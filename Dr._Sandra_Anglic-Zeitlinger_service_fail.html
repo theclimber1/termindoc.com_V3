@@ -1,0 +1,1962 @@
+<!DOCTYPE html><html><head>
+  <meta charset="utf-8">
+  <title>Latido - Ihr digitales Ärztezentrum</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/favicon/site.webmanifest">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#707070">
+  <meta name="msapplication-TileColor" content="#00aba9">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#ffffff">
+  <script src="socket.io/socket.io.js"></script>
+  <link rel="stylesheet" type="text/css" href="src/app.styles.css">
+  <link rel="stylesheet" type="text/css" href="themes/base.css">
+  <link rel="stylesheet" type="text/css" href="themes/default.css">
+<style type="text/css"></style><style>@keyframes _ngcontent-ng-c2646666280_new-entry-fade {
+  0% {
+    background-color: #eff2f5;
+  }
+  100% {
+    background-color: none;
+  }
+}
+.new-entry-anim[_ngcontent-ng-c2646666280] {
+  animation-name: _ngcontent-ng-c2646666280_new-entry-fade;
+  animation-duration: 1s;
+}
+
+@keyframes _ngcontent-ng-c2646666280_shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(0deg);
+  }
+  85% {
+    transform: rotate(8deg);
+  }
+  95% {
+    transform: rotate(-8deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes _ngcontent-ng-c2646666280_blink {
+  0% {
+    background-color: #e26c7a;
+  }
+  50% {
+    background-color: rgb(172.4744318182, 34.0255681818, 50.4517045455);
+  }
+  100% {
+    background-color: #e26c7a;
+  }
+}
+@keyframes _ngcontent-ng-c2646666280_scale {
+  0% {
+    transform: scale(1);
+  }
+  1% {
+    transform: scale(0);
+  }
+  20% {
+    transform: scale(0);
+  }
+  35% {
+    transform: scale(1.4);
+  }
+  40% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  65% {
+    transform: scale(1);
+  }
+  90% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+[_nghost-ng-c2646666280] {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+[_nghost-ng-c2646666280]   main[_ngcontent-ng-c2646666280] {
+  display: flex;
+  flex-flow: row wrap;
+  flex: 1;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+footer[_ngcontent-ng-c2646666280] {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0px;
+}
+footer[_ngcontent-ng-c2646666280]   a[_ngcontent-ng-c2646666280] {
+  font-size: 0.8em;
+  opacity: 0.5;
+  color: #363e51;
+  display: flex;
+  align-items: center;
+}
+footer[_ngcontent-ng-c2646666280]   a[_ngcontent-ng-c2646666280]:hover {
+  color: #617384;
+  opacity: 1;
+}
+footer[_ngcontent-ng-c2646666280]   .divider[_ngcontent-ng-c2646666280] {
+  width: 1px;
+  height: 15px;
+  background-color: #363e51;
+  opacity: 0.5;
+}
+footer[_ngcontent-ng-c2646666280]    > *[_ngcontent-ng-c2646666280] {
+  margin-right: 10px;
+}
+footer[_ngcontent-ng-c2646666280]    > *[_ngcontent-ng-c2646666280]:last-child {
+  margin-right: 0px;
+}</style><style>[_nghost-ng-c1679001208] {
+  width: 100%;
+  z-index: 9999;
+}
+
+nav[_ngcontent-ng-c1679001208] {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  height: 55px;
+  padding: 0px 20px;
+}
+nav[_ngcontent-ng-c1679001208]    > *[_ngcontent-ng-c1679001208] {
+  margin-right: 10px;
+}
+nav[_ngcontent-ng-c1679001208]    > *[_ngcontent-ng-c1679001208]:last-child {
+  margin-right: 0px;
+}
+nav[_ngcontent-ng-c1679001208] {
+  -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.062745098);
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.062745098);
+}
+nav[_ngcontent-ng-c1679001208]   .__logo-wrapper[_ngcontent-ng-c1679001208] {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+nav[_ngcontent-ng-c1679001208]   .__logo-wrapper[_ngcontent-ng-c1679001208]   .logo[_ngcontent-ng-c1679001208] {
+  margin-right: 10px;
+}
+nav[_ngcontent-ng-c1679001208]   .__logo-wrapper[_ngcontent-ng-c1679001208]   .follow-up-text[_ngcontent-ng-c1679001208] {
+  color: var(--brand-primary-color);
+}
+nav[_ngcontent-ng-c1679001208]   .__header-option[_ngcontent-ng-c1679001208] {
+  display: flex;
+  align-items: center;
+}
+nav[_ngcontent-ng-c1679001208]   .__header-option[_ngcontent-ng-c1679001208]   .__flag-wrapper[_ngcontent-ng-c1679001208] {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+nav[_ngcontent-ng-c1679001208]   .__header-option[_ngcontent-ng-c1679001208]   .__flag-wrapper[_ngcontent-ng-c1679001208]   .__language-flag[_ngcontent-ng-c1679001208] {
+  display: inherit;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 10px;
+}
+nav[_ngcontent-ng-c1679001208]   .__header-option[_ngcontent-ng-c1679001208]   .__flag-wrapper[_ngcontent-ng-c1679001208]   .__language-flag[_ngcontent-ng-c1679001208]:hover {
+  opacity: 0.8;
+}
+nav[_ngcontent-ng-c1679001208]   .__header-option[_ngcontent-ng-c1679001208]   .__flag-wrapper[_ngcontent-ng-c1679001208]   .__language-flag[_ngcontent-ng-c1679001208]:last-child {
+  margin: 0;
+}
+@media screen and (max-width: 800px) {
+  nav[_ngcontent-ng-c1679001208]   .__header-option[_ngcontent-ng-c1679001208] {
+    padding: 10px;
+    height: 50px;
+  }
+}
+nav[_ngcontent-ng-c1679001208]   .__header-option[_ngcontent-ng-c1679001208]   .vertical-divider[_ngcontent-ng-c1679001208] {
+  display: block;
+  width: 2px;
+  height: 18px;
+  background-color: #d5d8e0;
+  margin: 0px 10px;
+}
+nav[_ngcontent-ng-c1679001208]   i[_ngcontent-ng-c1679001208] {
+  margin-right: 10px;
+}</style><style>[_nghost-ng-c3762114856] {
+  width: 100%;
+}
+[_nghost-ng-c3762114856]   .card-wrapper[_ngcontent-ng-c3762114856] {
+  flex: 1;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+[_nghost-ng-c3762114856]   .card-wrapper[_ngcontent-ng-c3762114856]   .__card-content[_ngcontent-ng-c3762114856] {
+  display: flex;
+  flex: 1;
+  flex-flow: row wrap;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+[_nghost-ng-c3762114856]   .card-wrapper[_ngcontent-ng-c3762114856]   .__card-content[_ngcontent-ng-c3762114856] {
+  -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.062745098);
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.062745098);
+}
+[_nghost-ng-c3762114856]   .card-wrapper[_ngcontent-ng-c3762114856]   .__card-content[_ngcontent-ng-c3762114856]   .__loading[_ngcontent-ng-c3762114856] {
+  margin: 20px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+[_nghost-ng-c3762114856]   .card-wrapper[_ngcontent-ng-c3762114856]   .red[_ngcontent-ng-c3762114856] {
+  border-left: 6px solid #e26c7a !important;
+}
+[_nghost-ng-c3762114856]   .card-wrapper[_ngcontent-ng-c3762114856]   .yellow[_ngcontent-ng-c3762114856] {
+  border-left: 6px solid #f39d35;
+}
+@media (max-width: 959px) {
+  [_nghost-ng-c3762114856]   .card-wrapper[_ngcontent-ng-c3762114856] {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 599px) {
+  [_nghost-ng-c3762114856]   .card-wrapper[_ngcontent-ng-c3762114856] {
+    margin-top: 15px;
+  }
+}</style><style type="text/css">
+/*
+  @angular/flex-layout - workaround for possible browser quirk with mediaQuery listeners
+  see http://bit.ly/2sd4HMP
+*/
+@media screen and (min-width: 600px), screen and (min-width: 960px), screen and (min-width: 1280px), screen and (min-width: 1920px), screen and (min-width: 1920px) and (max-width: 4999.98px), screen and (max-width: 1919.98px), screen and (min-width: 1280px) and (max-width: 1919.98px), screen and (max-width: 1279.98px), screen and (min-width: 960px) and (max-width: 1279.98px), screen and (max-width: 959.98px), screen and (min-width: 600px) and (max-width: 959.98px), screen and (max-width: 599.98px), screen and (min-width: 0px) and (max-width: 599.98px), print {.fx-query-test{ }}
+</style><style>.__title[_ngcontent-ng-c607629633] {
+  font-size: 1.1em;
+}
+
+mimi-booking[_nghost-ng-c607629633] {
+  width: 100%;
+  max-width: 800px;
+  padding: 0 10px;
+}
+mimi-booking[_nghost-ng-c607629633]   .__login-title[_ngcontent-ng-c607629633] {
+  width: 100%;
+  max-width: 340px;
+  margin: auto;
+  margin-bottom: 20px;
+  font-weight: 500;
+  text-align: center;
+}
+mimi-booking[_nghost-ng-c607629633]     mimi-login {
+  margin: 0;
+  box-shadow: none;
+}
+mimi-booking[_nghost-ng-c607629633]     mimi-login .card-wrapper {
+  display: none !important;
+}
+mimi-booking[_nghost-ng-c607629633]   .__knownPatientsWarning[_ngcontent-ng-c607629633] {
+  width: 100%;
+  
+
+}
+mimi-booking[_nghost-ng-c607629633]   .__knownPatientsWarning[_ngcontent-ng-c607629633]   .__warning-icon[_ngcontent-ng-c607629633] {
+  width: 100%;
+  font-size: 3em;
+  color: #e26c7a;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+mimi-booking[_nghost-ng-c607629633]   .__knownPatientsWarning[_ngcontent-ng-c607629633]   .__knownPatientsWarningMessage[_ngcontent-ng-c607629633] {
+  margin-bottom: 20px;
+}
+mimi-booking[_nghost-ng-c607629633]   .__knownPatientsWarning[_ngcontent-ng-c607629633]   .__knownPatientsWarningSuccessButton[_ngcontent-ng-c607629633] {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+mimi-booking[_nghost-ng-c607629633]   .__knownPatientsWarning[_ngcontent-ng-c607629633]   .__knownPatientsWarningCancelButton[_ngcontent-ng-c607629633] {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}</style><style>.circle[_ngcontent-ng-c4125507196], [_nghost-ng-c4125507196]   .booking[_ngcontent-ng-c4125507196]   .__inactive-row[_ngcontent-ng-c4125507196]   .__step[_ngcontent-ng-c4125507196], [_nghost-ng-c4125507196]   .booking[_ngcontent-ng-c4125507196]   .__active-row[_ngcontent-ng-c4125507196]   .__step[_ngcontent-ng-c4125507196] {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+[_nghost-ng-c4125507196] {
+  width: 100%;
+}
+[_nghost-ng-c4125507196]   .booking[_ngcontent-ng-c4125507196] {
+  width: inherit;
+}
+[_nghost-ng-c4125507196]   .booking[_ngcontent-ng-c4125507196]   .__active-row[_ngcontent-ng-c4125507196] {
+  margin-bottom: 10px;
+}
+[_nghost-ng-c4125507196]   .booking[_ngcontent-ng-c4125507196]   .__active-row[_ngcontent-ng-c4125507196]   .__step[_ngcontent-ng-c4125507196] {
+  border: 3px solid var(--brand-primary-color);
+  color: var(--brand-primary-color);
+}
+[_nghost-ng-c4125507196]   .booking[_ngcontent-ng-c4125507196]   .__active-row[_ngcontent-ng-c4125507196]   a[_ngcontent-ng-c4125507196]   .icon-arrow.--down[_ngcontent-ng-c4125507196] {
+  transform: rotate(-90deg);
+}
+[_nghost-ng-c4125507196]   .booking[_ngcontent-ng-c4125507196]   .__active-row[_ngcontent-ng-c4125507196]   a[_ngcontent-ng-c4125507196]   .icon-arrow.--up[_ngcontent-ng-c4125507196] {
+  transform: rotate(90deg);
+}
+[_nghost-ng-c4125507196]   .booking[_ngcontent-ng-c4125507196]   .__active-row.__placeholder[_ngcontent-ng-c4125507196] {
+  margin-top: 15px;
+  width: 100%;
+  height: 400px;
+  border: 7px dashed #fafafb;
+}
+[_nghost-ng-c4125507196]   .booking[_ngcontent-ng-c4125507196]   .__inactive-row[_ngcontent-ng-c4125507196] {
+  color: rgb(221.6666666667, 221.6666666667, 228.3333333333);
+}
+[_nghost-ng-c4125507196]   .booking[_ngcontent-ng-c4125507196]   .__inactive-row[_ngcontent-ng-c4125507196]   .__step[_ngcontent-ng-c4125507196] {
+  border: 3px solid rgb(221.6666666667, 221.6666666667, 228.3333333333);
+  color: rgb(221.6666666667, 221.6666666667, 228.3333333333);
+}
+[_nghost-ng-c4125507196]   .booking[_ngcontent-ng-c4125507196]     ltdo-step:last-child ltdo-card-divider {
+  display: none;
+}</style><style>[_nghost-ng-c2850114337] {
+  width: 100%;
+}
+[_nghost-ng-c2850114337]   .header-wrapper[_ngcontent-ng-c2850114337] {
+  align-items: inherit;
+  justify-content: inherit;
+  padding: 20px;
+}
+@media (max-width: 599px) {
+  [_nghost-ng-c2850114337]   .header-wrapper[_ngcontent-ng-c2850114337] {
+    padding: 15px;
+  }
+}</style><style>.doc-core-data[_ngcontent-ng-c2640163326] {
+  display: flex;
+  align-items: center;
+}
+.doc-core-data[_ngcontent-ng-c2640163326]   .__profile-pic[_ngcontent-ng-c2640163326] {
+  border-radius: 100%;
+  height: auto;
+  color: #ffffff;
+  background-size: cover;
+}
+.doc-core-data[_ngcontent-ng-c2640163326]   .__no-image[_ngcontent-ng-c2640163326] {
+  display: flex;
+  background-color: #ced2d8;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #7f8d9a;
+}
+.doc-core-data[_ngcontent-ng-c2640163326]   .__no-image[_ngcontent-ng-c2640163326]   i[_ngcontent-ng-c2640163326] {
+  opacity: 0.8;
+}
+.doc-core-data[_ngcontent-ng-c2640163326]   .coreData_specialty[_ngcontent-ng-c2640163326] {
+  font-weight: 300;
+  font-size: 0.9em;
+}
+.doc-core-data.xs[_ngcontent-ng-c2640163326]   .__profile-pic[_ngcontent-ng-c2640163326], 
+.doc-core-data.xs[_ngcontent-ng-c2640163326]   .__no-image[_ngcontent-ng-c2640163326] {
+  width: 20px;
+  height: 20px;
+  font-size: 0.9em;
+}
+.doc-core-data.xs[_ngcontent-ng-c2640163326]   .coreData_name[_ngcontent-ng-c2640163326] {
+  overflow: hidden;
+  margin-left: 3px;
+  margin-top: 2px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+}
+.doc-core-data.sm[_ngcontent-ng-c2640163326]   .__profile-pic[_ngcontent-ng-c2640163326], 
+.doc-core-data.sm[_ngcontent-ng-c2640163326]   .__no-image[_ngcontent-ng-c2640163326] {
+  width: 30px;
+  height: 30px;
+  font-size: 1.2em;
+}
+.doc-core-data.sm[_ngcontent-ng-c2640163326]   .coreData_name[_ngcontent-ng-c2640163326] {
+  font-size: 0.9em;
+  font-weight: bold;
+}
+.doc-core-data.md[_ngcontent-ng-c2640163326]   .__profile-pic[_ngcontent-ng-c2640163326], 
+.doc-core-data.md[_ngcontent-ng-c2640163326]   .__no-image[_ngcontent-ng-c2640163326] {
+  width: 35px;
+  height: 35px;
+  font-size: 1.2em;
+}
+@media screen and (max-width: 599px) {
+  .doc-core-data.md[_ngcontent-ng-c2640163326]   .__profile-pic[_ngcontent-ng-c2640163326], 
+   .doc-core-data.md[_ngcontent-ng-c2640163326]   .__no-image[_ngcontent-ng-c2640163326] {
+    flex: 1 1 25px;
+    max-width: 25px;
+    min-width: 25px;
+    height: 25px;
+  }
+}
+.doc-core-data.md[_ngcontent-ng-c2640163326]   .coreData_name[_ngcontent-ng-c2640163326] {
+  font-size: 1em;
+  font-weight: bold;
+}
+.doc-core-data.lg[_ngcontent-ng-c2640163326]   .__profile-pic[_ngcontent-ng-c2640163326], 
+.doc-core-data.lg[_ngcontent-ng-c2640163326]   .__no-image[_ngcontent-ng-c2640163326] {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+  font-size: 2.8em;
+}
+.doc-core-data.lg[_ngcontent-ng-c2640163326]   .coreData_name[_ngcontent-ng-c2640163326] {
+  font-size: 1.1em;
+  font-weight: bold;
+  text-align: center;
+}
+.doc-core-data.lg[_ngcontent-ng-c2640163326]   .coreData_specialty[_ngcontent-ng-c2640163326] {
+  text-align: center;
+}
+
+.notification[_ngcontent-ng-c2640163326] {
+  border-radius: 50%;
+  background-color: #e26c7a;
+  padding: 3px;
+}</style><style>[_nghost-ng-c1913553836] {
+  height: 6px;
+  background-color: #eff2f5;
+  width: 100%;
+  display: block;
+}</style><style>[_nghost-ng-c1550466813] {
+  width: 100%;
+}
+[_nghost-ng-c1550466813]   .__header[_ngcontent-ng-c1550466813] {
+  display: flex;
+  flex: 1;
+  justify-content: flex-start;
+  align-items: center;
+}
+[_nghost-ng-c1550466813]   .__header[_ngcontent-ng-c1550466813]   .circle[_ngcontent-ng-c1550466813] {
+  display: inherit;
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+  border-radius: 100%;
+  font-weight: 500;
+  border: 2px solid;
+  justify-content: center;
+  align-items: center;
+}
+[_nghost-ng-c1550466813]   .__header[_ngcontent-ng-c1550466813]   .circle[_ngcontent-ng-c1550466813]    > *[_ngcontent-ng-c1550466813] {
+  margin-right: 10px;
+}
+[_nghost-ng-c1550466813]   .__header[_ngcontent-ng-c1550466813]   .circle[_ngcontent-ng-c1550466813]    > *[_ngcontent-ng-c1550466813]:last-child {
+  margin-right: 0px;
+}
+@media screen and (max-width: 599px) {
+  [_nghost-ng-c1550466813]   .__header[_ngcontent-ng-c1550466813]   .circle[_ngcontent-ng-c1550466813] {
+    max-width: 25px !important;
+    min-width: 25px !important;
+    height: 25px;
+    font-size: 0.8em;
+  }
+}
+[_nghost-ng-c1550466813]   .__header[_ngcontent-ng-c1550466813]   .__title[_ngcontent-ng-c1550466813] {
+  font-weight: 500;
+  font-size: 1.1em;
+}
+[_nghost-ng-c1550466813]   .button-row[_ngcontent-ng-c1550466813] {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-end;
+}
+[_nghost-ng-c1550466813]   .button-row[_ngcontent-ng-c1550466813]    > *[_ngcontent-ng-c1550466813] {
+  margin-right: 20px;
+}
+[_nghost-ng-c1550466813]   .button-row[_ngcontent-ng-c1550466813]    > *[_ngcontent-ng-c1550466813]:last-child {
+  margin-right: 0px;
+}
+
+.--completed[_ngcontent-ng-c1550466813] {
+  color: #43b38d;
+  border: 2px solid #43b38d;
+}
+
+.--skipped[_ngcontent-ng-c1550466813] {
+  border-color: rgb(198.7021276596, 202.8723404255, 213.2978723404);
+  color: rgb(198.7021276596, 202.8723404255, 213.2978723404);
+}
+
+.icon-arrow.--open[_ngcontent-ng-c1550466813] {
+  transform: rotate(90deg);
+}
+.icon-arrow.--down[_ngcontent-ng-c1550466813] {
+  transform: rotate(-90deg);
+}</style><style>.__row[_ngcontent-ng-c1274955661] {
+  padding: 15px 0px;
+}
+.__row[_ngcontent-ng-c1274955661]:first-child:not(:last-child) {
+  border-bottom: 1px solid #e4e6eb;
+}
+.__row[_ngcontent-ng-c1274955661]:last-child:not(:first-child) {
+  border-bottom: 0px;
+}
+.__row[_ngcontent-ng-c1274955661]:not(:first-child):not(:last-child) {
+  border-bottom: 1px solid #e4e6eb;
+}</style><style>[_nghost-ng-c702332853]   .booking-patient-wrapper[_ngcontent-ng-c702332853] {
+  display: flex;
+  flex-flow: row wrap;
+  flex: 1;
+}
+[_nghost-ng-c702332853]   .booking-patient-wrapper[_ngcontent-ng-c702332853]   .__form[_ngcontent-ng-c702332853] {
+  display: inherit;
+  flex-flow: row wrap;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+[_nghost-ng-c702332853]   .booking-patient-wrapper[_ngcontent-ng-c702332853]   .__list[_ngcontent-ng-c702332853] {
+  display: inherit;
+  flex: 1;
+}
+
+.checkbox-wrapper[_ngcontent-ng-c702332853] {
+  margin-bottom: 20px;
+}</style><style>[_nghost-ng-c2659986281] {
+  display: flex;
+  flex: 1;
+}
+[_nghost-ng-c2659986281]   .patient-box-wrapper[_ngcontent-ng-c2659986281] {
+  display: inherit;
+  flex: 1;
+  flex-flow: row wrap;
+}
+[_nghost-ng-c2659986281]   .patient-box-wrapper[_ngcontent-ng-c2659986281]   .patient-box[_ngcontent-ng-c2659986281] {
+  display: inherit;
+  flex: 1 1 100%;
+  flex-direction: row;
+  border: 1px solid #eff2f5;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 10px 15px;
+  font-size: 0.9em;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+[_nghost-ng-c2659986281]   .patient-box-wrapper[_ngcontent-ng-c2659986281]   .patient-box[_ngcontent-ng-c2659986281] {
+  -webkit-transition: background 250ms ease, width 250ms ease, opacity 250ms ease, outline 250ms ease, box-shadow 250ms ease, border 250ms ease, color 250ms ease;
+  -moz-transition: background 250ms ease, width 250ms ease, opacity 250ms ease, outline 250ms ease, box-shadow 250ms ease, border 250ms ease, color 250ms ease;
+  -ms-transition: background 250ms ease, width 250ms ease, opacity 250ms ease, outline 250ms ease, box-shadow 250ms ease, border 250ms ease, color 250ms ease;
+  -o-transition: background 250ms ease, width 250ms ease, opacity 250ms ease, outline 250ms ease, box-shadow 250ms ease, border 250ms ease, color 250ms ease;
+  transition: background 250ms ease, width 250ms ease, opacity 250ms ease, outline 250ms ease, box-shadow 250ms ease, border 250ms ease, color 250ms ease;
+}
+[_nghost-ng-c2659986281]   .patient-box-wrapper[_ngcontent-ng-c2659986281]   .patient-box[_ngcontent-ng-c2659986281]:last-child {
+  margin-bottom: 0px;
+}
+[_nghost-ng-c2659986281]   .patient-box-wrapper[_ngcontent-ng-c2659986281]   .patient-box[_ngcontent-ng-c2659986281]:hover, [_nghost-ng-c2659986281]   .patient-box-wrapper[_ngcontent-ng-c2659986281]   .patient-box.active[_ngcontent-ng-c2659986281] {
+  background-color: #eff2f5;
+}
+[_nghost-ng-c2659986281]   .patient-box-wrapper[_ngcontent-ng-c2659986281]   .patient-box.active[_ngcontent-ng-c2659986281] {
+  border: 1px solid var(--brand-primary-color);
+}
+[_nghost-ng-c2659986281]   .patient-box-wrapper[_ngcontent-ng-c2659986281]   .patient-box[_ngcontent-ng-c2659986281]   .patient-name[_ngcontent-ng-c2659986281] {
+  font-weight: 500;
+  font-size: 1.1em;
+}
+[_nghost-ng-c2659986281]   .patient-box-wrapper[_ngcontent-ng-c2659986281]   .patient-box[_ngcontent-ng-c2659986281]   .warning[_ngcontent-ng-c2659986281] {
+  color: #e26c7a;
+}
+[_nghost-ng-c2659986281]   .patient-box-wrapper[_ngcontent-ng-c2659986281]   .insurance[_ngcontent-ng-c2659986281] {
+  margin-left: 20px;
+}
+[_nghost-ng-c2659986281]   .patient-box-wrapper[_ngcontent-ng-c2659986281]   .--select-insurance[_ngcontent-ng-c2659986281] {
+  color: #e26c7a;
+}</style><style>h5[_ngcontent-ng-c3940770604] {
+  display: flex;
+  align-items: center;
+}
+h5[_ngcontent-ng-c3940770604]   .icon-exclamation-mark-circled[_ngcontent-ng-c3940770604] {
+  margin-right: 10px;
+}
+
+.checkbox-wrapper[_ngcontent-ng-c3940770604] {
+  margin-top: 20px;
+}
+.checkbox-wrapper[_ngcontent-ng-c3940770604]   label[_ngcontent-ng-c3940770604]:after {
+  top: 4px;
+}
+
+.__textarea[_ngcontent-ng-c3940770604] {
+  padding-top: 8px;
+  height: 80px;
+}
+
+.__message-container[_ngcontent-ng-c3940770604], 
+.__storno-container[_ngcontent-ng-c3940770604] {
+  margin-bottom: 20px;
+}
+
+.m-b-1[_ngcontent-ng-c3940770604] {
+  margin-bottom: 10px;
+}
+
+.m-b-4[_ngcontent-ng-c3940770604] {
+  margin-bottom: 40px;
+}
+
+section[_ngcontent-ng-c3940770604] {
+  margin-bottom: 20px;
+}
+
+section[_ngcontent-ng-c3940770604]:last-child {
+  margin-bottom: 0px;
+}
+
+.modal__body[_ngcontent-ng-c3940770604] {
+  min-width: 400px;
+}</style><style>[_nghost-ng-c3519873968] {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+}
+[_nghost-ng-c3519873968]   .card-body-wrapper[_ngcontent-ng-c3519873968] {
+  display: inherit;
+  flex-flow: row wrap;
+  flex: 1;
+}
+[_nghost-ng-c3519873968]   .card-body-wrapper[_ngcontent-ng-c3519873968]     .card-subtitle {
+  font-weight: 500;
+  font-size: 1em;
+  color: rgb(140.221875, 163.409375, 184.278125);
+}
+[_nghost-ng-c3519873968]   .card-body-wrapper.info[_ngcontent-ng-c3519873968] {
+  color: white;
+  background-color: #5bc0de;
+  width: calc(100% + 40px);
+  margin-left: -20px;
+  margin-right: -20px;
+}
+[_nghost-ng-c3519873968]   .card-body-wrapper[_ngcontent-ng-c3519873968]   .__loading[_ngcontent-ng-c3519873968] {
+  margin: 20px;
+  display: inherit;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 599px) {
+  [_nghost-ng-c3519873968] {
+    padding: 15px;
+  }
+}</style><style>.unavailableTimeslot_wrapper[_ngcontent-ng-c4160867973] {
+  background-color: #eff2f5;
+  border-left: 10px solid #e26c7a;
+  border-radius: 4px;
+  padding: 0.7em 0.9em;
+  margin-bottom: 30px;
+  display: flex;
+  flex-flow: row;
+}
+.unavailableTimeslot_wrapper[_ngcontent-ng-c4160867973]    > *[_ngcontent-ng-c4160867973] {
+  margin-right: 10px;
+}
+.unavailableTimeslot_wrapper[_ngcontent-ng-c4160867973]    > *[_ngcontent-ng-c4160867973]:last-child {
+  margin-right: 0px;
+}
+.unavailableTimeslot_wrapper[_ngcontent-ng-c4160867973]   .--us-text[_ngcontent-ng-c4160867973] {
+  flex: 1 1 0%;
+}
+
+.btn-outline.no-slots-available[_ngcontent-ng-c4160867973] {
+  background-color: #43b38d;
+  color: white;
+  border: none;
+}
+
+.booking-hr[_ngcontent-ng-c4160867973] {
+  border: 1px solid #eff2f5;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.--slot-info-wrapper[_ngcontent-ng-c4160867973] {
+  display: flex;
+  flex-direction: row;
+}
+@media (max-width: 599px) {
+  .--slot-info-wrapper[_ngcontent-ng-c4160867973] {
+    flex-direction: column;
+  }
+}</style><style>.slot-picker[_ngcontent-ng-c1607041535] {
+  display: flex;
+  flex: 1 1 100%;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  
+
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .__unavailable-slot[_ngcontent-ng-c1607041535] {
+  background: rgb(207.8421052632, 228.4736842105, 246.1578947368);
+  padding: 20px;
+  border-radius: 4px;
+  width: 100%;
+  color: rgb(35.4473684211, 118.1578947368, 189.0526315789);
+  margin-bottom: 20px;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .less-btn[_ngcontent-ng-c1607041535], 
+.slot-picker[_ngcontent-ng-c1607041535]   .more-btn[_ngcontent-ng-c1607041535] {
+  width: 50px;
+  height: 50px;
+  background-color: #e4e6eb;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .less-btn[_ngcontent-ng-c1607041535], 
+.slot-picker[_ngcontent-ng-c1607041535]   .more-btn[_ngcontent-ng-c1607041535] {
+  -webkit-transition: background 250ms ease, width 250ms ease, opacity 250ms ease, outline 250ms ease, box-shadow 250ms ease, border 250ms ease, color 250ms ease;
+  -moz-transition: background 250ms ease, width 250ms ease, opacity 250ms ease, outline 250ms ease, box-shadow 250ms ease, border 250ms ease, color 250ms ease;
+  -ms-transition: background 250ms ease, width 250ms ease, opacity 250ms ease, outline 250ms ease, box-shadow 250ms ease, border 250ms ease, color 250ms ease;
+  -o-transition: background 250ms ease, width 250ms ease, opacity 250ms ease, outline 250ms ease, box-shadow 250ms ease, border 250ms ease, color 250ms ease;
+  transition: background 250ms ease, width 250ms ease, opacity 250ms ease, outline 250ms ease, box-shadow 250ms ease, border 250ms ease, color 250ms ease;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .less-btn[_ngcontent-ng-c1607041535]:hover, 
+.slot-picker[_ngcontent-ng-c1607041535]   .more-btn[_ngcontent-ng-c1607041535]:hover {
+  background-color: var(--brand-primary-color);
+  color: white;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .less-btn[_ngcontent-ng-c1607041535] {
+  margin-right: 10px;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .more-btn[_ngcontent-ng-c1607041535] {
+  margin-left: 10px;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .__mobile-nav[_ngcontent-ng-c1607041535] {
+  display: inherit;
+  flex-direction: row;
+  flex: 1 1 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  display: none;
+  margin-bottom: 20px;
+}
+@media (max-width: 959px) {
+  .slot-picker[_ngcontent-ng-c1607041535]   .__mobile-nav[_ngcontent-ng-c1607041535] {
+    display: flex;
+  }
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .__mobile-nav[_ngcontent-ng-c1607041535]   .less-btn.small[_ngcontent-ng-c1607041535] {
+  margin-right: 10px;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .__mobile-nav[_ngcontent-ng-c1607041535]   .less-btn.small[_ngcontent-ng-c1607041535], 
+.slot-picker[_ngcontent-ng-c1607041535]   .__mobile-nav[_ngcontent-ng-c1607041535]   .more-btn.small[_ngcontent-ng-c1607041535] {
+  display: inherit;
+  height: inherit;
+  flex: 1;
+  border-radius: 4px;
+  border: 1px solid #e4e6eb;
+  padding: 10px;
+  font-size: 0.85em;
+  background-color: transparent;
+  color: #556c7b;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .__mobile-nav[_ngcontent-ng-c1607041535]   .less-btn.small[_ngcontent-ng-c1607041535]   i[_ngcontent-ng-c1607041535], 
+.slot-picker[_ngcontent-ng-c1607041535]   .__mobile-nav[_ngcontent-ng-c1607041535]   .more-btn.small[_ngcontent-ng-c1607041535]   i[_ngcontent-ng-c1607041535] {
+  font-size: 0.6em;
+  margin: 0 5px;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535] {
+  display: inherit;
+  flex-direction: row;
+  flex: 1;
+}
+@media (max-width: 959px) {
+  .slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .btn.less-btn[_ngcontent-ng-c1607041535], 
+   .slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .btn.more-btn[_ngcontent-ng-c1607041535] {
+    display: none;
+  }
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535] {
+  display: inherit;
+  flex: 1;
+  flex-flow: row wrap;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__day-slots[_ngcontent-ng-c1607041535] {
+  display: inherit;
+  flex: 1;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 240px;
+}
+@media (max-width: 599px) {
+  .slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__day-slots[_ngcontent-ng-c1607041535] {
+    min-height: 150px;
+  }
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__day-slots[_ngcontent-ng-c1607041535]   .__day-slot-wrapper[_ngcontent-ng-c1607041535] {
+  display: inherit;
+  flex: 1 1 100%;
+  flex-direction: row;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__day-slots[_ngcontent-ng-c1607041535]   .__day-slot-wrapper[_ngcontent-ng-c1607041535]   ul.__day-slot[_ngcontent-ng-c1607041535] {
+  margin: 0;
+  display: inherit;
+  list-style: none;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  border: 2px transparent solid;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__day-slots[_ngcontent-ng-c1607041535]   .__day-slot-wrapper[_ngcontent-ng-c1607041535]   ul.__day-slot[_ngcontent-ng-c1607041535]   .__day-slot-date[_ngcontent-ng-c1607041535] {
+  display: inherit;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__day-slots[_ngcontent-ng-c1607041535]   .__day-slot-wrapper[_ngcontent-ng-c1607041535]   ul.__day-slot.__hide-weekend[_ngcontent-ng-c1607041535] {
+  display: none;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__day-slots[_ngcontent-ng-c1607041535]   .__day-slot-wrapper[_ngcontent-ng-c1607041535]   ul.__day-slot.__today[_ngcontent-ng-c1607041535] {
+  justify-content: center;
+  align-items: center;
+  background: rgb(233.6105263158, 242.9684210526, 250.9894736842);
+  border-radius: 4px;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__day-slots[_ngcontent-ng-c1607041535]   .__day-slot-wrapper[_ngcontent-ng-c1607041535]   ul.__day-slot.__saturday[_ngcontent-ng-c1607041535] {
+  border-left: 1px dotted #e4e6eb;
+  padding-left: 2px;
+}
+@media (max-width: 959px) {
+  .slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__day-slots[_ngcontent-ng-c1607041535]   .__day-slot-wrapper[_ngcontent-ng-c1607041535]   ul.__day-slot[_ngcontent-ng-c1607041535] {
+    font-size: 0.85em;
+  }
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__day-slots[_ngcontent-ng-c1607041535]   .__day-slot-wrapper[_ngcontent-ng-c1607041535]   ul.__day-slot[_ngcontent-ng-c1607041535]   .__slot[_ngcontent-ng-c1607041535] {
+  width: 100%;
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  padding: 10px 20px;
+  margin: 5px 0px;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__day-slots[_ngcontent-ng-c1607041535]   .__day-slot-wrapper[_ngcontent-ng-c1607041535]   ul.__day-slot[_ngcontent-ng-c1607041535]   .__slot.--time[_ngcontent-ng-c1607041535] {
+  background-color: #e4e6eb;
+  cursor: pointer;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__day-slots[_ngcontent-ng-c1607041535]   .__day-slot-wrapper[_ngcontent-ng-c1607041535]   ul.__day-slot[_ngcontent-ng-c1607041535]   .__slot.--time[_ngcontent-ng-c1607041535] {
+  -webkit-transition: background 250ms ease, width 250ms ease, opacity 250ms ease, outline 250ms ease, box-shadow 250ms ease, border 250ms ease, color 250ms ease;
+  -moz-transition: background 250ms ease, width 250ms ease, opacity 250ms ease, outline 250ms ease, box-shadow 250ms ease, border 250ms ease, color 250ms ease;
+  -ms-transition: background 250ms ease, width 250ms ease, opacity 250ms ease, outline 250ms ease, box-shadow 250ms ease, border 250ms ease, color 250ms ease;
+  -o-transition: background 250ms ease, width 250ms ease, opacity 250ms ease, outline 250ms ease, box-shadow 250ms ease, border 250ms ease, color 250ms ease;
+  transition: background 250ms ease, width 250ms ease, opacity 250ms ease, outline 250ms ease, box-shadow 250ms ease, border 250ms ease, color 250ms ease;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__day-slots[_ngcontent-ng-c1607041535]   .__day-slot-wrapper[_ngcontent-ng-c1607041535]   ul.__day-slot[_ngcontent-ng-c1607041535]   .__slot.--time[_ngcontent-ng-c1607041535]:hover {
+  background-color: var(--brand-primary-color);
+  opacity: 0.8;
+  color: #ffffff;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__day-slots[_ngcontent-ng-c1607041535]   .__day-slot-wrapper[_ngcontent-ng-c1607041535]   ul.__day-slot[_ngcontent-ng-c1607041535]   .__slot.--time[_ngcontent-ng-c1607041535]:focus {
+  opacity: 1;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__day-slots[_ngcontent-ng-c1607041535]   .__day-slot-wrapper[_ngcontent-ng-c1607041535]   ul.__day-slot[_ngcontent-ng-c1607041535]   .__slot.--time.selected[_ngcontent-ng-c1607041535] {
+  background-color: var(--brand-primary-color);
+  color: #ffffff;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__day-slots[_ngcontent-ng-c1607041535]   .__day-slot-wrapper[_ngcontent-ng-c1607041535]   ul.__day-slot[_ngcontent-ng-c1607041535]   .__slot.--small[_ngcontent-ng-c1607041535] {
+  padding: 3px 5px;
+  margin: 5px 0px;
+  height: 30px;
+  font-weight: 400;
+}
+@media (max-width: 599px) {
+  .slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__day-slots[_ngcontent-ng-c1607041535]   .__day-slot-wrapper[_ngcontent-ng-c1607041535]   ul.__day-slot[_ngcontent-ng-c1607041535]   .__slot[_ngcontent-ng-c1607041535] {
+    padding: 8px;
+    margin: 3px 0px;
+  }
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__show-slots[_ngcontent-ng-c1607041535] {
+  display: flex;
+  flex: 1 1 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__no-slot[_ngcontent-ng-c1607041535] {
+  display: inherit;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  background: #e4e6eb;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 4px;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__no-slot[_ngcontent-ng-c1607041535]   button[_ngcontent-ng-c1607041535] {
+  margin-top: 10px;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__no-slot[_ngcontent-ng-c1607041535]   .icon-time[_ngcontent-ng-c1607041535] {
+  font-size: 0.8em;
+  color: #ffffff;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__show-next-slot-btn[_ngcontent-ng-c1607041535] {
+  cursor: pointer;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__slot-message[_ngcontent-ng-c1607041535] {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__slot-message[_ngcontent-ng-c1607041535]   .icon-time[_ngcontent-ng-c1607041535] {
+  margin-right: 5px;
+}
+@media screen and (max-width: 400px) {
+  .slot-picker.--small[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__day-slots[_ngcontent-ng-c1607041535]   .__day-slot[_ngcontent-ng-c1607041535]   .__slot[_ngcontent-ng-c1607041535], 
+   .slot-picker.--small[_ngcontent-ng-c1607041535]   .__day-slot-date[_ngcontent-ng-c1607041535] {
+    font-size: 0.9rem;
+  }
+}
+.slot-picker.--small[_ngcontent-ng-c1607041535]   .less-btn[_ngcontent-ng-c1607041535], 
+.slot-picker.--small[_ngcontent-ng-c1607041535]   .more-btn[_ngcontent-ng-c1607041535] {
+  width: 30px;
+  height: 30px;
+}
+.slot-picker.--small[_ngcontent-ng-c1607041535]   .less-btn[_ngcontent-ng-c1607041535]   i[_ngcontent-ng-c1607041535], 
+.slot-picker.--small[_ngcontent-ng-c1607041535]   .more-btn[_ngcontent-ng-c1607041535]   i[_ngcontent-ng-c1607041535] {
+  font-size: 0.7em;
+}</style><style>[_nghost-ng-c404897595]   .patient-form[_ngcontent-ng-c404897595] {
+  display: flex;
+  flex-direction: column;
+}
+[_nghost-ng-c404897595]   .patient-form[_ngcontent-ng-c404897595]   .__patient-data[_ngcontent-ng-c404897595], 
+[_nghost-ng-c404897595]   .patient-form[_ngcontent-ng-c404897595]   .__patient-contact[_ngcontent-ng-c404897595], 
+[_nghost-ng-c404897595]   .patient-form[_ngcontent-ng-c404897595]   .__patient-address[_ngcontent-ng-c404897595] {
+  display: flex;
+  flex: 1 1 100%;
+  flex-flow: row wrap;
+  margin-bottom: 10px;
+}
+[_nghost-ng-c404897595]   .__row[_ngcontent-ng-c404897595] {
+  display: flex;
+  flex: 1 1 100%;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+[_nghost-ng-c404897595]   .__row[_ngcontent-ng-c404897595]   *[_ngcontent-ng-c404897595] {
+  margin-right: 10px;
+}
+[_nghost-ng-c404897595]   .__row[_ngcontent-ng-c404897595]   *[_ngcontent-ng-c404897595]:last-child {
+  margin-right: 0px;
+}
+[_nghost-ng-c404897595]   .__row[_ngcontent-ng-c404897595]   mimi-form-input[_ngcontent-ng-c404897595] {
+  display: inherit;
+  flex: 1;
+}
+[_nghost-ng-c404897595]   .__row[_ngcontent-ng-c404897595]   mimi-form-input.--zip-code[_ngcontent-ng-c404897595] {
+  flex: 0 1 100px;
+}
+@media (max-width: 599px) {
+  [_nghost-ng-c404897595]   .__row[_ngcontent-ng-c404897595]   mimi-form-input.insurance-gap[_ngcontent-ng-c404897595] {
+    display: none;
+  }
+}
+@media (max-width: 599px) {
+  [_nghost-ng-c404897595]   .__row[_ngcontent-ng-c404897595] {
+    flex-flow: row wrap;
+    margin-bottom: 0px;
+  }
+  [_nghost-ng-c404897595]   .__row[_ngcontent-ng-c404897595]   mimi-form-input[_ngcontent-ng-c404897595] {
+    display: flex;
+    flex: 1 1 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  [_nghost-ng-c404897595]   .__row[_ngcontent-ng-c404897595]   mimi-form-input.--zip-code[_ngcontent-ng-c404897595] {
+    flex: 1 1 100%;
+  }
+}
+[_nghost-ng-c404897595]   .__heading[_ngcontent-ng-c404897595] {
+  display: inherit;
+  flex: 1 1 100%;
+  font-size: 1.1em;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #7f8d9a;
+  margin-bottom: 10px;
+}
+@media (max-width: 599px) {
+  [_nghost-ng-c404897595]   .__heading[_ngcontent-ng-c404897595] {
+    margin-top: 10px;
+  }
+}
+[_nghost-ng-c404897595]   .main-insurer-wrapper[_ngcontent-ng-c404897595] {
+  margin-top: 20px;
+}
+[_nghost-ng-c404897595]   .main-insurer-wrapper[_ngcontent-ng-c404897595]   .__main-insurer-description[_ngcontent-ng-c404897595] {
+  margin-bottom: 10px;
+}
+[_nghost-ng-c404897595]   .main-insurer-wrapper[_ngcontent-ng-c404897595]   .alert[_ngcontent-ng-c404897595] {
+  margin-bottom: 10px;
+}</style><style>[_nghost-ng-c2898723735]   label[_ngcontent-ng-c2898723735] {
+  margin-bottom: 5px;
+}
+[_nghost-ng-c2898723735]   label.hasError[_ngcontent-ng-c2898723735] {
+  color: rgb(213.3948863636, 44.1051136364, 64.1903409091);
+}
+[_nghost-ng-c2898723735]   label.hasWarning[_ngcontent-ng-c2898723735] {
+  color: rgb(207.191588785, 118.9813084112, 12.308411215);
+}
+
+.form-row[_ngcontent-ng-c2898723735]   .error-box[_ngcontent-ng-c2898723735] {
+  font-size: 1.2em;
+  height: 44px;
+}
+.form-row.hasError[_ngcontent-ng-c2898723735] {
+  color: #e26c7a;
+  border: 1px solid #e26c7a;
+  border-radius: 4px;
+}
+.form-row.hasError[_ngcontent-ng-c2898723735]     input, 
+.form-row.hasError[_ngcontent-ng-c2898723735]     .__calling-codes, 
+.form-row.hasError[_ngcontent-ng-c2898723735]     .password-wrapper {
+  outline: 0;
+  box-shadow: 0 0 0 0 transparent;
+  border: none;
+}
+.form-row.hasError[_ngcontent-ng-c2898723735]     input:focus, 
+.form-row.hasError[_ngcontent-ng-c2898723735]     .__calling-codes:focus, 
+.form-row.hasError[_ngcontent-ng-c2898723735]     .password-wrapper:focus {
+  box-shadow: none;
+}
+.form-row.hasWarning[_ngcontent-ng-c2898723735] {
+  color: #f39d35;
+  border: 1px solid #f39d35;
+  border-radius: 4px;
+}
+.form-row.hasWarning[_ngcontent-ng-c2898723735]     input {
+  outline: 0;
+  box-shadow: 0 0 0 0 transparent;
+  border: none;
+}
+.form-row[_ngcontent-ng-c2898723735]     ltdo-datepicker {
+  width: 100%;
+}
+.form-row[_ngcontent-ng-c2898723735]     ltdo-datepicker .datepicker-wrapper {
+  height: 44px;
+  border: 1px solid #e4e6eb;
+  border-radius: 4px;
+}
+.form-row[_ngcontent-ng-c2898723735]     ltdo-datepicker .datepicker-wrapper input, 
+.form-row[_ngcontent-ng-c2898723735]     ltdo-datepicker .datepicker-wrapper a {
+  height: 100%;
+  border: 0;
+}
+.form-row[_ngcontent-ng-c2898723735]     ltdo-datepicker .datepicker-wrapper input:focus, 
+.form-row[_ngcontent-ng-c2898723735]     ltdo-datepicker .datepicker-wrapper a:focus {
+  box-shadow: initial;
+}
+.form-row[_ngcontent-ng-c2898723735]     ltdo-datepicker .datepicker-wrapper:focus-within {
+  outline: 0;
+  -webkit-box-shadow: 0 0 1px 1px var(--brand-primary-color-light);
+  box-shadow: 0 0 1px 1px var(--brand-primary-color-light);
+}</style><style>.datepicker-wrapper[_ngcontent-ng-c4282332133] {
+  display: flex;
+}
+.datepicker-wrapper[_ngcontent-ng-c4282332133]   .__datepicker-desktop[_ngcontent-ng-c4282332133] {
+  display: flex;
+  flex: 1;
+  height: 40px;
+}
+.datepicker-wrapper[_ngcontent-ng-c4282332133]   .__datepicker-desktop[_ngcontent-ng-c4282332133]   .__pick-date[_ngcontent-ng-c4282332133] {
+  width: 100%;
+  display: flex;
+  flex: 1 1 auto;
+  height: 40px;
+}
+.datepicker-wrapper[_ngcontent-ng-c4282332133]   .__datepicker-desktop[_ngcontent-ng-c4282332133]   .__reset-date[_ngcontent-ng-c4282332133]   .icon-close[_ngcontent-ng-c4282332133] {
+  font-size: 0.75em;
+}
+.datepicker-wrapper[_ngcontent-ng-c4282332133]   .__datepicker-desktop[_ngcontent-ng-c4282332133]   .__today-date[_ngcontent-ng-c4282332133]   .circle[_ngcontent-ng-c4282332133] {
+  width: 7px;
+  height: 7px;
+  background-color: #363e51;
+  border-radius: 50%;
+  border: transparent;
+}
+.datepicker-wrapper[_ngcontent-ng-c4282332133]   .__datepicker-desktop[_ngcontent-ng-c4282332133]   .__select-date[_ngcontent-ng-c4282332133]   .icon-calendar[_ngcontent-ng-c4282332133] {
+  font-size: 0.9em;
+}
+.datepicker-wrapper[_ngcontent-ng-c4282332133]   .__datepicker-desktop[_ngcontent-ng-c4282332133]   .__pick-date[_ngcontent-ng-c4282332133], 
+.datepicker-wrapper[_ngcontent-ng-c4282332133]   .__datepicker-desktop[_ngcontent-ng-c4282332133]   .__reset-date[_ngcontent-ng-c4282332133], 
+.datepicker-wrapper[_ngcontent-ng-c4282332133]   .__datepicker-desktop[_ngcontent-ng-c4282332133]   .__today-date[_ngcontent-ng-c4282332133], 
+.datepicker-wrapper[_ngcontent-ng-c4282332133]   .__datepicker-desktop[_ngcontent-ng-c4282332133]   .__select-date[_ngcontent-ng-c4282332133] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 0px 8px;
+  background-color: #eff2f5;
+}
+.datepicker-wrapper[_ngcontent-ng-c4282332133]   .__datepicker-desktop[_ngcontent-ng-c4282332133]   .__pick-date[_ngcontent-ng-c4282332133], 
+.datepicker-wrapper[_ngcontent-ng-c4282332133]   .__datepicker-desktop[_ngcontent-ng-c4282332133]   .__reset-date[_ngcontent-ng-c4282332133], 
+.datepicker-wrapper[_ngcontent-ng-c4282332133]   .__datepicker-desktop[_ngcontent-ng-c4282332133]   .__today-date[_ngcontent-ng-c4282332133], 
+.datepicker-wrapper[_ngcontent-ng-c4282332133]   .__datepicker-desktop[_ngcontent-ng-c4282332133]   .__select-date[_ngcontent-ng-c4282332133] {
+  -webkit-transition: background 150ms ease, width 150ms ease, opacity 150ms ease, outline 150ms ease, box-shadow 150ms ease, border 150ms ease, color 150ms ease;
+  -moz-transition: background 150ms ease, width 150ms ease, opacity 150ms ease, outline 150ms ease, box-shadow 150ms ease, border 150ms ease, color 150ms ease;
+  -ms-transition: background 150ms ease, width 150ms ease, opacity 150ms ease, outline 150ms ease, box-shadow 150ms ease, border 150ms ease, color 150ms ease;
+  -o-transition: background 150ms ease, width 150ms ease, opacity 150ms ease, outline 150ms ease, box-shadow 150ms ease, border 150ms ease, color 150ms ease;
+  transition: background 150ms ease, width 150ms ease, opacity 150ms ease, outline 150ms ease, box-shadow 150ms ease, border 150ms ease, color 150ms ease;
+}
+.datepicker-wrapper[_ngcontent-ng-c4282332133]   .__datepicker-desktop[_ngcontent-ng-c4282332133]   .__pick-date[_ngcontent-ng-c4282332133]:hover:not(.__pick-date), 
+.datepicker-wrapper[_ngcontent-ng-c4282332133]   .__datepicker-desktop[_ngcontent-ng-c4282332133]   .__reset-date[_ngcontent-ng-c4282332133]:hover:not(.__pick-date), 
+.datepicker-wrapper[_ngcontent-ng-c4282332133]   .__datepicker-desktop[_ngcontent-ng-c4282332133]   .__today-date[_ngcontent-ng-c4282332133]:hover:not(.__pick-date), 
+.datepicker-wrapper[_ngcontent-ng-c4282332133]   .__datepicker-desktop[_ngcontent-ng-c4282332133]   .__select-date[_ngcontent-ng-c4282332133]:hover:not(.__pick-date) {
+  background-color: rgb(191.9230769231, 203.75, 215.5769230769);
+}
+.datepicker-wrapper[_ngcontent-ng-c4282332133]   .__datepicker-desktop.--dark[_ngcontent-ng-c4282332133]   .__pick-date[_ngcontent-ng-c4282332133], 
+.datepicker-wrapper[_ngcontent-ng-c4282332133]   .__datepicker-desktop.--dark[_ngcontent-ng-c4282332133]   .__reset-date[_ngcontent-ng-c4282332133], 
+.datepicker-wrapper[_ngcontent-ng-c4282332133]   .__datepicker-desktop.--dark[_ngcontent-ng-c4282332133]   .__today-date[_ngcontent-ng-c4282332133], 
+.datepicker-wrapper[_ngcontent-ng-c4282332133]   .__datepicker-desktop.--dark[_ngcontent-ng-c4282332133]   .__select-date[_ngcontent-ng-c4282332133] {
+  background-color: #eff2f5;
+}
+.datepicker-wrapper[_ngcontent-ng-c4282332133]   .__datepicker-desktop.--dark[_ngcontent-ng-c4282332133]   .__pick-date[_ngcontent-ng-c4282332133]:hover:not(.__pick-date), 
+.datepicker-wrapper[_ngcontent-ng-c4282332133]   .__datepicker-desktop.--dark[_ngcontent-ng-c4282332133]   .__reset-date[_ngcontent-ng-c4282332133]:hover:not(.__pick-date), 
+.datepicker-wrapper[_ngcontent-ng-c4282332133]   .__datepicker-desktop.--dark[_ngcontent-ng-c4282332133]   .__today-date[_ngcontent-ng-c4282332133]:hover:not(.__pick-date), 
+.datepicker-wrapper[_ngcontent-ng-c4282332133]   .__datepicker-desktop.--dark[_ngcontent-ng-c4282332133]   .__select-date[_ngcontent-ng-c4282332133]:hover:not(.__pick-date) {
+  background-color: rgb(191.9230769231, 203.75, 215.5769230769);
+}
+.datepicker-wrapper[_ngcontent-ng-c4282332133]   .__datepicker-desktop.--light[_ngcontent-ng-c4282332133]   .__pick-date[_ngcontent-ng-c4282332133], 
+.datepicker-wrapper[_ngcontent-ng-c4282332133]   .__datepicker-desktop.--light[_ngcontent-ng-c4282332133]   .__reset-date[_ngcontent-ng-c4282332133], 
+.datepicker-wrapper[_ngcontent-ng-c4282332133]   .__datepicker-desktop.--light[_ngcontent-ng-c4282332133]   .__today-date[_ngcontent-ng-c4282332133], 
+.datepicker-wrapper[_ngcontent-ng-c4282332133]   .__datepicker-desktop.--light[_ngcontent-ng-c4282332133]   .__select-date[_ngcontent-ng-c4282332133] {
+  background-color: #ffffff;
+}
+.datepicker-wrapper[_ngcontent-ng-c4282332133]   .__datepicker-desktop.--light[_ngcontent-ng-c4282332133]   .__pick-date[_ngcontent-ng-c4282332133]:hover:not(.__pick-date), 
+.datepicker-wrapper[_ngcontent-ng-c4282332133]   .__datepicker-desktop.--light[_ngcontent-ng-c4282332133]   .__reset-date[_ngcontent-ng-c4282332133]:hover:not(.__pick-date), 
+.datepicker-wrapper[_ngcontent-ng-c4282332133]   .__datepicker-desktop.--light[_ngcontent-ng-c4282332133]   .__today-date[_ngcontent-ng-c4282332133]:hover:not(.__pick-date), 
+.datepicker-wrapper[_ngcontent-ng-c4282332133]   .__datepicker-desktop.--light[_ngcontent-ng-c4282332133]   .__select-date[_ngcontent-ng-c4282332133]:hover:not(.__pick-date) {
+  background-color: #e4e6eb;
+}
+.datepicker-wrapper[_ngcontent-ng-c4282332133]   .__datepicker-mobile[_ngcontent-ng-c4282332133] {
+  display: flex;
+  flex: 1 1 100%;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  height: 40px;
+  padding: 0.7em 0.9em;
+  background-color: #eff2f5;
+  border-radius: 4px;
+}
+.datepicker-wrapper[_ngcontent-ng-c4282332133]   .__datepicker-mobile[_ngcontent-ng-c4282332133]   input[_ngcontent-ng-c4282332133] {
+  -webkit-appearance: none;
+  width: 100%;
+  border: 0;
+  background-color: inherit;
+  margin: 0;
+}
+.datepicker-wrapper[_ngcontent-ng-c4282332133]   .__datepicker-mobile[_ngcontent-ng-c4282332133]   .placeholder[_ngcontent-ng-c4282332133]:before {
+  content: attr(placeholder) !important;
+  margin-right: 0.5em;
+}
+.datepicker-wrapper[_ngcontent-ng-c4282332133]   .__datepicker-mobile[_ngcontent-ng-c4282332133]   .placeholder[_ngcontent-ng-c4282332133]:focus:before, 
+.datepicker-wrapper[_ngcontent-ng-c4282332133]   .__datepicker-mobile[_ngcontent-ng-c4282332133]   .placeholder[_ngcontent-ng-c4282332133]:valid:before {
+  content: "";
+}
+.datepicker-wrapper[_ngcontent-ng-c4282332133]   .__datepicker-mobile.--dark[_ngcontent-ng-c4282332133] {
+  background-color: #d0d3d9;
+}
+
+.today[_ngcontent-ng-c4282332133] {
+  color: #f39d35;
+}
+
+.datepicker-calendar-wrapper[_ngcontent-ng-c4282332133] {
+  position: absolute;
+  background-color: #ffffff;
+  width: 280px;
+  height: auto;
+  border-radius: 4px;
+  z-index: 1000;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 20px 0px !important;
+}
+.datepicker-calendar-wrapper[_ngcontent-ng-c4282332133]   .year-container[_ngcontent-ng-c4282332133], 
+.datepicker-calendar-wrapper[_ngcontent-ng-c4282332133]   .month-container[_ngcontent-ng-c4282332133], 
+.datepicker-calendar-wrapper[_ngcontent-ng-c4282332133]   .day-container[_ngcontent-ng-c4282332133] {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 0.7em 0.9em;
+}
+.datepicker-calendar-wrapper[_ngcontent-ng-c4282332133]   .day-container[_ngcontent-ng-c4282332133]   table[_ngcontent-ng-c4282332133] {
+  width: 100%;
+  height: auto;
+}
+.datepicker-calendar-wrapper[_ngcontent-ng-c4282332133]   .day-container[_ngcontent-ng-c4282332133]   table[_ngcontent-ng-c4282332133]   th[_ngcontent-ng-c4282332133] {
+  font-weight: 500;
+}
+.datepicker-calendar-wrapper[_ngcontent-ng-c4282332133]   .day-container[_ngcontent-ng-c4282332133]   table[_ngcontent-ng-c4282332133]   th[_ngcontent-ng-c4282332133], 
+.datepicker-calendar-wrapper[_ngcontent-ng-c4282332133]   .day-container[_ngcontent-ng-c4282332133]   table[_ngcontent-ng-c4282332133]   td[_ngcontent-ng-c4282332133] {
+  padding: 0.2em;
+  margin: 0.2em;
+  text-align: center;
+  cursor: pointer;
+}
+.datepicker-calendar-wrapper[_ngcontent-ng-c4282332133]   .day-container[_ngcontent-ng-c4282332133]   table[_ngcontent-ng-c4282332133]   th[_ngcontent-ng-c4282332133], 
+.datepicker-calendar-wrapper[_ngcontent-ng-c4282332133]   .day-container[_ngcontent-ng-c4282332133]   table[_ngcontent-ng-c4282332133]   td[_ngcontent-ng-c4282332133] {
+  -webkit-transition: background 250ms ease, width 250ms ease, opacity 250ms ease, outline 250ms ease, box-shadow 250ms ease, border 250ms ease, color 250ms ease;
+  -moz-transition: background 250ms ease, width 250ms ease, opacity 250ms ease, outline 250ms ease, box-shadow 250ms ease, border 250ms ease, color 250ms ease;
+  -ms-transition: background 250ms ease, width 250ms ease, opacity 250ms ease, outline 250ms ease, box-shadow 250ms ease, border 250ms ease, color 250ms ease;
+  -o-transition: background 250ms ease, width 250ms ease, opacity 250ms ease, outline 250ms ease, box-shadow 250ms ease, border 250ms ease, color 250ms ease;
+  transition: background 250ms ease, width 250ms ease, opacity 250ms ease, outline 250ms ease, box-shadow 250ms ease, border 250ms ease, color 250ms ease;
+}
+.datepicker-calendar-wrapper[_ngcontent-ng-c4282332133]   .day-container[_ngcontent-ng-c4282332133]   table[_ngcontent-ng-c4282332133]   td.active[_ngcontent-ng-c4282332133] {
+  background-color: #363e51;
+  border-radius: 10%;
+  color: #fff;
+}
+.datepicker-calendar-wrapper[_ngcontent-ng-c4282332133]   .day-container[_ngcontent-ng-c4282332133]   table[_ngcontent-ng-c4282332133]   td.outOfRange[_ngcontent-ng-c4282332133] {
+  color: #d0d3d9;
+  cursor: not-allowed;
+}
+.datepicker-calendar-wrapper[_ngcontent-ng-c4282332133]   .day-container[_ngcontent-ng-c4282332133]   table[_ngcontent-ng-c4282332133]   td.outOfRange[_ngcontent-ng-c4282332133]:hover {
+  background: none !important;
+  color: #d0d3d9 !important;
+}
+.datepicker-calendar-wrapper[_ngcontent-ng-c4282332133]   .month-container[_ngcontent-ng-c4282332133]   .active[_ngcontent-ng-c4282332133] {
+  background-color: #363e51;
+  border-radius: 10%;
+  color: #fff;
+}
+.datepicker-calendar-wrapper[_ngcontent-ng-c4282332133]   table[_ngcontent-ng-c4282332133]   td[_ngcontent-ng-c4282332133]:hover {
+  background-color: #363e51;
+  border-radius: 10%;
+  color: #fff;
+}
+.datepicker-calendar-wrapper[_ngcontent-ng-c4282332133]   .skip-select-row[_ngcontent-ng-c4282332133], 
+.datepicker-calendar-wrapper[_ngcontent-ng-c4282332133]   .scope-select-row[_ngcontent-ng-c4282332133] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex: 1 1 100%;
+}
+.datepicker-calendar-wrapper[_ngcontent-ng-c4282332133]   .scope-select-row[_ngcontent-ng-c4282332133]   a[_ngcontent-ng-c4282332133] {
+  text-decoration: underline;
+}
+.datepicker-calendar-wrapper[_ngcontent-ng-c4282332133]   .scope-select-row[_ngcontent-ng-c4282332133]   a[_ngcontent-ng-c4282332133]:hover {
+  text-decoration: none;
+}
+.datepicker-calendar-wrapper[_ngcontent-ng-c4282332133]   .scope-select-row[_ngcontent-ng-c4282332133]   a.active[_ngcontent-ng-c4282332133] {
+  text-decoration: none;
+  font-weight: 500;
+}
+.datepicker-calendar-wrapper[_ngcontent-ng-c4282332133]   .scope-select-container[_ngcontent-ng-c4282332133], 
+.datepicker-calendar-wrapper[_ngcontent-ng-c4282332133]   .skip-select-container[_ngcontent-ng-c4282332133] {
+  padding: 10px 30px;
+}
+.datepicker-calendar-wrapper[_ngcontent-ng-c4282332133]   .skip-select-button[_ngcontent-ng-c4282332133] {
+  width: 10px;
+  height: 18px;
+  background-color: #ccc;
+}
+.datepicker-calendar-wrapper[_ngcontent-ng-c4282332133]   .bottom-border[_ngcontent-ng-c4282332133] {
+  border-bottom: 1px solid #ccc;
+}
+.datepicker-calendar-wrapper[_ngcontent-ng-c4282332133]   .month-table[_ngcontent-ng-c4282332133]   td.active[_ngcontent-ng-c4282332133] {
+  background-color: #ccc;
+}
+.datepicker-calendar-wrapper[_ngcontent-ng-c4282332133]   .year-select[_ngcontent-ng-c4282332133], 
+.datepicker-calendar-wrapper[_ngcontent-ng-c4282332133]   .month-select[_ngcontent-ng-c4282332133] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4em 0.7em;
+  margin: 0.2em;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.datepicker-calendar-wrapper[_ngcontent-ng-c4282332133]   .year-select[_ngcontent-ng-c4282332133], 
+.datepicker-calendar-wrapper[_ngcontent-ng-c4282332133]   .month-select[_ngcontent-ng-c4282332133] {
+  -webkit-transition: background 150ms ease, width 150ms ease, opacity 150ms ease, outline 150ms ease, box-shadow 150ms ease, border 150ms ease, color 150ms ease;
+  -moz-transition: background 150ms ease, width 150ms ease, opacity 150ms ease, outline 150ms ease, box-shadow 150ms ease, border 150ms ease, color 150ms ease;
+  -ms-transition: background 150ms ease, width 150ms ease, opacity 150ms ease, outline 150ms ease, box-shadow 150ms ease, border 150ms ease, color 150ms ease;
+  -o-transition: background 150ms ease, width 150ms ease, opacity 150ms ease, outline 150ms ease, box-shadow 150ms ease, border 150ms ease, color 150ms ease;
+  transition: background 150ms ease, width 150ms ease, opacity 150ms ease, outline 150ms ease, box-shadow 150ms ease, border 150ms ease, color 150ms ease;
+}
+.datepicker-calendar-wrapper[_ngcontent-ng-c4282332133]   .year-select.outOfRange[_ngcontent-ng-c4282332133], 
+.datepicker-calendar-wrapper[_ngcontent-ng-c4282332133]   .month-select.outOfRange[_ngcontent-ng-c4282332133] {
+  color: #d0d3d9;
+  cursor: not-allowed;
+}
+.datepicker-calendar-wrapper[_ngcontent-ng-c4282332133]   .year-select.outOfRange[_ngcontent-ng-c4282332133]:hover, 
+.datepicker-calendar-wrapper[_ngcontent-ng-c4282332133]   .month-select.outOfRange[_ngcontent-ng-c4282332133]:hover {
+  background: none !important;
+  color: #d0d3d9;
+}
+.datepicker-calendar-wrapper[_ngcontent-ng-c4282332133]   .year-select[_ngcontent-ng-c4282332133]:hover, 
+.datepicker-calendar-wrapper[_ngcontent-ng-c4282332133]   .month-select[_ngcontent-ng-c4282332133]:hover {
+  background-color: #363e51;
+  color: #fff;
+}
+.datepicker-calendar-wrapper[_ngcontent-ng-c4282332133]   .year-select.active[_ngcontent-ng-c4282332133] {
+  background-color: #363e51;
+  color: #fff;
+}
+.datepicker-calendar-wrapper[_ngcontent-ng-c4282332133]   .btn-icon[_ngcontent-ng-c4282332133] {
+  font-size: 0.7em;
+}
+.datepicker-calendar-wrapper[_ngcontent-ng-c4282332133]   .skip-text[_ngcontent-ng-c4282332133] {
+  line-height: 2.3em;
+  font-size: 1em;
+  font-weight: 500;
+}
+.datepicker-calendar-wrapper[_ngcontent-ng-c4282332133]   .p-col[_ngcontent-ng-c4282332133] {
+  padding: 0.5rem 1rem;
+}</style><style>input[type=text][_ngcontent-ng-c2321362635], 
+input[type=date][_ngcontent-ng-c2321362635], 
+input[type=datetime][_ngcontent-ng-c2321362635], 
+input[type=number][_ngcontent-ng-c2321362635], 
+input[type=tel][_ngcontent-ng-c2321362635], 
+input[type=search][_ngcontent-ng-c2321362635], 
+input[type=time][_ngcontent-ng-c2321362635], 
+input[type=url][_ngcontent-ng-c2321362635], 
+input[type=email][_ngcontent-ng-c2321362635], 
+input[type=password][_ngcontent-ng-c2321362635], 
+textarea[_ngcontent-ng-c2321362635], 
+select[_ngcontent-ng-c2321362635], 
+.inputStyle[_ngcontent-ng-c2321362635], 
+[_nghost-ng-c2321362635]   .__calling-codes[_ngcontent-ng-c2321362635] {
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  background-color: #eff2f5;
+  height: 44px;
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1.5;
+  padding: 0 10px 0 10px;
+  font-family: "Roboto";
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: black;
+}
+
+textarea[_ngcontent-ng-c2321362635] {
+  resize: none;
+}
+
+input[type=number][_ngcontent-ng-c2321362635]::-webkit-outer-spin-button, 
+input[type=number][_ngcontent-ng-c2321362635]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number][_ngcontent-ng-c2321362635] {
+  -moz-appearance: textfield;
+}
+
+select[_ngcontent-ng-c2321362635] {
+  background: url("/src/assets/images/arrow-dropdown.svg") 96%/20px no-repeat #eff2f5;
+}
+
+.placeholderHack[_ngcontent-ng-c2321362635] {
+  color: #bcbcbc !important;
+}
+
+
+
+*[_ngcontent-ng-c2321362635]::-webkit-input-placeholder {
+  color: #bcbcbc;
+}
+
+*[_ngcontent-ng-c2321362635]:-moz-placeholder {
+  color: #bcbcbc;
+}
+
+*[_ngcontent-ng-c2321362635]::-moz-placeholder {
+  color: #bcbcbc;
+}
+
+*[_ngcontent-ng-c2321362635]:-ms-input-placeholder {
+  color: #bcbcbc;
+}
+
+hr.divider[_ngcontent-ng-c2321362635] {
+  margin: 20px -20px;
+  height: 1px;
+  background-color: #eff2f5;
+  border: 0;
+}
+@media screen and (max-width: 800px) {
+  hr.divider[_ngcontent-ng-c2321362635] {
+    margin: 20px -15px;
+  }
+}
+
+.checkbox-wrapper[_ngcontent-ng-c2321362635]   input[_ngcontent-ng-c2321362635] {
+  position: absolute;
+  opacity: 0;
+  display: none;
+}
+.checkbox-wrapper[_ngcontent-ng-c2321362635]   label[_ngcontent-ng-c2321362635] {
+  position: relative;
+  cursor: pointer;
+}
+.checkbox-wrapper[_ngcontent-ng-c2321362635]   label[_ngcontent-ng-c2321362635]:before {
+  content: "";
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 2px solid #43b38d;
+  padding: 10px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 5px;
+  border-radius: 4px;
+}
+.checkbox-wrapper[_ngcontent-ng-c2321362635]   label[_ngcontent-ng-c2321362635]:before {
+  -webkit-transition: background 250ms ease, width 250ms ease, opacity 250ms ease, outline 250ms ease, box-shadow 250ms ease, border 250ms ease, color 250ms ease;
+  -moz-transition: background 250ms ease, width 250ms ease, opacity 250ms ease, outline 250ms ease, box-shadow 250ms ease, border 250ms ease, color 250ms ease;
+  -ms-transition: background 250ms ease, width 250ms ease, opacity 250ms ease, outline 250ms ease, box-shadow 250ms ease, border 250ms ease, color 250ms ease;
+  -o-transition: background 250ms ease, width 250ms ease, opacity 250ms ease, outline 250ms ease, box-shadow 250ms ease, border 250ms ease, color 250ms ease;
+  transition: background 250ms ease, width 250ms ease, opacity 250ms ease, outline 250ms ease, box-shadow 250ms ease, border 250ms ease, color 250ms ease;
+}
+.checkbox-wrapper[_ngcontent-ng-c2321362635]   input[_ngcontent-ng-c2321362635]:checked    + label[_ngcontent-ng-c2321362635]:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 8px;
+  left: 9px;
+  width: 6px;
+  height: 14px;
+  border: solid #43b38d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.checkbox-wrapper[_ngcontent-ng-c2321362635]   input[_ngcontent-ng-c2321362635]:checked    + label[_ngcontent-ng-c2321362635]:before {
+  background-color: #43b38d;
+}
+.checkbox-wrapper[_ngcontent-ng-c2321362635]   input[_ngcontent-ng-c2321362635]:checked    + label[_ngcontent-ng-c2321362635]:after {
+  border-color: #ffffff;
+}
+
+.search[_ngcontent-ng-c2321362635] {
+  border-radius: 4px;
+  border: 1px #363e51 solid;
+  padding: 10px 10px 10px 30px;
+  font-size: 1em;
+  color: #363e51;
+}
+.search[_ngcontent-ng-c2321362635]:focus {
+  outline: 0;
+  -webkit-box-shadow: 0 0 1px 1px var(--brand-primary-color-light) !important;
+  box-shadow: 0 0 1px 1px var(--brand-primary-color-light) !important;
+}
+.search[_ngcontent-ng-c2321362635]::placeholder {
+  color: #363e51;
+  font-weight: 100;
+  letter-spacing: 0.04em;
+  font-size: 0.9em;
+}
+.search.--magnifier[_ngcontent-ng-c2321362635] {
+  background: url("/src/assets/uniqa/magnifier.svg") 8px/14px no-repeat;
+}
+.search.--pin[_ngcontent-ng-c2321362635] {
+  background: url("/src/assets/uniqa/pin.svg") 7px/17px no-repeat;
+}
+.search.--small[_ngcontent-ng-c2321362635] {
+  padding: 6px 10px 6px 30px;
+  font-size: 1em;
+}
+
+.dropdown.--filter[_ngcontent-ng-c2321362635] {
+  width: initial;
+  height: initial;
+  padding: 9px;
+  background-color: #ffffff;
+  border: 1px test solid;
+  font-size: 0.9em;
+}
+.dropdown.--small[_ngcontent-ng-c2321362635] {
+  padding: 4px 10px 4px 10px;
+  font-size: 1em;
+}
+
+.ng-select.profile-list-select[_ngcontent-ng-c2321362635]   .ng-value-container[_ngcontent-ng-c2321362635]   .ng-placeholder[_ngcontent-ng-c2321362635] {
+  top: 12px;
+  padding-bottom: 0;
+  text-transform: initial;
+  font-weight: 400;
+}
+.ng-select.profile-list-select[_ngcontent-ng-c2321362635]   .ng-select-container[_ngcontent-ng-c2321362635] {
+  border: 1px #e4e6eb solid !important;
+  height: 44px !important;
+}
+.ng-select.profile-list-select[_ngcontent-ng-c2321362635]   .ng-select-container[_ngcontent-ng-c2321362635]   .ng-value-container[_ngcontent-ng-c2321362635] {
+  padding-left: 30px !important;
+}
+.ng-select.profile-list-select[_ngcontent-ng-c2321362635]   .ng-select-container[_ngcontent-ng-c2321362635]   .ng-value-container[_ngcontent-ng-c2321362635]   .ng-input[_ngcontent-ng-c2321362635] {
+  top: 4px !important;
+  height: 30px !important;
+  padding-left: 30px !important;
+}
+.ng-select.profile-list-select[_ngcontent-ng-c2321362635]   .ng-select-container[_ngcontent-ng-c2321362635]   .ng-value-container[_ngcontent-ng-c2321362635]   .ng-input[_ngcontent-ng-c2321362635]   input[_ngcontent-ng-c2321362635] {
+  border-radius: 0px;
+  padding: 0px;
+  height: inherit;
+}
+.ng-select.profile-list-select[_ngcontent-ng-c2321362635]   .ng-option.ng-option-selected[_ngcontent-ng-c2321362635], 
+.ng-select.profile-list-select[_ngcontent-ng-c2321362635]   .ng-dropdown-panel[_ngcontent-ng-c2321362635]   .ng-dropdown-panel-items[_ngcontent-ng-c2321362635]   .ng-option.ng-option-marked[_ngcontent-ng-c2321362635] {
+  background-color: var(--brand-primary-color) !important;
+  color: #ffffff !important;
+}
+.ng-select.profile-list-select.ng-select-focused[_ngcontent-ng-c2321362635] {
+  outline: 0 !important;
+  border-radius: 4px !important;
+  -webkit-box-shadow: inset 0px 0px 2px 0px rgba(230, 230, 230, 0.71), 0 0 1px 1px var(--brand-primary-color-light) !important;
+  box-shadow: inset 0px 0px 2px 0px rgba(230, 230, 230, 0.71), 0 0 1px 1px var(--brand-primary-color-light) !important;
+}
+.ng-select.profile-list-select.ng-select-focused[_ngcontent-ng-c2321362635]:not(.ng-select-opened)    > .ng-select-container[_ngcontent-ng-c2321362635] {
+  outline: 0 !important;
+  -webkit-box-shadow: 0 !important;
+  box-shadow: none !important;
+}
+.ng-select.profile-list-select[_ngcontent-ng-c2321362635]   .ng-value[_ngcontent-ng-c2321362635] {
+  white-space: pre-wrap !important;
+}
+
+.profile-list-select.--pin[_ngcontent-ng-c2321362635]   .ng-select-container[_ngcontent-ng-c2321362635]   .ng-value-container[_ngcontent-ng-c2321362635]   .ng-input[_ngcontent-ng-c2321362635] {
+  background: url("/src/assets/uniqa/pin.svg") 7px/15px no-repeat !important;
+}
+
+.profile-list-select.--magnifier[_ngcontent-ng-c2321362635]   .ng-select-container[_ngcontent-ng-c2321362635]   .ng-value-container[_ngcontent-ng-c2321362635]   .ng-input[_ngcontent-ng-c2321362635] {
+  background: url("/src/assets/uniqa/magnifier.svg") 7px/13px no-repeat !important;
+}
+
+.ng-select.profile-list-multiple-select[_ngcontent-ng-c2321362635]   .ng-select-container[_ngcontent-ng-c2321362635] {
+  min-height: 44px;
+  border: 1px solid #e4e6eb;
+}
+.ng-select.profile-list-multiple-select[_ngcontent-ng-c2321362635]   .ng-select-container[_ngcontent-ng-c2321362635]   .ng-value-container[_ngcontent-ng-c2321362635] {
+  padding-left: 30px;
+}
+.ng-select.profile-list-multiple-select[_ngcontent-ng-c2321362635]   .ng-select-container[_ngcontent-ng-c2321362635]   .ng-value-container[_ngcontent-ng-c2321362635]   .ng-placeholder[_ngcontent-ng-c2321362635] {
+  top: 12px;
+  padding-bottom: 0;
+  text-transform: initial;
+  font-weight: 400;
+}
+.ng-select.profile-list-multiple-select[_ngcontent-ng-c2321362635]   .ng-select-container[_ngcontent-ng-c2321362635]   .ng-value-container[_ngcontent-ng-c2321362635]   .ng-value[_ngcontent-ng-c2321362635] {
+  display: flex;
+  background-color: var(--brand-primary-color) !important;
+  color: #ffffff;
+  border: 1px solid var(--brand-primary-color-light) !important;
+  border-radius: 4px !important;
+  justify-content: center;
+  align-items: center;
+}
+.ng-select.profile-list-multiple-select[_ngcontent-ng-c2321362635]   .ng-select-container[_ngcontent-ng-c2321362635]   .ng-value-container[_ngcontent-ng-c2321362635]   .ng-value[_ngcontent-ng-c2321362635]   .ng-value-icon[_ngcontent-ng-c2321362635] {
+  padding: 5px !important;
+}
+.ng-select.profile-list-multiple-select[_ngcontent-ng-c2321362635]   .ng-select-container[_ngcontent-ng-c2321362635]   .ng-value-container[_ngcontent-ng-c2321362635]   .ng-value[_ngcontent-ng-c2321362635]   .ng-value-icon[_ngcontent-ng-c2321362635]:hover {
+  background-color: var(--brand-primary-color-light) !important;
+}
+.ng-select.profile-list-multiple-select[_ngcontent-ng-c2321362635]   .ng-select-container[_ngcontent-ng-c2321362635]   .ng-value-container[_ngcontent-ng-c2321362635]   .ng-value[_ngcontent-ng-c2321362635]   .ng-value-icon.left[_ngcontent-ng-c2321362635] {
+  border-right: 1px solid var(--brand-primary-color-light) !important;
+}
+.ng-select.profile-list-multiple-select[_ngcontent-ng-c2321362635]   .ng-select-container[_ngcontent-ng-c2321362635]   .ng-value-container[_ngcontent-ng-c2321362635]   .ng-value-label[_ngcontent-ng-c2321362635] {
+  max-width: 120px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.ng-select.profile-list-multiple-select[_ngcontent-ng-c2321362635]   .ng-input[_ngcontent-ng-c2321362635]   input[_ngcontent-ng-c2321362635] {
+  height: initial;
+  padding: 0;
+}
+.ng-select.profile-list-multiple-select.ng-select-focused[_ngcontent-ng-c2321362635] {
+  outline: 0 !important;
+  border-radius: 4px !important;
+  -webkit-box-shadow: inset 0px 0px 2px 0px rgba(230, 230, 230, 0.71), 0 0 1px 1px var(--brand-primary-color-light) !important;
+  box-shadow: inset 0px 0px 2px 0px rgba(230, 230, 230, 0.71), 0 0 1px 1px var(--brand-primary-color-light) !important;
+}
+.ng-select.profile-list-multiple-select.ng-select-focused[_ngcontent-ng-c2321362635]:not(.ng-select-opened)    > .ng-select-container[_ngcontent-ng-c2321362635] {
+  outline: 0 !important;
+  -webkit-box-shadow: 0 !important;
+  box-shadow: none !important;
+  border-color: transparent;
+}
+.ng-select.profile-list-multiple-select[_ngcontent-ng-c2321362635]   .ng-option.ng-option-selected[_ngcontent-ng-c2321362635], 
+.ng-select.profile-list-multiple-select[_ngcontent-ng-c2321362635]   .ng-dropdown-panel[_ngcontent-ng-c2321362635]   .ng-dropdown-panel-items[_ngcontent-ng-c2321362635]   .ng-option.ng-option-marked[_ngcontent-ng-c2321362635] {
+  background-color: var(--brand-primary-color) !important;
+  color: #ffffff !important;
+}
+.ng-select.profile-list-multiple-select[_ngcontent-ng-c2321362635]:focus {
+  -webkit-box-shadow: inset 0px 0px 2px 0px rgba(230, 230, 230, 0.71), 0 0 1px 1px var(--brand-primary-color-light) !important;
+  box-shadow: inset 0px 0px 2px 0px rgba(230, 230, 230, 0.71), 0 0 1px 1px var(--brand-primary-color-light) !important;
+  outline-color: var(--brand-primary-color);
+}
+.ng-select.profile-list-multiple-select.--language[_ngcontent-ng-c2321362635]   .ng-select-container[_ngcontent-ng-c2321362635] {
+  background: url("/src/assets/images/language.svg") 10px/15px no-repeat !important;
+}
+.ng-select.profile-list-multiple-select.--schedule[_ngcontent-ng-c2321362635]   .ng-select-container[_ngcontent-ng-c2321362635] {
+  background: url("/src/assets/images/time-grey.svg") 10px/15px no-repeat !important;
+}
+.ng-select.profile-list-multiple-select.--speciality[_ngcontent-ng-c2321362635]   .ng-select-container[_ngcontent-ng-c2321362635] {
+  background: url("/src/assets/images/speciality.png") 10px/15px no-repeat !important;
+}
+
+input[type=text][_ngcontent-ng-c2321362635], 
+input[type=date][_ngcontent-ng-c2321362635], 
+input[type=datetime][_ngcontent-ng-c2321362635], 
+input[type=number][_ngcontent-ng-c2321362635], 
+input[type=tel][_ngcontent-ng-c2321362635], 
+input[type=search][_ngcontent-ng-c2321362635], 
+input[type=time][_ngcontent-ng-c2321362635], 
+input[type=url][_ngcontent-ng-c2321362635], 
+input[type=email][_ngcontent-ng-c2321362635], 
+input[type=password][_ngcontent-ng-c2321362635], 
+textarea[_ngcontent-ng-c2321362635], 
+select[_ngcontent-ng-c2321362635], 
+.password-wrapper[_ngcontent-ng-c2321362635], 
+.inputStyle[_ngcontent-ng-c2321362635], 
+[_nghost-ng-c2321362635]   .__calling-codes[_ngcontent-ng-c2321362635] {
+  border: 1px solid #e4e6eb;
+  background-color: #ffffff;
+  -webkit-box-shadow: inset 0px 0px 2px 0px rgba(230, 230, 230, 0.71);
+  -moz-box-shadow: inset 0px 0px 2px 0px rgba(230, 230, 230, 0.71);
+  box-shadow: inset 0px 0px 2px 0px rgba(230, 230, 230, 0.71);
+}
+input[type=text][_ngcontent-ng-c2321362635]:focus, input[type=text][_ngcontent-ng-c2321362635]:focus-within, 
+input[type=date][_ngcontent-ng-c2321362635]:focus, 
+input[type=date][_ngcontent-ng-c2321362635]:focus-within, 
+input[type=datetime][_ngcontent-ng-c2321362635]:focus, 
+input[type=datetime][_ngcontent-ng-c2321362635]:focus-within, 
+input[type=number][_ngcontent-ng-c2321362635]:focus, 
+input[type=number][_ngcontent-ng-c2321362635]:focus-within, 
+input[type=tel][_ngcontent-ng-c2321362635]:focus, 
+input[type=tel][_ngcontent-ng-c2321362635]:focus-within, 
+input[type=search][_ngcontent-ng-c2321362635]:focus, 
+input[type=search][_ngcontent-ng-c2321362635]:focus-within, 
+input[type=time][_ngcontent-ng-c2321362635]:focus, 
+input[type=time][_ngcontent-ng-c2321362635]:focus-within, 
+input[type=url][_ngcontent-ng-c2321362635]:focus, 
+input[type=url][_ngcontent-ng-c2321362635]:focus-within, 
+input[type=email][_ngcontent-ng-c2321362635]:focus, 
+input[type=email][_ngcontent-ng-c2321362635]:focus-within, 
+input[type=password][_ngcontent-ng-c2321362635]:focus, 
+input[type=password][_ngcontent-ng-c2321362635]:focus-within, 
+textarea[_ngcontent-ng-c2321362635]:focus, 
+textarea[_ngcontent-ng-c2321362635]:focus-within, 
+select[_ngcontent-ng-c2321362635]:focus, 
+select[_ngcontent-ng-c2321362635]:focus-within, 
+.password-wrapper[_ngcontent-ng-c2321362635]:focus, 
+.password-wrapper[_ngcontent-ng-c2321362635]:focus-within, 
+.inputStyle[_ngcontent-ng-c2321362635]:focus, 
+[_nghost-ng-c2321362635]   .__calling-codes[_ngcontent-ng-c2321362635]:focus, 
+.inputStyle[_ngcontent-ng-c2321362635]:focus-within, 
+[_nghost-ng-c2321362635]   .__calling-codes[_ngcontent-ng-c2321362635]:focus-within {
+  outline: 0;
+  -webkit-box-shadow: 0 0 1px 1px var(--brand-primary-color-light);
+  box-shadow: 0 0 1px 1px var(--brand-primary-color-light);
+}
+
+.login[_ngcontent-ng-c2321362635]   mimi-form-input[_ngcontent-ng-c2321362635], 
+.recover[_ngcontent-ng-c2321362635]   mimi-form-input[_ngcontent-ng-c2321362635], 
+.recover-success[_ngcontent-ng-c2321362635]   mimi-form-input[_ngcontent-ng-c2321362635], 
+.token-success[_ngcontent-ng-c2321362635]   mimi-form-input[_ngcontent-ng-c2321362635], 
+.set-new-password[_ngcontent-ng-c2321362635]   mimi-form-input[_ngcontent-ng-c2321362635], 
+.signup[_ngcontent-ng-c2321362635]   mimi-form-input[_ngcontent-ng-c2321362635] {
+  display: block;
+  margin-bottom: 15px;
+}
+.login[_ngcontent-ng-c2321362635]   .btn-primary[_ngcontent-ng-c2321362635], 
+.login[_ngcontent-ng-c2321362635]   .btn-secondary[_ngcontent-ng-c2321362635], 
+.recover[_ngcontent-ng-c2321362635]   .btn-primary[_ngcontent-ng-c2321362635], 
+.recover[_ngcontent-ng-c2321362635]   .btn-secondary[_ngcontent-ng-c2321362635], 
+.recover-success[_ngcontent-ng-c2321362635]   .btn-primary[_ngcontent-ng-c2321362635], 
+.recover-success[_ngcontent-ng-c2321362635]   .btn-secondary[_ngcontent-ng-c2321362635], 
+.token-success[_ngcontent-ng-c2321362635]   .btn-primary[_ngcontent-ng-c2321362635], 
+.token-success[_ngcontent-ng-c2321362635]   .btn-secondary[_ngcontent-ng-c2321362635], 
+.set-new-password[_ngcontent-ng-c2321362635]   .btn-primary[_ngcontent-ng-c2321362635], 
+.set-new-password[_ngcontent-ng-c2321362635]   .btn-secondary[_ngcontent-ng-c2321362635], 
+.signup[_ngcontent-ng-c2321362635]   .btn-primary[_ngcontent-ng-c2321362635], 
+.signup[_ngcontent-ng-c2321362635]   .btn-secondary[_ngcontent-ng-c2321362635] {
+  width: 100%;
+  text-align: center;
+}
+.login[_ngcontent-ng-c2321362635]   .btn-primary[_ngcontent-ng-c2321362635], 
+.recover[_ngcontent-ng-c2321362635]   .btn-primary[_ngcontent-ng-c2321362635], 
+.recover-success[_ngcontent-ng-c2321362635]   .btn-primary[_ngcontent-ng-c2321362635], 
+.token-success[_ngcontent-ng-c2321362635]   .btn-primary[_ngcontent-ng-c2321362635], 
+.set-new-password[_ngcontent-ng-c2321362635]   .btn-primary[_ngcontent-ng-c2321362635], 
+.signup[_ngcontent-ng-c2321362635]   .btn-primary[_ngcontent-ng-c2321362635] {
+  margin-top: 7px;
+}
+.login[_ngcontent-ng-c2321362635]   .__header[_ngcontent-ng-c2321362635], 
+.recover[_ngcontent-ng-c2321362635]   .__header[_ngcontent-ng-c2321362635], 
+.recover-success[_ngcontent-ng-c2321362635]   .__header[_ngcontent-ng-c2321362635], 
+.token-success[_ngcontent-ng-c2321362635]   .__header[_ngcontent-ng-c2321362635], 
+.set-new-password[_ngcontent-ng-c2321362635]   .__header[_ngcontent-ng-c2321362635], 
+.signup[_ngcontent-ng-c2321362635]   .__header[_ngcontent-ng-c2321362635] {
+  font-size: 1.3em;
+  color: #000;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.login[_ngcontent-ng-c2321362635]   .__header[_ngcontent-ng-c2321362635]   .__icon-wrapper[_ngcontent-ng-c2321362635], 
+.recover[_ngcontent-ng-c2321362635]   .__header[_ngcontent-ng-c2321362635]   .__icon-wrapper[_ngcontent-ng-c2321362635], 
+.recover-success[_ngcontent-ng-c2321362635]   .__header[_ngcontent-ng-c2321362635]   .__icon-wrapper[_ngcontent-ng-c2321362635], 
+.token-success[_ngcontent-ng-c2321362635]   .__header[_ngcontent-ng-c2321362635]   .__icon-wrapper[_ngcontent-ng-c2321362635], 
+.set-new-password[_ngcontent-ng-c2321362635]   .__header[_ngcontent-ng-c2321362635]   .__icon-wrapper[_ngcontent-ng-c2321362635], 
+.signup[_ngcontent-ng-c2321362635]   .__header[_ngcontent-ng-c2321362635]   .__icon-wrapper[_ngcontent-ng-c2321362635] {
+  display: flex;
+  flex: 1 1 100%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.login[_ngcontent-ng-c2321362635]   .__header[_ngcontent-ng-c2321362635]   .__title[_ngcontent-ng-c2321362635], 
+.recover[_ngcontent-ng-c2321362635]   .__header[_ngcontent-ng-c2321362635]   .__title[_ngcontent-ng-c2321362635], 
+.recover-success[_ngcontent-ng-c2321362635]   .__header[_ngcontent-ng-c2321362635]   .__title[_ngcontent-ng-c2321362635], 
+.token-success[_ngcontent-ng-c2321362635]   .__header[_ngcontent-ng-c2321362635]   .__title[_ngcontent-ng-c2321362635], 
+.set-new-password[_ngcontent-ng-c2321362635]   .__header[_ngcontent-ng-c2321362635]   .__title[_ngcontent-ng-c2321362635], 
+.signup[_ngcontent-ng-c2321362635]   .__header[_ngcontent-ng-c2321362635]   .__title[_ngcontent-ng-c2321362635] {
+  display: flex;
+  flex: 1 1 100%;
+  align-items: center;
+  justify-content: center;
+}
+.login[_ngcontent-ng-c2321362635]   .__header[_ngcontent-ng-c2321362635]   .icon-check[_ngcontent-ng-c2321362635], 
+.recover[_ngcontent-ng-c2321362635]   .__header[_ngcontent-ng-c2321362635]   .icon-check[_ngcontent-ng-c2321362635], 
+.recover-success[_ngcontent-ng-c2321362635]   .__header[_ngcontent-ng-c2321362635]   .icon-check[_ngcontent-ng-c2321362635], 
+.token-success[_ngcontent-ng-c2321362635]   .__header[_ngcontent-ng-c2321362635]   .icon-check[_ngcontent-ng-c2321362635], 
+.set-new-password[_ngcontent-ng-c2321362635]   .__header[_ngcontent-ng-c2321362635]   .icon-check[_ngcontent-ng-c2321362635], 
+.signup[_ngcontent-ng-c2321362635]   .__header[_ngcontent-ng-c2321362635]   .icon-check[_ngcontent-ng-c2321362635] {
+  color: #43b38d;
+}
+.login[_ngcontent-ng-c2321362635]   .__content[_ngcontent-ng-c2321362635], 
+.recover[_ngcontent-ng-c2321362635]   .__content[_ngcontent-ng-c2321362635], 
+.recover-success[_ngcontent-ng-c2321362635]   .__content[_ngcontent-ng-c2321362635], 
+.token-success[_ngcontent-ng-c2321362635]   .__content[_ngcontent-ng-c2321362635], 
+.set-new-password[_ngcontent-ng-c2321362635]   .__content[_ngcontent-ng-c2321362635], 
+.signup[_ngcontent-ng-c2321362635]   .__content[_ngcontent-ng-c2321362635] {
+  display: flex;
+  flex: 1 1 100%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-flow: row wrap;
+}
+.login[_ngcontent-ng-c2321362635]   .__content[_ngcontent-ng-c2321362635]   span[_ngcontent-ng-c2321362635], 
+.recover[_ngcontent-ng-c2321362635]   .__content[_ngcontent-ng-c2321362635]   span[_ngcontent-ng-c2321362635], 
+.recover-success[_ngcontent-ng-c2321362635]   .__content[_ngcontent-ng-c2321362635]   span[_ngcontent-ng-c2321362635], 
+.token-success[_ngcontent-ng-c2321362635]   .__content[_ngcontent-ng-c2321362635]   span[_ngcontent-ng-c2321362635], 
+.set-new-password[_ngcontent-ng-c2321362635]   .__content[_ngcontent-ng-c2321362635]   span[_ngcontent-ng-c2321362635], 
+.signup[_ngcontent-ng-c2321362635]   .__content[_ngcontent-ng-c2321362635]   span[_ngcontent-ng-c2321362635] {
+  text-align: center;
+}
+.login[_ngcontent-ng-c2321362635]   .__action[_ngcontent-ng-c2321362635], 
+.recover[_ngcontent-ng-c2321362635]   .__action[_ngcontent-ng-c2321362635], 
+.recover-success[_ngcontent-ng-c2321362635]   .__action[_ngcontent-ng-c2321362635], 
+.token-success[_ngcontent-ng-c2321362635]   .__action[_ngcontent-ng-c2321362635], 
+.set-new-password[_ngcontent-ng-c2321362635]   .__action[_ngcontent-ng-c2321362635], 
+.signup[_ngcontent-ng-c2321362635]   .__action[_ngcontent-ng-c2321362635] {
+  margin-top: 15px;
+}
+.login[_ngcontent-ng-c2321362635]   .password-wrapper[_ngcontent-ng-c2321362635], 
+.recover[_ngcontent-ng-c2321362635]   .password-wrapper[_ngcontent-ng-c2321362635], 
+.recover-success[_ngcontent-ng-c2321362635]   .password-wrapper[_ngcontent-ng-c2321362635], 
+.token-success[_ngcontent-ng-c2321362635]   .password-wrapper[_ngcontent-ng-c2321362635], 
+.set-new-password[_ngcontent-ng-c2321362635]   .password-wrapper[_ngcontent-ng-c2321362635], 
+.signup[_ngcontent-ng-c2321362635]   .password-wrapper[_ngcontent-ng-c2321362635] {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  align-items: start;
+  width: 100%;
+  border-radius: 4px;
+}
+.login[_ngcontent-ng-c2321362635]   .password-wrapper[_ngcontent-ng-c2321362635]   .__input-wrapper[_ngcontent-ng-c2321362635], 
+.recover[_ngcontent-ng-c2321362635]   .password-wrapper[_ngcontent-ng-c2321362635]   .__input-wrapper[_ngcontent-ng-c2321362635], 
+.recover-success[_ngcontent-ng-c2321362635]   .password-wrapper[_ngcontent-ng-c2321362635]   .__input-wrapper[_ngcontent-ng-c2321362635], 
+.token-success[_ngcontent-ng-c2321362635]   .password-wrapper[_ngcontent-ng-c2321362635]   .__input-wrapper[_ngcontent-ng-c2321362635], 
+.set-new-password[_ngcontent-ng-c2321362635]   .password-wrapper[_ngcontent-ng-c2321362635]   .__input-wrapper[_ngcontent-ng-c2321362635], 
+.signup[_ngcontent-ng-c2321362635]   .password-wrapper[_ngcontent-ng-c2321362635]   .__input-wrapper[_ngcontent-ng-c2321362635] {
+  flex: 1 1 0%;
+  width: inherit;
+}
+.login[_ngcontent-ng-c2321362635]   .password-wrapper[_ngcontent-ng-c2321362635]   .__input-wrapper[_ngcontent-ng-c2321362635]   input[_ngcontent-ng-c2321362635], 
+.recover[_ngcontent-ng-c2321362635]   .password-wrapper[_ngcontent-ng-c2321362635]   .__input-wrapper[_ngcontent-ng-c2321362635]   input[_ngcontent-ng-c2321362635], 
+.recover-success[_ngcontent-ng-c2321362635]   .password-wrapper[_ngcontent-ng-c2321362635]   .__input-wrapper[_ngcontent-ng-c2321362635]   input[_ngcontent-ng-c2321362635], 
+.token-success[_ngcontent-ng-c2321362635]   .password-wrapper[_ngcontent-ng-c2321362635]   .__input-wrapper[_ngcontent-ng-c2321362635]   input[_ngcontent-ng-c2321362635], 
+.set-new-password[_ngcontent-ng-c2321362635]   .password-wrapper[_ngcontent-ng-c2321362635]   .__input-wrapper[_ngcontent-ng-c2321362635]   input[_ngcontent-ng-c2321362635], 
+.signup[_ngcontent-ng-c2321362635]   .password-wrapper[_ngcontent-ng-c2321362635]   .__input-wrapper[_ngcontent-ng-c2321362635]   input[_ngcontent-ng-c2321362635] {
+  outline: 0;
+  box-shadow: 0 0 0 0 transparent;
+  border: none;
+}
+.login[_ngcontent-ng-c2321362635]   .password-wrapper[_ngcontent-ng-c2321362635]   .btn-icon[_ngcontent-ng-c2321362635], 
+.recover[_ngcontent-ng-c2321362635]   .password-wrapper[_ngcontent-ng-c2321362635]   .btn-icon[_ngcontent-ng-c2321362635], 
+.recover-success[_ngcontent-ng-c2321362635]   .password-wrapper[_ngcontent-ng-c2321362635]   .btn-icon[_ngcontent-ng-c2321362635], 
+.token-success[_ngcontent-ng-c2321362635]   .password-wrapper[_ngcontent-ng-c2321362635]   .btn-icon[_ngcontent-ng-c2321362635], 
+.set-new-password[_ngcontent-ng-c2321362635]   .password-wrapper[_ngcontent-ng-c2321362635]   .btn-icon[_ngcontent-ng-c2321362635], 
+.signup[_ngcontent-ng-c2321362635]   .password-wrapper[_ngcontent-ng-c2321362635]   .btn-icon[_ngcontent-ng-c2321362635] {
+  flex: 0 1 auto;
+  height: 44px;
+  width: 40px;
+}
+.login[_ngcontent-ng-c2321362635]   .password-cleartext[_ngcontent-ng-c2321362635], 
+.recover[_ngcontent-ng-c2321362635]   .password-cleartext[_ngcontent-ng-c2321362635], 
+.recover-success[_ngcontent-ng-c2321362635]   .password-cleartext[_ngcontent-ng-c2321362635], 
+.token-success[_ngcontent-ng-c2321362635]   .password-cleartext[_ngcontent-ng-c2321362635], 
+.set-new-password[_ngcontent-ng-c2321362635]   .password-cleartext[_ngcontent-ng-c2321362635], 
+.signup[_ngcontent-ng-c2321362635]   .password-cleartext[_ngcontent-ng-c2321362635] {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.login[_ngcontent-ng-c2321362635]   .password-cleartext[_ngcontent-ng-c2321362635]   .icon-lock[_ngcontent-ng-c2321362635], 
+.recover[_ngcontent-ng-c2321362635]   .password-cleartext[_ngcontent-ng-c2321362635]   .icon-lock[_ngcontent-ng-c2321362635], 
+.recover-success[_ngcontent-ng-c2321362635]   .password-cleartext[_ngcontent-ng-c2321362635]   .icon-lock[_ngcontent-ng-c2321362635], 
+.token-success[_ngcontent-ng-c2321362635]   .password-cleartext[_ngcontent-ng-c2321362635]   .icon-lock[_ngcontent-ng-c2321362635], 
+.set-new-password[_ngcontent-ng-c2321362635]   .password-cleartext[_ngcontent-ng-c2321362635]   .icon-lock[_ngcontent-ng-c2321362635], 
+.signup[_ngcontent-ng-c2321362635]   .password-cleartext[_ngcontent-ng-c2321362635]   .icon-lock[_ngcontent-ng-c2321362635] {
+  flex: 0 1 auto;
+  margin-right: 5px;
+  color: #7f8d9a;
+}
+.login[_ngcontent-ng-c2321362635]   .password-cleartext[_ngcontent-ng-c2321362635]   span[_ngcontent-ng-c2321362635], 
+.recover[_ngcontent-ng-c2321362635]   .password-cleartext[_ngcontent-ng-c2321362635]   span[_ngcontent-ng-c2321362635], 
+.recover-success[_ngcontent-ng-c2321362635]   .password-cleartext[_ngcontent-ng-c2321362635]   span[_ngcontent-ng-c2321362635], 
+.token-success[_ngcontent-ng-c2321362635]   .password-cleartext[_ngcontent-ng-c2321362635]   span[_ngcontent-ng-c2321362635], 
+.set-new-password[_ngcontent-ng-c2321362635]   .password-cleartext[_ngcontent-ng-c2321362635]   span[_ngcontent-ng-c2321362635], 
+.signup[_ngcontent-ng-c2321362635]   .password-cleartext[_ngcontent-ng-c2321362635]   span[_ngcontent-ng-c2321362635] {
+  flex: 1 1 0%;
+}
+@-webkit-keyframes _ngcontent-ng-c2321362635_autofill {
+  0%, 100% {
+    color: #666;
+    background: transparent;
+  }
+}
+
+mat-dialog-container[_ngcontent-ng-c2321362635]   .mat-mdc-dialog-surface[_ngcontent-ng-c2321362635] {
+  padding: 10px;
+}
+
+.mat-mdc-dialog-surface[_ngcontent-ng-c2321362635]::before {
+  display: none;
+}
+
+.__mobile-view-btn-wrapper[_ngcontent-ng-c2321362635]   .btn[_ngcontent-ng-c2321362635] {
+  width: 100%;
+  text-align: center;
+}
+
+.fullscreen-dialog[_ngcontent-ng-c2321362635] {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+}
+
+.scrollable-modal[_ngcontent-ng-c2321362635]   ltdo-modal-body[_ngcontent-ng-c2321362635] {
+  max-height: 60vh !important;
+}
+.scrollable-modal.--max-width-500[_ngcontent-ng-c2321362635] {
+  max-width: 500px !important;
+}
+.scrollable-modal.--max-width-300[_ngcontent-ng-c2321362635] {
+  max-width: 300px !important;
+}
+
+[_nghost-ng-c2321362635] {
+  display: flex;
+  flex: 1;
+}
+[_nghost-ng-c2321362635]   .__code-wrapper[_ngcontent-ng-c2321362635] {
+  position: relative;
+}
+[_nghost-ng-c2321362635]   .__calling-codes[_ngcontent-ng-c2321362635] {
+  cursor: pointer;
+}
+[_nghost-ng-c2321362635]   .__calling-codes[_ngcontent-ng-c2321362635]   .icon-arrow[_ngcontent-ng-c2321362635] {
+  font-size: 0.8em;
+  transform: rotate(-90deg);
+}
+[_nghost-ng-c2321362635]   .__calling-codes-list-wrapper[_ngcontent-ng-c2321362635] {
+  position: absolute;
+  top: 100%;
+  margin-top: 1px;
+  width: 200px;
+  border: 1px solid #fafafb;
+  border-radius: 4px;
+  background-color: #ffffff;
+  z-index: 9000;
+}
+[_nghost-ng-c2321362635]   .__calling-codes-list-wrapper[_ngcontent-ng-c2321362635] {
+  -webkit-box-shadow: 0 0 8px -2px rgba(0, 0, 0, 0.3137254902);
+  box-shadow: 0 0 8px -2px rgba(0, 0, 0, 0.3137254902);
+}
+[_nghost-ng-c2321362635]   .__calling-code-list[_ngcontent-ng-c2321362635] {
+  color: #363e51;
+  font-size: 15px;
+  max-height: 200px;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+[_nghost-ng-c2321362635]   .__code-list-item[_ngcontent-ng-c2321362635] {
+  padding: 0.7em 0.9em;
+  border-bottom: 1px solid #e4e6eb;
+  border-right: 1px solid #e4e6eb;
+  cursor: pointer;
+}
+[_nghost-ng-c2321362635]   .__code-list-item[_ngcontent-ng-c2321362635]:hover {
+  background-color: #e4e6eb;
+}
+[_nghost-ng-c2321362635]   .__calling-code-search[_ngcontent-ng-c2321362635] {
+  padding: 8px 13px;
+  border-bottom: 1px solid #e4e6eb;
+}</style><style>.cdk-visually-hidden{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;white-space:nowrap;outline:0;-webkit-appearance:none;-moz-appearance:none;left:0}[dir=rtl] .cdk-visually-hidden{left:auto;right:0}</style></head>
+
+<body mimi-root="" ng-version="19.1.2" _nghost-ng-c2646666280=""><div _ngcontent-ng-c2646666280="" class="mimi-header"><header _ngcontent-ng-c2646666280="" mimi-header="" _nghost-ng-c1679001208=""><!----><!----><nav _ngcontent-ng-c1679001208="" test-tag="header-navbar"><a _ngcontent-ng-c1679001208="" href="/" class="__logo-wrapper"><div _ngcontent-ng-c1679001208="" class="logo"></div><div _ngcontent-ng-c1679001208="" class="follow-up-text"></div></a><div _ngcontent-ng-c1679001208="" class="__header-option"><div _ngcontent-ng-c1679001208="" class="__flag-wrapper"><a _ngcontent-ng-c1679001208="" class="__language-flag"><img _ngcontent-ng-c1679001208="" src="src/assets/images/flag-austria.svg"></a><a _ngcontent-ng-c1679001208="" class="__language-flag"><img _ngcontent-ng-c1679001208="" src="src/assets/images/flag-english.svg"></a></div><div _ngcontent-ng-c1679001208="" class="vertical-divider"></div><div _ngcontent-ng-c1679001208="" class="login-section"><button _ngcontent-ng-c1679001208="" type="button" routerlink="/login" class="btn btn-primary --small" tabindex="0"><i _ngcontent-ng-c1679001208="" class="ltdo icon-key"></i><span _ngcontent-ng-c1679001208="">anmelden</span></button><!----><!----></div></div></nav></header></div><!----><main _ngcontent-ng-c2646666280="" class="booking-main"><router-outlet _ngcontent-ng-c2646666280=""></router-outlet><mimi-booking _nghost-ng-c607629633=""><div _ngcontent-ng-c607629633="" class="booking fx-direction-row fx-flex-100 fx-gap-row-30px fx-layout-align-main-space-between fx-layout-align-cross-start fxm-lt-md-fx-direction-row fxm-lt-md-fx-wrap-wrap"><ltdo-stepper _ngcontent-ng-c607629633="" _nghost-ng-c4125507196=""><div _ngcontent-ng-c4125507196="" class="booking fx-direction-row fx-wrap-wrap"><ltdo-card _ngcontent-ng-c4125507196="" class="fx-direction-column fx-flex-100" _nghost-ng-c3762114856=""><div _ngcontent-ng-c3762114856="" class="card-wrapper"><div _ngcontent-ng-c3762114856="" class="__card-content"><ltdo-card-header _ngcontent-ng-c607629633="" _nghost-ng-c2850114337="" class="ng-star-inserted"><div _ngcontent-ng-c2850114337="" class="header-wrapper fx-direction-row fx-wrap-wrap fx-flex-100"><person-view _ngcontent-ng-c607629633="" class="fx-flex-nogrow fxm-lt-sm-fx-flex-100" _nghost-ng-c2640163326=""><div _ngcontent-ng-c2640163326="" class="doc-core-data fx-direction-row fx-flex-nogrow fx-gap-row-10px fx-layout-align-main-default fx-layout-align-cross-center md ng-star-inserted"><div _ngcontent-ng-c2640163326="" class="__no-image fx-layout-align-main-center fx-layout-align-cross-center ng-star-inserted"><i _ngcontent-ng-c2640163326="" class="ltdo icon-profile"></i></div><!----><!----><div _ngcontent-ng-c2640163326="" class="fx-direction-column"><div _ngcontent-ng-c2640163326="" class="coreData_name">Dr. Sandra Anglic-Zeitlinger</div><div _ngcontent-ng-c2640163326="" class="coreData_specialty fxm-xs-fx-hide ng-star-inserted">Ärztin für Allgemeinmedizin </div><!----><!----><!----></div></div><!----><!----><!----><!----></person-view></div></ltdo-card-header><ltdo-card-divider _ngcontent-ng-c607629633="" _nghost-ng-c1913553836="" class="ng-star-inserted"></ltdo-card-divider><ltdo-step _ngcontent-ng-c607629633="" _nghost-ng-c1550466813="" class="ng-star-inserted"><div _ngcontent-ng-c1550466813="" class="fx-direction-row fx-wrap-wrap fx-flex-100"><ltdo-card-header _ngcontent-ng-c1550466813="" _nghost-ng-c2850114337=""><div _ngcontent-ng-c2850114337="" class="header-wrapper fx-direction-row fx-wrap-wrap fx-flex-100"><div _ngcontent-ng-c1550466813="" class="__header"><span _ngcontent-ng-c1550466813="" class="circle"><span _ngcontent-ng-c1550466813="" class="ng-star-inserted">1</span><!----><!----></span><span _ngcontent-ng-c607629633="" class="__title medium ng-star-inserted">Wählen Sie einen Termintyp</span><!----><!----><!----><span _ngcontent-ng-c1550466813="" class="__title active"></span></div><ltdo-card-action _ngcontent-ng-c1550466813=""><!----><!----><button _ngcontent-ng-c1550466813="" type="button" class="btn btn-icon ng-star-inserted"><i _ngcontent-ng-c1550466813="" class="ltdo icon-arrow --open"></i></button><!----></ltdo-card-action></div></ltdo-card-header><ltdo-card-body _ngcontent-ng-c1550466813="" _nghost-ng-c3519873968="" class="ng-star-inserted"><div _ngcontent-ng-c3519873968="" class="card-body-wrapper"><!----><mimi-booking-select _ngcontent-ng-c607629633="" ltdostepped="" class="fx-flex-100" _nghost-ng-c1274955661=""><div _ngcontent-ng-c1274955661="" class="booking-select-wrapper fx-direction-row fx-wrap-wrap"><div _ngcontent-ng-c1274955661="" class="__content fx-flex-100"><!----></div><div _ngcontent-ng-c1274955661="" class="fx-direction-row fx-wrap-wrap fx-flex-100 fx-layout-align-main-space-between fx-layout-align-cross-center ng-star-inserted"><!----></div><!----></div></mimi-booking-select><!----></div></ltdo-card-body><!----><ltdo-card-divider _ngcontent-ng-c1550466813="" _nghost-ng-c1913553836=""></ltdo-card-divider></div></ltdo-step><!----><ltdo-step _ngcontent-ng-c607629633="" _nghost-ng-c1550466813="" class="ng-star-inserted"><div _ngcontent-ng-c1550466813="" class="fx-direction-row fx-wrap-wrap fx-flex-100"><ltdo-card-header _ngcontent-ng-c1550466813="" _nghost-ng-c2850114337=""><div _ngcontent-ng-c2850114337="" class="header-wrapper fx-direction-row fx-wrap-wrap fx-flex-100"><div _ngcontent-ng-c1550466813="" class="__header"><span _ngcontent-ng-c1550466813="" class="circle"><span _ngcontent-ng-c1550466813="" class="ng-star-inserted">2</span><!----><!----></span><span _ngcontent-ng-c607629633="" class="__title medium ng-star-inserted">Wählen Sie Ihren Wunschtermin</span><!----><!----><!----><!----><span _ngcontent-ng-c1550466813="" class="__title disabled"></span></div><ltdo-card-action _ngcontent-ng-c1550466813=""><!----><!----><button _ngcontent-ng-c1550466813="" type="button" class="btn btn-icon ng-star-inserted"><i _ngcontent-ng-c1550466813="" class="ltdo icon-arrow --down"></i></button><!----></ltdo-card-action></div></ltdo-card-header><!----><ltdo-card-divider _ngcontent-ng-c1550466813="" _nghost-ng-c1913553836=""></ltdo-card-divider></div></ltdo-step><!----><ltdo-step _ngcontent-ng-c607629633="" class="fx-flex-100 fx-layout-align-main-center fx-layout-align-cross-default ng-star-inserted" _nghost-ng-c1550466813=""><div _ngcontent-ng-c1550466813="" class="fx-direction-row fx-wrap-wrap fx-flex-100"><ltdo-card-header _ngcontent-ng-c1550466813="" _nghost-ng-c2850114337=""><div _ngcontent-ng-c2850114337="" class="header-wrapper fx-direction-row fx-wrap-wrap fx-flex-100"><div _ngcontent-ng-c1550466813="" class="__header"><span _ngcontent-ng-c1550466813="" class="circle"><span _ngcontent-ng-c1550466813="" class="ng-star-inserted">3</span><!----><!----></span><span _ngcontent-ng-c607629633="" class="__title medium ng-star-inserted">Authentifizieren Sie sich</span><!----><!----><!----><span _ngcontent-ng-c1550466813="" class="__title disabled"></span></div><ltdo-card-action _ngcontent-ng-c1550466813=""><!----><!----><button _ngcontent-ng-c1550466813="" type="button" class="btn btn-icon ng-star-inserted"><i _ngcontent-ng-c1550466813="" class="ltdo icon-arrow --down"></i></button><!----></ltdo-card-action></div></ltdo-card-header><!----><ltdo-card-divider _ngcontent-ng-c1550466813="" _nghost-ng-c1913553836=""></ltdo-card-divider></div></ltdo-step><!----><ltdo-step _ngcontent-ng-c607629633="" _nghost-ng-c1550466813="" class="ng-star-inserted"><div _ngcontent-ng-c1550466813="" class="fx-direction-row fx-wrap-wrap fx-flex-100"><ltdo-card-header _ngcontent-ng-c1550466813="" _nghost-ng-c2850114337=""><div _ngcontent-ng-c2850114337="" class="header-wrapper fx-direction-row fx-wrap-wrap fx-flex-100"><div _ngcontent-ng-c1550466813="" class="__header"><span _ngcontent-ng-c1550466813="" class="circle"><span _ngcontent-ng-c1550466813="" class="ng-star-inserted">4</span><!----><!----></span><span _ngcontent-ng-c607629633="" class="__title medium ng-star-inserted">Geben Sie die Daten des Patienten an</span><!----><!----><!----><!----><span _ngcontent-ng-c1550466813="" class="__title disabled"></span></div><ltdo-card-action _ngcontent-ng-c1550466813=""><!----><!----><button _ngcontent-ng-c1550466813="" type="button" class="btn btn-icon ng-star-inserted"><i _ngcontent-ng-c1550466813="" class="ltdo icon-arrow --down"></i></button><!----></ltdo-card-action></div></ltdo-card-header><!----><ltdo-card-divider _ngcontent-ng-c1550466813="" _nghost-ng-c1913553836=""></ltdo-card-divider></div></ltdo-step><!----><ltdo-step _ngcontent-ng-c607629633="" title="Termin bestätigen" _nghost-ng-c1550466813="" class="ng-star-inserted"><div _ngcontent-ng-c1550466813="" class="fx-direction-row fx-wrap-wrap fx-flex-100"><ltdo-card-header _ngcontent-ng-c1550466813="" _nghost-ng-c2850114337=""><div _ngcontent-ng-c2850114337="" class="header-wrapper fx-direction-row fx-wrap-wrap fx-flex-100"><div _ngcontent-ng-c1550466813="" class="__header"><span _ngcontent-ng-c1550466813="" class="circle"><span _ngcontent-ng-c1550466813="" class="ng-star-inserted">5</span><!----><!----></span><span _ngcontent-ng-c1550466813="" class="__title disabled">Termin bestätigen</span></div><ltdo-card-action _ngcontent-ng-c1550466813=""><!----><!----><button _ngcontent-ng-c1550466813="" type="button" class="btn btn-icon ng-star-inserted"><i _ngcontent-ng-c1550466813="" class="ltdo icon-arrow --down"></i></button><!----></ltdo-card-action></div></ltdo-card-header><!----><ltdo-card-divider _ngcontent-ng-c1550466813="" _nghost-ng-c1913553836=""></ltdo-card-divider></div></ltdo-step><!----><!----><!----><!----><!----></div></div></ltdo-card></div></ltdo-stepper></div></mimi-booking><!----></main><footer _ngcontent-ng-c2646666280=""><a _ngcontent-ng-c2646666280="" href="https://www.latido.at" target="_blank"><img _ngcontent-ng-c2646666280="" src="src/assets/images/poweredby.svg" class="poweredby"></a><span _ngcontent-ng-c2646666280="" class="divider"></span><a _ngcontent-ng-c2646666280="" href="/impressum/" target="_blank" class="link"><span _ngcontent-ng-c2646666280=""> Impressum </span></a><a _ngcontent-ng-c2646666280="" href="/datenschutzerklaerung/" target="_blank" class="link"><span _ngcontent-ng-c2646666280=""> Datenschutz </span></a><a _ngcontent-ng-c2646666280="" href="/faq" target="_blank" class="link hide-generali"><span _ngcontent-ng-c2646666280="">FAQ</span></a><a _ngcontent-ng-c2646666280="" href="/compliance/" target="_blank" class="link hide-generali"> Lizenzen </a></footer><!----><div class="cdk-describedby-message-container cdk-visually-hidden" style="visibility: hidden;"><div id="cdk-describedby-message-ng-1-2" role="tooltip">Heute</div></div></body></html>

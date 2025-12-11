@@ -1,0 +1,1126 @@
+<!DOCTYPE html><html><head>
+  <meta charset="utf-8">
+  <title>Latido - Ihr digitales Ärztezentrum</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/favicon/site.webmanifest">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#707070">
+  <meta name="msapplication-TileColor" content="#00aba9">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#ffffff">
+  <script src="socket.io/socket.io.js"></script>
+  <link rel="stylesheet" type="text/css" href="src/app.styles.css">
+  <link rel="stylesheet" type="text/css" href="themes/base.css">
+  <link rel="stylesheet" type="text/css" href="themes/default.css">
+<style type="text/css"></style><style>@keyframes _ngcontent-ng-c2646666280_new-entry-fade {
+  0% {
+    background-color: #eff2f5;
+  }
+  100% {
+    background-color: none;
+  }
+}
+.new-entry-anim[_ngcontent-ng-c2646666280] {
+  animation-name: _ngcontent-ng-c2646666280_new-entry-fade;
+  animation-duration: 1s;
+}
+
+@keyframes _ngcontent-ng-c2646666280_shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(0deg);
+  }
+  85% {
+    transform: rotate(8deg);
+  }
+  95% {
+    transform: rotate(-8deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes _ngcontent-ng-c2646666280_blink {
+  0% {
+    background-color: #e26c7a;
+  }
+  50% {
+    background-color: rgb(172.4744318182, 34.0255681818, 50.4517045455);
+  }
+  100% {
+    background-color: #e26c7a;
+  }
+}
+@keyframes _ngcontent-ng-c2646666280_scale {
+  0% {
+    transform: scale(1);
+  }
+  1% {
+    transform: scale(0);
+  }
+  20% {
+    transform: scale(0);
+  }
+  35% {
+    transform: scale(1.4);
+  }
+  40% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  65% {
+    transform: scale(1);
+  }
+  90% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+[_nghost-ng-c2646666280] {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+[_nghost-ng-c2646666280]   main[_ngcontent-ng-c2646666280] {
+  display: flex;
+  flex-flow: row wrap;
+  flex: 1;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+footer[_ngcontent-ng-c2646666280] {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0px;
+}
+footer[_ngcontent-ng-c2646666280]   a[_ngcontent-ng-c2646666280] {
+  font-size: 0.8em;
+  opacity: 0.5;
+  color: #363e51;
+  display: flex;
+  align-items: center;
+}
+footer[_ngcontent-ng-c2646666280]   a[_ngcontent-ng-c2646666280]:hover {
+  color: #617384;
+  opacity: 1;
+}
+footer[_ngcontent-ng-c2646666280]   .divider[_ngcontent-ng-c2646666280] {
+  width: 1px;
+  height: 15px;
+  background-color: #363e51;
+  opacity: 0.5;
+}
+footer[_ngcontent-ng-c2646666280]    > *[_ngcontent-ng-c2646666280] {
+  margin-right: 10px;
+}
+footer[_ngcontent-ng-c2646666280]    > *[_ngcontent-ng-c2646666280]:last-child {
+  margin-right: 0px;
+}</style><style>[_nghost-ng-c1679001208] {
+  width: 100%;
+  z-index: 9999;
+}
+
+nav[_ngcontent-ng-c1679001208] {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  height: 55px;
+  padding: 0px 20px;
+}
+nav[_ngcontent-ng-c1679001208]    > *[_ngcontent-ng-c1679001208] {
+  margin-right: 10px;
+}
+nav[_ngcontent-ng-c1679001208]    > *[_ngcontent-ng-c1679001208]:last-child {
+  margin-right: 0px;
+}
+nav[_ngcontent-ng-c1679001208] {
+  -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.062745098);
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.062745098);
+}
+nav[_ngcontent-ng-c1679001208]   .__logo-wrapper[_ngcontent-ng-c1679001208] {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+nav[_ngcontent-ng-c1679001208]   .__logo-wrapper[_ngcontent-ng-c1679001208]   .logo[_ngcontent-ng-c1679001208] {
+  margin-right: 10px;
+}
+nav[_ngcontent-ng-c1679001208]   .__logo-wrapper[_ngcontent-ng-c1679001208]   .follow-up-text[_ngcontent-ng-c1679001208] {
+  color: var(--brand-primary-color);
+}
+nav[_ngcontent-ng-c1679001208]   .__header-option[_ngcontent-ng-c1679001208] {
+  display: flex;
+  align-items: center;
+}
+nav[_ngcontent-ng-c1679001208]   .__header-option[_ngcontent-ng-c1679001208]   .__flag-wrapper[_ngcontent-ng-c1679001208] {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+nav[_ngcontent-ng-c1679001208]   .__header-option[_ngcontent-ng-c1679001208]   .__flag-wrapper[_ngcontent-ng-c1679001208]   .__language-flag[_ngcontent-ng-c1679001208] {
+  display: inherit;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 10px;
+}
+nav[_ngcontent-ng-c1679001208]   .__header-option[_ngcontent-ng-c1679001208]   .__flag-wrapper[_ngcontent-ng-c1679001208]   .__language-flag[_ngcontent-ng-c1679001208]:hover {
+  opacity: 0.8;
+}
+nav[_ngcontent-ng-c1679001208]   .__header-option[_ngcontent-ng-c1679001208]   .__flag-wrapper[_ngcontent-ng-c1679001208]   .__language-flag[_ngcontent-ng-c1679001208]:last-child {
+  margin: 0;
+}
+@media screen and (max-width: 800px) {
+  nav[_ngcontent-ng-c1679001208]   .__header-option[_ngcontent-ng-c1679001208] {
+    padding: 10px;
+    height: 50px;
+  }
+}
+nav[_ngcontent-ng-c1679001208]   .__header-option[_ngcontent-ng-c1679001208]   .vertical-divider[_ngcontent-ng-c1679001208] {
+  display: block;
+  width: 2px;
+  height: 18px;
+  background-color: #d5d8e0;
+  margin: 0px 10px;
+}
+nav[_ngcontent-ng-c1679001208]   i[_ngcontent-ng-c1679001208] {
+  margin-right: 10px;
+}</style><style>@keyframes _ngcontent-ng-c804680645_new-entry-fade {
+  0% {
+    background-color: #eff2f5;
+  }
+  100% {
+    background-color: none;
+  }
+}
+.new-entry-anim[_ngcontent-ng-c804680645] {
+  animation-name: _ngcontent-ng-c804680645_new-entry-fade;
+  animation-duration: 1s;
+}
+
+@keyframes _ngcontent-ng-c804680645_shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(0deg);
+  }
+  85% {
+    transform: rotate(8deg);
+  }
+  95% {
+    transform: rotate(-8deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes _ngcontent-ng-c804680645_blink {
+  0% {
+    background-color: #e26c7a;
+  }
+  50% {
+    background-color: rgb(172.4744318182, 34.0255681818, 50.4517045455);
+  }
+  100% {
+    background-color: #e26c7a;
+  }
+}
+@keyframes _ngcontent-ng-c804680645_scale {
+  0% {
+    transform: scale(1);
+  }
+  1% {
+    transform: scale(0);
+  }
+  20% {
+    transform: scale(0);
+  }
+  35% {
+    transform: scale(1.4);
+  }
+  40% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  65% {
+    transform: scale(1);
+  }
+  90% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+booking-search-box[_ngcontent-ng-c804680645] {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+
+[_nghost-ng-c804680645] {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.is-loading[_ngcontent-ng-c804680645] {
+  display: none;
+}
+
+.profile-list-wrapper[_ngcontent-ng-c804680645] {
+  display: flex;
+  flex-flow: row wrap;
+  flex: 1 1 100%;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__profile-status-row[_ngcontent-ng-c804680645]   .__loader[_ngcontent-ng-c804680645] {
+  margin: 10px;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 4px;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__profile-status-row[_ngcontent-ng-c804680645]   .__add-profile[_ngcontent-ng-c804680645] {
+  margin: 10px;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__profile-status-row[_ngcontent-ng-c804680645]   .__add-profile[_ngcontent-ng-c804680645]   .btn-primary[_ngcontent-ng-c804680645] {
+  margin-right: 5px;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list-loader[_ngcontent-ng-c804680645] {
+  margin: 0 auto;
+  max-width: 1400px;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645] {
+  flex: 1;
+  display: flex;
+  margin: 0 auto;
+  max-width: 1400px;
+  padding: 20px;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645] {
+  display: flex;
+  flex: 1 1 100%;
+  width: 100%;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__list-wrapper[_ngcontent-ng-c804680645] {
+  display: inherit;
+  flex-flow: row wrap;
+  flex: 1 1 100%;
+  width: 100%;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__list-wrapper[_ngcontent-ng-c804680645]   .__list[_ngcontent-ng-c804680645] {
+  padding-top: 0;
+  width: 100%;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__list-wrapper[_ngcontent-ng-c804680645]   .__list[_ngcontent-ng-c804680645]   .__list-card[_ngcontent-ng-c804680645] {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+@media (max-width: 959px) {
+  .profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__list-wrapper[_ngcontent-ng-c804680645]   .__list[_ngcontent-ng-c804680645]   .__list-card[_ngcontent-ng-c804680645] {
+    flex-flow: row wrap;
+  }
+}
+@media (max-width: 599px) {
+  .profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__list-wrapper[_ngcontent-ng-c804680645]   .__list[_ngcontent-ng-c804680645]   .__list-card[_ngcontent-ng-c804680645] {
+    margin-bottom: 10px;
+  }
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__list-wrapper[_ngcontent-ng-c804680645]   .__list[_ngcontent-ng-c804680645]   .__list-card[_ngcontent-ng-c804680645]:hover {
+  box-shadow: 0 0 0 2px var(--brand-primary-color);
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__list-wrapper[_ngcontent-ng-c804680645]   .__list[_ngcontent-ng-c804680645]   .__list-card[_ngcontent-ng-c804680645]   .--divider[_ngcontent-ng-c804680645] {
+  border-right: 1px solid #e3e8eb;
+  margin-right: 10px;
+  padding-right: 10px;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__list-wrapper[_ngcontent-ng-c804680645]   .__list[_ngcontent-ng-c804680645]   .__list-card[_ngcontent-ng-c804680645]   .__list-card-header[_ngcontent-ng-c804680645] {
+  margin-bottom: 20px;
+  
+
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__list-wrapper[_ngcontent-ng-c804680645]   .__list[_ngcontent-ng-c804680645]   .__list-card[_ngcontent-ng-c804680645]   .__list-card-header[_ngcontent-ng-c804680645]     .mat-card-header-text {
+  margin: 0px;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__list-wrapper[_ngcontent-ng-c804680645]   .__list[_ngcontent-ng-c804680645]   .__list-card[_ngcontent-ng-c804680645]   .__list-card-header[_ngcontent-ng-c804680645]   .__profile-avatar-wrapper[_ngcontent-ng-c804680645] {
+  width: 45px;
+  height: 45px;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__list-wrapper[_ngcontent-ng-c804680645]   .__list[_ngcontent-ng-c804680645]   .__list-card[_ngcontent-ng-c804680645]   .__list-card-header[_ngcontent-ng-c804680645]   .__profile-avatar-wrapper[_ngcontent-ng-c804680645]   .__profile-avatar[_ngcontent-ng-c804680645] {
+  background-size: cover;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__list-wrapper[_ngcontent-ng-c804680645]   .__list[_ngcontent-ng-c804680645]   .__list-card[_ngcontent-ng-c804680645]   .__list-card-header[_ngcontent-ng-c804680645]   .__profile-avatar-wrapper[_ngcontent-ng-c804680645]   .__no-profile-avatar[_ngcontent-ng-c804680645]   .__profile-avatar[_ngcontent-ng-c804680645] {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #eff2f5;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__list-wrapper[_ngcontent-ng-c804680645]   .__list[_ngcontent-ng-c804680645]   .__list-card[_ngcontent-ng-c804680645]   .__list-card-header[_ngcontent-ng-c804680645]   .__profile-avatar-wrapper[_ngcontent-ng-c804680645]   .__no-profile-avatar[_ngcontent-ng-c804680645]   .__profile-avatar[_ngcontent-ng-c804680645]   .ltdo.icon-profile[_ngcontent-ng-c804680645] {
+  font-size: 2em;
+  color: #d0d3d9;
+}
+@media (max-width: 599px) {
+  .profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__list-wrapper[_ngcontent-ng-c804680645]   .__list[_ngcontent-ng-c804680645]   .__list-card[_ngcontent-ng-c804680645]   .__list-card-header[_ngcontent-ng-c804680645]   .__profile-avatar-wrapper[_ngcontent-ng-c804680645]   .__no-profile-avatar[_ngcontent-ng-c804680645]   .__profile-avatar[_ngcontent-ng-c804680645] {
+    width: 35px;
+    height: 35px;
+  }
+  .profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__list-wrapper[_ngcontent-ng-c804680645]   .__list[_ngcontent-ng-c804680645]   .__list-card[_ngcontent-ng-c804680645]   .__list-card-header[_ngcontent-ng-c804680645]   .__profile-avatar-wrapper[_ngcontent-ng-c804680645]   .__no-profile-avatar[_ngcontent-ng-c804680645]   .__profile-avatar[_ngcontent-ng-c804680645]   .ltdo.icon-profile[_ngcontent-ng-c804680645] {
+    font-size: 1.5em;
+  }
+}
+@media (max-width: 599px) {
+  .profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__list-wrapper[_ngcontent-ng-c804680645]   .__list[_ngcontent-ng-c804680645]   .__list-card[_ngcontent-ng-c804680645]   .__list-card-header[_ngcontent-ng-c804680645]   .__profile-avatar-wrapper[_ngcontent-ng-c804680645] {
+    width: 35px;
+    height: 35px;
+  }
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__list-wrapper[_ngcontent-ng-c804680645]   .__list[_ngcontent-ng-c804680645]   .__list-card[_ngcontent-ng-c804680645]   .__list-card-header[_ngcontent-ng-c804680645]   .__list-controls[_ngcontent-ng-c804680645] {
+  display: none;
+}
+@media (max-width: 959px) {
+  .profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__list-wrapper[_ngcontent-ng-c804680645]   .__list[_ngcontent-ng-c804680645]   .__list-card[_ngcontent-ng-c804680645]   .__list-card-header[_ngcontent-ng-c804680645]   .__list-controls[_ngcontent-ng-c804680645] {
+    display: block;
+    margin-left: 10px;
+  }
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__list-wrapper[_ngcontent-ng-c804680645]   .__list[_ngcontent-ng-c804680645]   .__list-card[_ngcontent-ng-c804680645]   .__card-title[_ngcontent-ng-c804680645] {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: var(--brand-primary-color);
+  word-break: break-word;
+  cursor: pointer;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__list-wrapper[_ngcontent-ng-c804680645]   .__list[_ngcontent-ng-c804680645]   .__list-card[_ngcontent-ng-c804680645]   .__card-title[_ngcontent-ng-c804680645] {
+  -webkit-transition: background 200ms ease, width 200ms ease, opacity 200ms ease, outline 200ms ease, box-shadow 200ms ease, border 200ms ease, color 200ms ease;
+  -moz-transition: background 200ms ease, width 200ms ease, opacity 200ms ease, outline 200ms ease, box-shadow 200ms ease, border 200ms ease, color 200ms ease;
+  -ms-transition: background 200ms ease, width 200ms ease, opacity 200ms ease, outline 200ms ease, box-shadow 200ms ease, border 200ms ease, color 200ms ease;
+  -o-transition: background 200ms ease, width 200ms ease, opacity 200ms ease, outline 200ms ease, box-shadow 200ms ease, border 200ms ease, color 200ms ease;
+  transition: background 200ms ease, width 200ms ease, opacity 200ms ease, outline 200ms ease, box-shadow 200ms ease, border 200ms ease, color 200ms ease;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__list-wrapper[_ngcontent-ng-c804680645]   .__list[_ngcontent-ng-c804680645]   .__list-card[_ngcontent-ng-c804680645]   .__card-title[_ngcontent-ng-c804680645]:hover {
+  text-decoration: underline;
+}
+@media (max-width: 599px) {
+  .profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__list-wrapper[_ngcontent-ng-c804680645]   .__list[_ngcontent-ng-c804680645]   .__list-card[_ngcontent-ng-c804680645]   .__card-title[_ngcontent-ng-c804680645] {
+    font-size: 18px;
+  }
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__list-wrapper[_ngcontent-ng-c804680645]   .__list[_ngcontent-ng-c804680645]   .__list-card[_ngcontent-ng-c804680645]   .__card-subtitle[_ngcontent-ng-c804680645] {
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 5px;
+  color: #8997a3;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__list-wrapper[_ngcontent-ng-c804680645]   .__list[_ngcontent-ng-c804680645]   .__list-card[_ngcontent-ng-c804680645]   .__profile-detail-list[_ngcontent-ng-c804680645] {
+  font-size: 1em;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__list-wrapper[_ngcontent-ng-c804680645]   .__list[_ngcontent-ng-c804680645]   .__list-card[_ngcontent-ng-c804680645]   .__profile-detail-list[_ngcontent-ng-c804680645]   div[_ngcontent-ng-c804680645] {
+  margin-bottom: 10px;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__list-wrapper[_ngcontent-ng-c804680645]   .__list[_ngcontent-ng-c804680645]   .__list-card[_ngcontent-ng-c804680645]   .__profile-detail-list[_ngcontent-ng-c804680645]   div[_ngcontent-ng-c804680645]:last-child {
+  margin-bottom: 0px;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__list-wrapper[_ngcontent-ng-c804680645]   .__list[_ngcontent-ng-c804680645]   .__list-card[_ngcontent-ng-c804680645]   .__profile-detail-list[_ngcontent-ng-c804680645]   .icon.home[_ngcontent-ng-c804680645], .profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__list-wrapper[_ngcontent-ng-c804680645]   .__list[_ngcontent-ng-c804680645]   .__list-card[_ngcontent-ng-c804680645]   .__profile-detail-list[_ngcontent-ng-c804680645]   .icon.mobile[_ngcontent-ng-c804680645], .profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__list-wrapper[_ngcontent-ng-c804680645]   .__list[_ngcontent-ng-c804680645]   .__list-card[_ngcontent-ng-c804680645]   .__profile-detail-list[_ngcontent-ng-c804680645]   .icon.phone[_ngcontent-ng-c804680645], .profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__list-wrapper[_ngcontent-ng-c804680645]   .__list[_ngcontent-ng-c804680645]   .__list-card[_ngcontent-ng-c804680645]   .__profile-detail-list[_ngcontent-ng-c804680645]   .icon.email[_ngcontent-ng-c804680645], .profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__list-wrapper[_ngcontent-ng-c804680645]   .__list[_ngcontent-ng-c804680645]   .__list-card[_ngcontent-ng-c804680645]   .__profile-detail-list[_ngcontent-ng-c804680645]   .icon.website[_ngcontent-ng-c804680645], .profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__list-wrapper[_ngcontent-ng-c804680645]   .__list[_ngcontent-ng-c804680645]   .__list-card[_ngcontent-ng-c804680645]   .__profile-detail-list[_ngcontent-ng-c804680645]   .icon.language[_ngcontent-ng-c804680645] {
+  color: #617384;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__list-wrapper[_ngcontent-ng-c804680645]   .__list[_ngcontent-ng-c804680645]   .__list-card[_ngcontent-ng-c804680645]   .__profile-detail-list[_ngcontent-ng-c804680645]   .__mobile[_ngcontent-ng-c804680645]   a[_ngcontent-ng-c804680645], 
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__list-wrapper[_ngcontent-ng-c804680645]   .__list[_ngcontent-ng-c804680645]   .__list-card[_ngcontent-ng-c804680645]   .__profile-detail-list[_ngcontent-ng-c804680645]   .__email[_ngcontent-ng-c804680645]   a[_ngcontent-ng-c804680645], 
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__list-wrapper[_ngcontent-ng-c804680645]   .__list[_ngcontent-ng-c804680645]   .__list-card[_ngcontent-ng-c804680645]   .__profile-detail-list[_ngcontent-ng-c804680645]   .__website[_ngcontent-ng-c804680645]   a[_ngcontent-ng-c804680645] {
+  color: var(--brand-primary-color);
+  font-weight: 900;
+  text-decoration: none;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__list-wrapper[_ngcontent-ng-c804680645]   .__list[_ngcontent-ng-c804680645]   .__list-card[_ngcontent-ng-c804680645]   .__profile-detail-list[_ngcontent-ng-c804680645]   .__mobile[_ngcontent-ng-c804680645]   a[_ngcontent-ng-c804680645]:hover, 
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__list-wrapper[_ngcontent-ng-c804680645]   .__list[_ngcontent-ng-c804680645]   .__list-card[_ngcontent-ng-c804680645]   .__profile-detail-list[_ngcontent-ng-c804680645]   .__email[_ngcontent-ng-c804680645]   a[_ngcontent-ng-c804680645]:hover, 
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__list-wrapper[_ngcontent-ng-c804680645]   .__list[_ngcontent-ng-c804680645]   .__list-card[_ngcontent-ng-c804680645]   .__profile-detail-list[_ngcontent-ng-c804680645]   .__website[_ngcontent-ng-c804680645]   a[_ngcontent-ng-c804680645]:hover {
+  text-decoration: underline;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__list-wrapper[_ngcontent-ng-c804680645]   .__list[_ngcontent-ng-c804680645]   .__list-card[_ngcontent-ng-c804680645]   .__profile-detail-list.--spacing[_ngcontent-ng-c804680645] {
+  margin-bottom: 30px;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__list-wrapper[_ngcontent-ng-c804680645]   .__list[_ngcontent-ng-c804680645]   .__list-card[_ngcontent-ng-c804680645]   .__profile-detail-list[_ngcontent-ng-c804680645]   .__home[_ngcontent-ng-c804680645] {
+  word-break: break-word;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__list-wrapper[_ngcontent-ng-c804680645]   .__list[_ngcontent-ng-c804680645]   .__list-card[_ngcontent-ng-c804680645]   .__profile-additional-info[_ngcontent-ng-c804680645]   .__additional-info-title[_ngcontent-ng-c804680645] {
+  margin-bottom: 25px;
+  font-size: 25px;
+  font-weight: 100;
+  border-bottom: 1px solid #e3e8eb;
+  color: #8997a3;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__list-wrapper[_ngcontent-ng-c804680645]   .__list[_ngcontent-ng-c804680645]   .__list-card[_ngcontent-ng-c804680645]   .__profile-additional-info[_ngcontent-ng-c804680645]   .__additional-info-title[_ngcontent-ng-c804680645]   .__title[_ngcontent-ng-c804680645], 
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__list-wrapper[_ngcontent-ng-c804680645]   .__list[_ngcontent-ng-c804680645]   .__list-card[_ngcontent-ng-c804680645]   .__profile-additional-info[_ngcontent-ng-c804680645]   .__additional-info-title[_ngcontent-ng-c804680645]   .btn[_ngcontent-ng-c804680645] {
+  margin-bottom: 15px;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__list-wrapper[_ngcontent-ng-c804680645]   .__list[_ngcontent-ng-c804680645]   .__list-card[_ngcontent-ng-c804680645]   .__profile-additional-info[_ngcontent-ng-c804680645]   .__additional-info-title.--spacing[_ngcontent-ng-c804680645] {
+  margin-top: 30px;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__list-wrapper[_ngcontent-ng-c804680645]   .__list[_ngcontent-ng-c804680645]   .__list-card[_ngcontent-ng-c804680645]   .__profile-additional-info[_ngcontent-ng-c804680645]   .book-appointment-wrapper[_ngcontent-ng-c804680645] {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  background-color: #e4e6eb;
+  padding: 1.4em 2em;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__list-wrapper[_ngcontent-ng-c804680645]   .__list[_ngcontent-ng-c804680645]   .__list-card.--selected[_ngcontent-ng-c804680645] {
+  box-shadow: 0 0 0 2px var(--brand-primary-color) !important;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__profile-list-footer[_ngcontent-ng-c804680645] {
+  height: 40px;
+  margin: 20px 0px;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__profile-list-footer[_ngcontent-ng-c804680645]   .__profile-list-pagination[_ngcontent-ng-c804680645] {
+  width: 100%;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__profile-list-footer[_ngcontent-ng-c804680645]   .__profile-list-pagination[_ngcontent-ng-c804680645]     .ngx-pagination {
+  display: flex;
+  flex: 1 1 100%;
+  margin: 0;
+  padding: 0;
+  justify-content: flex-end;
+  align-items: center;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__profile-list-footer[_ngcontent-ng-c804680645]   .__profile-list-pagination[_ngcontent-ng-c804680645]     .ngx-pagination li {
+  margin: 0px 3px;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__profile-list-footer[_ngcontent-ng-c804680645]   .__profile-list-pagination[_ngcontent-ng-c804680645]     .ngx-pagination li a {
+  text-decoration: none !important;
+  background-color: #c1d1d8;
+  border-radius: 3px;
+  color: #ffffff;
+  padding: 5px 10px;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__profile-list-footer[_ngcontent-ng-c804680645]   .__profile-list-pagination[_ngcontent-ng-c804680645]     .ngx-pagination li a {
+  -webkit-transition: background 300msms ease, width 300msms ease, opacity 300msms ease, outline 300msms ease, box-shadow 300msms ease, border 300msms ease, color 300msms ease;
+  -moz-transition: background 300msms ease, width 300msms ease, opacity 300msms ease, outline 300msms ease, box-shadow 300msms ease, border 300msms ease, color 300msms ease;
+  -ms-transition: background 300msms ease, width 300msms ease, opacity 300msms ease, outline 300msms ease, box-shadow 300msms ease, border 300msms ease, color 300msms ease;
+  -o-transition: background 300msms ease, width 300msms ease, opacity 300msms ease, outline 300msms ease, box-shadow 300msms ease, border 300msms ease, color 300msms ease;
+  transition: background 300msms ease, width 300msms ease, opacity 300msms ease, outline 300msms ease, box-shadow 300msms ease, border 300msms ease, color 300msms ease;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__profile-list-footer[_ngcontent-ng-c804680645]   .__profile-list-pagination[_ngcontent-ng-c804680645]     .ngx-pagination li a:hover {
+  background-color: var(--brand-primary-color);
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__profile-list-footer[_ngcontent-ng-c804680645]   .__profile-list-pagination[_ngcontent-ng-c804680645]     .ngx-pagination li.current {
+  padding: 5px 10px;
+  background-color: var(--brand-primary-color);
+  border-radius: 3px;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__profile-list-footer[_ngcontent-ng-c804680645]   .__profile-list-pagination[_ngcontent-ng-c804680645]     .ngx-pagination .pagination-previous a::before, 
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__profile-list-footer[_ngcontent-ng-c804680645]   .__profile-list-pagination[_ngcontent-ng-c804680645]     .ngx-pagination .pagination-next a::after {
+  content: "";
+  margin: 0px;
+}
+@media screen and (max-width: 599px) {
+  .profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__profile-list-footer[_ngcontent-ng-c804680645]   .__profile-list-pagination[_ngcontent-ng-c804680645]     .ngx-pagination {
+    justify-content: space-between;
+    align-items: center;
+  }
+  .profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__profile-list-footer[_ngcontent-ng-c804680645]   .__profile-list-pagination[_ngcontent-ng-c804680645]     .ngx-pagination li {
+    margin: 0px;
+    font-size: 0.8em;
+  }
+  .profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__profile-list-footer[_ngcontent-ng-c804680645]   .__profile-list-pagination[_ngcontent-ng-c804680645]     .ngx-pagination li a {
+    padding: 6px 8px;
+  }
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__profile-list-footer[_ngcontent-ng-c804680645]   .__results[_ngcontent-ng-c804680645] {
+  padding: 0.4em 0.7em;
+  border-radius: 4px;
+  background-color: #cccccc;
+  color: #ffffff;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__profile-list-footer[_ngcontent-ng-c804680645]   .__results[_ngcontent-ng-c804680645]    > *[_ngcontent-ng-c804680645] {
+  margin-right: 5px;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .__profile-list[_ngcontent-ng-c804680645]   .__profile-list-footer[_ngcontent-ng-c804680645]   .__results[_ngcontent-ng-c804680645]    > *[_ngcontent-ng-c804680645]:last-child {
+  margin-right: 0px;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .gdpr-hider[_ngcontent-ng-c804680645] {
+  display: none;
+}
+@media (min-width: 1280px) {
+  .profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .gdpr-hider[_ngcontent-ng-c804680645] {
+    position: sticky;
+    display: flex;
+    flex: 0 1 auto;
+    width: 400px;
+    height: 400px;
+    max-height: 400px;
+    max-width: 400px;
+    width: 100%;
+    margin-left: 20px;
+    top: 10px;
+    right: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px 0 hsla(206.4705882353, 79.0697674419%, -18.137254902%, 0.1019607843);
+  }
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .gdpr-hider[_ngcontent-ng-c804680645]   .__profile-list-map[_ngcontent-ng-c804680645] {
+  width: inherit;
+  height: inherit;
+  border-radius: 4px;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .gdpr-hider[_ngcontent-ng-c804680645]   .__profile-list-map[_ngcontent-ng-c804680645]    .agm-map-container-inner {
+  border-radius: inherit;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .gdpr-hider.display-none[_ngcontent-ng-c804680645] {
+  display: none;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645]   .icon.appointment[_ngcontent-ng-c804680645] {
+  color: #ffffff;
+  width: 13px;
+  height: 13px;
+}
+@media (max-width: 599px) {
+  .profile-list-wrapper[_ngcontent-ng-c804680645]   .__main-list-wrapper[_ngcontent-ng-c804680645] {
+    margin: 10px;
+    padding: 0px;
+  }
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__no-search-result[_ngcontent-ng-c804680645] {
+  width: 100%;
+  max-width: 500px;
+  padding: 0.9em 1.2em;
+  margin: 30px 0px 20px 0px;
+  background-color: #c1d1d8;
+  border-radius: 4px;
+  color: #ffffff;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__no-search-result[_ngcontent-ng-c804680645]   hr[_ngcontent-ng-c804680645] {
+  height: 1px;
+  background-color: rgb(180.4772277228, 199.7089108911, 208.1227722772);
+  border: 0;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__no-search-result[_ngcontent-ng-c804680645]   .__title[_ngcontent-ng-c804680645] {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  font-size: 1.2em;
+  padding-bottom: 20px;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__no-search-result[_ngcontent-ng-c804680645]   .__title[_ngcontent-ng-c804680645]   .circle[_ngcontent-ng-c804680645] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 0 60px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid white;
+  font-weight: bold;
+  margin: 20px 0px;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__no-search-result[_ngcontent-ng-c804680645]   .__title[_ngcontent-ng-c804680645]   .circle[_ngcontent-ng-c804680645]   .ltdo[_ngcontent-ng-c804680645] {
+  color: white;
+  font-size: 1.5em;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__no-search-result[_ngcontent-ng-c804680645]   .__title[_ngcontent-ng-c804680645]   h4[_ngcontent-ng-c804680645] {
+  text-align: center;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__no-search-criteria[_ngcontent-ng-c804680645] {
+  margin: 80px 0px;
+  color: var(--brand-primary-color);
+  stroke: #fff;
+  fill: #fff;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__no-search-criteria[_ngcontent-ng-c804680645]   .icon.no-search-criteria[_ngcontent-ng-c804680645] {
+  width: 130px;
+  height: auto;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__no-search-criteria[_ngcontent-ng-c804680645]   .__title[_ngcontent-ng-c804680645] {
+  margin: 20px 0 10px 0;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--brand-primary-color);
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__no-search-criteria[_ngcontent-ng-c804680645]   .__tabs-wrapper[_ngcontent-ng-c804680645] {
+  margin: 15px 0px;
+}
+.profile-list-wrapper[_ngcontent-ng-c804680645]   .__no-search-criteria[_ngcontent-ng-c804680645]   .__tabs-wrapper[_ngcontent-ng-c804680645]   .__tab[_ngcontent-ng-c804680645] {
+  padding: 6px 14px;
+  background-color: var(--brand-primary-color);
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 0.7em;
+}</style><style>.search-box-wrapper[_ngcontent-ng-c1308542630] {
+  width: 100%;
+  max-width: 1400px;
+}
+.search-box-wrapper[_ngcontent-ng-c1308542630]   .generali-menu[_ngcontent-ng-c1308542630] {
+  display: none;
+  width: 100%;
+  max-width: 1400px;
+  margin-top: 20px;
+  padding: 0px 20px;
+  border-bottom: 1px solid #e4e6eb;
+}
+.search-box-wrapper[_ngcontent-ng-c1308542630]   .generali-menu[_ngcontent-ng-c1308542630]    > *[_ngcontent-ng-c1308542630] {
+  margin-right: 15px;
+}
+.search-box-wrapper[_ngcontent-ng-c1308542630]   .generali-menu[_ngcontent-ng-c1308542630]    > *[_ngcontent-ng-c1308542630]:last-child {
+  margin-right: 0px;
+}
+.search-box-wrapper[_ngcontent-ng-c1308542630]   .generali-menu[_ngcontent-ng-c1308542630]   .btn[_ngcontent-ng-c1308542630] {
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  background-color: var(--brand-primary-color);
+  padding: 10px 20px;
+  font-size: 1.2em;
+  color: white;
+  font-weight: 700;
+}
+.search-box-wrapper[_ngcontent-ng-c1308542630]   .generali-menu[_ngcontent-ng-c1308542630]   .btn[_ngcontent-ng-c1308542630]:disabled {
+  background-color: #e4e6eb;
+}
+.search-box-wrapper[_ngcontent-ng-c1308542630]   .profile-list-search[_ngcontent-ng-c1308542630] {
+  padding: 20px;
+  background-color: #ffffff;
+}
+.search-box-wrapper[_ngcontent-ng-c1308542630]   .profile-list-search[_ngcontent-ng-c1308542630]   .btn-primary[_ngcontent-ng-c1308542630] {
+  font-family: inherit;
+  height: 44px;
+}
+.search-box-wrapper[_ngcontent-ng-c1308542630]   .profile-list-search-filter[_ngcontent-ng-c1308542630] {
+  padding: 0px 20px 20px 20px;
+  background-color: #ffffff;
+  color: #c1cace;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+.search-box-wrapper[_ngcontent-ng-c1308542630]   .profile-list-search-filter[_ngcontent-ng-c1308542630]   .__video-consultation[_ngcontent-ng-c1308542630]   .btn-primary.--video[_ngcontent-ng-c1308542630] {
+  border: 1px solid #e3e8eb;
+  background-color: #ffffff;
+  height: 44px;
+  padding: 10px;
+  text-transform: initial;
+  color: #999;
+  font-size: 1em;
+}
+.search-box-wrapper[_ngcontent-ng-c1308542630]   .profile-list-search-filter[_ngcontent-ng-c1308542630]   .__video-consultation[_ngcontent-ng-c1308542630]   .btn-primary.--video[_ngcontent-ng-c1308542630]   i[_ngcontent-ng-c1308542630] {
+  font-size: 1.2em;
+  color: #c2cace;
+}
+.search-box-wrapper[_ngcontent-ng-c1308542630]   .profile-list-search-filter[_ngcontent-ng-c1308542630]   .__video-consultation[_ngcontent-ng-c1308542630]   .btn-primary.--video.--video-active[_ngcontent-ng-c1308542630] {
+  border: 1px solid var(--video-consultation-button-color);
+  background-color: var(--video-consultation-button-color);
+  color: white;
+}
+.search-box-wrapper[_ngcontent-ng-c1308542630]   .profile-list-search-filter[_ngcontent-ng-c1308542630]   .__video-consultation[_ngcontent-ng-c1308542630]   .btn-primary.--video.--video-active[_ngcontent-ng-c1308542630]   i[_ngcontent-ng-c1308542630] {
+  color: white;
+}
+
+.form-switch[_ngcontent-ng-c1308542630] {
+  display: inline-block;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.form-switch[_ngcontent-ng-c1308542630]   i[_ngcontent-ng-c1308542630] {
+  position: relative;
+  display: inline-block;
+  margin-right: 0.5rem;
+  width: 46px;
+  height: 26px;
+  background-color: #e6e6e6;
+  border-radius: 23px;
+  vertical-align: text-bottom;
+}
+.form-switch[_ngcontent-ng-c1308542630]   i[_ngcontent-ng-c1308542630] {
+  -webkit-transition: background 200ms ease, width 200ms ease, opacity 200ms ease, outline 200ms ease, box-shadow 200ms ease, border 200ms ease, color 200ms ease;
+  -moz-transition: background 200ms ease, width 200ms ease, opacity 200ms ease, outline 200ms ease, box-shadow 200ms ease, border 200ms ease, color 200ms ease;
+  -ms-transition: background 200ms ease, width 200ms ease, opacity 200ms ease, outline 200ms ease, box-shadow 200ms ease, border 200ms ease, color 200ms ease;
+  -o-transition: background 200ms ease, width 200ms ease, opacity 200ms ease, outline 200ms ease, box-shadow 200ms ease, border 200ms ease, color 200ms ease;
+  transition: background 200ms ease, width 200ms ease, opacity 200ms ease, outline 200ms ease, box-shadow 200ms ease, border 200ms ease, color 200ms ease;
+}
+
+.form-switch[_ngcontent-ng-c1308542630]   i[_ngcontent-ng-c1308542630]::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 42px;
+  height: 22px;
+  background-color: #fff;
+  border-radius: 11px;
+  transform: translate3d(2px, 2px, 0) scale3d(1, 1, 1);
+}
+.form-switch[_ngcontent-ng-c1308542630]   i[_ngcontent-ng-c1308542630]::before {
+  -webkit-transition: background 250ms ease, width 250ms ease, opacity 250ms ease, outline 250ms ease, box-shadow 250ms ease, border 250ms ease, color 250ms ease;
+  -moz-transition: background 250ms ease, width 250ms ease, opacity 250ms ease, outline 250ms ease, box-shadow 250ms ease, border 250ms ease, color 250ms ease;
+  -ms-transition: background 250ms ease, width 250ms ease, opacity 250ms ease, outline 250ms ease, box-shadow 250ms ease, border 250ms ease, color 250ms ease;
+  -o-transition: background 250ms ease, width 250ms ease, opacity 250ms ease, outline 250ms ease, box-shadow 250ms ease, border 250ms ease, color 250ms ease;
+  transition: background 250ms ease, width 250ms ease, opacity 250ms ease, outline 250ms ease, box-shadow 250ms ease, border 250ms ease, color 250ms ease;
+}
+
+.form-switch[_ngcontent-ng-c1308542630]   i[_ngcontent-ng-c1308542630]::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24);
+  transform: translate3d(2px, 2px, 0);
+}
+.form-switch[_ngcontent-ng-c1308542630]   i[_ngcontent-ng-c1308542630]::after {
+  -webkit-transition: background 250ms ease, width 250ms ease, opacity 250ms ease, outline 250ms ease, box-shadow 250ms ease, border 250ms ease, color 250ms ease;
+  -moz-transition: background 250ms ease, width 250ms ease, opacity 250ms ease, outline 250ms ease, box-shadow 250ms ease, border 250ms ease, color 250ms ease;
+  -ms-transition: background 250ms ease, width 250ms ease, opacity 250ms ease, outline 250ms ease, box-shadow 250ms ease, border 250ms ease, color 250ms ease;
+  -o-transition: background 250ms ease, width 250ms ease, opacity 250ms ease, outline 250ms ease, box-shadow 250ms ease, border 250ms ease, color 250ms ease;
+  transition: background 250ms ease, width 250ms ease, opacity 250ms ease, outline 250ms ease, box-shadow 250ms ease, border 250ms ease, color 250ms ease;
+}
+
+.form-switch[_ngcontent-ng-c1308542630]:active   i[_ngcontent-ng-c1308542630]::after, 
+.active[_ngcontent-ng-c1308542630] {
+  width: 28px;
+  transform: translate3d(2px, 2px, 0);
+}
+
+.form-switch[_ngcontent-ng-c1308542630]:active   input[_ngcontent-ng-c1308542630]:checked    + i[_ngcontent-ng-c1308542630]::after {
+  transform: translate3d(16px, 2px, 0);
+}
+
+.form-switch[_ngcontent-ng-c1308542630]   input[_ngcontent-ng-c1308542630] {
+  display: none;
+}
+
+.form-switch[_ngcontent-ng-c1308542630]   input[_ngcontent-ng-c1308542630]:checked    + i[_ngcontent-ng-c1308542630] {
+  background-color: #43b38d;
+}
+
+.form-switch[_ngcontent-ng-c1308542630]   input[_ngcontent-ng-c1308542630]:checked    + i[_ngcontent-ng-c1308542630]::before {
+  transform: translate3d(18px, 2px, 0) scale3d(0, 0, 0);
+}
+
+.form-switch[_ngcontent-ng-c1308542630]   input[_ngcontent-ng-c1308542630]:checked    + i[_ngcontent-ng-c1308542630]::after {
+  transform: translate3d(22px, 2px, 0);
+}</style><style>@charset "UTF-8";.ng-select{position:relative;display:block;box-sizing:border-box}.ng-select div,.ng-select input,.ng-select span{box-sizing:border-box}.ng-select [hidden]{display:none}.ng-select.ng-select-searchable .ng-select-container .ng-value-container .ng-input{opacity:1}.ng-select.ng-select-opened .ng-select-container{z-index:1001}.ng-select.ng-select-disabled .ng-select-container .ng-value-container .ng-placeholder,.ng-select.ng-select-disabled .ng-select-container .ng-value-container .ng-value{-webkit-user-select:none;user-select:none;cursor:default}.ng-select.ng-select-disabled .ng-arrow-wrapper{cursor:default}.ng-select.ng-select-filtered .ng-placeholder{display:none}.ng-select .ng-select-container{cursor:default;display:flex;outline:none;overflow:hidden;position:relative;width:100%}.ng-select .ng-select-container .ng-value-container{display:flex;flex:1}.ng-select .ng-select-container .ng-value-container .ng-input{opacity:0}.ng-select .ng-select-container .ng-value-container .ng-input>input{box-sizing:content-box;background:none transparent;border:0 none;box-shadow:none;outline:none;padding:0;cursor:default;width:100%}.ng-select .ng-select-container .ng-value-container .ng-input>input::-ms-clear{display:none}.ng-select .ng-select-container .ng-value-container .ng-input>input[readonly]{-webkit-user-select:none;user-select:none;width:0;padding:0}.ng-select.ng-select-single.ng-select-filtered .ng-select-container .ng-value-container .ng-value{visibility:hidden}.ng-select.ng-select-single .ng-select-container .ng-value-container,.ng-select.ng-select-single .ng-select-container .ng-value-container .ng-value{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ng-select.ng-select-single .ng-select-container .ng-value-container .ng-value .ng-value-icon{display:none}.ng-select.ng-select-single .ng-select-container .ng-value-container .ng-input{position:absolute;left:0;width:100%}.ng-select.ng-select-multiple.ng-select-disabled>.ng-select-container .ng-value-container .ng-value .ng-value-icon{display:none}.ng-select.ng-select-multiple .ng-select-container .ng-value-container{flex-wrap:wrap}.ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-placeholder{position:absolute}.ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value{white-space:nowrap}.ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value.ng-value-disabled .ng-value-icon{display:none}.ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value .ng-value-icon{cursor:pointer}.ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-input{flex:1;z-index:2}.ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-placeholder{z-index:1}.ng-select .ng-clear-wrapper{cursor:pointer;position:relative;width:17px;-webkit-user-select:none;user-select:none}.ng-select .ng-clear-wrapper .ng-clear{display:inline-block;font-size:18px;line-height:1;pointer-events:none}.ng-select .ng-spinner-loader{border-radius:50%;width:17px;height:17px;margin-right:5px;font-size:10px;position:relative;text-indent:-9999em;border-top:2px solid rgba(66,66,66,.2);border-right:2px solid rgba(66,66,66,.2);border-bottom:2px solid rgba(66,66,66,.2);border-left:2px solid #424242;transform:translateZ(0);animation:load8 .8s infinite linear}.ng-select .ng-spinner-loader:after{border-radius:50%;width:17px;height:17px}@keyframes load8{0%{transform:rotate(0)}to{transform:rotate(360deg)}}.ng-select .ng-arrow-wrapper{cursor:pointer;position:relative;text-align:center;-webkit-user-select:none;user-select:none}.ng-select .ng-arrow-wrapper .ng-arrow{pointer-events:none;display:inline-block;height:0;width:0;position:relative}.ng-dropdown-panel{box-sizing:border-box;position:absolute;opacity:0;width:100%;z-index:1050;-webkit-overflow-scrolling:touch}.ng-dropdown-panel .ng-dropdown-panel-items{display:block;height:auto;box-sizing:border-box;max-height:240px;overflow-y:auto}.ng-dropdown-panel .ng-dropdown-panel-items .ng-optgroup{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ng-dropdown-panel .ng-dropdown-panel-items .ng-option{box-sizing:border-box;cursor:pointer;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ng-dropdown-panel .ng-dropdown-panel-items .ng-option .ng-option-label:empty:before{content:"\200b"}.ng-dropdown-panel .ng-dropdown-panel-items .ng-option .highlighted{font-weight:700;text-decoration:underline}.ng-dropdown-panel .ng-dropdown-panel-items .ng-option.disabled{cursor:default}.ng-dropdown-panel .scroll-host{overflow:hidden;overflow-y:auto;position:relative;display:block;-webkit-overflow-scrolling:touch}.ng-dropdown-panel .scrollable-content{top:0;left:0;width:100%;height:100%;position:absolute}.ng-dropdown-panel .total-padding{width:1px;opacity:0}
+</style><style type="text/css">
+/*
+  @angular/flex-layout - workaround for possible browser quirk with mediaQuery listeners
+  see http://bit.ly/2sd4HMP
+*/
+@media screen and (min-width: 600px), screen and (min-width: 960px), screen and (min-width: 1280px), screen and (min-width: 1920px), screen and (min-width: 1920px) and (max-width: 4999.98px), screen and (max-width: 1919.98px), screen and (min-width: 1280px) and (max-width: 1919.98px), screen and (max-width: 1279.98px), screen and (min-width: 960px) and (max-width: 1279.98px), screen and (max-width: 959.98px), screen and (min-width: 600px) and (max-width: 959.98px), screen and (max-width: 599.98px), screen and (min-width: 0px) and (max-width: 599.98px), print {.fx-query-test{ }}
+</style><style>.gdpr-hider-wrapper[_ngcontent-ng-c1408702857] {
+  height: 100%;
+  width: 100%;
+}
+.gdpr-hider-wrapper[_ngcontent-ng-c1408702857]   .__gdpr-bg[_ngcontent-ng-c1408702857] {
+  background-image: url("src/assets/images/map.png");
+  filter: blur(6px);
+  -webkit-filter: blur(6px);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  height: 100%;
+}
+.gdpr-hider-wrapper[_ngcontent-ng-c1408702857]   .__gdpr-text[_ngcontent-ng-c1408702857] {
+  background-color: #ffffff; 
+
+  border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999999999;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 5px 0px 15px -10px #bcbcbc !important;
+  -webkit-box-shadow: 5px 0px 15px -10px #bcbcbc !important;
+}
+.gdpr-hider-wrapper[_ngcontent-ng-c1408702857]   .__gdpr-text[_ngcontent-ng-c1408702857]   .--title[_ngcontent-ng-c1408702857] {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+.gdpr-hider-wrapper[_ngcontent-ng-c1408702857]   .__gdpr-text[_ngcontent-ng-c1408702857]   .btn-primary[_ngcontent-ng-c1408702857] {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}</style><style>.mdc-list{margin:0;padding:8px 0;list-style-type:none}.mdc-list:focus{outline:none}.mdc-list-item{display:flex;position:relative;justify-content:flex-start;overflow:hidden;padding:0;align-items:stretch;cursor:pointer;padding-left:16px;padding-right:16px;background-color:var(--mdc-list-list-item-container-color, transparent);border-radius:var(--mdc-list-list-item-container-shape, var(--mat-sys-corner-none))}.mdc-list-item.mdc-list-item--selected{background-color:var(--mdc-list-list-item-selected-container-color)}.mdc-list-item:focus{outline:0}.mdc-list-item.mdc-list-item--disabled{cursor:auto}.mdc-list-item.mdc-list-item--with-one-line{height:var(--mdc-list-list-item-one-line-container-height, 48px)}.mdc-list-item.mdc-list-item--with-one-line .mdc-list-item__start{align-self:center;margin-top:0}.mdc-list-item.mdc-list-item--with-one-line .mdc-list-item__end{align-self:center;margin-top:0}.mdc-list-item.mdc-list-item--with-two-lines{height:var(--mdc-list-list-item-two-line-container-height, 64px)}.mdc-list-item.mdc-list-item--with-two-lines .mdc-list-item__start{align-self:flex-start;margin-top:16px}.mdc-list-item.mdc-list-item--with-two-lines .mdc-list-item__end{align-self:center;margin-top:0}.mdc-list-item.mdc-list-item--with-three-lines{height:var(--mdc-list-list-item-three-line-container-height, 88px)}.mdc-list-item.mdc-list-item--with-three-lines .mdc-list-item__start{align-self:flex-start;margin-top:16px}.mdc-list-item.mdc-list-item--with-three-lines .mdc-list-item__end{align-self:flex-start;margin-top:16px}.mdc-list-item.mdc-list-item--selected::before,.mdc-list-item.mdc-list-item--selected:focus::before,.mdc-list-item:not(.mdc-list-item--selected):focus::before{position:absolute;box-sizing:border-box;width:100%;height:100%;top:0;left:0;content:"";pointer-events:none}a.mdc-list-item{color:inherit;text-decoration:none}.mdc-list-item__start{fill:currentColor;flex-shrink:0;pointer-events:none}.mdc-list-item--with-leading-icon .mdc-list-item__start{color:var(--mdc-list-list-item-leading-icon-color, var(--mat-sys-on-surface-variant));width:var(--mdc-list-list-item-leading-icon-size, 24px);height:var(--mdc-list-list-item-leading-icon-size, 24px);margin-left:16px;margin-right:32px}[dir=rtl] .mdc-list-item--with-leading-icon .mdc-list-item__start{margin-left:32px;margin-right:16px}.mdc-list-item--with-leading-icon:hover .mdc-list-item__start{color:var(--mdc-list-list-item-hover-leading-icon-color)}.mdc-list-item--with-leading-avatar .mdc-list-item__start{width:var(--mdc-list-list-item-leading-avatar-size, 40px);height:var(--mdc-list-list-item-leading-avatar-size, 40px);margin-left:16px;margin-right:16px;border-radius:50%}.mdc-list-item--with-leading-avatar .mdc-list-item__start,[dir=rtl] .mdc-list-item--with-leading-avatar .mdc-list-item__start{margin-left:16px;margin-right:16px;border-radius:50%}.mdc-list-item__end{flex-shrink:0;pointer-events:none}.mdc-list-item--with-trailing-meta .mdc-list-item__end{font-family:var(--mdc-list-list-item-trailing-supporting-text-font, var(--mat-sys-label-small-font));line-height:var(--mdc-list-list-item-trailing-supporting-text-line-height, var(--mat-sys-label-small-line-height));font-size:var(--mdc-list-list-item-trailing-supporting-text-size, var(--mat-sys-label-small-size));font-weight:var(--mdc-list-list-item-trailing-supporting-text-weight, var(--mat-sys-label-small-weight));letter-spacing:var(--mdc-list-list-item-trailing-supporting-text-tracking, var(--mat-sys-label-small-tracking))}.mdc-list-item--with-trailing-icon .mdc-list-item__end{color:var(--mdc-list-list-item-trailing-icon-color, var(--mat-sys-on-surface-variant));width:var(--mdc-list-list-item-trailing-icon-size, 24px);height:var(--mdc-list-list-item-trailing-icon-size, 24px)}.mdc-list-item--with-trailing-icon:hover .mdc-list-item__end{color:var(--mdc-list-list-item-hover-trailing-icon-color)}.mdc-list-item.mdc-list-item--with-trailing-meta .mdc-list-item__end{color:var(--mdc-list-list-item-trailing-supporting-text-color, var(--mat-sys-on-surface-variant))}.mdc-list-item--selected.mdc-list-item--with-trailing-icon .mdc-list-item__end{color:var(--mdc-list-list-item-selected-trailing-icon-color, var(--mat-sys-primary))}.mdc-list-item__content{text-overflow:ellipsis;white-space:nowrap;overflow:hidden;align-self:center;flex:1;pointer-events:none}.mdc-list-item--with-two-lines .mdc-list-item__content,.mdc-list-item--with-three-lines .mdc-list-item__content{align-self:stretch}.mdc-list-item__primary-text{text-overflow:ellipsis;white-space:nowrap;overflow:hidden;color:var(--mdc-list-list-item-label-text-color, var(--mat-sys-on-surface));font-family:var(--mdc-list-list-item-label-text-font, var(--mat-sys-body-large-font));line-height:var(--mdc-list-list-item-label-text-line-height, var(--mat-sys-body-large-line-height));font-size:var(--mdc-list-list-item-label-text-size, var(--mat-sys-body-large-size));font-weight:var(--mdc-list-list-item-label-text-weight, var(--mat-sys-body-large-weight));letter-spacing:var(--mdc-list-list-item-label-text-tracking, var(--mat-sys-body-large-tracking))}.mdc-list-item:hover .mdc-list-item__primary-text{color:var(--mdc-list-list-item-hover-label-text-color, var(--mat-sys-on-surface))}.mdc-list-item:focus .mdc-list-item__primary-text{color:var(--mdc-list-list-item-focus-label-text-color, var(--mat-sys-on-surface))}.mdc-list-item--with-two-lines .mdc-list-item__primary-text,.mdc-list-item--with-three-lines .mdc-list-item__primary-text{display:block;margin-top:0;line-height:normal;margin-bottom:-20px}.mdc-list-item--with-two-lines .mdc-list-item__primary-text::before,.mdc-list-item--with-three-lines .mdc-list-item__primary-text::before{display:inline-block;width:0;height:28px;content:"";vertical-align:0}.mdc-list-item--with-two-lines .mdc-list-item__primary-text::after,.mdc-list-item--with-three-lines .mdc-list-item__primary-text::after{display:inline-block;width:0;height:20px;content:"";vertical-align:-20px}.mdc-list-item__secondary-text{text-overflow:ellipsis;white-space:nowrap;overflow:hidden;display:block;margin-top:0;color:var(--mdc-list-list-item-supporting-text-color, var(--mat-sys-on-surface-variant));font-family:var(--mdc-list-list-item-supporting-text-font, var(--mat-sys-body-medium-font));line-height:var(--mdc-list-list-item-supporting-text-line-height, var(--mat-sys-body-medium-line-height));font-size:var(--mdc-list-list-item-supporting-text-size, var(--mat-sys-body-medium-size));font-weight:var(--mdc-list-list-item-supporting-text-weight, var(--mat-sys-body-medium-weight));letter-spacing:var(--mdc-list-list-item-supporting-text-tracking, var(--mat-sys-body-medium-tracking))}.mdc-list-item__secondary-text::before{display:inline-block;width:0;height:20px;content:"";vertical-align:0}.mdc-list-item--with-three-lines .mdc-list-item__secondary-text{white-space:normal;line-height:20px}.mdc-list-item--with-overline .mdc-list-item__secondary-text{white-space:nowrap;line-height:auto}.mdc-list-item--with-leading-radio.mdc-list-item,.mdc-list-item--with-leading-checkbox.mdc-list-item,.mdc-list-item--with-leading-icon.mdc-list-item,.mdc-list-item--with-leading-avatar.mdc-list-item{padding-left:0;padding-right:16px}[dir=rtl] .mdc-list-item--with-leading-radio.mdc-list-item,[dir=rtl] .mdc-list-item--with-leading-checkbox.mdc-list-item,[dir=rtl] .mdc-list-item--with-leading-icon.mdc-list-item,[dir=rtl] .mdc-list-item--with-leading-avatar.mdc-list-item{padding-left:16px;padding-right:0}.mdc-list-item--with-leading-radio.mdc-list-item--with-two-lines .mdc-list-item__primary-text,.mdc-list-item--with-leading-checkbox.mdc-list-item--with-two-lines .mdc-list-item__primary-text,.mdc-list-item--with-leading-icon.mdc-list-item--with-two-lines .mdc-list-item__primary-text,.mdc-list-item--with-leading-avatar.mdc-list-item--with-two-lines .mdc-list-item__primary-text{display:block;margin-top:0;line-height:normal;margin-bottom:-20px}.mdc-list-item--with-leading-radio.mdc-list-item--with-two-lines .mdc-list-item__primary-text::before,.mdc-list-item--with-leading-checkbox.mdc-list-item--with-two-lines .mdc-list-item__primary-text::before,.mdc-list-item--with-leading-icon.mdc-list-item--with-two-lines .mdc-list-item__primary-text::before,.mdc-list-item--with-leading-avatar.mdc-list-item--with-two-lines .mdc-list-item__primary-text::before{display:inline-block;width:0;height:32px;content:"";vertical-align:0}.mdc-list-item--with-leading-radio.mdc-list-item--with-two-lines .mdc-list-item__primary-text::after,.mdc-list-item--with-leading-checkbox.mdc-list-item--with-two-lines .mdc-list-item__primary-text::after,.mdc-list-item--with-leading-icon.mdc-list-item--with-two-lines .mdc-list-item__primary-text::after,.mdc-list-item--with-leading-avatar.mdc-list-item--with-two-lines .mdc-list-item__primary-text::after{display:inline-block;width:0;height:20px;content:"";vertical-align:-20px}.mdc-list-item--with-leading-radio.mdc-list-item--with-two-lines.mdc-list-item--with-trailing-meta .mdc-list-item__end,.mdc-list-item--with-leading-checkbox.mdc-list-item--with-two-lines.mdc-list-item--with-trailing-meta .mdc-list-item__end,.mdc-list-item--with-leading-icon.mdc-list-item--with-two-lines.mdc-list-item--with-trailing-meta .mdc-list-item__end,.mdc-list-item--with-leading-avatar.mdc-list-item--with-two-lines.mdc-list-item--with-trailing-meta .mdc-list-item__end{display:block;margin-top:0;line-height:normal}.mdc-list-item--with-leading-radio.mdc-list-item--with-two-lines.mdc-list-item--with-trailing-meta .mdc-list-item__end::before,.mdc-list-item--with-leading-checkbox.mdc-list-item--with-two-lines.mdc-list-item--with-trailing-meta .mdc-list-item__end::before,.mdc-list-item--with-leading-icon.mdc-list-item--with-two-lines.mdc-list-item--with-trailing-meta .mdc-list-item__end::before,.mdc-list-item--with-leading-avatar.mdc-list-item--with-two-lines.mdc-list-item--with-trailing-meta .mdc-list-item__end::before{display:inline-block;width:0;height:32px;content:"";vertical-align:0}.mdc-list-item--with-trailing-icon.mdc-list-item,[dir=rtl] .mdc-list-item--with-trailing-icon.mdc-list-item{padding-left:0;padding-right:0}.mdc-list-item--with-trailing-icon .mdc-list-item__end{margin-left:16px;margin-right:16px}.mdc-list-item--with-trailing-meta.mdc-list-item{padding-left:16px;padding-right:0}[dir=rtl] .mdc-list-item--with-trailing-meta.mdc-list-item{padding-left:0;padding-right:16px}.mdc-list-item--with-trailing-meta .mdc-list-item__end{-webkit-user-select:none;user-select:none;margin-left:28px;margin-right:16px}[dir=rtl] .mdc-list-item--with-trailing-meta .mdc-list-item__end{margin-left:16px;margin-right:28px}.mdc-list-item--with-trailing-meta.mdc-list-item--with-three-lines .mdc-list-item__end,.mdc-list-item--with-trailing-meta.mdc-list-item--with-two-lines .mdc-list-item__end{display:block;line-height:normal;align-self:flex-start;margin-top:0}.mdc-list-item--with-trailing-meta.mdc-list-item--with-three-lines .mdc-list-item__end::before,.mdc-list-item--with-trailing-meta.mdc-list-item--with-two-lines .mdc-list-item__end::before{display:inline-block;width:0;height:28px;content:"";vertical-align:0}.mdc-list-item--with-leading-radio .mdc-list-item__start,.mdc-list-item--with-leading-checkbox .mdc-list-item__start{margin-left:8px;margin-right:24px}[dir=rtl] .mdc-list-item--with-leading-radio .mdc-list-item__start,[dir=rtl] .mdc-list-item--with-leading-checkbox .mdc-list-item__start{margin-left:24px;margin-right:8px}.mdc-list-item--with-leading-radio.mdc-list-item--with-two-lines .mdc-list-item__start,.mdc-list-item--with-leading-checkbox.mdc-list-item--with-two-lines .mdc-list-item__start{align-self:flex-start;margin-top:8px}.mdc-list-item--with-trailing-radio.mdc-list-item,.mdc-list-item--with-trailing-checkbox.mdc-list-item{padding-left:16px;padding-right:0}[dir=rtl] .mdc-list-item--with-trailing-radio.mdc-list-item,[dir=rtl] .mdc-list-item--with-trailing-checkbox.mdc-list-item{padding-left:0;padding-right:16px}.mdc-list-item--with-trailing-radio.mdc-list-item--with-leading-icon,.mdc-list-item--with-trailing-radio.mdc-list-item--with-leading-avatar,.mdc-list-item--with-trailing-checkbox.mdc-list-item--with-leading-icon,.mdc-list-item--with-trailing-checkbox.mdc-list-item--with-leading-avatar{padding-left:0}[dir=rtl] .mdc-list-item--with-trailing-radio.mdc-list-item--with-leading-icon,[dir=rtl] .mdc-list-item--with-trailing-radio.mdc-list-item--with-leading-avatar,[dir=rtl] .mdc-list-item--with-trailing-checkbox.mdc-list-item--with-leading-icon,[dir=rtl] .mdc-list-item--with-trailing-checkbox.mdc-list-item--with-leading-avatar{padding-right:0}.mdc-list-item--with-trailing-radio .mdc-list-item__end,.mdc-list-item--with-trailing-checkbox .mdc-list-item__end{margin-left:24px;margin-right:8px}[dir=rtl] .mdc-list-item--with-trailing-radio .mdc-list-item__end,[dir=rtl] .mdc-list-item--with-trailing-checkbox .mdc-list-item__end{margin-left:8px;margin-right:24px}.mdc-list-item--with-trailing-radio.mdc-list-item--with-three-lines .mdc-list-item__end,.mdc-list-item--with-trailing-checkbox.mdc-list-item--with-three-lines .mdc-list-item__end{align-self:flex-start;margin-top:8px}.mdc-list-group__subheader{margin:.75rem 16px}.mdc-list-item--disabled .mdc-list-item__start,.mdc-list-item--disabled .mdc-list-item__content,.mdc-list-item--disabled .mdc-list-item__end{opacity:1}.mdc-list-item--disabled .mdc-list-item__primary-text,.mdc-list-item--disabled .mdc-list-item__secondary-text{opacity:var(--mdc-list-list-item-disabled-label-text-opacity, 0.3)}.mdc-list-item--disabled.mdc-list-item--with-leading-icon .mdc-list-item__start{color:var(--mdc-list-list-item-disabled-leading-icon-color, var(--mat-sys-on-surface));opacity:var(--mdc-list-list-item-disabled-leading-icon-opacity, 0.38)}.mdc-list-item--disabled.mdc-list-item--with-trailing-icon .mdc-list-item__end{color:var(--mdc-list-list-item-disabled-trailing-icon-color, var(--mat-sys-on-surface));opacity:var(--mdc-list-list-item-disabled-trailing-icon-opacity, 0.38)}.mat-mdc-list-item.mat-mdc-list-item-both-leading-and-trailing,[dir=rtl] .mat-mdc-list-item.mat-mdc-list-item-both-leading-and-trailing{padding-left:0;padding-right:0}.mdc-list-item.mdc-list-item--disabled .mdc-list-item__primary-text{color:var(--mdc-list-list-item-disabled-label-text-color, var(--mat-sys-on-surface))}.mdc-list-item:hover::before{background-color:var(--mdc-list-list-item-hover-state-layer-color, var(--mat-sys-on-surface));opacity:var(--mdc-list-list-item-hover-state-layer-opacity, var(--mat-sys-hover-state-layer-opacity))}.mdc-list-item.mdc-list-item--disabled::before{background-color:var(--mdc-list-list-item-disabled-state-layer-color, var(--mat-sys-on-surface));opacity:var(--mdc-list-list-item-disabled-state-layer-opacity, var(--mat-sys-focus-state-layer-opacity))}.mdc-list-item:focus::before{background-color:var(--mdc-list-list-item-focus-state-layer-color, var(--mat-sys-on-surface));opacity:var(--mdc-list-list-item-focus-state-layer-opacity, var(--mat-sys-focus-state-layer-opacity))}.mdc-list-item--disabled .mdc-radio,.mdc-list-item--disabled .mdc-checkbox{opacity:var(--mdc-list-list-item-disabled-label-text-opacity, 0.3)}.mdc-list-item--with-leading-avatar .mat-mdc-list-item-avatar{border-radius:var(--mdc-list-list-item-leading-avatar-shape, var(--mat-sys-corner-full));background-color:var(--mdc-list-list-item-leading-avatar-color, var(--mat-sys-primary-container))}.mat-mdc-list-item-icon{font-size:var(--mdc-list-list-item-leading-icon-size, 24px)}@media(forced-colors: active){a.mdc-list-item--activated::after{content:"";position:absolute;top:50%;right:16px;transform:translateY(-50%);width:10px;height:0;border-bottom:solid 10px;border-radius:10px}a.mdc-list-item--activated [dir=rtl]::after{right:auto;left:16px}}.mat-mdc-list-base{display:block}.mat-mdc-list-base .mdc-list-item__start,.mat-mdc-list-base .mdc-list-item__end,.mat-mdc-list-base .mdc-list-item__content{pointer-events:auto}.mat-mdc-list-item,.mat-mdc-list-option{width:100%;box-sizing:border-box;-webkit-tap-highlight-color:rgba(0,0,0,0)}.mat-mdc-list-item:not(.mat-mdc-list-item-interactive),.mat-mdc-list-option:not(.mat-mdc-list-item-interactive){cursor:default}.mat-mdc-list-item .mat-divider-inset,.mat-mdc-list-option .mat-divider-inset{position:absolute;left:0;right:0;bottom:0}.mat-mdc-list-item .mat-mdc-list-item-avatar~.mat-divider-inset,.mat-mdc-list-option .mat-mdc-list-item-avatar~.mat-divider-inset{margin-left:72px}[dir=rtl] .mat-mdc-list-item .mat-mdc-list-item-avatar~.mat-divider-inset,[dir=rtl] .mat-mdc-list-option .mat-mdc-list-item-avatar~.mat-divider-inset{margin-right:72px}.mat-mdc-list-item-interactive::before{top:0;left:0;right:0;bottom:0;position:absolute;content:"";opacity:0;pointer-events:none;border-radius:inherit}.mat-mdc-list-item>.mat-focus-indicator{top:0;left:0;right:0;bottom:0;position:absolute;pointer-events:none}.mat-mdc-list-item:focus>.mat-focus-indicator::before{content:""}.mat-mdc-list-item.mdc-list-item--with-three-lines .mat-mdc-list-item-line.mdc-list-item__secondary-text{white-space:nowrap;line-height:normal}.mat-mdc-list-item.mdc-list-item--with-three-lines .mat-mdc-list-item-unscoped-content.mdc-list-item__secondary-text{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2}mat-action-list button{background:none;color:inherit;border:none;font:inherit;outline:inherit;-webkit-tap-highlight-color:rgba(0,0,0,0);text-align:start}mat-action-list button::-moz-focus-inner{border:0}.mdc-list-item--with-leading-icon .mdc-list-item__start{margin-inline-start:var(--mat-list-list-item-leading-icon-start-space, 16px);margin-inline-end:var(--mat-list-list-item-leading-icon-end-space, 16px)}.mat-mdc-nav-list .mat-mdc-list-item{border-radius:var(--mat-list-active-indicator-shape, var(--mat-sys-corner-full));--mat-focus-indicator-border-radius:var(--mat-list-active-indicator-shape, var(--mat-sys-corner-full))}.mat-mdc-nav-list .mat-mdc-list-item.mdc-list-item--activated{background-color:var(--mat-list-active-indicator-color, var(--mat-sys-secondary-container))}</style><style>.mat-mdc-card{display:flex;flex-direction:column;box-sizing:border-box;position:relative;border-style:solid;border-width:0;background-color:var(--mdc-elevated-card-container-color, var(--mat-sys-surface-container-low));border-color:var(--mdc-elevated-card-container-color, var(--mat-sys-surface-container-low));border-radius:var(--mdc-elevated-card-container-shape, var(--mat-sys-corner-medium));box-shadow:var(--mdc-elevated-card-container-elevation, var(--mat-sys-level1))}.mat-mdc-card::after{position:absolute;top:0;left:0;width:100%;height:100%;border:solid 1px rgba(0,0,0,0);content:"";display:block;pointer-events:none;box-sizing:border-box;border-radius:var(--mdc-elevated-card-container-shape, var(--mat-sys-corner-medium))}.mat-mdc-card-outlined{background-color:var(--mdc-outlined-card-container-color, var(--mat-sys-surface));border-radius:var(--mdc-outlined-card-container-shape, var(--mat-sys-corner-medium));border-width:var(--mdc-outlined-card-outline-width, 1px);border-color:var(--mdc-outlined-card-outline-color, var(--mat-sys-outline-variant));box-shadow:var(--mdc-outlined-card-container-elevation, var(--mat-sys-level0))}.mat-mdc-card-outlined::after{border:none}.mdc-card__media{position:relative;box-sizing:border-box;background-repeat:no-repeat;background-position:center;background-size:cover}.mdc-card__media::before{display:block;content:""}.mdc-card__media:first-child{border-top-left-radius:inherit;border-top-right-radius:inherit}.mdc-card__media:last-child{border-bottom-left-radius:inherit;border-bottom-right-radius:inherit}.mat-mdc-card-actions{display:flex;flex-direction:row;align-items:center;box-sizing:border-box;min-height:52px;padding:8px}.mat-mdc-card-title{font-family:var(--mat-card-title-text-font, var(--mat-sys-title-large-font));line-height:var(--mat-card-title-text-line-height, var(--mat-sys-title-large-line-height));font-size:var(--mat-card-title-text-size, var(--mat-sys-title-large-size));letter-spacing:var(--mat-card-title-text-tracking, var(--mat-sys-title-large-tracking));font-weight:var(--mat-card-title-text-weight, var(--mat-sys-title-large-weight))}.mat-mdc-card-subtitle{color:var(--mat-card-subtitle-text-color, var(--mat-sys-on-surface));font-family:var(--mat-card-subtitle-text-font, var(--mat-sys-title-medium-font));line-height:var(--mat-card-subtitle-text-line-height, var(--mat-sys-title-medium-line-height));font-size:var(--mat-card-subtitle-text-size, var(--mat-sys-title-medium-size));letter-spacing:var(--mat-card-subtitle-text-tracking, var(--mat-sys-title-medium-tracking));font-weight:var(--mat-card-subtitle-text-weight, var(--mat-sys-title-medium-weight))}.mat-mdc-card-title,.mat-mdc-card-subtitle{display:block;margin:0}.mat-mdc-card-avatar~.mat-mdc-card-header-text .mat-mdc-card-title,.mat-mdc-card-avatar~.mat-mdc-card-header-text .mat-mdc-card-subtitle{padding:16px 16px 0}.mat-mdc-card-header{display:flex;padding:16px 16px 0}.mat-mdc-card-content{display:block;padding:0 16px}.mat-mdc-card-content:first-child{padding-top:16px}.mat-mdc-card-content:last-child{padding-bottom:16px}.mat-mdc-card-title-group{display:flex;justify-content:space-between;width:100%}.mat-mdc-card-avatar{height:40px;width:40px;border-radius:50%;flex-shrink:0;margin-bottom:16px;object-fit:cover}.mat-mdc-card-avatar~.mat-mdc-card-header-text .mat-mdc-card-subtitle,.mat-mdc-card-avatar~.mat-mdc-card-header-text .mat-mdc-card-title{line-height:normal}.mat-mdc-card-sm-image{width:80px;height:80px}.mat-mdc-card-md-image{width:112px;height:112px}.mat-mdc-card-lg-image{width:152px;height:152px}.mat-mdc-card-xl-image{width:240px;height:240px}.mat-mdc-card-subtitle~.mat-mdc-card-title,.mat-mdc-card-title~.mat-mdc-card-subtitle,.mat-mdc-card-header .mat-mdc-card-header-text .mat-mdc-card-title,.mat-mdc-card-header .mat-mdc-card-header-text .mat-mdc-card-subtitle,.mat-mdc-card-title-group .mat-mdc-card-title,.mat-mdc-card-title-group .mat-mdc-card-subtitle{padding-top:0}.mat-mdc-card-content>:last-child:not(.mat-mdc-card-footer){margin-bottom:0}.mat-mdc-card-actions-align-end{justify-content:flex-end}</style><style>.ngx-pagination{margin-left:0;margin-bottom:1rem}.ngx-pagination:before,.ngx-pagination:after{content:" ";display:table}.ngx-pagination:after{clear:both}.ngx-pagination li{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;margin-right:.0625rem;border-radius:0}.ngx-pagination li{display:inline-block}.ngx-pagination a,.ngx-pagination button{color:#0a0a0a;display:block;padding:.1875rem .625rem;border-radius:0}.ngx-pagination a:hover,.ngx-pagination button:hover{background:#e6e6e6}.ngx-pagination .current{padding:.1875rem .625rem;background:#2199e8;color:#fefefe;cursor:default}.ngx-pagination .disabled{padding:.1875rem .625rem;color:#cacaca;cursor:default}.ngx-pagination .disabled:hover{background:transparent}.ngx-pagination a,.ngx-pagination button{cursor:pointer}.ngx-pagination .pagination-previous a:before,.ngx-pagination .pagination-previous.disabled:before{content:"\ab";display:inline-block;margin-right:.5rem}.ngx-pagination .pagination-next a:after,.ngx-pagination .pagination-next.disabled:after{content:"\bb";display:inline-block;margin-left:.5rem}.ngx-pagination .show-for-sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}.ngx-pagination .small-screen{display:none}@media screen and (max-width: 601px){.ngx-pagination.responsive .small-screen{display:inline-block}.ngx-pagination.responsive li:not(.small-screen):not(.pagination-previous):not(.pagination-next){display:none}}
+</style><style>.slot-picker[_ngcontent-ng-c1607041535] {
+  display: flex;
+  flex: 1 1 100%;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  
+
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .__unavailable-slot[_ngcontent-ng-c1607041535] {
+  background: rgb(207.8421052632, 228.4736842105, 246.1578947368);
+  padding: 20px;
+  border-radius: 4px;
+  width: 100%;
+  color: rgb(35.4473684211, 118.1578947368, 189.0526315789);
+  margin-bottom: 20px;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .less-btn[_ngcontent-ng-c1607041535], 
+.slot-picker[_ngcontent-ng-c1607041535]   .more-btn[_ngcontent-ng-c1607041535] {
+  width: 50px;
+  height: 50px;
+  background-color: #e4e6eb;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .less-btn[_ngcontent-ng-c1607041535], 
+.slot-picker[_ngcontent-ng-c1607041535]   .more-btn[_ngcontent-ng-c1607041535] {
+  -webkit-transition: background 250ms ease, width 250ms ease, opacity 250ms ease, outline 250ms ease, box-shadow 250ms ease, border 250ms ease, color 250ms ease;
+  -moz-transition: background 250ms ease, width 250ms ease, opacity 250ms ease, outline 250ms ease, box-shadow 250ms ease, border 250ms ease, color 250ms ease;
+  -ms-transition: background 250ms ease, width 250ms ease, opacity 250ms ease, outline 250ms ease, box-shadow 250ms ease, border 250ms ease, color 250ms ease;
+  -o-transition: background 250ms ease, width 250ms ease, opacity 250ms ease, outline 250ms ease, box-shadow 250ms ease, border 250ms ease, color 250ms ease;
+  transition: background 250ms ease, width 250ms ease, opacity 250ms ease, outline 250ms ease, box-shadow 250ms ease, border 250ms ease, color 250ms ease;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .less-btn[_ngcontent-ng-c1607041535]:hover, 
+.slot-picker[_ngcontent-ng-c1607041535]   .more-btn[_ngcontent-ng-c1607041535]:hover {
+  background-color: var(--brand-primary-color);
+  color: white;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .less-btn[_ngcontent-ng-c1607041535] {
+  margin-right: 10px;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .more-btn[_ngcontent-ng-c1607041535] {
+  margin-left: 10px;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .__mobile-nav[_ngcontent-ng-c1607041535] {
+  display: inherit;
+  flex-direction: row;
+  flex: 1 1 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  display: none;
+  margin-bottom: 20px;
+}
+@media (max-width: 959px) {
+  .slot-picker[_ngcontent-ng-c1607041535]   .__mobile-nav[_ngcontent-ng-c1607041535] {
+    display: flex;
+  }
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .__mobile-nav[_ngcontent-ng-c1607041535]   .less-btn.small[_ngcontent-ng-c1607041535] {
+  margin-right: 10px;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .__mobile-nav[_ngcontent-ng-c1607041535]   .less-btn.small[_ngcontent-ng-c1607041535], 
+.slot-picker[_ngcontent-ng-c1607041535]   .__mobile-nav[_ngcontent-ng-c1607041535]   .more-btn.small[_ngcontent-ng-c1607041535] {
+  display: inherit;
+  height: inherit;
+  flex: 1;
+  border-radius: 4px;
+  border: 1px solid #e4e6eb;
+  padding: 10px;
+  font-size: 0.85em;
+  background-color: transparent;
+  color: #556c7b;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .__mobile-nav[_ngcontent-ng-c1607041535]   .less-btn.small[_ngcontent-ng-c1607041535]   i[_ngcontent-ng-c1607041535], 
+.slot-picker[_ngcontent-ng-c1607041535]   .__mobile-nav[_ngcontent-ng-c1607041535]   .more-btn.small[_ngcontent-ng-c1607041535]   i[_ngcontent-ng-c1607041535] {
+  font-size: 0.6em;
+  margin: 0 5px;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535] {
+  display: inherit;
+  flex-direction: row;
+  flex: 1;
+}
+@media (max-width: 959px) {
+  .slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .btn.less-btn[_ngcontent-ng-c1607041535], 
+   .slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .btn.more-btn[_ngcontent-ng-c1607041535] {
+    display: none;
+  }
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535] {
+  display: inherit;
+  flex: 1;
+  flex-flow: row wrap;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__day-slots[_ngcontent-ng-c1607041535] {
+  display: inherit;
+  flex: 1;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 240px;
+}
+@media (max-width: 599px) {
+  .slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__day-slots[_ngcontent-ng-c1607041535] {
+    min-height: 150px;
+  }
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__day-slots[_ngcontent-ng-c1607041535]   .__day-slot-wrapper[_ngcontent-ng-c1607041535] {
+  display: inherit;
+  flex: 1 1 100%;
+  flex-direction: row;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__day-slots[_ngcontent-ng-c1607041535]   .__day-slot-wrapper[_ngcontent-ng-c1607041535]   ul.__day-slot[_ngcontent-ng-c1607041535] {
+  margin: 0;
+  display: inherit;
+  list-style: none;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  border: 2px transparent solid;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__day-slots[_ngcontent-ng-c1607041535]   .__day-slot-wrapper[_ngcontent-ng-c1607041535]   ul.__day-slot[_ngcontent-ng-c1607041535]   .__day-slot-date[_ngcontent-ng-c1607041535] {
+  display: inherit;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__day-slots[_ngcontent-ng-c1607041535]   .__day-slot-wrapper[_ngcontent-ng-c1607041535]   ul.__day-slot.__hide-weekend[_ngcontent-ng-c1607041535] {
+  display: none;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__day-slots[_ngcontent-ng-c1607041535]   .__day-slot-wrapper[_ngcontent-ng-c1607041535]   ul.__day-slot.__today[_ngcontent-ng-c1607041535] {
+  justify-content: center;
+  align-items: center;
+  background: rgb(233.6105263158, 242.9684210526, 250.9894736842);
+  border-radius: 4px;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__day-slots[_ngcontent-ng-c1607041535]   .__day-slot-wrapper[_ngcontent-ng-c1607041535]   ul.__day-slot.__saturday[_ngcontent-ng-c1607041535] {
+  border-left: 1px dotted #e4e6eb;
+  padding-left: 2px;
+}
+@media (max-width: 959px) {
+  .slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__day-slots[_ngcontent-ng-c1607041535]   .__day-slot-wrapper[_ngcontent-ng-c1607041535]   ul.__day-slot[_ngcontent-ng-c1607041535] {
+    font-size: 0.85em;
+  }
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__day-slots[_ngcontent-ng-c1607041535]   .__day-slot-wrapper[_ngcontent-ng-c1607041535]   ul.__day-slot[_ngcontent-ng-c1607041535]   .__slot[_ngcontent-ng-c1607041535] {
+  width: 100%;
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  padding: 10px 20px;
+  margin: 5px 0px;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__day-slots[_ngcontent-ng-c1607041535]   .__day-slot-wrapper[_ngcontent-ng-c1607041535]   ul.__day-slot[_ngcontent-ng-c1607041535]   .__slot.--time[_ngcontent-ng-c1607041535] {
+  background-color: #e4e6eb;
+  cursor: pointer;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__day-slots[_ngcontent-ng-c1607041535]   .__day-slot-wrapper[_ngcontent-ng-c1607041535]   ul.__day-slot[_ngcontent-ng-c1607041535]   .__slot.--time[_ngcontent-ng-c1607041535] {
+  -webkit-transition: background 250ms ease, width 250ms ease, opacity 250ms ease, outline 250ms ease, box-shadow 250ms ease, border 250ms ease, color 250ms ease;
+  -moz-transition: background 250ms ease, width 250ms ease, opacity 250ms ease, outline 250ms ease, box-shadow 250ms ease, border 250ms ease, color 250ms ease;
+  -ms-transition: background 250ms ease, width 250ms ease, opacity 250ms ease, outline 250ms ease, box-shadow 250ms ease, border 250ms ease, color 250ms ease;
+  -o-transition: background 250ms ease, width 250ms ease, opacity 250ms ease, outline 250ms ease, box-shadow 250ms ease, border 250ms ease, color 250ms ease;
+  transition: background 250ms ease, width 250ms ease, opacity 250ms ease, outline 250ms ease, box-shadow 250ms ease, border 250ms ease, color 250ms ease;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__day-slots[_ngcontent-ng-c1607041535]   .__day-slot-wrapper[_ngcontent-ng-c1607041535]   ul.__day-slot[_ngcontent-ng-c1607041535]   .__slot.--time[_ngcontent-ng-c1607041535]:hover {
+  background-color: var(--brand-primary-color);
+  opacity: 0.8;
+  color: #ffffff;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__day-slots[_ngcontent-ng-c1607041535]   .__day-slot-wrapper[_ngcontent-ng-c1607041535]   ul.__day-slot[_ngcontent-ng-c1607041535]   .__slot.--time[_ngcontent-ng-c1607041535]:focus {
+  opacity: 1;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__day-slots[_ngcontent-ng-c1607041535]   .__day-slot-wrapper[_ngcontent-ng-c1607041535]   ul.__day-slot[_ngcontent-ng-c1607041535]   .__slot.--time.selected[_ngcontent-ng-c1607041535] {
+  background-color: var(--brand-primary-color);
+  color: #ffffff;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__day-slots[_ngcontent-ng-c1607041535]   .__day-slot-wrapper[_ngcontent-ng-c1607041535]   ul.__day-slot[_ngcontent-ng-c1607041535]   .__slot.--small[_ngcontent-ng-c1607041535] {
+  padding: 3px 5px;
+  margin: 5px 0px;
+  height: 30px;
+  font-weight: 400;
+}
+@media (max-width: 599px) {
+  .slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__day-slots[_ngcontent-ng-c1607041535]   .__day-slot-wrapper[_ngcontent-ng-c1607041535]   ul.__day-slot[_ngcontent-ng-c1607041535]   .__slot[_ngcontent-ng-c1607041535] {
+    padding: 8px;
+    margin: 3px 0px;
+  }
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__show-slots[_ngcontent-ng-c1607041535] {
+  display: flex;
+  flex: 1 1 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__no-slot[_ngcontent-ng-c1607041535] {
+  display: inherit;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  background: #e4e6eb;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 4px;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__no-slot[_ngcontent-ng-c1607041535]   button[_ngcontent-ng-c1607041535] {
+  margin-top: 10px;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__no-slot[_ngcontent-ng-c1607041535]   .icon-time[_ngcontent-ng-c1607041535] {
+  font-size: 0.8em;
+  color: #ffffff;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__show-next-slot-btn[_ngcontent-ng-c1607041535] {
+  cursor: pointer;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__slot-message[_ngcontent-ng-c1607041535] {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.slot-picker[_ngcontent-ng-c1607041535]   .slot-wrapper[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__slot-message[_ngcontent-ng-c1607041535]   .icon-time[_ngcontent-ng-c1607041535] {
+  margin-right: 5px;
+}
+@media screen and (max-width: 400px) {
+  .slot-picker.--small[_ngcontent-ng-c1607041535]   .__content[_ngcontent-ng-c1607041535]   .__day-slots[_ngcontent-ng-c1607041535]   .__day-slot[_ngcontent-ng-c1607041535]   .__slot[_ngcontent-ng-c1607041535], 
+   .slot-picker.--small[_ngcontent-ng-c1607041535]   .__day-slot-date[_ngcontent-ng-c1607041535] {
+    font-size: 0.9rem;
+  }
+}
+.slot-picker.--small[_ngcontent-ng-c1607041535]   .less-btn[_ngcontent-ng-c1607041535], 
+.slot-picker.--small[_ngcontent-ng-c1607041535]   .more-btn[_ngcontent-ng-c1607041535] {
+  width: 30px;
+  height: 30px;
+}
+.slot-picker.--small[_ngcontent-ng-c1607041535]   .less-btn[_ngcontent-ng-c1607041535]   i[_ngcontent-ng-c1607041535], 
+.slot-picker.--small[_ngcontent-ng-c1607041535]   .more-btn[_ngcontent-ng-c1607041535]   i[_ngcontent-ng-c1607041535] {
+  font-size: 0.7em;
+}</style><style>.__time-wrapper[_ngcontent-ng-c2304718999]   .__time-table[_ngcontent-ng-c2304718999]   .__time-row[_ngcontent-ng-c2304718999] {
+  margin: 5px 0px;
+}
+.__time-wrapper[_ngcontent-ng-c2304718999]   .__time-table[_ngcontent-ng-c2304718999]   .__time-row[_ngcontent-ng-c2304718999]:first-child {
+  margin-top: 0px;
+}
+.__time-wrapper[_ngcontent-ng-c2304718999]   .__time-table[_ngcontent-ng-c2304718999]   .__time-row[_ngcontent-ng-c2304718999]   .__weekdays[_ngcontent-ng-c2304718999] {
+  font-weight: bold;
+}</style></head>
+
+<body mimi-root="" ng-version="19.1.2" _nghost-ng-c2646666280=""><div _ngcontent-ng-c2646666280="" class="mimi-header"><header _ngcontent-ng-c2646666280="" mimi-header="" _nghost-ng-c1679001208=""><!----><!----><nav _ngcontent-ng-c1679001208="" test-tag="header-navbar"><a _ngcontent-ng-c1679001208="" href="/" class="__logo-wrapper"><div _ngcontent-ng-c1679001208="" class="logo"></div><div _ngcontent-ng-c1679001208="" class="follow-up-text"></div></a><div _ngcontent-ng-c1679001208="" class="__header-option"><div _ngcontent-ng-c1679001208="" class="__flag-wrapper"><a _ngcontent-ng-c1679001208="" class="__language-flag"><img _ngcontent-ng-c1679001208="" src="src/assets/images/flag-austria.svg"></a><a _ngcontent-ng-c1679001208="" class="__language-flag"><img _ngcontent-ng-c1679001208="" src="src/assets/images/flag-english.svg"></a></div><div _ngcontent-ng-c1679001208="" class="vertical-divider"></div><div _ngcontent-ng-c1679001208="" class="login-section"><button _ngcontent-ng-c1679001208="" type="button" routerlink="/login" class="btn btn-primary --small" tabindex="0"><i _ngcontent-ng-c1679001208="" class="ltdo icon-key"></i><span _ngcontent-ng-c1679001208="">anmelden</span></button><!----><!----></div></div></nav></header></div><!----><main _ngcontent-ng-c2646666280="" class="booking-main"><router-outlet _ngcontent-ng-c2646666280=""></router-outlet><booking-profile-list _nghost-ng-c804680645=""><div _ngcontent-ng-c804680645="" class="profile-list-wrapper"><booking-search-box _ngcontent-ng-c804680645="" class="fx-flex-100" _nghost-ng-c1308542630=""><div _ngcontent-ng-c1308542630="" class="search-box-wrapper"><section _ngcontent-ng-c1308542630="" class="profile-list-search fx-direction-row fx-wrap-wrap fx-gap-row-15px fx-layout-align-main-start fx-layout-align-cross-center fxm-lt-sm-fx-gap-row-0px fxm-lt-sm-fx-layout-align-main-stretch fxm-lt-sm-fx-layout-align-cross-default"><ng-select _ngcontent-ng-c1308542630="" ngclass.lt-lg="m-b-1" bindlabel="core" ngclass="profile-list-multiple-select --speciality fx-flex fxm-lt-sm-fx-flex-100" placeholder="Fachrichtung" class="profile-list-multiple-select --speciality fx-flex fxm-lt-sm-fx-flex-100 ng-select-typeahead ng-select-multiple ng-select-searchable ng-select-clearable ng-select ng-untouched ng-pristine ng-valid"><div class="ng-select-container"><div class="ng-value-container"><div class="ng-placeholder">Fachrichtung</div><!----><!----><div role="combobox" aria-haspopup="listbox" class="ng-input" aria-expanded="false"><input aria-autocomplete="list" type="text" autocorrect="off" autocapitalize="off" autocomplete="a8be332588cb"></div></div><!----><!----><span class="ng-arrow-wrapper"><span class="ng-arrow"></span></span></div><!----></ng-select><!----><ng-select _ngcontent-ng-c1308542630="" ngclass.lt-lg="m-b-1" ngclass="profile-list-select --pin fx-flex fxm-lt-sm-fx-flex-100" bindlabel="place" typetosearchtext="Bspw.: Graz, 1170, Niederösterreich" placeholder="Ort, PLZ, Bundesland" class="profile-list-select --pin fx-flex fxm-lt-sm-fx-flex-100 ng-select-typeahead ng-select-searchable ng-select-clearable ng-select ng-select-single ng-untouched ng-pristine ng-valid"><div class="ng-select-container"><div class="ng-value-container"><div class="ng-placeholder">Ort, PLZ, Bundesland</div><!----><!----><div role="combobox" aria-haspopup="listbox" class="ng-input" aria-expanded="false"><input aria-autocomplete="list" type="text" autocorrect="off" autocapitalize="off" autocomplete="a44912092b04"></div></div><!----><!----><span class="ng-arrow-wrapper"><span class="ng-arrow"></span></span></div><!----></ng-select><button _ngcontent-ng-c1308542630="" test-tag="doc-search-btn" ngclass="btn btn-primary ie-btn fx-flex-nogrow fx-gap-row-10px fxm-lt-sm-fx-flex-100" ngclass.lt-lg="m-b-1" type="button" class="btn btn-primary ie-btn fx-flex-nogrow fx-gap-row-10px fxm-lt-sm-fx-flex-100"><i _ngcontent-ng-c1308542630="" class="ltdo icon-magnifier"></i><span _ngcontent-ng-c1308542630="">suchen</span></button></section><section _ngcontent-ng-c1308542630="" class="profile-list-search-filter fx-direction-row fx-wrap-wrap fx-gap-row-15px fx-layout-align-main-start fx-layout-align-cross-center fxm-lt-sm-fx-gap-row-0px"><span _ngcontent-ng-c1308542630="" class="fx-flex-nogrow fxm-lt-md-fx-hide">filtern nach</span><div _ngcontent-ng-c1308542630="" ngclass="fxm-lt-sm-fx-flex-100" ngclass.lt-lg="m-b-1" class="fxm-lt-sm-fx-flex-100"><input _ngcontent-ng-c1308542630="" autocomplete="false" type="text" placeholder="Nachname" id="name-input" class="fx-flex-200px fxm-lt-sm-fx-flex-100 ng-valid ng-dirty ng-touched"><!----><!----></div><div _ngcontent-ng-c1308542630="" ngclass.lt-lg="m-b-1" ngclass="__language hide-generali fx-flex-200px fxm-sm-fx-flex fxm-lt-sm-fx-flex-100" ngclass.lt-sm="m-b-1" class="__language hide-generali fxm-gt-sm-fx-flex-nogrow fxm-sm-fx-flex fxm-lt-sm-fx-flex-100 fx-flex-200px"><ng-select _ngcontent-ng-c1308542630="" placeholder="Alle Sprachen" bindlabel="name" bindvalue="code" class="profile-list-multiple-select --language ng-select-multiple ng-select-searchable ng-select-clearable ng-select ng-untouched ng-pristine ng-valid" style="width: 100%;"><div class="ng-select-container"><div class="ng-value-container"><div class="ng-placeholder">Alle Sprachen</div><!----><!----><div role="combobox" aria-haspopup="listbox" class="ng-input" aria-expanded="false"><input aria-autocomplete="list" type="text" autocorrect="off" autocapitalize="off" autocomplete="ab8b6890b409"></div></div><!----><!----><span class="ng-arrow-wrapper"><span class="ng-arrow"></span></span></div><!----></ng-select></div><div _ngcontent-ng-c1308542630="" ngclass.lt-lg="m-b-1" ngclass="__video-consultation hide-generali fxm-gt-sm-fx-flex-nogrow fxm-sm-fx-flex fxm-lt-sm-fx-flex-100" class="__video-consultation hide-generali fxm-gt-sm-fx-flex-nogrow fxm-sm-fx-flex fxm-lt-sm-fx-flex-100"><button _ngcontent-ng-c1308542630="" type="button" ngclass="btn btn-primary --video fx-flex-100 fx-gap-row-10px fx-layout-align-main-start fx-layout-align-cross-center fxm-lt-sm-fx-layout-align-main-center fxm-lt-sm-fx-layout-align-cross-default" class="btn btn-primary --video fx-flex-100 fx-gap-row-10px fx-layout-align-main-start fx-layout-align-cross-center fxm-lt-sm-fx-layout-align-main-center fxm-lt-sm-fx-layout-align-cross-default"><i _ngcontent-ng-c1308542630="" class="ltdo icon-video"></i><span _ngcontent-ng-c1308542630="">Videokonsultation</span></button></div></section></div></booking-search-box><div _ngcontent-ng-c804680645="" class="__profile-status-row fx-flex-100 fx-layout-align-main-space-between fx-layout-align-cross-center"><div _ngcontent-ng-c804680645="" class="__profile-list-loader"><!----></div><!----></div><!----><div _ngcontent-ng-c804680645="" class="__main-list-wrapper"><div _ngcontent-ng-c804680645="" class="__profile-list"><div _ngcontent-ng-c804680645="" class="__list-wrapper ng-star-inserted"><mat-list _ngcontent-ng-c804680645="" class="mat-mdc-list mat-mdc-list-base mdc-list __list" aria-disabled="false"><mat-card _ngcontent-ng-c804680645="" class="mat-mdc-card mdc-card __list-card ng-star-inserted" id="profile-67c70bf9cf24417056939ac1"><div _ngcontent-ng-c804680645="" ngclass="__profile-info" ngclass.gt-sm="--divider" class="fx-flex-100 --divider"><mat-card-header _ngcontent-ng-c804680645="" class="mat-mdc-card-header __list-card-header"><div class="mat-mdc-card-header-text"></div><div _ngcontent-ng-c804680645="" class="fx-direction-row fx-flex fx-gap-row-20px"><div _ngcontent-ng-c804680645="" mat-card-avatar="" class="mat-mdc-card-avatar __profile-avatar-wrapper fx-layout-align-main-center fx-layout-align-cross-center">  <!----><div _ngcontent-ng-c804680645="" class="__no-profile-avatar ng-star-inserted"><div _ngcontent-ng-c804680645="" class="__profile-avatar fx-layout-align-main-center fx-layout-align-cross-center"><i _ngcontent-ng-c804680645="" class="ltdo icon-profile"></i></div></div><!----></div><div _ngcontent-ng-c804680645="" class="fx-direction-column"><mat-card-title _ngcontent-ng-c804680645="" class="mat-mdc-card-title __card-title ng-star-inserted"> Karpaltunnelsyndrom Ordination OA Dr. Georg Bézard </mat-card-title><!----><!----><mat-card-subtitle _ngcontent-ng-c804680645="" class="mat-mdc-card-subtitle __card-subtitle"><span _ngcontent-ng-c804680645="">Fachärzt:in für Orthopädie und Traumatologie</span><span _ngcontent-ng-c804680645="" class="ng-star-inserted"><br _ngcontent-ng-c804680645="">Fachärzt:in für Unfallchirurgie </span><!----><!----></mat-card-subtitle></div></div><div _ngcontent-ng-c804680645="" class="__list-controls"><a _ngcontent-ng-c804680645="" target="_blank" class="btn btn-primary --small" href="http://www.google.com/maps/place/,"><i _ngcontent-ng-c804680645="" class="ltdo icon-pin"></i></a><!----></div></mat-card-header><mat-card-content _ngcontent-ng-c804680645="" class="mat-mdc-card-content"><div _ngcontent-ng-c804680645="" ngclass="--spacing" class="__profile-detail-list --spacing"><div _ngcontent-ng-c804680645="" class="fx-gap-row-20px fx-layout-align-main-start fx-layout-align-cross-center"><span _ngcontent-ng-c804680645="" class="fx-flex-20px fx-layout-align-main-center fx-layout-align-cross-center"><i _ngcontent-ng-c804680645="" class="ltdo icon-home"></i></span><span _ngcontent-ng-c804680645="" class="__home">,  </span></div><div _ngcontent-ng-c804680645="" class="fx-gap-row-20px fx-layout-align-main-start fx-layout-align-cross-center ng-star-inserted"><span _ngcontent-ng-c804680645="" class="fx-flex-20px fx-layout-align-main-center fx-layout-align-cross-center"><i _ngcontent-ng-c804680645="" class="ltdo icon-phone"></i></span><span _ngcontent-ng-c804680645="" class="__mobile"><a _ngcontent-ng-c804680645="" target="_blank" href="tel:+43 (0) 660 3737 936">+43 (0) 660 3737 936</a></span></div><!----><!----><div _ngcontent-ng-c804680645="" class="fx-gap-row-20px fx-layout-align-main-start fx-layout-align-cross-center ng-star-inserted"><span _ngcontent-ng-c804680645="" class="fx-flex-20px fx-layout-align-main-center fx-layout-align-cross-center"><i _ngcontent-ng-c804680645="" class="ltdo icon-email"></i></span><span _ngcontent-ng-c804680645="" class="__email"><a _ngcontent-ng-c804680645="" target="_blank" href="mailto:office@drbezard.com">office@drbezard.com</a></span></div><!----><div _ngcontent-ng-c804680645="" class="fx-gap-row-20px fx-layout-align-main-start fx-layout-align-cross-center ng-star-inserted"><span _ngcontent-ng-c804680645="" class="fx-flex-20px fx-layout-align-main-center fx-layout-align-cross-center"><i _ngcontent-ng-c804680645="" class="ltdo icon-card"></i></span><span _ngcontent-ng-c804680645="" class="__website"><a _ngcontent-ng-c804680645="" target="_blank" href="http://www.carpaltunnelsyndrom.at">www.carpaltunnelsyndrom.at</a></span></div><!----><!----><div _ngcontent-ng-c804680645="" class="fx-gap-row-20px fx-layout-align-main-start fx-layout-align-cross-center ng-star-inserted"><span _ngcontent-ng-c804680645="" class="fx-flex-20px fx-layout-align-main-center fx-layout-align-cross-center"><i _ngcontent-ng-c804680645="" class="ltdo icon-video"></i></span><span _ngcontent-ng-c804680645="" class="__tele">Videokonsultation verfügbar</span></div><!----></div></mat-card-content></div><div _ngcontent-ng-c804680645="" class="__profile-additional-info fx-flex-100"><mat-card-content _ngcontent-ng-c804680645="" class="mat-mdc-card-content ng-star-inserted"><ltdo-slot-picker _ngcontent-ng-c804680645="" size="small" _nghost-ng-c1607041535="" class="ng-tns-c1607041535-21 ng-star-inserted"><div _ngcontent-ng-c1607041535="" class="slot-picker ng-tns-c1607041535-21 --small"><div _ngcontent-ng-c1607041535="" class="__mobile-nav ng-tns-c1607041535-21"><button _ngcontent-ng-c1607041535="" type="button" class="btn less-btn small ng-tns-c1607041535-21" disabled=""><i _ngcontent-ng-c1607041535="" class="ltdo icon-arrow ng-tns-c1607041535-21"></i><span _ngcontent-ng-c1607041535="" class="ng-tns-c1607041535-21">vorherige Woche</span></button><button _ngcontent-ng-c1607041535="" type="button" class="btn more-btn small ng-tns-c1607041535-21"><span _ngcontent-ng-c1607041535="" class="ng-tns-c1607041535-21">nächste Woche</span><i _ngcontent-ng-c1607041535="" class="ltdo icon-arrow --flipH ng-tns-c1607041535-21"></i></button></div><div _ngcontent-ng-c1607041535="" class="slot-wrapper ng-tns-c1607041535-21"><button _ngcontent-ng-c1607041535="" type="button" class="btn less-btn ng-tns-c1607041535-21" disabled=""><i _ngcontent-ng-c1607041535="" class="ltdo icon-arrow ng-tns-c1607041535-21"></i></button><div _ngcontent-ng-c1607041535="" class="__content ng-tns-c1607041535-21"><div _ngcontent-ng-c1607041535="" class="__day-slots ng-tns-c1607041535-21"><div _ngcontent-ng-c1607041535="" class="__day-slot-wrapper ng-tns-c1607041535-21"><ul _ngcontent-ng-c1607041535="" test-tag="day-slot" class="__day-slot ng-tns-c1607041535-21 __today ng-star-inserted"><div _ngcontent-ng-c1607041535="" class="__day-slot-date ng-tns-c1607041535-21"><span _ngcontent-ng-c1607041535="" class="ng-tns-c1607041535-21">Mo</span><span _ngcontent-ng-c1607041535="" class="ng-tns-c1607041535-21">08.12.</span></div><li _ngcontent-ng-c1607041535="" test-tag="slotItem" class="__slot ng-tns-c1607041535-21 --time --small ng-star-inserted"><!----> 18:15 <!----></li><li _ngcontent-ng-c1607041535="" test-tag="slotItem" class="__slot ng-tns-c1607041535-21 --time --small ng-star-inserted"><!----> 18:30 <!----></li><li _ngcontent-ng-c1607041535="" test-tag="slotItem" class="__slot ng-tns-c1607041535-21 --small ng-star-inserted">-<!----><!----></li><li _ngcontent-ng-c1607041535="" test-tag="slotItem" class="__slot ng-tns-c1607041535-21 --small ng-star-inserted">-<!----><!----></li><li _ngcontent-ng-c1607041535="" test-tag="slotItem" class="__slot ng-tns-c1607041535-21 --small ng-star-inserted">-<!----><!----></li><!----><!----></ul><ul _ngcontent-ng-c1607041535="" test-tag="day-slot" class="__day-slot ng-tns-c1607041535-21 ng-star-inserted"><div _ngcontent-ng-c1607041535="" class="__day-slot-date ng-tns-c1607041535-21"><span _ngcontent-ng-c1607041535="" class="ng-tns-c1607041535-21">Di</span><span _ngcontent-ng-c1607041535="" class="ng-tns-c1607041535-21">09.12.</span></div><li _ngcontent-ng-c1607041535="" test-tag="slotItem" class="__slot ng-tns-c1607041535-21 --small ng-star-inserted">-<!----><!----></li><li _ngcontent-ng-c1607041535="" test-tag="slotItem" class="__slot ng-tns-c1607041535-21 --small ng-star-inserted">-<!----><!----></li><li _ngcontent-ng-c1607041535="" test-tag="slotItem" class="__slot ng-tns-c1607041535-21 --small ng-star-inserted">-<!----><!----></li><li _ngcontent-ng-c1607041535="" test-tag="slotItem" class="__slot ng-tns-c1607041535-21 --small ng-star-inserted">-<!----><!----></li><li _ngcontent-ng-c1607041535="" test-tag="slotItem" class="__slot ng-tns-c1607041535-21 --small ng-star-inserted">-<!----><!----></li><!----><!----></ul><ul _ngcontent-ng-c1607041535="" test-tag="day-slot" class="__day-slot ng-tns-c1607041535-21 ng-star-inserted"><div _ngcontent-ng-c1607041535="" class="__day-slot-date ng-tns-c1607041535-21"><span _ngcontent-ng-c1607041535="" class="ng-tns-c1607041535-21">Mi</span><span _ngcontent-ng-c1607041535="" class="ng-tns-c1607041535-21">10.12.</span></div><li _ngcontent-ng-c1607041535="" test-tag="slotItem" class="__slot ng-tns-c1607041535-21 --time --small ng-star-inserted"><!----> 08:00 <!----></li><li _ngcontent-ng-c1607041535="" test-tag="slotItem" class="__slot ng-tns-c1607041535-21 --time --small ng-star-inserted"><!----> 08:15 <!----></li><li _ngcontent-ng-c1607041535="" test-tag="slotItem" class="__slot ng-tns-c1607041535-21 --time --small ng-star-inserted"><!----> 08:30 <!----></li><li _ngcontent-ng-c1607041535="" test-tag="slotItem" class="__slot ng-tns-c1607041535-21 --time --small ng-star-inserted"><!----> 08:45 <!----></li><li _ngcontent-ng-c1607041535="" test-tag="slotItem" class="__slot ng-tns-c1607041535-21 --small ng-star-inserted">-<!----><!----></li><!----><!----></ul><ul _ngcontent-ng-c1607041535="" test-tag="day-slot" class="__day-slot ng-tns-c1607041535-21 ng-star-inserted"><div _ngcontent-ng-c1607041535="" class="__day-slot-date ng-tns-c1607041535-21"><span _ngcontent-ng-c1607041535="" class="ng-tns-c1607041535-21">Do</span><span _ngcontent-ng-c1607041535="" class="ng-tns-c1607041535-21">11.12.</span></div><li _ngcontent-ng-c1607041535="" test-tag="slotItem" class="__slot ng-tns-c1607041535-21 --small ng-star-inserted">-<!----><!----></li><li _ngcontent-ng-c1607041535="" test-tag="slotItem" class="__slot ng-tns-c1607041535-21 --small ng-star-inserted">-<!----><!----></li><li _ngcontent-ng-c1607041535="" test-tag="slotItem" class="__slot ng-tns-c1607041535-21 --small ng-star-inserted">-<!----><!----></li><li _ngcontent-ng-c1607041535="" test-tag="slotItem" class="__slot ng-tns-c1607041535-21 --small ng-star-inserted">-<!----><!----></li><li _ngcontent-ng-c1607041535="" test-tag="slotItem" class="__slot ng-tns-c1607041535-21 --small ng-star-inserted">-<!----><!----></li><!----><!----></ul><ul _ngcontent-ng-c1607041535="" test-tag="day-slot" class="__day-slot ng-tns-c1607041535-21 ng-star-inserted"><div _ngcontent-ng-c1607041535="" class="__day-slot-date ng-tns-c1607041535-21"><span _ngcontent-ng-c1607041535="" class="ng-tns-c1607041535-21">Fr</span><span _ngcontent-ng-c1607041535="" class="ng-tns-c1607041535-21">12.12.</span></div><li _ngcontent-ng-c1607041535="" test-tag="slotItem" class="__slot ng-tns-c1607041535-21 --time --small ng-star-inserted"><!----> 08:00 <!----></li><li _ngcontent-ng-c1607041535="" test-tag="slotItem" class="__slot ng-tns-c1607041535-21 --time --small ng-star-inserted"><!----> 08:15 <!----></li><li _ngcontent-ng-c1607041535="" test-tag="slotItem" class="__slot ng-tns-c1607041535-21 --time --small ng-star-inserted"><!----> 08:30 <!----></li><li _ngcontent-ng-c1607041535="" test-tag="slotItem" class="__slot ng-tns-c1607041535-21 --time --small ng-star-inserted"><!----> 08:45 <!----></li><li _ngcontent-ng-c1607041535="" test-tag="slotItem" class="__slot ng-tns-c1607041535-21 --small ng-star-inserted">-<!----><!----></li><!----><!----></ul><ul _ngcontent-ng-c1607041535="" test-tag="day-slot" class="__day-slot ng-tns-c1607041535-21 __hide-weekend __saturday ng-star-inserted"><div _ngcontent-ng-c1607041535="" class="__day-slot-date ng-tns-c1607041535-21"><span _ngcontent-ng-c1607041535="" class="ng-tns-c1607041535-21">Sa</span><span _ngcontent-ng-c1607041535="" class="ng-tns-c1607041535-21">13.12.</span></div><li _ngcontent-ng-c1607041535="" test-tag="slotItem" class="__slot ng-tns-c1607041535-21 --small ng-star-inserted">-<!----><!----></li><li _ngcontent-ng-c1607041535="" test-tag="slotItem" class="__slot ng-tns-c1607041535-21 --small ng-star-inserted">-<!----><!----></li><li _ngcontent-ng-c1607041535="" test-tag="slotItem" class="__slot ng-tns-c1607041535-21 --small ng-star-inserted">-<!----><!----></li><li _ngcontent-ng-c1607041535="" test-tag="slotItem" class="__slot ng-tns-c1607041535-21 --small ng-star-inserted">-<!----><!----></li><li _ngcontent-ng-c1607041535="" test-tag="slotItem" class="__slot ng-tns-c1607041535-21 --small ng-star-inserted">-<!----><!----></li><!----><!----></ul><ul _ngcontent-ng-c1607041535="" test-tag="day-slot" class="__day-slot ng-tns-c1607041535-21 __hide-weekend ng-star-inserted"><div _ngcontent-ng-c1607041535="" class="__day-slot-date ng-tns-c1607041535-21"><span _ngcontent-ng-c1607041535="" class="ng-tns-c1607041535-21">So</span><span _ngcontent-ng-c1607041535="" class="ng-tns-c1607041535-21">14.12.</span></div><li _ngcontent-ng-c1607041535="" test-tag="slotItem" class="__slot ng-tns-c1607041535-21 --small ng-star-inserted">-<!----><!----></li><li _ngcontent-ng-c1607041535="" test-tag="slotItem" class="__slot ng-tns-c1607041535-21 --small ng-star-inserted">-<!----><!----></li><li _ngcontent-ng-c1607041535="" test-tag="slotItem" class="__slot ng-tns-c1607041535-21 --small ng-star-inserted">-<!----><!----></li><li _ngcontent-ng-c1607041535="" test-tag="slotItem" class="__slot ng-tns-c1607041535-21 --small ng-star-inserted">-<!----><!----></li><li _ngcontent-ng-c1607041535="" test-tag="slotItem" class="__slot ng-tns-c1607041535-21 --small ng-star-inserted">-<!----><!----></li><!----><!----></ul><!----></div><!----></div><!----><!----></div><button _ngcontent-ng-c1607041535="" type="button" test-tag="forward" class="btn more-btn ng-tns-c1607041535-21"><i _ngcontent-ng-c1607041535="" class="ltdo icon-arrow --flipH ng-tns-c1607041535-21"></i></button></div></div></ltdo-slot-picker><!----><!----><!----></mat-card-content><!----><!----></div></mat-card><mat-card _ngcontent-ng-c804680645="" class="mat-mdc-card mdc-card __list-card ng-star-inserted" id="profile-66154dc9eb1a864850911f3f"><div _ngcontent-ng-c804680645="" ngclass="__profile-info" ngclass.gt-sm="--divider" class="fx-flex-100 --divider"><mat-card-header _ngcontent-ng-c804680645="" class="mat-mdc-card-header __list-card-header"><div class="mat-mdc-card-header-text"></div><div _ngcontent-ng-c804680645="" class="fx-direction-row fx-flex fx-gap-row-20px"><div _ngcontent-ng-c804680645="" mat-card-avatar="" class="mat-mdc-card-avatar __profile-avatar-wrapper fx-layout-align-main-center fx-layout-align-cross-center">  <!----><div _ngcontent-ng-c804680645="" class="__no-profile-avatar ng-star-inserted"><div _ngcontent-ng-c804680645="" class="__profile-avatar fx-layout-align-main-center fx-layout-align-cross-center"><i _ngcontent-ng-c804680645="" class="ltdo icon-profile"></i></div></div><!----></div><div _ngcontent-ng-c804680645="" class="fx-direction-column"><mat-card-title _ngcontent-ng-c804680645="" class="mat-mdc-card-title __card-title ng-star-inserted"> Dr. Andrea Dranačková Beneková </mat-card-title><!----><!----><mat-card-subtitle _ngcontent-ng-c804680645="" class="mat-mdc-card-subtitle __card-subtitle"><span _ngcontent-ng-c804680645="">Fachärztin für Psychiatrie und Psychotherapeutische Medizin</span><!----><!----></mat-card-subtitle></div></div><div _ngcontent-ng-c804680645="" class="__list-controls"><a _ngcontent-ng-c804680645="" target="_blank" class="btn btn-primary --small" href="http://www.google.com/maps/place/48.1478342,16.2716117"><i _ngcontent-ng-c804680645="" class="ltdo icon-pin"></i></a><!----></div></mat-card-header><mat-card-content _ngcontent-ng-c804680645="" class="mat-mdc-card-content"><div _ngcontent-ng-c804680645="" ngclass="--spacing" class="__profile-detail-list --spacing"><div _ngcontent-ng-c804680645="" class="fx-gap-row-20px fx-layout-align-main-start fx-layout-align-cross-center"><span _ngcontent-ng-c804680645="" class="fx-flex-20px fx-layout-align-main-center fx-layout-align-cross-center"><i _ngcontent-ng-c804680645="" class="ltdo icon-home"></i></span><span _ngcontent-ng-c804680645="" class="__home">Maurer Lange Gasse 36, 1230 Wien</span></div><!----><div _ngcontent-ng-c804680645="" class="fx-gap-row-20px fx-layout-align-main-start fx-layout-align-cross-center ng-star-inserted"><span _ngcontent-ng-c804680645="" class="fx-flex-20px fx-layout-align-main-center fx-layout-align-cross-center"><i _ngcontent-ng-c804680645="" class="ltdo icon-mobile-2"></i></span><span _ngcontent-ng-c804680645="" class="__mobile"><a _ngcontent-ng-c804680645="" target="_blank" href="tel:+436605366244">+43 660 536 624 4</a></span></div><!----><div _ngcontent-ng-c804680645="" class="fx-gap-row-20px fx-layout-align-main-start fx-layout-align-cross-center ng-star-inserted"><span _ngcontent-ng-c804680645="" class="fx-flex-20px fx-layout-align-main-center fx-layout-align-cross-center"><i _ngcontent-ng-c804680645="" class="ltdo icon-email"></i></span><span _ngcontent-ng-c804680645="" class="__email"><a _ngcontent-ng-c804680645="" target="_blank" href="mailto:office@ambulantepsychiatrie.at">office@ambulantepsychiatrie.at</a></span></div><!----><div _ngcontent-ng-c804680645="" class="fx-gap-row-20px fx-layout-align-main-start fx-layout-align-cross-center ng-star-inserted"><span _ngcontent-ng-c804680645="" class="fx-flex-20px fx-layout-align-main-center fx-layout-align-cross-center"><i _ngcontent-ng-c804680645="" class="ltdo icon-card"></i></span><span _ngcontent-ng-c804680645="" class="__website"><a _ngcontent-ng-c804680645="" target="_blank" href="http://praxis36.at">praxis36.at</a></span></div><!----><div _ngcontent-ng-c804680645="" class="fx-gap-row-20px fx-layout-align-main-start fx-layout-align-cross-center ng-star-inserted"><span _ngcontent-ng-c804680645="" class="fx-flex-20px fx-layout-align-main-center fx-layout-align-cross-center"><i _ngcontent-ng-c804680645="" class="ltdo icon-language"></i></span><span _ngcontent-ng-c804680645="" class="__language">Deutsch, Englisch</span></div><!----><!----></div></mat-card-content></div><div _ngcontent-ng-c804680645="" class="__profile-additional-info fx-flex-100"><!----><mat-card-content _ngcontent-ng-c804680645="" class="mat-mdc-card-content ng-star-inserted"><div _ngcontent-ng-c804680645="" ngclass="__additional-info-title" ngclass.sm="--spacing" ngclass.xs="--spacing" class="__additional-info-title"><span _ngcontent-ng-c804680645="" class="__title ng-star-inserted">Ordinationszeiten</span><!----><!----><!----></div><!----><business-hours-display _ngcontent-ng-c804680645="" _nghost-ng-c2304718999="" class="ng-star-inserted"><div _ngcontent-ng-c2304718999="" class="__time-wrapper fx-direction-row fx-flex-100 fx-gap-row-20px ng-star-inserted"><i _ngcontent-ng-c2304718999="" class="ltdo icon-time"></i><div _ngcontent-ng-c2304718999="" class="__time-table fx-direction-row fx-wrap-wrap fx-flex-100" style="margin-bottom: 5px;"><!----><!----><!----><div _ngcontent-ng-c2304718999="" class="__time-row fx-direction-row fx-flex-100 fx-gap-row-20px ng-star-inserted"><span _ngcontent-ng-c2304718999="" class="__weekdays fx-flex-30px">Do:</span><span _ngcontent-ng-c2304718999="" class="fx-flex">08:00 - 20:00</span></div><!----><!----><!----><!----><!----></div></div><!----><!----></business-hours-display><!----></mat-card-content><!----></div></mat-card><mat-card _ngcontent-ng-c804680645="" class="mat-mdc-card mdc-card __list-card ng-star-inserted" id="profile-6682baa3290dfc0fb174e3ab"><div _ngcontent-ng-c804680645="" ngclass="__profile-info" ngclass.gt-sm="--divider" class="fx-flex-100 --divider"><mat-card-header _ngcontent-ng-c804680645="" class="mat-mdc-card-header __list-card-header"><div class="mat-mdc-card-header-text"></div><div _ngcontent-ng-c804680645="" class="fx-direction-row fx-flex fx-gap-row-20px"><div _ngcontent-ng-c804680645="" mat-card-avatar="" class="mat-mdc-card-avatar __profile-avatar-wrapper fx-layout-align-main-center fx-layout-align-cross-center">  <!----><div _ngcontent-ng-c804680645="" class="__no-profile-avatar ng-star-inserted"><div _ngcontent-ng-c804680645="" class="__profile-avatar fx-layout-align-main-center fx-layout-align-cross-center"><i _ngcontent-ng-c804680645="" class="ltdo icon-profile"></i></div></div><!----></div><div _ngcontent-ng-c804680645="" class="fx-direction-column"><mat-card-title _ngcontent-ng-c804680645="" class="mat-mdc-card-title __card-title ng-star-inserted"> Dr. med. univ. Christiane Dreschl, MBA </mat-card-title><!----><!----><mat-card-subtitle _ngcontent-ng-c804680645="" class="mat-mdc-card-subtitle __card-subtitle"><span _ngcontent-ng-c804680645="">Fachärztin für Allgemeinchirurgie und Viszeralchirurgie</span><span _ngcontent-ng-c804680645="" class="ng-star-inserted"><br _ngcontent-ng-c804680645="">Ärztin für Allgemeinmedizin </span><!----><!----></mat-card-subtitle></div></div><div _ngcontent-ng-c804680645="" class="__list-controls"><a _ngcontent-ng-c804680645="" target="_blank" class="btn btn-primary --small" href="http://www.google.com/maps/place/46.626183,14.2151142"><i _ngcontent-ng-c804680645="" class="ltdo icon-pin"></i></a><!----></div></mat-card-header><mat-card-content _ngcontent-ng-c804680645="" class="mat-mdc-card-content"><div _ngcontent-ng-c804680645="" ngclass="--spacing" class="__profile-detail-list --spacing"><div _ngcontent-ng-c804680645="" class="fx-gap-row-20px fx-layout-align-main-start fx-layout-align-cross-center"><span _ngcontent-ng-c804680645="" class="fx-flex-20px fx-layout-align-main-center fx-layout-align-cross-center"><i _ngcontent-ng-c804680645="" class="ltdo icon-home"></i></span><span _ngcontent-ng-c804680645="" class="__home">Hauptstraße 141, 9201 Krumpendorf am Wörthersee</span></div><div _ngcontent-ng-c804680645="" class="fx-gap-row-20px fx-layout-align-main-start fx-layout-align-cross-center ng-star-inserted"><span _ngcontent-ng-c804680645="" class="fx-flex-20px fx-layout-align-main-center fx-layout-align-cross-center"><i _ngcontent-ng-c804680645="" class="ltdo icon-phone"></i></span><span _ngcontent-ng-c804680645="" class="__mobile"><a _ngcontent-ng-c804680645="" target="_blank" href="tel:+43 664 73258225">+43 664 73258225</a></span></div><!----><!----><div _ngcontent-ng-c804680645="" class="fx-gap-row-20px fx-layout-align-main-start fx-layout-align-cross-center ng-star-inserted"><span _ngcontent-ng-c804680645="" class="fx-flex-20px fx-layout-align-main-center fx-layout-align-cross-center"><i _ngcontent-ng-c804680645="" class="ltdo icon-email"></i></span><span _ngcontent-ng-c804680645="" class="__email"><a _ngcontent-ng-c804680645="" target="_blank" href="mailto:dreschl@aerztehaus-krumpendorf.at">dreschl@aerztehaus-krumpendorf.at</a></span></div><!----><div _ngcontent-ng-c804680645="" class="fx-gap-row-20px fx-layout-align-main-start fx-layout-align-cross-center ng-star-inserted"><span _ngcontent-ng-c804680645="" class="fx-flex-20px fx-layout-align-main-center fx-layout-align-cross-center"><i _ngcontent-ng-c804680645="" class="ltdo icon-card"></i></span><span _ngcontent-ng-c804680645="" class="__website"><a _ngcontent-ng-c804680645="" target="_blank" href="http://www.doktor-dreschl.at">www.doktor-dreschl.at</a></span></div><!----><div _ngcontent-ng-c804680645="" class="fx-gap-row-20px fx-layout-align-main-start fx-layout-align-cross-center ng-star-inserted"><span _ngcontent-ng-c804680645="" class="fx-flex-20px fx-layout-align-main-center fx-layout-align-cross-center"><i _ngcontent-ng-c804680645="" class="ltdo icon-language"></i></span><span _ngcontent-ng-c804680645="" class="__language">Deutsch, Englisch</span></div><!----><!----></div></mat-card-content></div><div _ngcontent-ng-c804680645="" class="__profile-additional-info fx-flex-100"><!----><mat-card-content _ngcontent-ng-c804680645="" class="mat-mdc-card-content ng-star-inserted"><div _ngcontent-ng-c804680645="" ngclass="__additional-info-title" ngclass.sm="--spacing" ngclass.xs="--spacing" class="__additional-info-title"><span _ngcontent-ng-c804680645="" class="__title ng-star-inserted">Ordinationszeiten</span><!----><!----><!----></div><!----><business-hours-display _ngcontent-ng-c804680645="" _nghost-ng-c2304718999="" class="ng-star-inserted"><!----><div _ngcontent-ng-c2304718999="" class="__time-wrapper fx-direction-row fx-flex-100 fx-gap-row-20px ng-star-inserted"><span _ngcontent-ng-c2304718999="" class="badge badge-warning --small">Nach Vereinbarung</span></div><!----></business-hours-display><!----></mat-card-content><!----></div></mat-card><mat-card _ngcontent-ng-c804680645="" class="mat-mdc-card mdc-card __list-card ng-star-inserted" id="profile-63be9a5b98b11eb29be1a75c"><div _ngcontent-ng-c804680645="" ngclass="__profile-info" ngclass.gt-sm="--divider" class="fx-flex-100 --divider"><mat-card-header _ngcontent-ng-c804680645="" class="mat-mdc-card-header __list-card-header"><div class="mat-mdc-card-header-text"></div><div _ngcontent-ng-c804680645="" class="fx-direction-row fx-flex fx-gap-row-20px"><div _ngcontent-ng-c804680645="" mat-card-avatar="" class="mat-mdc-card-avatar __profile-avatar-wrapper fx-layout-align-main-center fx-layout-align-cross-center">  <!----><div _ngcontent-ng-c804680645="" class="__no-profile-avatar ng-star-inserted"><div _ngcontent-ng-c804680645="" class="__profile-avatar fx-layout-align-main-center fx-layout-align-cross-center"><i _ngcontent-ng-c804680645="" class="ltdo icon-profile"></i></div></div><!----></div><div _ngcontent-ng-c804680645="" class="fx-direction-column"><mat-card-title _ngcontent-ng-c804680645="" class="mat-mdc-card-title __card-title ng-star-inserted"> Orthoteam Salzburg Dr. Drekonja &amp; Dr. Matis GmbH c/o Dr. Bittermann </mat-card-title><!----><!----><mat-card-subtitle _ngcontent-ng-c804680645="" class="mat-mdc-card-subtitle __card-subtitle"><span _ngcontent-ng-c804680645="">Fachärzt:in für Orthopädie und Traumatologie</span><!----><!----></mat-card-subtitle></div></div><div _ngcontent-ng-c804680645="" class="__list-controls"><a _ngcontent-ng-c804680645="" target="_blank" class="btn btn-primary --small" href="http://www.google.com/maps/place/47.8085633,13.0413239"><i _ngcontent-ng-c804680645="" class="ltdo icon-pin"></i></a><!----></div></mat-card-header><mat-card-content _ngcontent-ng-c804680645="" class="mat-mdc-card-content"><div _ngcontent-ng-c804680645="" ngclass="--spacing" class="__profile-detail-list --spacing"><div _ngcontent-ng-c804680645="" class="fx-gap-row-20px fx-layout-align-main-start fx-layout-align-cross-center"><span _ngcontent-ng-c804680645="" class="fx-flex-20px fx-layout-align-main-center fx-layout-align-cross-center"><i _ngcontent-ng-c804680645="" class="ltdo icon-home"></i></span><span _ngcontent-ng-c804680645="" class="__home">Rainerstrasse 9, 5020 Salzburg</span></div><div _ngcontent-ng-c804680645="" class="fx-gap-row-20px fx-layout-align-main-start fx-layout-align-cross-center ng-star-inserted"><span _ngcontent-ng-c804680645="" class="fx-flex-20px fx-layout-align-main-center fx-layout-align-cross-center"><i _ngcontent-ng-c804680645="" class="ltdo icon-phone"></i></span><span _ngcontent-ng-c804680645="" class="__mobile"><a _ngcontent-ng-c804680645="" target="_blank" href="tel:+43-662-874487">+43-662-874487</a></span></div><!----><!----><div _ngcontent-ng-c804680645="" class="fx-gap-row-20px fx-layout-align-main-start fx-layout-align-cross-center ng-star-inserted"><span _ngcontent-ng-c804680645="" class="fx-flex-20px fx-layout-align-main-center fx-layout-align-cross-center"><i _ngcontent-ng-c804680645="" class="ltdo icon-email"></i></span><span _ngcontent-ng-c804680645="" class="__email"><a _ngcontent-ng-c804680645="" target="_blank" href="mailto:info@orthoteam-salzburg.at">info@orthoteam-salzburg.at</a></span></div><!----><div _ngcontent-ng-c804680645="" class="fx-gap-row-20px fx-layout-align-main-start fx-layout-align-cross-center ng-star-inserted"><span _ngcontent-ng-c804680645="" class="fx-flex-20px fx-layout-align-main-center fx-layout-align-cross-center"><i _ngcontent-ng-c804680645="" class="ltdo icon-card"></i></span><span _ngcontent-ng-c804680645="" class="__website"><a _ngcontent-ng-c804680645="" target="_blank" href="http://Orthoteam-Salzburg.at">Orthoteam-Salzburg.at</a></span></div><!----><div _ngcontent-ng-c804680645="" class="fx-gap-row-20px fx-layout-align-main-start fx-layout-align-cross-center ng-star-inserted"><span _ngcontent-ng-c804680645="" class="fx-flex-20px fx-layout-align-main-center fx-layout-align-cross-center"><i _ngcontent-ng-c804680645="" class="ltdo icon-language"></i></span><span _ngcontent-ng-c804680645="" class="__language">Deutsch, Englisch</span></div><!----><!----></div></mat-card-content></div><div _ngcontent-ng-c804680645="" class="__profile-additional-info fx-flex-100"><!----><mat-card-content _ngcontent-ng-c804680645="" class="mat-mdc-card-content ng-star-inserted"><div _ngcontent-ng-c804680645="" ngclass="__additional-info-title" ngclass.sm="--spacing" ngclass.xs="--spacing" class="__additional-info-title"><span _ngcontent-ng-c804680645="" class="__title ng-star-inserted">Ordinationszeiten</span><!----><!----><!----></div><!----><business-hours-display _ngcontent-ng-c804680645="" _nghost-ng-c2304718999="" class="ng-star-inserted"><div _ngcontent-ng-c2304718999="" class="__time-wrapper fx-direction-row fx-flex-100 fx-gap-row-20px ng-star-inserted"><i _ngcontent-ng-c2304718999="" class="ltdo icon-time"></i><div _ngcontent-ng-c2304718999="" class="__time-table fx-direction-row fx-wrap-wrap fx-flex-100" style="margin-bottom: 5px;"><div _ngcontent-ng-c2304718999="" class="__time-row fx-direction-row fx-flex-100 fx-gap-row-20px ng-star-inserted"><span _ngcontent-ng-c2304718999="" class="__weekdays fx-flex-30px">Mo:</span><span _ngcontent-ng-c2304718999="" class="fx-flex">09:00 - 16:00</span></div><!----><div _ngcontent-ng-c2304718999="" class="__time-row fx-direction-row fx-flex-100 fx-gap-row-20px ng-star-inserted"><span _ngcontent-ng-c2304718999="" class="__weekdays fx-flex-30px">Di:</span><span _ngcontent-ng-c2304718999="" class="fx-flex">09:00 - 16:00</span></div><!----><div _ngcontent-ng-c2304718999="" class="__time-row fx-direction-row fx-flex-100 fx-gap-row-20px ng-star-inserted"><span _ngcontent-ng-c2304718999="" class="__weekdays fx-flex-30px">Mi:</span><span _ngcontent-ng-c2304718999="" class="fx-flex">09:00 - 16:00</span></div><!----><div _ngcontent-ng-c2304718999="" class="__time-row fx-direction-row fx-flex-100 fx-gap-row-20px ng-star-inserted"><span _ngcontent-ng-c2304718999="" class="__weekdays fx-flex-30px">Do:</span><span _ngcontent-ng-c2304718999="" class="fx-flex">09:00 - 16:00</span></div><!----><div _ngcontent-ng-c2304718999="" class="__time-row fx-direction-row fx-flex-100 fx-gap-row-20px ng-star-inserted"><span _ngcontent-ng-c2304718999="" class="__weekdays fx-flex-30px">Fr:</span><span _ngcontent-ng-c2304718999="" class="fx-flex">09:00 - 13:00</span></div><!----><!----><!----><!----></div></div><!----><!----></business-hours-display><!----></mat-card-content><!----></div></mat-card><mat-card _ngcontent-ng-c804680645="" class="mat-mdc-card mdc-card __list-card ng-star-inserted" id="profile-64da66add0e82c2fe7e99701"><div _ngcontent-ng-c804680645="" ngclass="__profile-info" ngclass.gt-sm="--divider" class="fx-flex-100 --divider"><mat-card-header _ngcontent-ng-c804680645="" class="mat-mdc-card-header __list-card-header"><div class="mat-mdc-card-header-text"></div><div _ngcontent-ng-c804680645="" class="fx-direction-row fx-flex fx-gap-row-20px"><div _ngcontent-ng-c804680645="" mat-card-avatar="" class="mat-mdc-card-avatar __profile-avatar-wrapper fx-layout-align-main-center fx-layout-align-cross-center">  <div _ngcontent-ng-c804680645="" class="__profile-avatar ng-star-inserted" style="background-image: url(&quot;/cdn/images/small/650bf2dbd789dcff0a4ccef5&quot;);"></div><!----><!----></div><div _ngcontent-ng-c804680645="" class="fx-direction-column"><mat-card-title _ngcontent-ng-c804680645="" class="mat-mdc-card-title __card-title ng-star-inserted"> Dr. Sandra Fridrich </mat-card-title><!----><!----><mat-card-subtitle _ngcontent-ng-c804680645="" class="mat-mdc-card-subtitle __card-subtitle"><span _ngcontent-ng-c804680645="">Ärztin für Allgemeinmedizin</span><span _ngcontent-ng-c804680645="" class="ng-star-inserted"><br _ngcontent-ng-c804680645=""> </span><!----><!----></mat-card-subtitle></div></div><div _ngcontent-ng-c804680645="" class="__list-controls"><a _ngcontent-ng-c804680645="" target="_blank" class="btn btn-primary --small" href="http://www.google.com/maps/place/48.2272307,15.3311723"><i _ngcontent-ng-c804680645="" class="ltdo icon-pin"></i></a><!----></div></mat-card-header><mat-card-content _ngcontent-ng-c804680645="" class="mat-mdc-card-content"><div _ngcontent-ng-c804680645="" ngclass="--spacing" class="__profile-detail-list --spacing"><div _ngcontent-ng-c804680645="" class="fx-gap-row-20px fx-layout-align-main-start fx-layout-align-cross-center"><span _ngcontent-ng-c804680645="" class="fx-flex-20px fx-layout-align-main-center fx-layout-align-cross-center"><i _ngcontent-ng-c804680645="" class="ltdo icon-home"></i></span><span _ngcontent-ng-c804680645="" class="__home">Hauptstraße 14/2, 3390 Melk</span></div><div _ngcontent-ng-c804680645="" class="fx-gap-row-20px fx-layout-align-main-start fx-layout-align-cross-center ng-star-inserted"><span _ngcontent-ng-c804680645="" class="fx-flex-20px fx-layout-align-main-center fx-layout-align-cross-center"><i _ngcontent-ng-c804680645="" class="ltdo icon-phone"></i></span><span _ngcontent-ng-c804680645="" class="__mobile"><a _ngcontent-ng-c804680645="" target="_blank" href="tel:+43 664 750 305 77">+43 664 750 305 77</a></span></div><!----><!----><div _ngcontent-ng-c804680645="" class="fx-gap-row-20px fx-layout-align-main-start fx-layout-align-cross-center ng-star-inserted"><span _ngcontent-ng-c804680645="" class="fx-flex-20px fx-layout-align-main-center fx-layout-align-cross-center"><i _ngcontent-ng-c804680645="" class="ltdo icon-email"></i></span><span _ngcontent-ng-c804680645="" class="__email"><a _ngcontent-ng-c804680645="" target="_blank" href="mailto:praxis@sandrafridrich.at">praxis@sandrafridrich.at</a></span></div><!----><div _ngcontent-ng-c804680645="" class="fx-gap-row-20px fx-layout-align-main-start fx-layout-align-cross-center ng-star-inserted"><span _ngcontent-ng-c804680645="" class="fx-flex-20px fx-layout-align-main-center fx-layout-align-cross-center"><i _ngcontent-ng-c804680645="" class="ltdo icon-card"></i></span><span _ngcontent-ng-c804680645="" class="__website"><a _ngcontent-ng-c804680645="" target="_blank" href="http://www.sandrafridrich.at">www.sandrafridrich.at</a></span></div><!----><div _ngcontent-ng-c804680645="" class="fx-gap-row-20px fx-layout-align-main-start fx-layout-align-cross-center ng-star-inserted"><span _ngcontent-ng-c804680645="" class="fx-flex-20px fx-layout-align-main-center fx-layout-align-cross-center"><i _ngcontent-ng-c804680645="" class="ltdo icon-language"></i></span><span _ngcontent-ng-c804680645="" class="__language">Deutsch, Englisch</span></div><!----><div _ngcontent-ng-c804680645="" class="fx-gap-row-20px fx-layout-align-main-start fx-layout-align-cross-center ng-star-inserted"><span _ngcontent-ng-c804680645="" class="fx-flex-20px fx-layout-align-main-center fx-layout-align-cross-center"><i _ngcontent-ng-c804680645="" class="ltdo icon-video"></i></span><span _ngcontent-ng-c804680645="" class="__tele">Videokonsultation verfügbar</span></div><!----></div></mat-card-content></div><div _ngcontent-ng-c804680645="" class="__profile-additional-info fx-flex-100"><!----><mat-card-content _ngcontent-ng-c804680645="" class="mat-mdc-card-content ng-star-inserted"><div _ngcontent-ng-c804680645="" ngclass="__additional-info-title" ngclass.sm="--spacing" ngclass.xs="--spacing" class="__additional-info-title"><span _ngcontent-ng-c804680645="" class="__title ng-star-inserted">Ordinationszeiten</span><!----><!----><!----></div><!----><business-hours-display _ngcontent-ng-c804680645="" _nghost-ng-c2304718999="" class="ng-star-inserted"><div _ngcontent-ng-c2304718999="" class="__time-wrapper fx-direction-row fx-flex-100 fx-gap-row-20px ng-star-inserted"><i _ngcontent-ng-c2304718999="" class="ltdo icon-time"></i><div _ngcontent-ng-c2304718999="" class="__time-table fx-direction-row fx-wrap-wrap fx-flex-100" style="margin-bottom: 5px;"><div _ngcontent-ng-c2304718999="" class="__time-row fx-direction-row fx-flex-100 fx-gap-row-20px ng-star-inserted"><span _ngcontent-ng-c2304718999="" class="__weekdays fx-flex-30px">Mo:</span><span _ngcontent-ng-c2304718999="" class="fx-flex">09:00 - 18:00</span></div><!----><!----><div _ngcontent-ng-c2304718999="" class="__time-row fx-direction-row fx-flex-100 fx-gap-row-20px ng-star-inserted"><span _ngcontent-ng-c2304718999="" class="__weekdays fx-flex-30px">Mi:</span><span _ngcontent-ng-c2304718999="" class="fx-flex">09:00 - 14:00</span></div><!----><!----><!----><div _ngcontent-ng-c2304718999="" class="__time-row fx-direction-row fx-flex-100 fx-gap-row-20px ng-star-inserted"><span _ngcontent-ng-c2304718999="" class="__weekdays fx-flex-30px">Sa:</span><span _ngcontent-ng-c2304718999="" class="fx-flex">14:00 - 15:30</span></div><!----><!----><!----></div></div><!----><!----></business-hours-display><!----></mat-card-content><!----></div></mat-card><!----></mat-list><div _ngcontent-ng-c804680645="" class="fx-flex-100 fx-layout-align-main-center fx-layout-align-cross-center"><!----></div><div _ngcontent-ng-c804680645="" class="__profile-list-footer fx-direction-row fx-wrap-wrap fx-flex-100 ng-star-inserted"><div _ngcontent-ng-c804680645="" class="fx-flex-100 fx-layout-align-main-space-between fx-layout-align-cross-center fxm-xs-fx-direction-row"><div _ngcontent-ng-c804680645="" class="__results fxm-xs-fx-hide"><span _ngcontent-ng-c804680645="" class="bold">5</span><span _ngcontent-ng-c804680645="">Treffer</span></div><pagination-controls _ngcontent-ng-c804680645="" nextlabel="vor" previouslabel="zurück" class="__profile-list-pagination"><pagination-template><nav role="navigation" aria-label="Pagination"><ul class="ngx-pagination ng-star-inserted"><li class="pagination-previous disabled ng-star-inserted"><!----><span aria-disabled="true" class="ng-star-inserted"> zurück <span class="show-for-sr">page</span></span><!----></li><!----><li class="small-screen"> 1 / 1 </li><li class="current ng-star-inserted"><!----><span aria-live="polite" class="ng-star-inserted"><span class="show-for-sr">You're on page </span><span>1</span></span><!----><!----></li><!----><li class="pagination-next disabled ng-star-inserted"><!----><span aria-disabled="true" class="ng-star-inserted"> vor <span class="show-for-sr">page</span></span><!----></li><!----></ul><!----></nav></pagination-template></pagination-controls></div></div><!----></div><!----></div><gdpr-hider _ngcontent-ng-c804680645="" class="gdpr-hider" _nghost-ng-c1408702857=""><div _ngcontent-ng-c1408702857="" class="gdpr-hider-wrapper"><div _ngcontent-ng-c1408702857="" class="__gdpr-bg"></div><div _ngcontent-ng-c1408702857="" class="__gdpr-text"><div _ngcontent-ng-c1408702857="" class="--title medium">Entscheiden Sie selbst!</div><div _ngcontent-ng-c1408702857="">Mit Ihrer Einwilligung wird die Karte vom Google-Server geladen.</div><button _ngcontent-ng-c1408702857="" type="button" class="btn btn-primary">Google Map anzeigen</button></div></div><!----><!----></gdpr-hider></div><!----></div></booking-profile-list><!----></main><footer _ngcontent-ng-c2646666280=""><a _ngcontent-ng-c2646666280="" href="https://www.latido.at" target="_blank"><img _ngcontent-ng-c2646666280="" src="src/assets/images/poweredby.svg" class="poweredby"></a><span _ngcontent-ng-c2646666280="" class="divider"></span><a _ngcontent-ng-c2646666280="" href="/impressum/" target="_blank" class="link"><span _ngcontent-ng-c2646666280=""> Impressum </span></a><a _ngcontent-ng-c2646666280="" href="/datenschutzerklaerung/" target="_blank" class="link"><span _ngcontent-ng-c2646666280=""> Datenschutz </span></a><a _ngcontent-ng-c2646666280="" href="/faq" target="_blank" class="link hide-generali"><span _ngcontent-ng-c2646666280="">FAQ</span></a><a _ngcontent-ng-c2646666280="" href="/compliance/" target="_blank" class="link hide-generali"> Lizenzen </a></footer><!----><div class="cdk-live-announcer-element cdk-visually-hidden" aria-atomic="true" aria-live="polite" id="cdk-live-announcer-0"></div></body></html>

@@ -1,0 +1,4 @@
+pydantic
+playwright
+streamlit
+pandas
