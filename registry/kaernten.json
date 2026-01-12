@@ -106,7 +106,10 @@
     {
         "id": "perfect_smile_kieferorthopaedie",
         "name": "Perfect Smile (Kieferorthopädie)",
-        "speciality": "Zahnarzt / Kieferorthopädie",
+        "speciality": [
+            "Zahnarzt",
+            "Kieferorthopädie"
+        ],
         "address": "Feldkirchner Straße 49, 9020 Klagenfurt",
         "insurance": [
             "Alle Kassen"

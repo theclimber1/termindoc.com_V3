@@ -118,7 +118,8 @@
         "speciality": "Zahnarzt",
         "address": "Am Rathausplatz 2/4, 9800 Spittal/Drau",
         "insurance": [
-            "Alle Kassen", "Privat"
+            "Alle Kassen",
+            "Privat"
         ],
         "scraper_type": "custom_webform",
         "booking_url": "https://www.zahn-gesund.at/online-terminvereinbarung/",
@@ -156,8 +157,2702 @@
         "insurance": [
             "Alle Kassen"
         ],
-        "scraper_type": "custom_modrocky",
-        "booking_url": "https://www.gartenweg-dental.at/termin-buchen-online",
-        "note": "Eigenes Buchungssystem auf der Webseite."
+        "speciality": "Ärztin für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Erstvorstellung",
+                "type_id": "683f5316c97e0f5d5cca142e",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "683f5314744eea1536ca1375",
+        "address": "St. Veiter Ring 35, 9020 Klagenfurt"
+    },
+    {
+        "id": "latido_kontrolle_1",
+        "name": "Dr. Angelika Stöckl-Diem | Kontrolle",
+        "group_id": "Dr. Angelika Stöckl-Diem",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Dr._Angelika_St%C3%B6ckl-Diem",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Ärztin für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Kontrolle",
+                "type_id": "683f5314744eea1536ca1375",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "683f5314744eea1536ca1375",
+        "address": "St. Veiter Ring 35, 9020 Klagenfurt"
+    },
+    {
+        "id": "latido_vu1_2",
+        "name": "Dr. Angelika Stöckl-Diem | VU1",
+        "group_id": "Dr. Angelika Stöckl-Diem",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Dr._Angelika_St%C3%B6ckl-Diem",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Ärztin für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "VU1",
+                "type_id": "683f5315fc7091ad1dee139a",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "683f5314744eea1536ca1375",
+        "address": "St. Veiter Ring 35, 9020 Klagenfurt"
+    },
+    {
+        "id": "latido_pollinexacarova_3",
+        "name": "Dr. Angelika Stöckl-Diem | Pollinex/Acarovac",
+        "group_id": "Dr. Angelika Stöckl-Diem",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Dr._Angelika_St%C3%B6ckl-Diem",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Ärztin für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Pollinex/Acarovac",
+                "type_id": "68d262109be76efc6768d9d1",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "683f5314744eea1536ca1375",
+        "address": "St. Veiter Ring 35, 9020 Klagenfurt"
+    },
+    {
+        "id": "latido_impfung_4",
+        "name": "Dr. Angelika Stöckl-Diem | Impfung",
+        "group_id": "Dr. Angelika Stöckl-Diem",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Dr._Angelika_St%C3%B6ckl-Diem",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Ärztin für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Impfung",
+                "type_id": "68d2621e9be76efc6768d9db",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "683f5314744eea1536ca1375",
+        "address": "St. Veiter Ring 35, 9020 Klagenfurt"
+    },
+    {
+        "id": "latido_akuterkrankt_5",
+        "name": "Dr. Angelika Stöckl-Diem | AKUT ERKRANKT",
+        "group_id": "Dr. Angelika Stöckl-Diem",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Dr._Angelika_St%C3%B6ckl-Diem",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Ärztin für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "AKUT ERKRANKT",
+                "type_id": "68d262349be76efc6768d9e5",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "683f5314744eea1536ca1375",
+        "address": "St. Veiter Ring 35, 9020 Klagenfurt"
+    },
+    {
+        "id": "latido_führerscheinunt_6",
+        "name": "Dr. Angelika Stöckl-Diem | Führerscheinuntersuchung",
+        "group_id": "Dr. Angelika Stöckl-Diem",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Dr._Angelika_St%C3%B6ckl-Diem",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Ärztin für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Führerscheinuntersuchung",
+                "type_id": "68d262459be76efc6768d9ef",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "683f5314744eea1536ca1375",
+        "address": "St. Veiter Ring 35, 9020 Klagenfurt"
+    },
+    {
+        "id": "latido_eiseninfusion_7",
+        "name": "Dr. Angelika Stöckl-Diem | Eiseninfusion",
+        "group_id": "Dr. Angelika Stöckl-Diem",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Dr._Angelika_St%C3%B6ckl-Diem",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Ärztin für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Eiseninfusion",
+                "type_id": "68d262599be76efc6768d9f9",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "683f5314744eea1536ca1375",
+        "address": "St. Veiter Ring 35, 9020 Klagenfurt"
+    },
+    {
+        "id": "latido_grippeimpfung_8",
+        "name": "Dr. Angelika Stöckl-Diem | Grippeimpfung",
+        "group_id": "Dr. Angelika Stöckl-Diem",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Dr._Angelika_St%C3%B6ckl-Diem",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Ärztin für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Grippeimpfung",
+                "type_id": "68d286051710241a6e74bb55",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "683f5314744eea1536ca1375",
+        "address": "St. Veiter Ring 35, 9020 Klagenfurt"
+    },
+    {
+        "id": "latido_erstvorstellung_9",
+        "name": "Dr. Angelika Stöckl-Diem | Erstvorstellung",
+        "group_id": "Dr. Angelika Stöckl-Diem",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Dr._Angelika_St%C3%B6ckl-Diem",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Ärztin für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Erstvorstellung",
+                "type_id": "68de39bb125de64385f8d16c",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "683f5314744eea1536ca1375",
+        "address": "St. Veiter Ring 35, 9020 Klagenfurt"
+    },
+    {
+        "id": "latido_kontrolle_10",
+        "name": "Dr. Angelika Stöckl-Diem | Kontrolle",
+        "group_id": "Dr. Angelika Stöckl-Diem",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Dr._Angelika_St%C3%B6ckl-Diem",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Ärztin für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Kontrolle",
+                "type_id": "68de39c7125de64385f8d17e",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "683f5314744eea1536ca1375",
+        "address": "St. Veiter Ring 35, 9020 Klagenfurt"
+    },
+    {
+        "id": "latido_vu1_11",
+        "name": "Dr. Angelika Stöckl-Diem | VU1",
+        "group_id": "Dr. Angelika Stöckl-Diem",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Dr._Angelika_St%C3%B6ckl-Diem",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Ärztin für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "VU1",
+                "type_id": "68de39d6125de64385f8d184",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "683f5314744eea1536ca1375",
+        "address": "St. Veiter Ring 35, 9020 Klagenfurt"
+    },
+    {
+        "id": "latido_pollinexacarova_12",
+        "name": "Dr. Angelika Stöckl-Diem | Pollinex/Acarovac",
+        "group_id": "Dr. Angelika Stöckl-Diem",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Dr._Angelika_St%C3%B6ckl-Diem",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Ärztin für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Pollinex/Acarovac",
+                "type_id": "68de39e2125de64385f8d18a",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "683f5314744eea1536ca1375",
+        "address": "St. Veiter Ring 35, 9020 Klagenfurt"
+    },
+    {
+        "id": "latido_impfung_13",
+        "name": "Dr. Angelika Stöckl-Diem | Impfung",
+        "group_id": "Dr. Angelika Stöckl-Diem",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Dr._Angelika_St%C3%B6ckl-Diem",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Ärztin für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Impfung",
+                "type_id": "68de39ec125de64385f8d190",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "683f5314744eea1536ca1375",
+        "address": "St. Veiter Ring 35, 9020 Klagenfurt"
+    },
+    {
+        "id": "latido_akuterkrankt_14",
+        "name": "Dr. Angelika Stöckl-Diem | AKUT ERKRANKT",
+        "group_id": "Dr. Angelika Stöckl-Diem",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Dr._Angelika_St%C3%B6ckl-Diem",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Ärztin für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "AKUT ERKRANKT",
+                "type_id": "68de39f8125de64385f8d196",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "683f5314744eea1536ca1375",
+        "address": "St. Veiter Ring 35, 9020 Klagenfurt"
+    },
+    {
+        "id": "latido_führerscheinunt_15",
+        "name": "Dr. Angelika Stöckl-Diem | Führerscheinuntersuchung",
+        "group_id": "Dr. Angelika Stöckl-Diem",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Dr._Angelika_St%C3%B6ckl-Diem",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Ärztin für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Führerscheinuntersuchung",
+                "type_id": "68de3a04125de64385f8d19c",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "683f5314744eea1536ca1375",
+        "address": "St. Veiter Ring 35, 9020 Klagenfurt"
+    },
+    {
+        "id": "latido_eiseninfusion_16",
+        "name": "Dr. Angelika Stöckl-Diem | Eiseninfusion",
+        "group_id": "Dr. Angelika Stöckl-Diem",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Dr._Angelika_St%C3%B6ckl-Diem",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Ärztin für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Eiseninfusion",
+                "type_id": "68de3a0f125de64385f8d1a2",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "683f5314744eea1536ca1375",
+        "address": "St. Veiter Ring 35, 9020 Klagenfurt"
+    },
+    {
+        "id": "latido_grippeimpfung_17",
+        "name": "Dr. Angelika Stöckl-Diem | Grippeimpfung",
+        "group_id": "Dr. Angelika Stöckl-Diem",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Dr._Angelika_St%C3%B6ckl-Diem",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Ärztin für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Grippeimpfung",
+                "type_id": "68de3a1a125de64385f8d1a8",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "683f5314744eea1536ca1375",
+        "address": "St. Veiter Ring 35, 9020 Klagenfurt"
+    },
+    {
+        "id": "latido_erstuntersuchun",
+        "name": "Sporthos (Dr. Schippinger & Dr. Gschöpf) | Erstuntersuchung",
+        "group_id": "Sporthos (Dr. Schippinger & Dr. Gschöpf)",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/Sportorthos",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Erstuntersuchung",
+                "type_id": "64c0e89bcf992d2f1fd92519",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "64ef5f32ebb91c71ca18ef8c",
+        "address": "Feschnigstraße 74, 9020 Klagenfurt"
+    },
+    {
+        "id": "latido_kontrolle_1",
+        "name": "Sporthos (Dr. Schippinger & Dr. Gschöpf) | Kontrolle",
+        "group_id": "Sporthos (Dr. Schippinger & Dr. Gschöpf)",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/Sportorthos",
+        "calendar_id": "64c0e89ba6ecee1a36417b9e",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Kontrolle",
+                "type_id": "64c0e89bf54523a9e1d9251a",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "64ef5f32ebb91c71ca18ef8c",
+        "address": "Feschnigstraße 74, 9020 Klagenfurt"
+    },
+    {
+        "id": "latido_eswt_2",
+        "name": "Sporthos (Dr. Schippinger & Dr. Gschöpf) | ESWT",
+        "group_id": "Sporthos (Dr. Schippinger & Dr. Gschöpf)",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/Sportorthos",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "ESWT",
+                "type_id": "67518575b0ee78c32851c1f5",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "64ef5f32ebb91c71ca18ef8c",
+        "address": "Feschnigstraße 74, 9020 Klagenfurt"
+    },
+    {
+        "id": "latido_magnetolith_3",
+        "name": "Sporthos (Dr. Schippinger & Dr. Gschöpf) | Magnetolith",
+        "group_id": "Sporthos (Dr. Schippinger & Dr. Gschöpf)",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/Sportorthos",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Magnetolith",
+                "type_id": "683482cd475e7ae5160fa3ee",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "64ef5f32ebb91c71ca18ef8c",
+        "address": "Feschnigstraße 74, 9020 Klagenfurt"
+    },
+    {
+        "id": "latido_erstuntersuchun_4",
+        "name": "Sporthos (Dr. Schippinger & Dr. Gschöpf) | Erstuntersuchung",
+        "group_id": "Sporthos (Dr. Schippinger & Dr. Gschöpf)",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/Sportorthos",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Erstuntersuchung",
+                "type_id": "64c128a3fc1a1944a2417c3e",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "64ef5f32ebb91c71ca18ef8c",
+        "address": "Feschnigstraße 74, 9020 Klagenfurt"
+    },
+    {
+        "id": "latido_kontrolle_5",
+        "name": "Sporthos (Dr. Schippinger & Dr. Gschöpf) | Kontrolle",
+        "group_id": "Sporthos (Dr. Schippinger & Dr. Gschöpf)",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/Sportorthos",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Kontrolle",
+                "type_id": "64c128a3f0517e70dc417c3f",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "64ef5f32ebb91c71ca18ef8c",
+        "address": "Feschnigstraße 74, 9020 Klagenfurt"
+    },
+    {
+        "id": "latido_physiotherapie_6",
+        "name": "Sporthos (Dr. Schippinger & Dr. Gschöpf) | Physiotherapie",
+        "group_id": "Sporthos (Dr. Schippinger & Dr. Gschöpf)",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/Sportorthos",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Physiotherapie",
+                "type_id": "64c128bbc108555e47417c47",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "64ef5f32ebb91c71ca18ef8c",
+        "address": "Feschnigstraße 74, 9020 Klagenfurt"
+    },
+    {
+        "id": "latido_massage_7",
+        "name": "Sporthos (Dr. Schippinger & Dr. Gschöpf) | Massage",
+        "group_id": "Sporthos (Dr. Schippinger & Dr. Gschöpf)",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/Sportorthos",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Massage",
+                "type_id": "64c128bbdce9af9754417c48",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "64ef5f32ebb91c71ca18ef8c",
+        "address": "Feschnigstraße 74, 9020 Klagenfurt"
+    },
+    {
+        "id": "latido_physiotherapie_8",
+        "name": "Sporthos (Dr. Schippinger & Dr. Gschöpf) | Physiotherapie",
+        "group_id": "Sporthos (Dr. Schippinger & Dr. Gschöpf)",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/Sportorthos",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Physiotherapie",
+                "type_id": "64c128cfdc4769b339417c4c",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "64ef5f32ebb91c71ca18ef8c",
+        "address": "Feschnigstraße 74, 9020 Klagenfurt"
+    },
+    {
+        "id": "latido_massage_9",
+        "name": "Sporthos (Dr. Schippinger & Dr. Gschöpf) | Massage",
+        "group_id": "Sporthos (Dr. Schippinger & Dr. Gschöpf)",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/Sportorthos",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Massage",
+                "type_id": "64c128cff4792b6d74417c4d",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "64ef5f32ebb91c71ca18ef8c",
+        "address": "Feschnigstraße 74, 9020 Klagenfurt"
+    },
+    {
+        "id": "latido_kardiologischee",
+        "name": "MUDr. Lýdia Macková | Kardiologische Erstordination (Ausführliche internistische und kardiologische Begutachtung mit der genauen Anamnese, körperlicher Untersuchung, EKG und der Echokardiographie) ",
+        "group_id": "MUDr. Lýdia Macková",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Mackova",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Innere Medizin, Innere Medizin und Kardiologie",
+        "appointment_types": [
+            {
+                "name": "Kardiologische Erstordination (Ausführliche internistische und kardiologische Begutachtung mit der genauen Anamnese, körperlicher Untersuchung, EKG und der Echokardiographie) ",
+                "type_id": "6543f2371ad616bd2341e85d",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "6543f233bd9703c89c41e7a9",
+        "address": "Hauptplatz 11, 9500 Villach"
+    },
+    {
+        "id": "latido_erstordinationm_1",
+        "name": "MUDr. Lýdia Macková | Erstordination mit der Abdomensonographie (Ausführliche internistische und kardiologische Begutachtung mit der genauen Anamnese, körperlicher Untersuchung und der Abdomensonographie, +/- EKG)",
+        "group_id": "MUDr. Lýdia Macková",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Mackova",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Innere Medizin, Innere Medizin und Kardiologie",
+        "appointment_types": [
+            {
+                "name": "Erstordination mit der Abdomensonographie (Ausführliche internistische und kardiologische Begutachtung mit der genauen Anamnese, körperlicher Untersuchung und der Abdomensonographie, +/- EKG)",
+                "type_id": "68c6f959f82fe0258c12614a",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "6543f233bd9703c89c41e7a9",
+        "address": "Hauptplatz 11, 9500 Villach"
+    },
+    {
+        "id": "latido_erstordinationo_2",
+        "name": "MUDr. Lýdia Macková | Erstordination ohne Ultraschall (Ausführliche internistische und kardiologische Begutachtung mit der genauen Anamnese, körperlicher Untersuchung, EKG)",
+        "group_id": "MUDr. Lýdia Macková",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Mackova",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Innere Medizin, Innere Medizin und Kardiologie",
+        "appointment_types": [
+            {
+                "name": "Erstordination ohne Ultraschall (Ausführliche internistische und kardiologische Begutachtung mit der genauen Anamnese, körperlicher Untersuchung, EKG)",
+                "type_id": "6578dff93063aecfbec7a2a6",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "6543f233bd9703c89c41e7a9",
+        "address": "Hauptplatz 11, 9500 Villach"
+    },
+    {
+        "id": "latido_managercheckaus_3",
+        "name": "MUDr. Lýdia Macková | Manager-Check (Ausführliche internistische und kardiologische Begutachtung mit der genauen Anamnese, körperlicher Untersuchung, EKG, Echokardiographie, Abdomensonographie, Schilddrüse- und Halsgefäßesonographie, Laboruntersuchung inkl. Besprechung der Befunde) ",
+        "group_id": "MUDr. Lýdia Macková",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Mackova",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Innere Medizin, Innere Medizin und Kardiologie",
+        "appointment_types": [
+            {
+                "name": "Manager-Check (Ausführliche internistische und kardiologische Begutachtung mit der genauen Anamnese, körperlicher Untersuchung, EKG, Echokardiographie, Abdomensonographie, Schilddrüse- und Halsgefäßesonographie, Laboruntersuchung inkl. Besprechung der Befunde) ",
+                "type_id": "6576fd35c55554854e067e7b",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "6543f233bd9703c89c41e7a9",
+        "address": "Hauptplatz 11, 9500 Villach"
+    },
+    {
+        "id": "latido_internistischek_4",
+        "name": "MUDr. Lýdia Macková | Internistische/Kardiologische Freigabe zur Operation ohne Untraschall (Ausführliche internistische und kardiologische Begutachtung mit der genauen Anamnese, körperlicher Untersuchung, EKG und RR)",
+        "group_id": "MUDr. Lýdia Macková",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Mackova",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Innere Medizin, Innere Medizin und Kardiologie",
+        "appointment_types": [
+            {
+                "name": "Internistische/Kardiologische Freigabe zur Operation ohne Untraschall (Ausführliche internistische und kardiologische Begutachtung mit der genauen Anamnese, körperlicher Untersuchung, EKG und RR)",
+                "type_id": "68c6f9c4f82fe0258c12614c",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "6543f233bd9703c89c41e7a9",
+        "address": "Hauptplatz 11, 9500 Villach"
+    },
+    {
+        "id": "latido_internistischek_5",
+        "name": "MUDr. Lýdia Macková | Internistische/Kardiologische Freigabe zur Operation mit Untraschall (Ausführliche internistische und kardiologische Begutachtung mit der genauen Anamnese, körperlicher Untersuchung, EKG und der Echokardiographie oder Abdomensonographie)",
+        "group_id": "MUDr. Lýdia Macková",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Mackova",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Innere Medizin, Innere Medizin und Kardiologie",
+        "appointment_types": [
+            {
+                "name": "Internistische/Kardiologische Freigabe zur Operation mit Untraschall (Ausführliche internistische und kardiologische Begutachtung mit der genauen Anamnese, körperlicher Untersuchung, EKG und der Echokardiographie oder Abdomensonographie)",
+                "type_id": "68c6f99bf82fe0258c12614b",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "6543f233bd9703c89c41e7a9",
+        "address": "Hauptplatz 11, 9500 Villach"
+    },
+    {
+        "id": "latido_folgeordination_6",
+        "name": "MUDr. Lýdia Macková | Folgeordination (Kontrolle innerhalb eines halben Jahres nach der Erstordination aufgrund gleicher Symptomatik oder Besprechung der ausstehenden Befunde wie Langzeit EKG, Langzeit Blutdruck, Labor, Bildgebung, …) ",
+        "group_id": "MUDr. Lýdia Macková",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Mackova",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Innere Medizin, Innere Medizin und Kardiologie",
+        "appointment_types": [
+            {
+                "name": "Folgeordination (Kontrolle innerhalb eines halben Jahres nach der Erstordination aufgrund gleicher Symptomatik oder Besprechung der ausstehenden Befunde wie Langzeit EKG, Langzeit Blutdruck, Labor, Bildgebung, …) ",
+                "type_id": "6543f237ca7ff69e3c41e85e",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "6543f233bd9703c89c41e7a9",
+        "address": "Hauptplatz 11, 9500 Villach"
+    },
+    {
+        "id": "latido_atemschutzunter_7",
+        "name": "MUDr. Lýdia Macková | Atemschutzuntersuchung (Beurteilung der Tauglichkeit für Atemschutz-Geräteträger mit Spirometrie und Ergometrie) ",
+        "group_id": "MUDr. Lýdia Macková",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Mackova",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Innere Medizin, Innere Medizin und Kardiologie",
+        "appointment_types": [
+            {
+                "name": "Atemschutzuntersuchung (Beurteilung der Tauglichkeit für Atemschutz-Geräteträger mit Spirometrie und Ergometrie) ",
+                "type_id": "68c6f9edf82fe0258c12614d",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "6543f233bd9703c89c41e7a9",
+        "address": "Hauptplatz 11, 9500 Villach"
+    },
+    {
+        "id": "latido_vorsorgeuntersu_8",
+        "name": "MUDr. Lýdia Macková | Vorsorgeuntersuchung",
+        "group_id": "MUDr. Lýdia Macková",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Mackova",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Innere Medizin, Innere Medizin und Kardiologie",
+        "appointment_types": [
+            {
+                "name": "Vorsorgeuntersuchung",
+                "type_id": "65b7e0acce48e38697e91ea9",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "6543f233bd9703c89c41e7a9",
+        "address": "Hauptplatz 11, 9500 Villach"
+    },
+    {
+        "id": "latido_lipidambulanzbe_9",
+        "name": "MUDr. Lýdia Macková | Lipidambulanz (Beratung bei der Hyperlipidämie und Einstellung der Lipidtherapie)",
+        "group_id": "MUDr. Lýdia Macková",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Mackova",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Innere Medizin, Innere Medizin und Kardiologie",
+        "appointment_types": [
+            {
+                "name": "Lipidambulanz (Beratung bei der Hyperlipidämie und Einstellung der Lipidtherapie)",
+                "type_id": "6576fd357d15d3429c067e7c",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "6543f233bd9703c89c41e7a9",
+        "address": "Hauptplatz 11, 9500 Villach"
+    },
+    {
+        "id": "latido_echokardiograph_10",
+        "name": "MUDr. Lýdia Macková | Echokardiographie",
+        "group_id": "MUDr. Lýdia Macková",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Mackova",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Innere Medizin, Innere Medizin und Kardiologie",
+        "appointment_types": [
+            {
+                "name": "Echokardiographie",
+                "type_id": "6576fd35ef4d2d50a2067e7d",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "6543f233bd9703c89c41e7a9",
+        "address": "Hauptplatz 11, 9500 Villach"
+    },
+    {
+        "id": "latido_abdomensonograp_11",
+        "name": "MUDr. Lýdia Macková | Abdomensonographie",
+        "group_id": "MUDr. Lýdia Macková",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Mackova",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Innere Medizin, Innere Medizin und Kardiologie",
+        "appointment_types": [
+            {
+                "name": "Abdomensonographie",
+                "type_id": "6576fd3523d78e6a52067e7e",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "6543f233bd9703c89c41e7a9",
+        "address": "Hauptplatz 11, 9500 Villach"
+    },
+    {
+        "id": "latido_carotissonograp_12",
+        "name": "MUDr. Lýdia Macková | Carotissonographie",
+        "group_id": "MUDr. Lýdia Macková",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Mackova",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Innere Medizin, Innere Medizin und Kardiologie",
+        "appointment_types": [
+            {
+                "name": "Carotissonographie",
+                "type_id": "6576fd3576cdb4bbab067e7f",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "6543f233bd9703c89c41e7a9",
+        "address": "Hauptplatz 11, 9500 Villach"
+    },
+    {
+        "id": "latido_ergometrie_13",
+        "name": "MUDr. Lýdia Macková | Ergometrie",
+        "group_id": "MUDr. Lýdia Macková",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Mackova",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Innere Medizin, Innere Medizin und Kardiologie",
+        "appointment_types": [
+            {
+                "name": "Ergometrie",
+                "type_id": "6576fd3595f83e3a76067e80",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "6543f233bd9703c89c41e7a9",
+        "address": "Hauptplatz 11, 9500 Villach"
+    },
+    {
+        "id": "latido_ruheekg_14",
+        "name": "MUDr. Lýdia Macková | Ruhe-EKG",
+        "group_id": "MUDr. Lýdia Macková",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Mackova",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Innere Medizin, Innere Medizin und Kardiologie",
+        "appointment_types": [
+            {
+                "name": "Ruhe-EKG",
+                "type_id": "6576fd35b75469e5ba067e81",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "6543f233bd9703c89c41e7a9",
+        "address": "Hauptplatz 11, 9500 Villach"
+    },
+    {
+        "id": "latido_langzeitekg_15",
+        "name": "MUDr. Lýdia Macková | Langzeit-EKG",
+        "group_id": "MUDr. Lýdia Macková",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Mackova",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Innere Medizin, Innere Medizin und Kardiologie",
+        "appointment_types": [
+            {
+                "name": "Langzeit-EKG",
+                "type_id": "6576fd35161051b5dd067e82",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "6543f233bd9703c89c41e7a9",
+        "address": "Hauptplatz 11, 9500 Villach"
+    },
+    {
+        "id": "latido_langzeitrr_16",
+        "name": "MUDr. Lýdia Macková | Langzeit-RR",
+        "group_id": "MUDr. Lýdia Macková",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Mackova",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Innere Medizin, Innere Medizin und Kardiologie",
+        "appointment_types": [
+            {
+                "name": "Langzeit-RR",
+                "type_id": "6576fd358db7d9816d067e83",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "6543f233bd9703c89c41e7a9",
+        "address": "Hauptplatz 11, 9500 Villach"
+    },
+    {
+        "id": "latido_spirometrie_17",
+        "name": "MUDr. Lýdia Macková | Spirometrie",
+        "group_id": "MUDr. Lýdia Macková",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Mackova",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Innere Medizin, Innere Medizin und Kardiologie",
+        "appointment_types": [
+            {
+                "name": "Spirometrie",
+                "type_id": "6578dff9abd03c90fcc7a2b1",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "6543f233bd9703c89c41e7a9",
+        "address": "Hauptplatz 11, 9500 Villach"
+    },
+    {
+        "id": "latido_phlebosonograph_18",
+        "name": "MUDr. Lýdia Macková | Phlebosonographie (Sonographie der Venen bei V.a. tiefe venöse Thrombose, Thrombophlebistis,…)",
+        "group_id": "MUDr. Lýdia Macková",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Mackova",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Innere Medizin, Innere Medizin und Kardiologie",
+        "appointment_types": [
+            {
+                "name": "Phlebosonographie (Sonographie der Venen bei V.a. tiefe venöse Thrombose, Thrombophlebistis,…)",
+                "type_id": "68c6fa0cf82fe0258c12614e",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "6543f233bd9703c89c41e7a9",
+        "address": "Hauptplatz 11, 9500 Villach"
+    },
+    {
+        "id": "latido_weichteilsonogr_19",
+        "name": "MUDr. Lýdia Macková | Weichteilsonographie (Sonographie der Weichteile bei Verhärtungen, Schwellung, Schmerzen,…)",
+        "group_id": "MUDr. Lýdia Macková",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Mackova",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Innere Medizin, Innere Medizin und Kardiologie",
+        "appointment_types": [
+            {
+                "name": "Weichteilsonographie (Sonographie der Weichteile bei Verhärtungen, Schwellung, Schmerzen,…)",
+                "type_id": "68c6fa24f82fe0258c12614f",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "6543f233bd9703c89c41e7a9",
+        "address": "Hauptplatz 11, 9500 Villach"
+    },
+    {
+        "id": "latido_mutterkindpassu_20",
+        "name": "MUDr. Lýdia Macková | Mutter Kind Pass Untersuchung",
+        "group_id": "MUDr. Lýdia Macková",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Mackova",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Innere Medizin, Innere Medizin und Kardiologie",
+        "appointment_types": [
+            {
+                "name": "Mutter Kind Pass Untersuchung",
+                "type_id": "65b7e0ac6f2951c45de91eaa",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "6543f233bd9703c89c41e7a9",
+        "address": "Hauptplatz 11, 9500 Villach"
+    },
+    {
+        "id": "latido_liebscherbracht_21",
+        "name": "MUDr. Lýdia Macková | Liebscher & Bracht Therapie",
+        "group_id": "MUDr. Lýdia Macková",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Mackova",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Innere Medizin, Innere Medizin und Kardiologie",
+        "appointment_types": [
+            {
+                "name": "Liebscher & Bracht Therapie",
+                "type_id": "6765b75adb6586237f80ba94",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "6543f233bd9703c89c41e7a9",
+        "address": "Hauptplatz 11, 9500 Villach"
+    },
+    {
+        "id": "latido_erstuntersuchun",
+        "name": "Dr. Andrea Wabnig | Erstuntersuchung",
+        "group_id": "Dr. Andrea Wabnig",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Dr._Andrea_Wabnig",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Hals-, Nasen- und Ohrenheilkunde",
+        "appointment_types": [
+            {
+                "name": "Erstuntersuchung",
+                "type_id": "67fe28345df575072ba81ab9",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "67fe28316a24ef49b1a81a00",
+        "address": "Nikolaigasse 43, 9500 Villach"
+    },
+    {
+        "id": "latido_kontrolle_1",
+        "name": "Dr. Andrea Wabnig | Kontrolle",
+        "group_id": "Dr. Andrea Wabnig",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Dr._Andrea_Wabnig",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Hals-, Nasen- und Ohrenheilkunde",
+        "appointment_types": [
+            {
+                "name": "Kontrolle",
+                "type_id": "67fe2834d7c60eb918a81aba",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "67fe28316a24ef49b1a81a00",
+        "address": "Nikolaigasse 43, 9500 Villach"
+    },
+    {
+        "id": "latido_ordination",
+        "name": "Dr. Markus Gregori | Ordination ",
+        "group_id": "Dr. Markus Gregori",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Dr._Markus_Gregori",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Orthopädie und Traumatologie, Unfallchirurgie",
+        "appointment_types": [
+            {
+                "name": "Ordination ",
+                "type_id": "67eaa06c011e0fa45c4bf4a9",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "67eaa068dc7eb8152c4bf3f0",
+        "address": "Adalbert-Stifter-Straße 9, 9500 Villach"
+    },
+    {
+        "id": "latido_stoßwelle_1",
+        "name": "Dr. Markus Gregori | Stoßwelle",
+        "group_id": "Dr. Markus Gregori",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Dr._Markus_Gregori",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Orthopädie und Traumatologie, Unfallchirurgie",
+        "appointment_types": [
+            {
+                "name": "Stoßwelle",
+                "type_id": "682b4035069c0250d0d3fd98",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "67eaa068dc7eb8152c4bf3f0",
+        "address": "Adalbert-Stifter-Straße 9, 9500 Villach"
+    },
+    {
+        "id": "latido_erstordination3",
+        "name": "Dr. Katharina Albl-Janschitz | Erstordination 30 min",
+        "group_id": "Dr. Katharina Albl-Janschitz",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Albl",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Erstordination 30 min",
+                "type_id": "624ac2b85bd39ab9c70bc23d",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "624ac2b07fcf9d0d89afe279",
+        "address": "Adalbert-Stifter-Straße 9, 9500 Villach"
+    },
+    {
+        "id": "latido_erstordination6_1",
+        "name": "Dr. Katharina Albl-Janschitz | Erstordination 60 min",
+        "group_id": "Dr. Katharina Albl-Janschitz",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Albl",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Erstordination 60 min",
+                "type_id": "6255229b7a2e5d82513d3db7",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "624ac2b07fcf9d0d89afe279",
+        "address": "Adalbert-Stifter-Straße 9, 9500 Villach"
+    },
+    {
+        "id": "latido_kontrolle30min_2",
+        "name": "Dr. Katharina Albl-Janschitz | Kontrolle 30 min",
+        "group_id": "Dr. Katharina Albl-Janschitz",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Albl",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Kontrolle 30 min",
+                "type_id": "624ac2b88ee03ca83f0bc23e",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "624ac2b07fcf9d0d89afe279",
+        "address": "Adalbert-Stifter-Straße 9, 9500 Villach"
+    },
+    {
+        "id": "latido_kontrolle15min_3",
+        "name": "Dr. Katharina Albl-Janschitz | Kontrolle 15 min",
+        "group_id": "Dr. Katharina Albl-Janschitz",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Albl",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Kontrolle 15 min",
+                "type_id": "6255229b574592e6663d3db9",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "624ac2b07fcf9d0d89afe279",
+        "address": "Adalbert-Stifter-Straße 9, 9500 Villach"
+    },
+    {
+        "id": "latido_kontrolle45min_4",
+        "name": "Dr. Katharina Albl-Janschitz | Kontrolle 45 min",
+        "group_id": "Dr. Katharina Albl-Janschitz",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Albl",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Kontrolle 45 min",
+                "type_id": "6255229b12366f45653d3dba",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "624ac2b07fcf9d0d89afe279",
+        "address": "Adalbert-Stifter-Straße 9, 9500 Villach"
+    },
+    {
+        "id": "latido_befundbesprechu_5",
+        "name": "Dr. Katharina Albl-Janschitz | Befundbesprechung 15 min",
+        "group_id": "Dr. Katharina Albl-Janschitz",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Albl",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Befundbesprechung 15 min",
+                "type_id": "6255229b73cb868c7f3d3dbc",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "624ac2b07fcf9d0d89afe279",
+        "address": "Adalbert-Stifter-Straße 9, 9500 Villach"
+    },
+    {
+        "id": "latido_befundbesprechu_6",
+        "name": "Dr. Katharina Albl-Janschitz | Befundbesprechung 30 min",
+        "group_id": "Dr. Katharina Albl-Janschitz",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Albl",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Befundbesprechung 30 min",
+                "type_id": "6255229bdd8e618b413d3dbd",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "624ac2b07fcf9d0d89afe279",
+        "address": "Adalbert-Stifter-Straße 9, 9500 Villach"
+    },
+    {
+        "id": "latido_befundbesprechu_7",
+        "name": "Dr. Katharina Albl-Janschitz | Befundbesprechung 45 min",
+        "group_id": "Dr. Katharina Albl-Janschitz",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Albl",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Befundbesprechung 45 min",
+                "type_id": "6255229b12652b69943d3dbe",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "624ac2b07fcf9d0d89afe279",
+        "address": "Adalbert-Stifter-Straße 9, 9500 Villach"
+    },
+    {
+        "id": "latido_infusionstherap_8",
+        "name": "Dr. Katharina Albl-Janschitz | Infusionstherapie 30 min",
+        "group_id": "Dr. Katharina Albl-Janschitz",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Albl",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Infusionstherapie 30 min",
+                "type_id": "6255229bbe5479bafe3d3dbf",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "624ac2b07fcf9d0d89afe279",
+        "address": "Adalbert-Stifter-Straße 9, 9500 Villach"
+    },
+    {
+        "id": "latido_infusionstherap_9",
+        "name": "Dr. Katharina Albl-Janschitz | Infusionstherapie 60 min",
+        "group_id": "Dr. Katharina Albl-Janschitz",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Albl",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Infusionstherapie 60 min",
+                "type_id": "6255229b01c3da1eb83d3dc0",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "624ac2b07fcf9d0d89afe279",
+        "address": "Adalbert-Stifter-Straße 9, 9500 Villach"
+    },
+    {
+        "id": "latido_gutachten_10",
+        "name": "Dr. Katharina Albl-Janschitz | Gutachten ",
+        "group_id": "Dr. Katharina Albl-Janschitz",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Albl",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Gutachten ",
+                "type_id": "640f7b487ca464b30a805206",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "624ac2b07fcf9d0d89afe279",
+        "address": "Adalbert-Stifter-Straße 9, 9500 Villach"
+    },
+    {
+        "id": "latido_erstuntersuchun",
+        "name": "Dr. Annette Langer | Erstuntersuchung a 60 min",
+        "group_id": "Dr. Annette Langer",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Langer,_",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Ärzt:in für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Erstuntersuchung a 60 min",
+                "type_id": "621e21b75cd91a24c4440d51",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "621e21afbe12750890c34278",
+        "address": "Moritschstraße 2, 9500 Villach"
+    },
+    {
+        "id": "latido_erstuntersuchun_1",
+        "name": "Dr. Annette Langer | Erstuntersuchung a 45min",
+        "group_id": "Dr. Annette Langer",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Langer,_",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Ärzt:in für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Erstuntersuchung a 45min",
+                "type_id": "632c54837e61f9a1dc60bc4e",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "621e21afbe12750890c34278",
+        "address": "Moritschstraße 2, 9500 Villach"
+    },
+    {
+        "id": "latido_erstuntersuchun_2",
+        "name": "Dr. Annette Langer | Erstuntersuchung a 30min",
+        "group_id": "Dr. Annette Langer",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Langer,_",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Ärzt:in für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Erstuntersuchung a 30min",
+                "type_id": "632c54833fe22eae7260bc4f",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "621e21afbe12750890c34278",
+        "address": "Moritschstraße 2, 9500 Villach"
+    },
+    {
+        "id": "latido_kontrollea15min_3",
+        "name": "Dr. Annette Langer | Kontrolle a 15min",
+        "group_id": "Dr. Annette Langer",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Langer,_",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Ärzt:in für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Kontrolle a 15min",
+                "type_id": "632c5483907521113a60bc50",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "621e21afbe12750890c34278",
+        "address": "Moritschstraße 2, 9500 Villach"
+    },
+    {
+        "id": "latido_kontrollea30min_4",
+        "name": "Dr. Annette Langer | Kontrolle a 30min",
+        "group_id": "Dr. Annette Langer",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Langer,_",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Ärzt:in für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Kontrolle a 30min",
+                "type_id": "621e21b7b3a2d308a2440d52",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "621e21afbe12750890c34278",
+        "address": "Moritschstraße 2, 9500 Villach"
+    },
+    {
+        "id": "latido_kontrollea45min_5",
+        "name": "Dr. Annette Langer | Kontrolle a 45min",
+        "group_id": "Dr. Annette Langer",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Langer,_",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Ärzt:in für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Kontrolle a 45min",
+                "type_id": "632c5483acea6814fb60bc51",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "621e21afbe12750890c34278",
+        "address": "Moritschstraße 2, 9500 Villach"
+    },
+    {
+        "id": "latido_kontrollea60min_6",
+        "name": "Dr. Annette Langer | Kontrolle a 60min",
+        "group_id": "Dr. Annette Langer",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Langer,_",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Ärzt:in für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Kontrolle a 60min",
+                "type_id": "632c548384ca482a7960bc52",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "621e21afbe12750890c34278",
+        "address": "Moritschstraße 2, 9500 Villach"
+    },
+    {
+        "id": "latido_telemedizina15m_7",
+        "name": "Dr. Annette Langer | Telemedizin a 15 min",
+        "group_id": "Dr. Annette Langer",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Langer,_",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Ärzt:in für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Telemedizin a 15 min",
+                "type_id": "64d5da661c7a5811550bffcb",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "621e21afbe12750890c34278",
+        "address": "Moritschstraße 2, 9500 Villach"
+    },
+    {
+        "id": "latido_telemedizina30m_8",
+        "name": "Dr. Annette Langer | Telemedizin a 30min",
+        "group_id": "Dr. Annette Langer",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Langer,_",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Ärzt:in für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Telemedizin a 30min",
+                "type_id": "6335af008c72dac4cea5293e",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "621e21afbe12750890c34278",
+        "address": "Moritschstraße 2, 9500 Villach"
+    },
+    {
+        "id": "latido_telemedizina45m_9",
+        "name": "Dr. Annette Langer | Telemedizin a 45min",
+        "group_id": "Dr. Annette Langer",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Langer,_",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Ärzt:in für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Telemedizin a 45min",
+                "type_id": "6335af008853d1404ba5293f",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "621e21afbe12750890c34278",
+        "address": "Moritschstraße 2, 9500 Villach"
+    },
+    {
+        "id": "latido_telemedizina60m_10",
+        "name": "Dr. Annette Langer | Telemedizin a 60min",
+        "group_id": "Dr. Annette Langer",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Langer,_",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Ärzt:in für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Telemedizin a 60min",
+                "type_id": "6335af00df4d170c8ba52940",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "621e21afbe12750890c34278",
+        "address": "Moritschstraße 2, 9500 Villach"
+    },
+    {
+        "id": "latido_pause15_11",
+        "name": "Dr. Annette Langer | Pause 15",
+        "group_id": "Dr. Annette Langer",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Langer,_",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Ärzt:in für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Pause 15",
+                "type_id": "633a8a9c3f46467b7e6102c3",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "621e21afbe12750890c34278",
+        "address": "Moritschstraße 2, 9500 Villach"
+    },
+    {
+        "id": "latido_pause30_12",
+        "name": "Dr. Annette Langer | Pause 30",
+        "group_id": "Dr. Annette Langer",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Langer,_",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Ärzt:in für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Pause 30",
+                "type_id": "633a8ab24eac8909d06102d1",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "621e21afbe12750890c34278",
+        "address": "Moritschstraße 2, 9500 Villach"
+    },
+    {
+        "id": "latido_befundbesprechu_13",
+        "name": "Dr. Annette Langer | Befundbesprechung a 30min",
+        "group_id": "Dr. Annette Langer",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Langer,_",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Ärzt:in für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Befundbesprechung a 30min",
+                "type_id": "655645b45301f63ca796de2d",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "621e21afbe12750890c34278",
+        "address": "Moritschstraße 2, 9500 Villach"
+    },
+    {
+        "id": "latido_befundbesprechu_14",
+        "name": "Dr. Annette Langer | Befundbesprechung",
+        "group_id": "Dr. Annette Langer",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Langer,_",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Ärzt:in für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Befundbesprechung",
+                "type_id": "633dbd4e47ca3f4579a5582e",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "621e21afbe12750890c34278",
+        "address": "Moritschstraße 2, 9500 Villach"
+    },
+    {
+        "id": "latido_hirudotherapie_15",
+        "name": "Dr. Annette Langer | Hirudotherapie",
+        "group_id": "Dr. Annette Langer",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Langer,_",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Ärzt:in für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Hirudotherapie",
+                "type_id": "636a502f3b4cc67a598811fb",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "621e21afbe12750890c34278",
+        "address": "Moritschstraße 2, 9500 Villach"
+    },
+    {
+        "id": "latido_blutabnahme_16",
+        "name": "Dr. Annette Langer | Blutabnahme",
+        "group_id": "Dr. Annette Langer",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Langer,_",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Ärzt:in für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Blutabnahme",
+                "type_id": "679b5c8c622ada49967300cd",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "621e21afbe12750890c34278",
+        "address": "Moritschstraße 2, 9500 Villach"
+    },
+    {
+        "id": "latido_intravenöseinfu_17",
+        "name": "Dr. Annette Langer | intravenöse Infusion",
+        "group_id": "Dr. Annette Langer",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Langer,_",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Ärzt:in für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "intravenöse Infusion",
+                "type_id": "679b5c8ca60835065f7300ce",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "621e21afbe12750890c34278",
+        "address": "Moritschstraße 2, 9500 Villach"
+    },
+    {
+        "id": "latido_erstordination4_18",
+        "name": "Dr. Annette Langer | Erstordination 45min",
+        "group_id": "Dr. Annette Langer",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Langer,_",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Ärzt:in für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Erstordination 45min",
+                "type_id": "6339ffcf8102fabc686100a5",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "621e21afbe12750890c34278",
+        "address": "Moritschstraße 2, 9500 Villach"
+    },
+    {
+        "id": "latido_estordination30_19",
+        "name": "Dr. Annette Langer | Estordination 30min",
+        "group_id": "Dr. Annette Langer",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Langer,_",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Ärzt:in für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Estordination 30min",
+                "type_id": "643536e1ef38c383b01ac32b",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "621e21afbe12750890c34278",
+        "address": "Moritschstraße 2, 9500 Villach"
+    },
+    {
+        "id": "latido_laborbesprechun_20",
+        "name": "Dr. Annette Langer | Laborbesprechung 30min",
+        "group_id": "Dr. Annette Langer",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Langer,_",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Ärzt:in für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Laborbesprechung 30min",
+                "type_id": "65dcc63f727abecc3f32abdd",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "621e21afbe12750890c34278",
+        "address": "Moritschstraße 2, 9500 Villach"
+    },
+    {
+        "id": "latido_laborbesprechun_21",
+        "name": "Dr. Annette Langer | Laborbesprechung 45min",
+        "group_id": "Dr. Annette Langer",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Langer,_",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Ärzt:in für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Laborbesprechung 45min",
+                "type_id": "65dcc63ff3339b9c7d32abde",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "621e21afbe12750890c34278",
+        "address": "Moritschstraße 2, 9500 Villach"
+    },
+    {
+        "id": "latido_telemedizin30mi_22",
+        "name": "Dr. Annette Langer | Telemedizin 30min ",
+        "group_id": "Dr. Annette Langer",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Langer,_",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Ärzt:in für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Telemedizin 30min ",
+                "type_id": "65dcc63f93f7ee72b132abdf",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "621e21afbe12750890c34278",
+        "address": "Moritschstraße 2, 9500 Villach"
+    },
+    {
+        "id": "latido_kontrolltermin3_23",
+        "name": "Dr. Annette Langer | Kontrolltermin 30min",
+        "group_id": "Dr. Annette Langer",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Langer,_",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Ärzt:in für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Kontrolltermin 30min",
+                "type_id": "65dcc9d1c6ba1569ad32acd0",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "621e21afbe12750890c34278",
+        "address": "Moritschstraße 2, 9500 Villach"
+    },
+    {
+        "id": "latido_infusion_24",
+        "name": "Dr. Annette Langer | Infusion",
+        "group_id": "Dr. Annette Langer",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Langer,_",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Ärzt:in für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Infusion",
+                "type_id": "65de315c2f4de09e1a68099e",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "621e21afbe12750890c34278",
+        "address": "Moritschstraße 2, 9500 Villach"
+    },
+    {
+        "id": "latido_ordination",
+        "name": "Dr. Kergi Leitgeb | Ordination",
+        "group_id": "Dr. Kergi Leitgeb",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Leitgeb",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Ärztin für Allgemeinmedizin, Stillberaterin",
+        "appointment_types": [
+            {
+                "name": "Ordination",
+                "type_id": "6054c2b2bc4a87e33a409b68",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "6054c2151e788d8986d82968",
+        "address": "Siebenhügelstraße 13/5, 9020 Klagenfurt"
+    },
+    {
+        "id": "latido_videosprechstun_1",
+        "name": "Dr. Kergi Leitgeb | Videosprechstunde",
+        "group_id": "Dr. Kergi Leitgeb",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Leitgeb",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Ärztin für Allgemeinmedizin, Stillberaterin",
+        "appointment_types": [
+            {
+                "name": "Videosprechstunde",
+                "type_id": "6061ed089dd8f2a4376ee241",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "6054c2151e788d8986d82968",
+        "address": "Siebenhügelstraße 13/5, 9020 Klagenfurt"
+    },
+    {
+        "id": "latido_gutachten_2",
+        "name": "Dr. Kergi Leitgeb | Gutachten",
+        "group_id": "Dr. Kergi Leitgeb",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Leitgeb",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Ärztin für Allgemeinmedizin, Stillberaterin",
+        "appointment_types": [
+            {
+                "name": "Gutachten",
+                "type_id": "6075a0c3ddc4440db45de2ff",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "6054c2151e788d8986d82968",
+        "address": "Siebenhügelstraße 13/5, 9020 Klagenfurt"
+    },
+    {
+        "id": "latido_patientenverfüg_3",
+        "name": "Dr. Kergi Leitgeb | Patientenverfügung",
+        "group_id": "Dr. Kergi Leitgeb",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Leitgeb",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Ärztin für Allgemeinmedizin, Stillberaterin",
+        "appointment_types": [
+            {
+                "name": "Patientenverfügung",
+                "type_id": "6294aa6ef24f5bbae051e278",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "6054c2151e788d8986d82968",
+        "address": "Siebenhügelstraße 13/5, 9020 Klagenfurt"
+    },
+    {
+        "id": "latido_sterbeverfügung_4",
+        "name": "Dr. Kergi Leitgeb | Sterbeverfügung",
+        "group_id": "Dr. Kergi Leitgeb",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Leitgeb",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Ärztin für Allgemeinmedizin, Stillberaterin",
+        "appointment_types": [
+            {
+                "name": "Sterbeverfügung",
+                "type_id": "6294aa6fb19171226151e279",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "6054c2151e788d8986d82968",
+        "address": "Siebenhügelstraße 13/5, 9020 Klagenfurt"
+    },
+    {
+        "id": "latido_ordination_5",
+        "name": "Dr. Kergi Leitgeb | Ordination",
+        "group_id": "Dr. Kergi Leitgeb",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Leitgeb",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Ärztin für Allgemeinmedizin, Stillberaterin",
+        "appointment_types": [
+            {
+                "name": "Ordination",
+                "type_id": "6061d478af7b12cd886eda60",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "6054c2151e788d8986d82968",
+        "address": "Siebenhügelstraße 13/5, 9020 Klagenfurt"
+    },
+    {
+        "id": "latido_videosprechstun_6",
+        "name": "Dr. Kergi Leitgeb | Videosprechstunde",
+        "group_id": "Dr. Kergi Leitgeb",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Leitgeb",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Ärztin für Allgemeinmedizin, Stillberaterin",
+        "appointment_types": [
+            {
+                "name": "Videosprechstunde",
+                "type_id": "6061ed1516d1c04ef36ee24a",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "6054c2151e788d8986d82968",
+        "address": "Siebenhügelstraße 13/5, 9020 Klagenfurt"
+    },
+    {
+        "id": "latido_erstuntersuchun",
+        "name": "Dr. Andrea Schwarz-Adelbrecht | Erstuntersuchung",
+        "group_id": "Dr. Andrea Schwarz-Adelbrecht",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Schwarz-Adelbrecht",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Allgemeinchirurgie und Gefäßchirurgie, Ärztin für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Erstuntersuchung",
+                "type_id": "6662167c381b67990ad29cd3",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "666216792c0ce73abfd29c1b",
+        "address": "Siebenhügelstraße 13/2, 9020 Klagenfurt"
+    },
+    {
+        "id": "latido_weitereordinati_1",
+        "name": "Dr. Andrea Schwarz-Adelbrecht | Weitere Ordinationen",
+        "group_id": "Dr. Andrea Schwarz-Adelbrecht",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Schwarz-Adelbrecht",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Allgemeinchirurgie und Gefäßchirurgie, Ärztin für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Weitere Ordinationen",
+                "type_id": "6662167c886ac9a48ad29cd4",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "666216792c0ce73abfd29c1b",
+        "address": "Siebenhügelstraße 13/2, 9020 Klagenfurt"
+    },
+    {
+        "id": "latido_hausbesuch_2",
+        "name": "Dr. Andrea Schwarz-Adelbrecht | Hausbesuch",
+        "group_id": "Dr. Andrea Schwarz-Adelbrecht",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Schwarz-Adelbrecht",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Allgemeinchirurgie und Gefäßchirurgie, Ärztin für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Hausbesuch",
+                "type_id": "67f39c41650ed2e3dac14d98",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "666216792c0ce73abfd29c1b",
+        "address": "Siebenhügelstraße 13/2, 9020 Klagenfurt"
+    },
+    {
+        "id": "latido_erstuntersuchun",
+        "name": "Dr. Gerhart Heyn | Erstuntersuchung",
+        "group_id": "Dr. Gerhart Heyn",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Heyn",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Arzt für Allgemeinmedizin, Anästhesiologie und Intensivmedizin",
+        "appointment_types": [
+            {
+                "name": "Erstuntersuchung",
+                "type_id": "6721dbe54e249be96ebb069f",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "6721dbe26734606c81bb05e4",
+        "address": "Hauptstraße 141, 9201 Krumpendorf"
+    },
+    {
+        "id": "latido_kontrolle_1",
+        "name": "Dr. Gerhart Heyn | Kontrolle",
+        "group_id": "Dr. Gerhart Heyn",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Heyn",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Arzt für Allgemeinmedizin, Anästhesiologie und Intensivmedizin",
+        "appointment_types": [
+            {
+                "name": "Kontrolle",
+                "type_id": "6721dbe52547fdc2c8bb06a0",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "6721dbe26734606c81bb05e4",
+        "address": "Hauptstraße 141, 9201 Krumpendorf"
+    },
+    {
+        "id": "latido_manualtherapeut_2",
+        "name": "Dr. Gerhart Heyn | Manualtherapeutische Behandlung",
+        "group_id": "Dr. Gerhart Heyn",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Heyn",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Arzt für Allgemeinmedizin, Anästhesiologie und Intensivmedizin",
+        "appointment_types": [
+            {
+                "name": "Manualtherapeutische Behandlung",
+                "type_id": "67963850b36e971040bc27b2",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "6721dbe26734606c81bb05e4",
+        "address": "Hauptstraße 141, 9201 Krumpendorf"
+    },
+    {
+        "id": "latido_funktionellemyo_3",
+        "name": "Dr. Gerhart Heyn | Funktionelle Myodiagnostik",
+        "group_id": "Dr. Gerhart Heyn",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Heyn",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Arzt für Allgemeinmedizin, Anästhesiologie und Intensivmedizin",
+        "appointment_types": [
+            {
+                "name": "Funktionelle Myodiagnostik",
+                "type_id": "67963850fe43ad32f0bc27b3",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "6721dbe26734606c81bb05e4",
+        "address": "Hauptstraße 141, 9201 Krumpendorf"
+    },
+    {
+        "id": "latido_führerscheinunt_4",
+        "name": "Dr. Gerhart Heyn | Führerscheinuntersuchung nach § 8 FSG",
+        "group_id": "Dr. Gerhart Heyn",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Heyn",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Arzt für Allgemeinmedizin, Anästhesiologie und Intensivmedizin",
+        "appointment_types": [
+            {
+                "name": "Führerscheinuntersuchung nach § 8 FSG",
+                "type_id": "67a8b0dcc7f8e7bf6635e4a5",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "6721dbe26734606c81bb05e4",
+        "address": "Hauptstraße 141, 9201 Krumpendorf"
+    },
+    {
+        "id": "latido_kontrolle",
+        "name": "Dr. Thomas Primosch | Kontrolle",
+        "group_id": "Dr. Thomas Primosch",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Primosch",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Hals-, Nasen- und Ohrenheilkunde, Arzt für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Kontrolle",
+                "type_id": "633689dc7626158907b12457",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "633689d505df2481dab12454",
+        "address": "Waaggasse 14/1, 9020 Klagenfurt"
+    },
+    {
+        "id": "latido_erstuntersuchun_1",
+        "name": "Dr. Thomas Primosch | Erstuntersuchung",
+        "group_id": "Dr. Thomas Primosch",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Primosch",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Hals-, Nasen- und Ohrenheilkunde, Arzt für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Erstuntersuchung",
+                "type_id": "633689dcbbd4b8d89ab12456",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "633689d505df2481dab12454",
+        "address": "Waaggasse 14/1, 9020 Klagenfurt"
+    },
+    {
+        "id": "latido_erstuntersuchun_2",
+        "name": "Dr. Thomas Primosch | Erstuntersuchung",
+        "group_id": "Dr. Thomas Primosch",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Primosch",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Hals-, Nasen- und Ohrenheilkunde, Arzt für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Erstuntersuchung",
+                "type_id": "67c831179f6a2ee61b5abb5b",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "633689d505df2481dab12454",
+        "address": "Waaggasse 14/1, 9020 Klagenfurt"
+    },
+    {
+        "id": "latido_erstuntersuchun",
+        "name": "Dr. med. univ. Aigul Salmhofer | Erstuntersuchung",
+        "group_id": "Dr. med. univ. Aigul Salmhofer",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Salmhofer",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Urologie",
+        "appointment_types": [
+            {
+                "name": "Erstuntersuchung",
+                "type_id": "64cceadfc797171d3d999cf1",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "64cceadbcfeca65867999c3f",
+        "address": "Völkermarkter Ring 7, 9020 Klagenfurt am Wörthersee"
+    },
+    {
+        "id": "latido_kontrolle_1",
+        "name": "Dr. med. univ. Aigul Salmhofer | Kontrolle",
+        "group_id": "Dr. med. univ. Aigul Salmhofer",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Salmhofer",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Urologie",
+        "appointment_types": [
+            {
+                "name": "Kontrolle",
+                "type_id": "64cceadf7e77f6b6b6999cf2",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "64cceadbcfeca65867999c3f",
+        "address": "Völkermarkter Ring 7, 9020 Klagenfurt am Wörthersee"
+    },
+    {
+        "id": "latido_befundbesprechu_2",
+        "name": "Dr. med. univ. Aigul Salmhofer | Befundbesprechung",
+        "group_id": "Dr. med. univ. Aigul Salmhofer",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Salmhofer",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Urologie",
+        "appointment_types": [
+            {
+                "name": "Befundbesprechung",
+                "type_id": "64ee102f444a927e145865cb",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "64cceadbcfeca65867999c3f",
+        "address": "Völkermarkter Ring 7, 9020 Klagenfurt am Wörthersee"
+    },
+    {
+        "id": "latido_zystoskopie_3",
+        "name": "Dr. med. univ. Aigul Salmhofer | Zystoskopie",
+        "group_id": "Dr. med. univ. Aigul Salmhofer",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Salmhofer",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Urologie",
+        "appointment_types": [
+            {
+                "name": "Zystoskopie",
+                "type_id": "64ee102f168e233d195865cc",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "64cceadbcfeca65867999c3f",
+        "address": "Völkermarkter Ring 7, 9020 Klagenfurt am Wörthersee"
+    },
+    {
+        "id": "latido_erstuntersuchun",
+        "name": "Priv.-Doz. DDr. Michael Trapp | Erstuntersuchung",
+        "group_id": "Priv.-Doz. DDr. Michael Trapp",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Trapp,_",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Kinder- und Jugendpsychiatrie und Psychotherapeutische Medizin",
+        "appointment_types": [
+            {
+                "name": "Erstuntersuchung",
+                "type_id": "65df07f72d51fed521b3b9db",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "65df07f38b79966f80b3b927",
+        "address": "Suppanstraße 69, 9020 Klagenfurt"
+    },
+    {
+        "id": "latido_30minkontrolle_1",
+        "name": "Priv.-Doz. DDr. Michael Trapp | 30 min. Kontrolle ",
+        "group_id": "Priv.-Doz. DDr. Michael Trapp",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Trapp,_",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Kinder- und Jugendpsychiatrie und Psychotherapeutische Medizin",
+        "appointment_types": [
+            {
+                "name": "30 min. Kontrolle ",
+                "type_id": "65df07f7c8e167d2cbb3b9dc",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "65df07f38b79966f80b3b927",
+        "address": "Suppanstraße 69, 9020 Klagenfurt"
+    },
+    {
+        "id": "latido_psychotherapie_2",
+        "name": "Priv.-Doz. DDr. Michael Trapp | Psychotherapie ",
+        "group_id": "Priv.-Doz. DDr. Michael Trapp",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Trapp,_",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Kinder- und Jugendpsychiatrie und Psychotherapeutische Medizin",
+        "appointment_types": [
+            {
+                "name": "Psychotherapie ",
+                "type_id": "65df13a969d81b626f6826cd",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "65df07f38b79966f80b3b927",
+        "address": "Suppanstraße 69, 9020 Klagenfurt"
+    },
+    {
+        "id": "latido_60minkontrolle_3",
+        "name": "Priv.-Doz. DDr. Michael Trapp | 60 min. Kontrolle ",
+        "group_id": "Priv.-Doz. DDr. Michael Trapp",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Trapp,_",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Kinder- und Jugendpsychiatrie und Psychotherapeutische Medizin",
+        "appointment_types": [
+            {
+                "name": "60 min. Kontrolle ",
+                "type_id": "66d1bc4f9a42ce0d9c082d61",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "65df07f38b79966f80b3b927",
+        "address": "Suppanstraße 69, 9020 Klagenfurt"
+    },
+    {
+        "id": "latido_erstuntersuchun",
+        "name": "Priv.-Doz. DDr. Lukas Holzer | Erstuntersuchung",
+        "group_id": "Priv.-Doz. DDr. Lukas Holzer",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/67ab452398e2c452321f566f",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Orthopädie und orthopädische Chirurgie, Orthopädie und Traumatologie",
+        "appointment_types": [
+            {
+                "name": "Erstuntersuchung",
+                "type_id": "67ab452760b3777b1864301d",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "67ab45220c5a0e0432642f64",
+        "address": "Pfarrhofgasse 8, 9020 Klagenfurt am Wörthersee"
+    },
+    {
+        "id": "latido_kontrolle_1",
+        "name": "Priv.-Doz. DDr. Lukas Holzer | Kontrolle",
+        "group_id": "Priv.-Doz. DDr. Lukas Holzer",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/67ab452398e2c452321f566f",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Orthopädie und orthopädische Chirurgie, Orthopädie und Traumatologie",
+        "appointment_types": [
+            {
+                "name": "Kontrolle",
+                "type_id": "67ab4527cefcef7c6864301e",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "67ab45220c5a0e0432642f64",
+        "address": "Pfarrhofgasse 8, 9020 Klagenfurt am Wörthersee"
+    },
+    {
+        "id": "latido_befundbesprechu_2",
+        "name": "Priv.-Doz. DDr. Lukas Holzer | Befundbesprechung",
+        "group_id": "Priv.-Doz. DDr. Lukas Holzer",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/67ab452398e2c452321f566f",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Orthopädie und orthopädische Chirurgie, Orthopädie und Traumatologie",
+        "appointment_types": [
+            {
+                "name": "Befundbesprechung",
+                "type_id": "67b49d1025cf60e6e3f7eeb3",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "67ab45220c5a0e0432642f64",
+        "address": "Pfarrhofgasse 8, 9020 Klagenfurt am Wörthersee"
+    },
+    {
+        "id": "latido_gynäkologischev",
+        "name": "Dr. Ulrike Lampl-Jöbstl | Gynäkologische Vorsorgeuntersuchung",
+        "group_id": "Dr. Ulrike Lampl-Jöbstl",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Lampl-J%C3%B6bstl",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Frauenheilkunde und Geburtshilfe, Ärztin für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Gynäkologische Vorsorgeuntersuchung",
+                "type_id": "64f8a17336659e10f7d92d6b",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "64f8a16f507bfdf4efd92cb9",
+        "address": "Herrengasse 8/2, 9400 Wolfsberg"
+    },
+    {
+        "id": "latido_feststellungsch_1",
+        "name": "Dr. Ulrike Lampl-Jöbstl | Feststellung Schwangerschaft",
+        "group_id": "Dr. Ulrike Lampl-Jöbstl",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Lampl-J%C3%B6bstl",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Frauenheilkunde und Geburtshilfe, Ärztin für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Feststellung Schwangerschaft",
+                "type_id": "65971735392f8f18dc28a64c",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "64f8a16f507bfdf4efd92cb9",
+        "address": "Herrengasse 8/2, 9400 Wolfsberg"
+    },
+    {
+        "id": "latido_mkpkontrolle_2",
+        "name": "Dr. Ulrike Lampl-Jöbstl | MKP Kontrolle",
+        "group_id": "Dr. Ulrike Lampl-Jöbstl",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Lampl-J%C3%B6bstl",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Frauenheilkunde und Geburtshilfe, Ärztin für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "MKP Kontrolle",
+                "type_id": "659717357b37b1930e28a64d",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "64f8a16f507bfdf4efd92cb9",
+        "address": "Herrengasse 8/2, 9400 Wolfsberg"
+    },
+    {
+        "id": "latido_gynäkologischeb_3",
+        "name": "Dr. Ulrike Lampl-Jöbstl | Gynäkologische Beschwerden ",
+        "group_id": "Dr. Ulrike Lampl-Jöbstl",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Lampl-J%C3%B6bstl",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Frauenheilkunde und Geburtshilfe, Ärztin für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Gynäkologische Beschwerden ",
+                "type_id": "67515a6137b2eff077998341",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "64f8a16f507bfdf4efd92cb9",
+        "address": "Herrengasse 8/2, 9400 Wolfsberg"
+    },
+    {
+        "id": "latido_kontrolluntersu_4",
+        "name": "Dr. Ulrike Lampl-Jöbstl | Kontrolluntersuchung ",
+        "group_id": "Dr. Ulrike Lampl-Jöbstl",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Lampl-J%C3%B6bstl",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Frauenheilkunde und Geburtshilfe, Ärztin für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Kontrolluntersuchung ",
+                "type_id": "67515a611753baff1c998342",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "64f8a16f507bfdf4efd92cb9",
+        "address": "Herrengasse 8/2, 9400 Wolfsberg"
+    },
+    {
+        "id": "latido_befundbesprechu_5",
+        "name": "Dr. Ulrike Lampl-Jöbstl | Befundbesprechung",
+        "group_id": "Dr. Ulrike Lampl-Jöbstl",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Lampl-J%C3%B6bstl",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Frauenheilkunde und Geburtshilfe, Ärztin für Allgemeinmedizin",
+        "appointment_types": [
+            {
+                "name": "Befundbesprechung",
+                "type_id": "6597182b025daa448d28a654",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "64f8a16f507bfdf4efd92cb9",
+        "address": "Herrengasse 8/2, 9400 Wolfsberg"
+    },
+    {
+        "id": "latido_erstuntersuchun",
+        "name": "Dr. Christoph Clement | Erstuntersuchung",
+        "group_id": "Dr. Christoph Clement",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Clement",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Orthopädie und orthopädische Chirurgie",
+        "appointment_types": [
+            {
+                "name": "Erstuntersuchung",
+                "type_id": "634438b7260932233018bdb2",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "634438b03163e8a07418bdb0",
+        "address": "Ossiacher Zeile 39, 9500 Villach"
+    },
+    {
+        "id": "latido_kontrolle_1",
+        "name": "Dr. Christoph Clement | Kontrolle",
+        "group_id": "Dr. Christoph Clement",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Clement",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Orthopädie und orthopädische Chirurgie",
+        "appointment_types": [
+            {
+                "name": "Kontrolle",
+                "type_id": "634438b736da0459d118bdb3",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "634438b03163e8a07418bdb0",
+        "address": "Ossiacher Zeile 39, 9500 Villach"
+    },
+    {
+        "id": "latido_erstuntersuchun_2",
+        "name": "Dr. Christoph Clement | Erstuntersuchung",
+        "group_id": "Dr. Christoph Clement",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Clement",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Orthopädie und orthopädische Chirurgie",
+        "appointment_types": [
+            {
+                "name": "Erstuntersuchung",
+                "type_id": "63443bed1ac06e15f4bb9115",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "634438b03163e8a07418bdb0",
+        "address": "Ossiacher Zeile 39, 9500 Villach"
+    },
+    {
+        "id": "latido_kontrolle_3",
+        "name": "Dr. Christoph Clement | Kontrolle",
+        "group_id": "Dr. Christoph Clement",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Clement",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "speciality": "Orthopädie und orthopädische Chirurgie",
+        "appointment_types": [
+            {
+                "name": "Kontrolle",
+                "type_id": "63443bede2b6c2be92bb9116",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "634438b03163e8a07418bdb0",
+        "address": "Ossiacher Zeile 39, 9500 Villach"
+    },
+    {
+        "id": "latido_lipödem",
+        "name": "Dr. Peter J. Mallinger | Lipödem",
+        "group_id": "Dr. Peter J. Mallinger",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Mallinger",
+        "insurance": [
+            "Wahlarzt"
+        ],
+        "speciality": "Plastische, Rekonstruktive und Ästhetische Chirurgie",
+        "appointment_types": [
+            {
+                "name": "Lipödem",
+                "type_id": "65a502ee8437220fb9ccd297",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "65a502ebcdbbd998df28cdaf",
+        "calendar_id": "65a502eeced895488028cdba",
+        "address": "Gartenstraße 10, 9400 Wolfsberg"
+    },
+    {
+        "id": "latido_handchirurgie",
+        "name": "Dr. Peter J. Mallinger | Handchirurgie",
+        "group_id": "Dr. Peter J. Mallinger",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Mallinger",
+        "insurance": [
+            "Wahlarzt"
+        ],
+        "speciality": "Plastische, Rekonstruktive und Ästhetische Chirurgie",
+        "appointment_types": [
+            {
+                "name": "Handchirurgie",
+                "type_id": "65eb1e5c4cf5da001babf379",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "65a502ebcdbbd998df28cdaf",
+        "calendar_id": "65a502eeced895488028cdba",
+        "address": "Gartenstraße 10, 9400 Wolfsberg"
+    },
+    {
+        "id": "latido_koerper",
+        "name": "Dr. Peter J. Mallinger | Körper",
+        "group_id": "Dr. Peter J. Mallinger",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Mallinger",
+        "insurance": [
+            "Wahlarzt"
+        ],
+        "speciality": "Plastische, Rekonstruktive und Ästhetische Chirurgie",
+        "appointment_types": [
+            {
+                "name": "Körper",
+                "type_id": "65eb1e5c78f1afb6d1abf375",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "65a502ebcdbbd998df28cdaf",
+        "calendar_id": "65a502eeced895488028cdba",
+        "address": "Gartenstraße 10, 9400 Wolfsberg"
+    },
+    {
+        "id": "latido_lipödem_klagenfurt",
+        "name": "Dr. Peter J. Mallinger (Klagenfurt) | Lipödem",
+        "group_id": "Dr. Peter J. Mallinger",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Mallinger",
+        "insurance": [
+            "Wahlarzt"
+        ],
+        "speciality": "Plastische Chirurgie",
+        "appointment_types": [
+            {
+                "name": "Lipödem",
+                "type_id": "65a503a89faf72f9dc28cdfb",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "65a502ebcdbbd998df28cdaf",
+        "calendar_id": "65a503a89c152bdb9528ce00",
+        "address": "Herbertstraße 1, 9020 Klagenfurt"
+    },
+    {
+        "id": "latido_handchirurgie_klagenfurt",
+        "name": "Dr. Peter J. Mallinger (Klagenfurt) | Handchirurgie",
+        "group_id": "Dr. Peter J. Mallinger",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Mallinger",
+        "insurance": [
+            "Wahlarzt"
+        ],
+        "speciality": "Plastische Chirurgie",
+        "appointment_types": [
+            {
+                "name": "Handchirurgie",
+                "type_id": "65eb1ecba4ff3e405eabf395",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "65a502ebcdbbd998df28cdaf",
+        "calendar_id": "65a503a89c152bdb9528ce00",
+        "address": "Herbertstraße 1, 9020 Klagenfurt"
+    },
+    {
+        "id": "latido_koerper_klagenfurt",
+        "name": "Dr. Peter J. Mallinger (Klagenfurt) | Körper",
+        "group_id": "Dr. Peter J. Mallinger",
+        "scraper_type": "latido",
+        "booking_url": "https://patient.latido.at/arzt/_Mallinger",
+        "insurance": [
+            "Wahlarzt"
+        ],
+        "speciality": "Plastische Chirurgie",
+        "appointment_types": [
+            {
+                "name": "Körper",
+                "type_id": "65eb1ecb0dff800e3babf391",
+                "category": "OTHER"
+            }
+        ],
+        "doctor_id": "65a502ebcdbbd998df28cdaf",
+        "calendar_id": "65a503a89c152bdb9528ce00",
+        "address": "Herbertstraße 1, 9020 Klagenfurt"
     }
 ]
