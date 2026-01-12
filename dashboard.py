@@ -8,7 +8,7 @@ from core.filter_service import FilterService
 
 # --- Page Config ---
 st.set_page_config(
-    page_title="NextDoc",
+    page_title="Termindoc",
     page_icon="🩺",
     layout="centered",
     initial_sidebar_state="collapsed"
@@ -237,14 +237,40 @@ def consolidate_data(doctors_json):
     """
     aggregated_doctors = {}
     
+    import re
+    
     for doc_id, doc in doctors_json.items():
-        # Identify Group ID
+        # Identify Group ID and Service Name
+        raw_name = doc.get("name", "Unknown")
         group_key = doc.get("group_id")
-        if not group_key:
-            # Fallback: Use Name but strip suffixes like " | Akut" if present
-            raw_name = doc.get("name", "Unknown")
-            group_key = raw_name.split("|")[0].strip() if "|" in raw_name else raw_name
+        base_service_name = "Termin"
         
+        # Regex to extract "Provider Name (Service)"
+        # e.g., "Perfect Smile Klagenfurt (Beratung)" -> "Perfect Smile Klagenfurt", "Beratung"
+        match = re.match(r"^(.*?)\s*\((.*?)\)$", raw_name)
+        
+        if match:
+            extracted_name = match.group(1).strip()
+            extracted_service = match.group(2).strip()
+            
+            if not group_key:
+                group_key = extracted_name
+            
+            # If the service name looks like a location or generic (e.g. just "Wolfsberg"), keep it.
+            # But usually it's "Beratung", "Schmerzen", etc.
+            base_service_name = extracted_service
+            
+        elif " | " in raw_name:
+             # Fallback for "Name | Service" pattern
+             parts = raw_name.split(" | ")
+             if not group_key:
+                 group_key = parts[0].strip()
+             if len(parts) > 1:
+                 base_service_name = parts[1].strip()
+        
+        if not group_key:
+            group_key = raw_name
+            
         if group_key not in aggregated_doctors:
             aggregated_doctors[group_key] = {
                 "name": group_key,
@@ -257,11 +283,6 @@ def consolidate_data(doctors_json):
                 "slots": []
             }
         
-        # Determine Service Name for this entry if slots are flat
-        base_service_name = "Termin"
-        if " | " in doc.get("name", ""):
-            base_service_name = doc.get("name").split(" | ")[1]
-        
         def add_appt(slot_str, s_name):
             try:
                 if slot_str.endswith("Z"):
@@ -272,9 +293,9 @@ def consolidate_data(doctors_json):
                     dt = dt.astimezone()
                 dt_naive = dt.replace(tzinfo=None)
                 
-                # Avoid duplicates (day, time) - since we don't distinguish services anymore
+                # Avoid duplicates (day, time, service)
                 slot_key = f"{dt_naive.isoformat()}"
-                if any(s["datetime"] == dt_naive for s in aggregated_doctors[group_key]["slots"]):
+                if any(s["datetime"] == dt_naive and s["service_name"] == s_name for s in aggregated_doctors[group_key]["slots"]):
                     return
 
                 category, color = classify_service(s_name)
@@ -286,7 +307,8 @@ def consolidate_data(doctors_json):
                     "service_name": s_name,
                     "category": category,
                     "color": color, 
-                    "booking_url": doc.get("booking_url", aggregated_doctors[group_key]["booking_url"])
+                    "booking_url": doc.get("booking_url", aggregated_doctors[group_key]["booking_url"]),
+                    "show_time": doc.get("show_time", True)
                 })
             except ValueError:
                 pass
@@ -521,7 +543,7 @@ def render_results(all_doctors):
 <div style="display:flex; justify-content:space-between; align-items:center; background:#f7fafc; padding:8px; border-radius:6px; margin-bottom:4px; border-left:4px solid {bg_color};">
     <div>
         <span style="font-weight:bold; color:#2d3748;">{s['day_name']} {s['date_str']}</span>
-        <span style="font-weight:800; color:{bg_color}; margin-left:8px;">{s['time_str']}</span>
+        {f'<span style="font-weight:800; color:{bg_color}; margin-left:8px;">{s["time_str"]}</span>' if s.get('show_time', True) else ''}
         <span style="font-size:0.85em; color:#718096; margin-left:8px;">{s['service_name']}</span>
     </div>
     <a href="{s['booking_url']}" target="_blank" style="text-decoration:none; color:white; background:{bg_color}; padding:4px 12px; border-radius:12px; font-size:0.8em; font-weight:bold;">Buchen</a>

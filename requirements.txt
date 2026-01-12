@@ -2,3 +2,4 @@ pydantic
 playwright
 streamlit
 pandas
+requests

@@ -80,12 +80,12 @@
             "SVS",
             "BVAEB",
             "KFA",
-            "Wahlarzt",
-            "Privat"
+            "Wahlarzt"
         ],
         "scraper_type": "custom_palasser",
         "booking_url": "https://helga.palasser.com/online-terminvereinbarung/",
-        "api_url": "https://www.wisitor.at/php/Termine/freieTage.php?Datum=2026-01-01&Bis=90&Grund=489&Ordination=153&OrdinationListe=245&Token=ITOR10014800002000080015300245"
+        "api_url": "https://www.wisitor.at/php/Termine/freieTage.php?Datum=2026-01-01&Bis=90&Grund=489&Ordination=153&OrdinationListe=245&Token=ITOR10014800002000080015300245",
+        "show_time": false
     },
     {
         "id": "dr_helmut_aichinger",
@@ -93,13 +93,14 @@
         "speciality": "Hautkrankheiten",
         "address": "Villacher Straße 1A, 9020 Klagenfurt",
         "insurance": [
+            "ÖGK",
             "SVS",
-            "BVAEB",
             "KFA",
-            "Privat"
+            "Wahlarzt"
         ],
         "scraper_type": "custom_aichinger",
         "booking_url": "https://www.hautarzt-aichinger.at/",
+        "show_time": false,
         "note": "Verwendet eigenes System (Wisitor)"
     },
     {
@@ -136,18 +137,6 @@
         "scraper_type": "custom_haderlapp",
         "booking_url": "https://www.augenarzt-klagenfurt.at/terminreservierung.html",
         "note": "Eigenständiges Online-Reservierungssystem auf der Website."
-    },
-    {
-        "id": "augenarzt_dr_wirtitsch",
-        "name": "Augenarzt Dr. Wirtitsch",
-        "speciality": "Augenheilkunde",
-        "address": "Villach (Adresse prüfen)",
-        "insurance": [
-            "Wahlarzt"
-        ],
-        "scraper_type": "email_request",
-        "booking_url": "https://www.augenarzt-villach.at/patienteninfo/terminvereinbarungen/",
-        "note": "Achtung: Scheint nur E-Mail Anfrage zu sein, kein echter Echtzeit-Kalender. Ggf. entfernen wenn nur Echtzeit gewünscht."
     },
     {
         "id": "zahnarzt_modrocky_finkenstein",

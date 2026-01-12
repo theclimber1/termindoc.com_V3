@@ -109,7 +109,8 @@ class CustomAichingerScraper(BaseScraper):
             speciality=self.config.get("speciality", "Hautarzt"),
             insurance=self.config.get("insurance", ["Alle Kassen"]),
             slots=slots,
-            booking_url=self.config.get("booking_url", "")
+            booking_url=self.config.get("booking_url", ""),
+            show_time=self.config.get("show_time", True)
         )
         print(f"[Aichinger] Found {len(slots)} slots.")
         return [doctor]

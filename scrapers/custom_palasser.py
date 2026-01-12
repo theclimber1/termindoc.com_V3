@@ -44,74 +44,31 @@ class CustomPalasserScraper(BaseScraper):
                     # We iterate over days and find "LEER" or gaps
                     
                     for datum, info in tage_dict.items():
-                        termine = info.get("Termine")
-                        
-                        # Fix 1: Skip days marked as "VOLL" (Full)
-                        if termine == "VOLL":
-                            continue
+                        try:
+                            # --- Simplified Day-Only Mode (Project Status: Known Issue) ---
+                            # Logic: Only identify available DAYS. Ignore specific times/grids/hours.
+                            # Return one placeholder slot (08:00) per available day.
                             
-                        # Fix 2: Skip today as requested (same-day bookings not possible)
-                        date_obj = datetime.strptime(datum, "%Y-%m-%d").date()
-                        if date_obj <= datetime.now().date():
-                            continue
-
-                        # Parse blocks
-                        blocks = []
-                        if isinstance(termine, list):
-                            for term in termine:
-                                try:
-                                    std = term.get("BeginnSTD")
-                                    min_ = term.get("BeginnMIN")
-                                    dauer = int(term.get("Dauer", 0))
-                                    if std and min_:
-                                        start_dt = datetime.strptime(f"{datum}T{std}:{min_}:00", "%Y-%m-%dT%H:%M:%S")
-                                        end_dt = start_dt + timedelta(minutes=dauer)
-                                        blocks.append((start_dt, end_dt))
-                                except Exception as parsing_err:
-                                    print(f"[Palasser] Error parsing block {term}: {parsing_err}")
-                        
-                        blocks.sort()
-                        
-                        # Define day limits - Start at 08:00 as seen online
-                        day_start = datetime.strptime(f"{datum}T08:00:00", "%Y-%m-%dT%H:%M:%S")
-                        day_end = datetime.strptime(f"{datum}T19:00:00", "%Y-%m-%dT%H:%M:%S")
-                        slot_duration = 20 # minutes
-                        
-                        # Find gaps
-                        current = day_start
-                        while current + timedelta(minutes=slot_duration) <= day_end:
-                            # Grid Alignment: Ensure current is on a 10-minute mark (0, 10, 20...)
-                            if current.minute % 10 != 0:
-                                # Snap to next 10-minute mark
-                                minutes_to_add = 10 - (current.minute % 10)
-                                current += timedelta(minutes=minutes_to_add)
-                                current = current.replace(second=0, microsecond=0)
-                                if current + timedelta(minutes=slot_duration) > day_end:
-                                    break
-
-                            # 1. Check if current is strictly inside a block -> jump to end
-                            in_block = False
-                            for b_start, b_end in blocks:
-                                if b_start <= current < b_end:
-                                    current = b_end
-                                    in_block = True
-                                    break
-                            if in_block:
+                            if info == "VOLL":
                                 continue
                                 
-                            # 2. Check if slot fits (current + duration <= next_block_start)
-                            slot_end = current + timedelta(minutes=slot_duration)
-                            clash = False
-                            for b_start, b_end in blocks:
-                                if current < b_end and slot_end > b_start:
-                                    clash = True
-                                    current = b_end
-                                    break
+                            # Skip today/past
+                            if datetime.strptime(datum, "%Y-%m-%d").date() <= datetime.now().date():
+                                continue
                             
-                            if not clash:
-                                if current > datetime.now():
-                                    slots.append(current.strftime("%Y-%m-%dT%H:%M:%S"))
-                                current += timedelta(minutes=slot_duration)
+                            # Check availability
+                            is_available = False
+                            if isinstance(info, dict):
+                                termine = info.get("Termine")
+                                if isinstance(termine, list) and len(termine) > 0:
+                                    is_available = True
+                            
+                            if is_available:
+                                # Add single placeholder slot
+                                slots.append(f"{datum}T08:00:00")
+                                
+                        except Exception as day_err:
+                            print(f"[Palasser] Error processing day {datum}: {day_err}")
 
                             
         except Exception as e:
@@ -124,7 +81,7 @@ class CustomPalasserScraper(BaseScraper):
             speciality=self.config.get("speciality", "Internist"),
             insurance=self.config.get("insurance", ["Wahlarzt"]),
             slots=slots,
-            booking_url=self.config.get("booking_url", "")
+            booking_url=self.config.get("booking_url", ""),
+            show_time=self.config.get("show_time", True)
         )
-        print(f"[Palasser] Found {len(slots)} slots.")
         return [doctor]

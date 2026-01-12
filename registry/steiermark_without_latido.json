@@ -1,0 +1,146 @@
+[
+    {
+        "id": "gz_reininghaus",
+        "name": "Gesundheitszentrum Reininghaus",
+        "speciality": "Allgemeinmedizin (PVE)",
+        "address": "Am Steinfeld 8, 8020 Graz",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "scraper_type": "timify",
+        "booking_url": "https://book.timify.com/services?accountId=657c0cfb745a3a96db1ae2f4&hideCloseButton=true&enterpriseId=5e5e6a627f3c99122ee97b8d",
+        "timify_account_id": "657c0cfb745a3a96db1ae2f4"
+    },
+    {
+        "id": "minimaxi_akut",
+        "name": "Mini Maxi Med (Akut)",
+        "speciality": "Kinder- & Jugendheilkunde (PVE)",
+        "address": "Reininghauspark 6, 8020 Graz",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "scraper_type": "timify",
+        "booking_url": "https://book.timify.com/services?accountId=67ea79466a169ffd24f92918&hideCloseButton=true&enterpriseId=5e5e6a627f3c99122ee97b8d",
+        "timify_account_id": "67ea79466a169ffd24f92918",
+        "service_filter": "Akuttermin"
+    },
+    {
+        "id": "minimaxi_vorsorge",
+        "name": "Mini Maxi Med (Vorsorge)",
+        "speciality": "Kinder- & Jugendheilkunde (PVE)",
+        "address": "Reininghauspark 6, 8020 Graz",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "scraper_type": "timify",
+        "booking_url": "https://book.timify.com/services?accountId=67ea79466a169ffd24f92918&hideCloseButton=true&enterpriseId=5e5e6a627f3c99122ee97b8d",
+        "timify_account_id": "67ea79466a169ffd24f92918",
+        "service_filter": "Jährliche Untersuchung"
+    },
+    {
+        "id": "medius_graz",
+        "name": "Medius Zentrum für Gesundheit",
+        "speciality": "Allgemeinmedizin (PVE)",
+        "address": "Leonhardstraße 10, 8010 Graz",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "scraper_type": "etermin",
+        "booking_url": "https://www.etermin.net/medius",
+        "etermin_id": "medius"
+    },
+    {
+        "id": "pvz_muerzzuschlag",
+        "name": "PVE Diakonissen Mürzzuschlag",
+        "speciality": "Allgemeinmedizin (PVE)",
+        "address": "Bahnhofplatz 1, 8680 Mürzzuschlag",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "scraper_type": "otr24",
+        "booking_url": "https://www.otr24.at/index.php?page=singleDoctor&docID=144",
+        "otr24_doc_id": "144"
+    },
+    {
+        "id": "allgemeinmedizin_gries_stammpatienten",
+        "name": "Allgemeinmedizin Graz Gries (Nur Stammpatienten)",
+        "speciality": "Allgemeinmedizin",
+        "address": "17 Karlauerstraße, 8020 Graz",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "scraper_type": "other_webform",
+        "booking_url": "https://www.allgemeinmedizingries.at/onlineterminbuchung"
+    },
+    {
+        "id": "die_hausaerztinnen_graz",
+        "name": "Die Hausärztinnen (Dr. Pötsch & Partner)",
+        "speciality": "Allgemeinmedizin",
+        "address": "Pachernbergweg 22a, 8075 Hart bei Graz",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "scraper_type": "other_webform",
+        "booking_url": "https://www.die-hausaerztinnen.at/terminbuchung/"
+    },
+    {
+        "id": "ensat_mobimed",
+        "name": "Dr. Florian Ensat",
+        "speciality": "Hautkrankheiten",
+        "address": "Körblergasse 42, 8010 Graz",
+        "insurance": [
+            "Wahlarzt"
+        ],
+        "scraper_type": "mobimed",
+        "booking_url": "https://scheduler.mobimed.at/ensat/",
+        "mobimed_user_id": 5002,
+        "mobimed_service_id": 21
+    },
+    {
+        "id": "schmidmayr_timesloth",
+        "name": "Dr. Barbara Schmidmayr (PVZ Kumberg)",
+        "speciality": "Allgemeinmedizin",
+        "address": "Meierhof 2, 8062 Kumberg",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "scraper_type": "timesloth",
+        "booking_url": "https://shop.timesloth.io/de/a/dr-schmidmayr/MHFBKJHRET3gALMawVRO?backButton=true"
+    },
+    {
+        "id": "christidis_graz",
+        "name": "Dr. Ilias Christidis",
+        "speciality": "Innere Medizin",
+        "address": "Lange Gasse 13, 8010 Graz",
+        "insurance": [
+            "Wahlarzt"
+        ],
+        "scraper_type": "etermin",
+        "booking_url": "https://www.etermin.net/dr-christidis",
+        "etermin_id": "dr-christidis"
+    },
+    {
+        "id": "escaname_graz",
+        "name": "Dr. med. univ. Marcela Martínez Escanamé",
+        "speciality": "Haut- und Geschlechtskrankheiten",
+        "address": "Schörgelgasse 10, 8010 Graz",
+        "insurance": [
+            "Wahlarzt"
+        ],
+        "scraper_type": "other_webform",
+        "booking_url": "https://app.cituro.com/booking/3383522"
+    },
+    {
+        "id": "pritz_graz",
+        "name": "Dr. Veronika Pritz",
+        "speciality": "Allgemeinmedizin",
+        "address": "Radetzkystraße 10/8, 8010 Graz",
+        "insurance": [
+            "Alle Kassen",
+            "Privat"
+        ],
+        "scraper_type": "timify",
+        "booking_url": "https://book.timify.com/?accountId=66f2a4ff797066bed8f786b0&hideCloseButton=true&enterpriseId=5e5e6a627f3c99122ee97b8d",
+        "timify_account_id": "66f2a4ff797066bed8f786b0"
+    }
+]
