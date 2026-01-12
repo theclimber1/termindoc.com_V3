@@ -1,6 +1,6 @@
 [
     {
-        "id": "medineum_meisterl",
+        "id": "dr_meisterl_medineum",
         "name": "Dr. Meisterl (Medineum)",
         "speciality": "Allgemeinmedizin",
         "address": "St. Veiter Straße 161, 9020 Klagenfurt",
@@ -13,10 +13,11 @@
         "scraper_type": "medineum",
         "institution_id": "ef406de6-589d-494b-8200-9ed7de4dc914",
         "appointment_type_id": "27b98eb0-f008-43db-9738-9ea56a578873",
-        "booking_url": "https://www.medineum.at/termine/"
+        "booking_url": "https://de.cgmlife.com/eservices/#/?institution=ef406de6-589d-494b-8200-9ed7de4dc914",
+        "cgm_base_url": "https://de.cgmlife.com"
     },
     {
-        "id": "medineum_steinscherer",
+        "id": "dr_steinscherer_medineum",
         "name": "Dr. Steinscherer (Medineum)",
         "speciality": "Allgemeinmedizin",
         "address": "St. Veiter Straße 161, 9020 Klagenfurt",
@@ -29,10 +30,11 @@
         "scraper_type": "medineum",
         "institution_id": "ef406de6-589d-494b-8200-9ed7de4dc914",
         "appointment_type_id": "30d1b973-fba8-41e0-86dc-30801e8cd834",
-        "booking_url": "https://www.medineum.at/termine/"
+        "booking_url": "https://de.cgmlife.com/eservices/#/?institution=ef406de6-589d-494b-8200-9ed7de4dc914",
+        "cgm_base_url": "https://de.cgmlife.com"
     },
     {
-        "id": "medineum_treven",
+        "id": "dr_treven_medineum",
         "name": "Dr. Treven (Medineum)",
         "speciality": "Allgemeinmedizin",
         "address": "St. Veiter Straße 161, 9020 Klagenfurt",
@@ -45,10 +47,11 @@
         "scraper_type": "medineum",
         "institution_id": "ef406de6-589d-494b-8200-9ed7de4dc914",
         "appointment_type_id": "54414b8e-2648-4784-b9a9-c86fd417cdf8",
-        "booking_url": "https://www.medineum.at/termine/"
+        "booking_url": "https://de.cgmlife.com/eservices/#/?institution=ef406de6-589d-494b-8200-9ed7de4dc914",
+        "cgm_base_url": "https://de.cgmlife.com"
     },
     {
-        "id": "medineum_unterkofler",
+        "id": "dr_unterkofler_medineum",
         "name": "Dr. Unterkofler (Medineum)",
         "speciality": "Allgemeinmedizin",
         "address": "St. Veiter Straße 161, 9020 Klagenfurt",
@@ -61,108 +64,31 @@
         "scraper_type": "medineum",
         "institution_id": "ef406de6-589d-494b-8200-9ed7de4dc914",
         "appointment_type_id": "a2daf6e3-4653-4d2a-9824-dcf23049380b",
-        "booking_url": "https://www.medineum.at/termine/"
+        "booking_url": "https://de.cgmlife.com/eservices/#/?institution=ef406de6-589d-494b-8200-9ed7de4dc914",
+        "cgm_base_url": "https://de.cgmlife.com"
     },
     {
-        "id": "palasser_helga",
+        "id": "dr_helga_palasser",
         "name": "Dr. Helga Palasser",
-        "speciality": "Allgemeinmedizin",
+        "speciality": [
+            "Allgemeinmedizin",
+            "Innere Medizin"
+        ],
         "address": "Luegerstraße 32, 9020 Klagenfurt",
         "insurance": [
+            "ÖGK",
+            "SVS",
+            "BVAEB",
+            "KFA",
             "Wahlarzt",
             "Privat"
         ],
         "scraper_type": "custom_palasser",
         "booking_url": "https://helga.palasser.com/online-terminvereinbarung/",
-        "api_url": "https://www.wisitor.at/php/Termine/freieTage.php?Datum=2025-12-03&Bis=90&Grund=489&Ordination=153&OrdinationListe=245&Token=ITOR10014800002000080015300245"
+        "api_url": "https://www.wisitor.at/php/Termine/freieTage.php?Datum=2026-01-01&Bis=90&Grund=489&Ordination=153&OrdinationListe=245&Token=ITOR10014800002000080015300245"
     },
     {
-        "id": "wernig_latido",
-        "name": "Dr. Wernig",
-        "speciality": "Innere Medizin",
-        "address": "Bahnhofstraße 55, 9020 Klagenfurt",
-        "insurance": [
-            "Wahlarzt"
-        ],
-        "scraper_type": "latido",
-        "doctor_id": "651ae114da7bdc687e24ade1",
-        "calendar_id": "651ae1147795ec82d624adea",
-        "type_id": "651ae114178c6ad79df3af87",
-        "booking_url": "https://patient.latido.at/arzt/_Wernig"
-    },
-    {
-        "id": "ambrozy_latido",
-        "name": "OA Dr. Peter Ambrozy",
-        "speciality": "Orthopädie",
-        "address": "Khevenhüllerstraße 38, 9020 Klagenfurt",
-        "insurance": [
-            "Wahlarzt"
-        ],
-        "scraper_type": "latido",
-        "doctor_id": "5e5d88846c4f632d290551f7",
-        "calendar_id": "5e5d888569c7dcd3c10551fd",
-        "type_id": "5e5d8885644b7232377fc3b0",
-        "booking_url": "https://patient.latido.at/arzt/_Ambrozy"
-    },
-    {
-        "id": "lex_latido",
-        "name": "Dr. Ulrich Lex",
-        "speciality": "Neurologie",
-        "address": "St. Ruprechterstraße 49, 9020 Klagenfurt",
-        "insurance": [
-            "Wahlarzt"
-        ],
-        "scraper_type": "latido",
-        "doctor_id": "61fe7396fc1ce5b899bff48d",
-        "calendar_id": "6241d9b9c6df68d0f094eea4",
-        "type_id": "6241d9b9b61595177194eea1",
-        "booking_url": "https://patient.latido.at/arzt/_Lex"
-    },
-    {
-        "id": "lewitschnig_latido",
-        "name": "Dr. Scarlett Lewitschnig",
-        "speciality": "Schilddrüse & Allgemein",
-        "address": "Blumengasse 12, 9020 Klagenfurt",
-        "insurance": [
-            "Wahlarzt"
-        ],
-        "scraper_type": "latido",
-        "doctor_id": "646e087ead8bb67bbb105de4",
-        "calendar_id": "68f53fc1b4438379ea9c11ce",
-        "type_id": "69187d3e3c56dd5dd32d5c56",
-        "booking_url": "https://patient.latido.at/arzt/_Lewitschnig"
-    },
-    {
-        "id": "lauchart_latido",
-        "name": "Dr. Hans Gildo Lauchart",
-        "speciality": "Neurologie",
-        "address": "Babenbergerstraße 62, 9020 Klagenfurt",
-        "insurance": [
-            "Wahlarzt"
-        ],
-        "scraper_type": "latido",
-        "doctor_id": "6881f65733eb81488e42443f",
-        "calendar_id": "6881f65a60ea05ebde1f5fb5",
-        "type_id": "68c18cbff97ac6e89e6b0704",
-        "booking_url": "https://patient.latido.at/arzt/_Lauchart"
-    },
-    {
-        "id": "kletz_latido",
-        "name": "Dr. Marco Kletz",
-        "speciality": "Orthopädie & Traumatologie",
-        "address": "Burggasse 25, 9020 Klagenfurt",
-        "insurance": [
-            "Wahlarzt"
-        ],
-        "scraper_type": "latido",
-        "note": "Spezialist für Sportverletzungen",
-        "booking_url": "https://patient.latido.at/arzt/_OA_Dr._Marco_Kletz",
-        "doctor_id": "67ebf690810bb835c4749889",
-        "calendar_id": "67ebf694ba021b5fc672f7cc",
-        "type_id": "67ebf693ef1f14c32de62983"
-    },
-    {
-        "id": "aichinger_custom",
+        "id": "dr_helmut_aichinger",
         "name": "Dr. Helmut Aichinger",
         "speciality": "Hautkrankheiten",
         "address": "Villacher Straße 1A, 9020 Klagenfurt",
@@ -177,7 +103,7 @@
         "note": "Verwendet eigenes System (Wisitor)"
     },
     {
-        "id": "perfect_smile",
+        "id": "perfect_smile_kieferorthopaedie",
         "name": "Perfect Smile (Kieferorthopädie)",
         "speciality": "Zahnarzt / Kieferorthopädie",
         "address": "Feldkirchner Straße 49, 9020 Klagenfurt",
@@ -188,214 +114,51 @@
         "booking_url": "https://perfect-smile.at/online-terminvereinbarung/"
     },
     {
-        "id": "springer_latido",
-        "name": "Dr. Susanne Springer",
-        "speciality": "Gynäkologie & Geburtshilfe",
-        "address": "Schleppeplatz 8, 9020 Klagenfurt",
+        "id": "dr_andre_wassermann",
+        "name": "Dr. André Wassermann",
+        "speciality": "Zahnarzt",
+        "address": "Am Rathausplatz 2/4, 9800 Spittal/Drau",
         "insurance": [
-            "Wahlarzt"
+            "Alle Kassen"
         ],
-        "scraper_type": "latido",
-        "doctor_id": "64995c8024a6df440141064b",
-        "calendar_id": "64995c81927ee70dd68e153f",
-        "type_id": "678e4f0ae873832542e936e9",
-        "booking_url": "https://patient.latido.at/arzt/_Springer,_"
+        "scraper_type": "custom_webform",
+        "booking_url": "https://www.zahn-gesund.at/online-terminvereinbarung/",
+        "note": "Verwendet wahrscheinlich CGM Life oder ein ähnliches Plugin, erfordert Prüfung."
     },
     {
-        "id": "lechner_latido",
-        "name": "Dr. Heide Lechner",
-        "speciality": "Psychiatrie & Psychotherapeutische Medizin",
-        "address": "Kramergasse 1, 9020 Klagenfurt",
+        "id": "dr_haderlapp_augen",
+        "name": "Dr. Haderlapp (Augenheilkunde)",
+        "speciality": "Augenheilkunde",
+        "address": "St. Veiter Straße 161, 9020 Klagenfurt",
         "insurance": [
             "Wahlarzt"
         ],
-        "scraper_type": "latido",
-        "doctor_id": "6818c37f0e57703a0f691e26",
-        "calendar_id": "6818c38349d2a3890ea2b98d",
-        "type_id": "6818c383be5fccfdf0acce2d",
-        "booking_url": "https://patient.latido.at/arzt/_Dr_Heide_Lechner"
+        "scraper_type": "custom_haderlapp",
+        "booking_url": "https://www.augenarzt-klagenfurt.at/terminreservierung.html",
+        "note": "Eigenständiges Online-Reservierungssystem auf der Website."
     },
     {
-        "id": "lessiak_latido",
-        "name": "Dr. Verena Lessiak",
-        "speciality": "Gynäkologie & Geburtshilfe",
-        "address": "Alter Platz 6, 9020 Klagenfurt",
+        "id": "augenarzt_dr_wirtitsch",
+        "name": "Augenarzt Dr. Wirtitsch",
+        "speciality": "Augenheilkunde",
+        "address": "Villach (Adresse prüfen)",
         "insurance": [
             "Wahlarzt"
         ],
-        "scraper_type": "latido",
-        "doctor_id": "680f7d253146e56ed3ccc2b5",
-        "calendar_id": "6848322199e0a7de0ed4e0b2",
-        "type_id": "68483221146df8565bd4e0b1",
-        "booking_url": "https://patient.latido.at/arzt/_Dr._med._Verena_Lessiak"
+        "scraper_type": "email_request",
+        "booking_url": "https://www.augenarzt-villach.at/patienteninfo/terminvereinbarungen/",
+        "note": "Achtung: Scheint nur E-Mail Anfrage zu sein, kein echter Echtzeit-Kalender. Ggf. entfernen wenn nur Echtzeit gewünscht."
     },
     {
-        "id": "jansa_latido",
-        "name": "Dr. Evgenia Janša",
-        "speciality": "Innere Medizin & Kardiologie",
-        "address": "Siriusstraße 15, 9020 Klagenfurt",
+        "id": "zahnarzt_modrocky_finkenstein",
+        "name": "Zahnarzt Tomas Modrocky",
+        "speciality": "Zahnarzt",
+        "address": "Gartenweg 23, 9584 Finkenstein am Faaker See",
         "insurance": [
-            "Wahlarzt"
+            "Alle Kassen"
         ],
-        "scraper_type": "latido",
-        "booking_url": "https://patient.latido.at/arzt/62da4fcddf5a971c3b0b6d2e",
-        "doctor_id": "62da4fcddf5a971c3b0b6d2e",
-        "calendar_id": "69285ef07cdc76e2271cba72",
-        "type_id": "69285f0c959e97e28a6c33a3"
-    },
-    {
-        "id": "stoeckl_diem_latido",
-        "name": "Dr. Angelika Stöckl-Diem",
-        "speciality": "Allgemeinmedizin",
-        "address": "St. Veiter Ring 35, 9020 Klagenfurt",
-        "insurance": [
-            "Wahlarzt"
-        ],
-        "scraper_type": "latido",
-        "booking_url": "https://patient.latido.at/arzt/_Dr._Angelika_St%C3%B6ckl-Diem",
-        "doctor_id": "683f5315fc7091ad1dee139a",
-        "calendar_id": "68dd494e835ef2bc299d4d13",
-        "type_id": "68de39c7125de64385f8d17e"
-    },
-    {
-        "id": "sporthos_latido",
-        "name": "Sporthos (Dr. Schippinger & Dr. Gschöpf)",
-        "speciality": "Orthopädie & Sportmedizin",
-        "address": "Feschnigstraße 74, 9020 Klagenfurt",
-        "insurance": [
-            "Wahlarzt"
-        ],
-        "scraper_type": "latido",
-        "booking_url": "https://patient.latido.at/arzt/Sportorthos",
-        "doctor_id": "64c0e89ad098696683417b95",
-        "calendar_id": "64c0e89ba6ecee1a36417b9e",
-        "type_id": "64c0e89bcf992d2f1fd92519"
-    },
-    {
-        "id": "mackova_villach",
-        "name": "MUDr. Lýdia Macková",
-        "speciality": "Innere Medizin & Kardiologie",
-        "address": "Hauptplatz 11, 9500 Villach",
-        "insurance": [
-            "Wahlarzt"
-        ],
-        "scraper_type": "latido",
-        "booking_url": "https://patient.latido.at/arzt/_Mackova",
-        "doctor_id": "6543f236b914b5a091de3cc6",
-        "calendar_id": "6543f237d3ea1c9a17de3ccf",
-        "type_id": "6543f2371ad616bd2341e85d"
-    },
-    {
-        "id": "wabnig_villach",
-        "name": "Dr. Andrea Wabnig",
-        "speciality": "HNO (Hals-Nasen-Ohren)",
-        "address": "Nikolaigasse 43, 9500 Villach",
-        "insurance": [
-            "Wahlarzt"
-        ],
-        "scraper_type": "latido",
-        "booking_url": "https://patient.latido.at/arzt/_Dr._Andrea_Wabnig",
-        "doctor_id": "67fe283324e07c0f3b6c39dc",
-        "calendar_id": "67fe2834692cb083034ef146",
-        "type_id": "67fe28345df575072ba81ab9"
-    },
-    {
-        "id": "gregori_villach",
-        "name": "Dr. Markus Gregori",
-        "speciality": "Orthopädie & Traumatologie",
-        "address": "Adalbert-Stifter-Straße 9, 9500 Villach",
-        "insurance": [
-            "Wahlarzt"
-        ],
-        "scraper_type": "latido",
-        "booking_url": "https://patient.latido.at/arzt/_Dr._Markus_Gregori",
-        "doctor_id": "67eaa069d8943faf1c74693b",
-        "calendar_id": "67eaa06cbbc8b97133a95b51",
-        "type_id": "67eaa06c011e0fa45c4bf4a9"
-    },
-    {
-        "id": "albl_villach",
-        "name": "Dr. Katharina Albl-Janschitz",
-        "speciality": "Allgemeinmedizin",
-        "address": "Adalbert-Stifter-Straße 9, 9500 Villach",
-        "insurance": [
-            "Wahlarzt"
-        ],
-        "scraper_type": "latido",
-        "booking_url": "https://patient.latido.at/arzt/_Albl",
-        "doctor_id": "624ac2b75afdc16e2b8f69fd",
-        "calendar_id": "624ac2b9cbdba9a9268f6a07",
-        "type_id": "6255229b7a2e5d82513d3db7"
-    },
-    {
-        "id": "langer_villach_klagenfurt",
-        "name": "Dr. Annette Langer",
-        "speciality": "Innere Medizin & Rheumatologie",
-        "address": "Moritschstraße 2, 9500 Villach",
-        "insurance": [
-            "Wahlarzt"
-        ],
-        "scraper_type": "latido",
-        "note": "Rheumatologie Spezialistin",
-        "booking_url": "https://patient.latido.at/arzt/_Langer,_",
-        "doctor_id": "621e21b61645b8278496fbe5",
-        "calendar_id": "621e21b7a66ce26c1896fbf0",
-        "type_id": "621e21b75cd91a24c4440d51"
-    },
-    {
-        "id": "leitgeb_latido",
-        "name": "Dr. Kergi Leitgeb",
-        "speciality": "Allgemeinmedizin & Stillberatung",
-        "address": "Siebenhügelstraße 13/5, 9020 Klagenfurt",
-        "insurance": [
-            "Wahlarzt"
-        ],
-        "scraper_type": "latido",
-        "booking_url": "https://patient.latido.at/arzt/_Leitgeb",
-        "doctor_id": "6054c218a09d1150fd409aff",
-        "calendar_id": "6054c219a6ee551a5d409b08",
-        "type_id": "6054c2b2bc4a87e33a409b68"
-    },
-    {
-        "id": "schwarz_adelbrecht_latido",
-        "name": "Dr. Andrea Schwarz-Adelbrecht",
-        "speciality": "Chirurgie & Gefäßchirurgie",
-        "address": "Siebenhügelstraße 13/2, 9020 Klagenfurt",
-        "insurance": [
-            "Wahlarzt"
-        ],
-        "scraper_type": "latido",
-        "booking_url": "https://patient.latido.at/arzt/_Schwarz-Adelbrecht",
-        "doctor_id": "6662167b03ade50eab9dd89e",
-        "calendar_id": "6662167c7bff6969f89dd8a7",
-        "type_id": "6662167c381b67990ad29cd3"
-    },
-    {
-        "id": "heyn_latido",
-        "name": "Dr. Gerhart Heyn",
-        "speciality": "Allgemeinmedizin",
-        "address": "Hauptstraße 141, 9201 Krumpendorf",
-        "insurance": [
-            "Wahlarzt"
-        ],
-        "scraper_type": "latido",
-        "booking_url": "https://patient.latido.at/arzt/_Heyn",
-        "doctor_id": "6721dbe4dc29ee5f6ce92a82",
-        "calendar_id": "6721dbe5d980e9f279e92a8b",
-        "type_id": "6721dbe54e249be96ebb069f"
-    },
-    {
-        "id": "primosch_latido",
-        "name": "Dr. Thomas Primosch",
-        "speciality": "HNO & Allgemeinmedizin",
-        "address": "Waaggasse 14/1, 9020 Klagenfurt",
-        "insurance": [
-            "Wahlarzt"
-        ],
-        "scraper_type": "latido",
-        "booking_url": "https://patient.latido.at/arzt/_Primosch",
-        "doctor_id": "633689dcc2636762aca593e0",
-        "calendar_id": "633689dc6c9018cfccbf3de0",
-        "type_id": "633689dc7626158907b12457"
+        "scraper_type": "custom_modrocky",
+        "booking_url": "https://www.gartenweg-dental.at/termin-buchen-online",
+        "note": "Eigenes Buchungssystem auf der Webseite."
     }
 ]

@@ -1,0 +1,116 @@
+[
+    {
+        "id": "dr_meisterl_medineum",
+        "name": "Dr. Meisterl (Medineum)",
+        "speciality": "Allgemeinmedizin",
+        "address": "St. Veiter Straße 161, 9020 Klagenfurt",
+        "insurance": [
+            "ÖGK",
+            "SVS",
+            "BVAEB",
+            "KFA"
+        ],
+        "scraper_type": "medineum",
+        "institution_id": "ef406de6-589d-494b-8200-9ed7de4dc914",
+        "appointment_type_id": "27b98eb0-f008-43db-9738-9ea56a578873",
+        "booking_url": "https://de.cgmlife.com/eservices/#/?institution=ef406de6-589d-494b-8200-9ed7de4dc914",
+        "cgm_base_url": "https://de.cgmlife.com"
+    },
+    {
+        "id": "dr_steinscherer_medineum",
+        "name": "Dr. Steinscherer (Medineum)",
+        "speciality": "Allgemeinmedizin",
+        "address": "St. Veiter Straße 161, 9020 Klagenfurt",
+        "insurance": [
+            "ÖGK",
+            "SVS",
+            "BVAEB",
+            "KFA"
+        ],
+        "scraper_type": "medineum",
+        "institution_id": "ef406de6-589d-494b-8200-9ed7de4dc914",
+        "appointment_type_id": "30d1b973-fba8-41e0-86dc-30801e8cd834",
+        "booking_url": "https://de.cgmlife.com/eservices/#/?institution=ef406de6-589d-494b-8200-9ed7de4dc914",
+        "cgm_base_url": "https://de.cgmlife.com"
+    },
+    {
+        "id": "dr_treven_medineum",
+        "name": "Dr. Treven (Medineum)",
+        "speciality": "Allgemeinmedizin",
+        "address": "St. Veiter Straße 161, 9020 Klagenfurt",
+        "insurance": [
+            "ÖGK",
+            "SVS",
+            "BVAEB",
+            "KFA"
+        ],
+        "scraper_type": "medineum",
+        "institution_id": "ef406de6-589d-494b-8200-9ed7de4dc914",
+        "appointment_type_id": "54414b8e-2648-4784-b9a9-c86fd417cdf8",
+        "booking_url": "https://de.cgmlife.com/eservices/#/?institution=ef406de6-589d-494b-8200-9ed7de4dc914",
+        "cgm_base_url": "https://de.cgmlife.com"
+    },
+    {
+        "id": "dr_unterkofler_medineum",
+        "name": "Dr. Unterkofler (Medineum)",
+        "speciality": "Allgemeinmedizin",
+        "address": "St. Veiter Straße 161, 9020 Klagenfurt",
+        "insurance": [
+            "ÖGK",
+            "SVS",
+            "BVAEB",
+            "KFA"
+        ],
+        "scraper_type": "medineum",
+        "institution_id": "ef406de6-589d-494b-8200-9ed7de4dc914",
+        "appointment_type_id": "a2daf6e3-4653-4d2a-9824-dcf23049380b",
+        "booking_url": "https://de.cgmlife.com/eservices/#/?institution=ef406de6-589d-494b-8200-9ed7de4dc914",
+        "cgm_base_url": "https://de.cgmlife.com"
+    },
+    {
+        "id": "dr_helga_palasser",
+        "name": "Dr. Helga Palasser",
+        "speciality": [
+            "Allgemeinmedizin",
+            "Innere Medizin"
+        ],
+        "address": "Luegerstraße 32, 9020 Klagenfurt",
+        "insurance": [
+            "ÖGK",
+            "SVS",
+            "BVAEB",
+            "KFA",
+            "Wahlarzt",
+            "Privat"
+        ],
+        "scraper_type": "custom_palasser",
+        "booking_url": "https://helga.palasser.com/online-terminvereinbarung/",
+        "api_url": "https://www.wisitor.at/php/Termine/freieTage.php?Datum=2026-01-01&Bis=90&Grund=489&Ordination=153&OrdinationListe=245&Token=ITOR10014800002000080015300245"
+    },
+    {
+        "id": "dr_helmut_aichinger",
+        "name": "Dr. Helmut Aichinger",
+        "speciality": "Hautkrankheiten",
+        "address": "Villacher Straße 1A, 9020 Klagenfurt",
+        "insurance": [
+            "SVS",
+            "BVAEB",
+            "KFA",
+            "Privat"
+        ],
+        "scraper_type": "custom_aichinger",
+        "booking_url": "https://www.hautarzt-aichinger.at/",
+        "note": "Verwendet eigenes System (Wisitor)"
+    },
+    {
+        "id": "perfect_smile_kieferorthopaedie",
+        "name": "Perfect Smile (Kieferorthopädie)",
+        "speciality": "Zahnarzt / Kieferorthopädie",
+        "address": "Feldkirchner Straße 49, 9020 Klagenfurt",
+        "insurance": [
+            "Alle Kassen"
+        ],
+        "scraper_type": "custom_perfect_smile",
+        "booking_url": "https://perfect-smile.at/online-terminvereinbarung/"
+    }
+]

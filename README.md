@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+# Next_Doc
+=======
 # Medical Appointment Aggregator
 
 This project aggregates medical appointment slots from various sources (Latido, Medineum, Wisitor, etc.) and displays them in a dashboard.
@@ -68,3 +71,7 @@ ToDO:
 
 test https://www.sporthos.at/team
 heide lechner
+>>>>>>> c8593ad (initial commit)
+Dr Gildo Lauchart Termin Type 6327 
+
+# Next_Doc_V2

@@ -1,0 +1,195 @@
+"
+  },
+  {
+    "name": "Dr. Jutta Nagele",
+    "address": "Rennweg 24a, 9863 Rennweg",
+    "insurance": "Alle Kassen & Wahlarzt",
+    "booking_url": "https://ordination-nagele.at/",
+    "specialty": "Allgemeinmedizin",
+    "info": "Unterscheidung zwischen Kassen- und Wahlarztterminen; teils Code erforderlich [2]"
+  },
+  {
+    "name": "OTR24 (Dr. Hroncek, Dr. Kiblböck)",
+    "address": "Diverse Standorte (Klagenfurt, Villach)",
+    "insurance": "Alle Kassen",
+    "booking_url": "https://www.otr24.at/",
+    "specialty": "Allgemeinmedizin",
+    "info": "Umfangreiche Auswahl an Terminarten [3]"
+  },
+  {
+    "name": "Dr. Angelika Alberer",
+    "address": "Alter Platz 1, 9020 Klagenfurt",
+    "insurance": "Alle Kassen & Privat",
+    "booking_url": "https://book.timify.com/?accountId=64edd11a5e7b4333f55fc18b",
+    "specialty": "Gynäkologie",
+    "info": "Hinweis auf 365-Tage Regelung für Vorsorgeuntersuchungen bei ÖGK [4]"
+  },
+  {
+    "name": "Dr. Bernhard Buchholzer",
+    "address": "Spittal an der Drau",
+    "insurance": "Alle Kassen",
+    "booking_url": "https://dr-buchholzer.at/service/allgemeinmedizin2/",
+    "specialty": "Gynäkologie",
+    "info": "Spezialisierung auf Pränataldiagnostik "
+  },
+  {
+    "name": "Dr. Julia Neunhoeffer",
+    "address": "Medizinweg 2, 9065 Ebenthal",
+    "insurance": "Wahlarzt",
+    "booking_url": "https://kinderpraxis-neunhoeffer.at/#",
+    "specialty": "Kinder- und Jugendheilkunde",
+    "info": "Auswahl-Tool für Impfstoffe; separate Buchung pro Kind [5]"
+  },
+  {
+    "name": "Dr. Josefine Laussegger",
+    "address": "Tarviser Straße 16, 9020 Klagenfurt",
+    "insurance": "Wahlarzt",
+    "booking_url": "https://kinderarzt-klagenfurt.at/terminvereinbarung/",
+    "specialty": "Kinder- und Jugendheilkunde",
+    "info": "Gemeinschaftspraxis [6]"
+  },
+  {
+    "name": "Dr. Tatjana Czernin",
+    "address": "Tarviser Straße 16, 9020 Klagenfurt",
+    "insurance": "Wahlarzt",
+    "booking_url": "https://www.praxis-czernin.at/",
+    "specialty": "Kinder- und Jugendheilkunde",
+    "info": "Online nur für Bestandspatienten [7]"
+  },
+  {
+    "name": "Dr. Monika Haderlapp",
+    "address": "St. Veiter Straße 161, 9020 Klagenfurt",
+    "insurance": "Wahlarzt",
+    "booking_url": "https://etermin.lobmaier.at/haderlapp-monika-01",
+    "specialty": "Augenheilkunde",
+    "info": "Stornogebühr bei kurzfristiger Absage; Leistungs-spezifische Buchung [8]"
+  },
+  {
+    "name": "Dr. Antonia Strohbücker",
+    "address": "Ossiacher Str. 22a, 9523 Villach",
+    "insurance": "Wahlarzt",
+    "booking_url": "https://derma-strohbuecker.at/",
+    "specialty": "Dermatologie",
+    "info": "Bietet auch Videosprechstunden an (Doctena) [9]"
+  },
+  {
+    "name": "Dr. Christa Samrock-Stückler",
+    "address": "Seecorso 4, 9220 Velden",
+    "insurance": "Wahlarzt",
+    "booking_url": "https://booking.latido.at/arzt/_Stückler",
+    "specialty": "Dermatologie",
+    "info": "Barrierefreie Praxis [10]"
+  },
+  {
+    "name": "Dr. Ewald Aichinger",
+    "address": "Feschnigstraße 46, 9020 Klagenfurt",
+    "insurance": "Wahlarzt",
+    "booking_url": "https://www.hautarzt-aichinger.at/",
+    "specialty": "Dermatologie",
+    "info": "Ausschließlich Online-Buchung ('Digital Only' Strategie) "
+  },
+  {
+    "name": "Dr. Peter Ambrozy",
+    "address": "Khevenhüllerstr. 38, 9020 Klagenfurt",
+    "insurance": "Wahlarzt",
+    "booking_url": "https://patient.latido.at/arzt/_Ambrozy",
+    "specialty": "Orthopädie",
+    "info": "Zwei Standorte (im.puls und reJOINTed) über ein System buchbar [11]"
+  },
+  {
+    "name": "Dr. Peter Mayer",
+    "address": "Hauptplatz, 9100 Völkermarkt",
+    "insurance": "Wahlarzt",
+    "booking_url": "https://www.orthopaedie-mayer.at/",
+    "specialty": "Orthopädie",
+    "info": "Online Reservierung verfügbar "
+  },
+  {
+    "name": "Ortheo (Dr. Ferenc Mitja)",
+    "address": "Kirchplatz 1, 9141 Eberndorf",
+    "insurance": "Wahlarzt",
+    "booking_url": "http://www.ortheo.at/termine/",
+    "specialty": "Orthopädie",
+    "info": "Standort im Stift Eberndorf [12]"
+  },
+  {
+    "name": "Priv.-Doz. DDr. Gerold Besser",
+    "address": "Treffner Str. 4, 9500 Villach",
+    "insurance": "Wahlarzt",
+    "booking_url": "https://patient.latido.at/booking/select;profileid=686453546ee3a78848d01c27",
+    "specialty": "HNO",
+    "info": "Auch Standort Privatklinik Maria Hilf buchbar "
+  },
+  {
+    "name": "Schwindelpraxis (Dr. Thomas Primosch)",
+    "address": "Waaggasse 14, 9020 Klagenfurt",
+    "insurance": "Wahlarzt",
+    "booking_url": "https://patient.latido.at/arzt/_Primosch",
+    "specialty": "HNO",
+    "info": "Spezialisiert auf Schwindel; Kostentransparenz vor Buchung "
+  },
+  {
+    "name": "Dr. Aigul Salmhofer",
+    "address": "Völkermarkter Ring 7, 9020 Klagenfurt",
+    "insurance": "Wahlarzt",
+    "booking_url": "https://patient.latido.at/arzt/_Salmhofer",
+    "specialty": "Urologie",
+    "info": "Mehrsprachig (Russisch, Kirgisisch) "
+  },
+  {
+    "name": "Dr. Branimir Lodeta",
+    "address": "Klagenfurt & Villach",
+    "insurance": "Wahlarzt",
+    "booking_url": "https://urologie-lodeta.at/ordination-klagenfurt",
+    "specialty": "Urologie",
+    "info": "Buchung für beide Standorte möglich "
+  },
+  {
+    "name": "Dr. Margarete Wigoschnig",
+    "address": "Villacherstr. 16, 9300 St. Veit",
+    "insurance": "Alle Kassen & Wahlarzt",
+    "booking_url": "https://www.drwigoschnig.at/termine",
+    "specialty": "Psychiatrie",
+    "info": "Unterscheidung Kassenleistung vs. Privatleistung im Tool "
+  },
+  {
+    "name": "Dr. Hans G. Lauchart (Neurolink)",
+    "address": "Babenbergerstr. 62, 9020 Klagenfurt",
+    "insurance": "Wahlarzt",
+    "booking_url": "https://patient.latido.at/arzt/_Lauchart,_",
+    "specialty": "Neurologie",
+    "info": "Termine buchen, ändern und stornieren möglich "
+  },
+  {
+    "name": "Dr. Claudia Fischer-Werl",
+    "address": "Dr. Alfred-Leopold-Gasse 5, 9020 Klagenfurt",
+    "insurance": "Wahlarzt",
+    "booking_url": "https://www.die-psy-praxis.at/",
+    "specialty": "Psychiatrie",
+    "info": "Barrierefreie Praxis "
+  },
+  {
+    "name": "Tomas Modrocky",
+    "address": "Gartenweg 23, 9584 Finkenstein",
+    "insurance": "Privat / Unbekannt",
+    "booking_url": "https://www.gartenweg-dental.at/termin-buchen-online",
+    "specialty": "Zahnmedizin",
+    "info": "PayPal Zahlung möglich "
+  },
+  {
+    "name": "Perfect Smile Kieferorthopädie",
+    "address": "Feldkirchner Str. 49, 9020 Klagenfurt",
+    "insurance": "Alle Kassen (Kieferorthopädie) & Privat",
+    "booking_url": "https://perfect-smile.at/online-terminvereinbarung/",
+    "specialty": "Zahnmedizin",
+    "info": "Kieferorthopädie [13]"
+  },
+  {
+    "name": "Physio Apfelbaum",
+    "address": "Durchlaßstraße 42, 9020 Klagenfurt",
+    "insurance": "Privat (Physiotherapie)",
+    "booking_url": "https://www.physio-apfelbaum.at/buchen/",
+    "specialty": "Physiotherapie",
+    "info": "Nutzung von medo.check für Kurse und Termine "
+  }
+]
