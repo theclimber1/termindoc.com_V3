@@ -1,0 +1,1604 @@
+<!DOCTYPE html><html lang="en" style="transform: none;"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Find easily a doctor and book online an appointment">
+    <title>BookingDoc - Einfach einen Arzt finden und online einen Termin buchen</title>
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="/Images/BookingDoc/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" type="image/x-icon" href="/Images/BookingDoc/apple-touch-icon-57x57-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="/Images/BookingDoc/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="/Images/BookingDoc/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="/Images/BookingDoc/apple-touch-icon-144x144-precomposed.png">
+    <!-- Bootstrap Core CSS -->
+    <!-- GOOGLE WEB FONT -->
+    <link href="/Content/vendor/font-awesome/css/Poppins.css" rel="stylesheet" type="text/css">
+    
+    <!-- BASE CSS -->
+
+    <style>
+
+        :root {
+            --main-bg-color-booking: #ffff;
+            --main-hover-color-booking: #fa918a;
+            --main-bg-fontcolor: #000000;
+            --main-hover-fontcolor: #fff;
+            --main-box-fontcolor: #000000;
+
+            --main-bg-btncolor: #f26b43;
+            --main-hover-btncolor: #596791;
+            --main-bg-btnfontcolor: #000000;
+            --main-hover-btnfontcolor: #fff;
+
+            --main-bg-btnbordercolor: ;
+            --main-hover-btnbordercolor: ;
+            --main-btnborderSize: 2px;
+
+            --main-bg-txtbordercolor: #f3645a;
+            --main-hover-txtbordercolor: #f3645a;
+            --main-txtborderSize: 2px;
+
+            --main-bg-boxbordercolor: #eaeaea;
+            --main-boxborderSize: 2px;
+
+            --main-underline-color:#831212;
+
+            --main-fontFamily: ;
+            --main-titelFontSize: ;
+            --main-textFontSize: ;
+
+            --main-box-shadow: none;
+        }
+    </style>
+    <link href="/Content/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/Content/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    <link href="/Content/css/homelayout-style.css" rel="stylesheet">
+    <link href="/Content/css/homelayout-menu.css" rel="stylesheet">
+    <link href="/Content/css/homelayout-vendors.css" rel="stylesheet">
+    <link href="/Content/fonts/css/homelayout-all_icons_min.css" rel="stylesheet">
+    <link href="/Content/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/Content/vendor/bootstrap/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+    <script src="/bundles/jquery?v=l_2JQLDpEf4NHz4ob7KHLjmeRFnOogKHIQKkMQQ4Chs1"></script>
+
+    <script src="/bundles/moment?v=JNcuHw5lBgV6GC1YHSYWPqZ826Cb2G5YQNQPiFEQOm41"></script>
+
+    <script src="/bundles/jqueryui?v=tG29gr4b89aZuHZhwb2RRduOLQe69zZ-D0yHV7Mp9SM1"></script>
+
+    <script src="/bundles/jqueryval?v=lKkr7KdPcvLVPi3xrHIo8IUey9Pih4k0MHIQ4Sm7-RU1"></script>
+
+    <script src="/bundles/bootstrap-4?v=pi-eiLrA7altUrt8UsvSer3p52Sa2PxzF6njkbcP7sU1"></script>
+
+
+<style type="text/css" id="notify-bootstrap">.notifyjs-bootstrap-base {
+	font-weight: bold;
+	padding: 8px 15px 8px 14px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	background-color: #fcf8e3;
+	border: 1px solid #fbeed5;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	white-space: nowrap;
+	padding-left: 25px;
+	background-repeat: no-repeat;
+	background-position: 3px 7px;
+}
+.notifyjs-bootstrap-error {
+	color: #B94A48;
+	background-color: #F2DEDE;
+	border-color: #EED3D7;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAtRJREFUeNqkVc1u00AQHq+dOD+0poIQfkIjalW0SEGqRMuRnHos3DjwAH0ArlyQeANOOSMeAA5VjyBxKBQhgSpVUKKQNGloFdw4cWw2jtfMOna6JOUArDTazXi/b3dm55socPqQhFka++aHBsI8GsopRJERNFlY88FCEk9Yiwf8RhgRyaHFQpPHCDmZG5oX2ui2yilkcTT1AcDsbYC1NMAyOi7zTX2Agx7A9luAl88BauiiQ/cJaZQfIpAlngDcvZZMrl8vFPK5+XktrWlx3/ehZ5r9+t6e+WVnp1pxnNIjgBe4/6dAysQc8dsmHwPcW9C0h3fW1hans1ltwJhy0GxK7XZbUlMp5Ww2eyan6+ft/f2FAqXGK4CvQk5HueFz7D6GOZtIrK+srupdx1GRBBqNBtzc2AiMr7nPplRdKhb1q6q6zjFhrklEFOUutoQ50xcX86ZlqaZpQrfbBdu2R6/G19zX6XSgh6RX5ubyHCM8nqSID6ICrGiZjGYYxojEsiw4PDwMSL5VKsC8Yf4VRYFzMzMaxwjlJSlCyAQ9l0CW44PBADzXhe7xMdi9HtTrdYjFYkDQL0cn4Xdq2/EAE+InCnvADTf2eah4Sx9vExQjkqXT6aAERICMewd/UAp/IeYANM2joxt+q5VI+ieq2i0Wg3l6DNzHwTERPgo1ko7XBXj3vdlsT2F+UuhIhYkp7u7CarkcrFOCtR3H5JiwbAIeImjT/YQKKBtGjRFCU5IUgFRe7fF4cCNVIPMYo3VKqxwjyNAXNepuopyqnld602qVsfRpEkkz+GFL1wPj6ySXBpJtWVa5xlhpcyhBNwpZHmtX8AGgfIExo0ZpzkWVTBGiXCSEaHh62/PoR0p/vHaczxXGnj4bSo+G78lELU80h1uogBwWLf5YlsPmgDEd4M236xjm+8nm4IuE/9u+/PH2JXZfbwz4zw1WbO+SQPpXfwG/BBgAhCNZiSb/pOQAAAAASUVORK5CYII=);
+}
+.notifyjs-bootstrap-success {
+	color: #468847;
+	background-color: #DFF0D8;
+	border-color: #D6E9C6;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAutJREFUeNq0lctPE0Ecx38zu/RFS1EryqtgJFA08YCiMZIAQQ4eRG8eDGdPJiYeTIwHTfwPiAcvXIwXLwoXPaDxkWgQ6islKlJLSQWLUraPLTv7Gme32zoF9KSTfLO7v53vZ3d/M7/fIth+IO6INt2jjoA7bjHCJoAlzCRw59YwHYjBnfMPqAKWQYKjGkfCJqAF0xwZjipQtA3MxeSG87VhOOYegVrUCy7UZM9S6TLIdAamySTclZdYhFhRHloGYg7mgZv1Zzztvgud7V1tbQ2twYA34LJmF4p5dXF1KTufnE+SxeJtuCZNsLDCQU0+RyKTF27Unw101l8e6hns3u0PBalORVVVkcaEKBJDgV3+cGM4tKKmI+ohlIGnygKX00rSBfszz/n2uXv81wd6+rt1orsZCHRdr1Imk2F2Kob3hutSxW8thsd8AXNaln9D7CTfA6O+0UgkMuwVvEFFUbbAcrkcTA8+AtOk8E6KiQiDmMFSDqZItAzEVQviRkdDdaFgPp8HSZKAEAL5Qh7Sq2lIJBJwv2scUqkUnKoZgNhcDKhKg5aH+1IkcouCAdFGAQsuWZYhOjwFHQ96oagWgRoUov1T9kRBEODAwxM2QtEUl+Wp+Ln9VRo6BcMw4ErHRYjH4/B26AlQoQQTRdHWwcd9AH57+UAXddvDD37DmrBBV34WfqiXPl61g+vr6xA9zsGeM9gOdsNXkgpEtTwVvwOklXLKm6+/p5ezwk4B+j6droBs2CsGa/gNs6RIxazl4Tc25mpTgw/apPR1LYlNRFAzgsOxkyXYLIM1V8NMwyAkJSctD1eGVKiq5wWjSPdjmeTkiKvVW4f2YPHWl3GAVq6ymcyCTgovM3FzyRiDe2TaKcEKsLpJvNHjZgPNqEtyi6mZIm4SRFyLMUsONSSdkPeFtY1n0mczoY3BHTLhwPRy9/lzcziCw9ACI+yql0VLzcGAZbYSM5CCSZg1/9oc/nn7+i8N9p/8An4JMADxhH+xHfuiKwAAAABJRU5ErkJggg==);
+}
+.notifyjs-bootstrap-info {
+	color: #3A87AD;
+	background-color: #D9EDF7;
+	border-color: #BCE8F1;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYFAhkSsdes/QAAA8dJREFUOMvVlGtMW2UYx//POaWHXg6lLaW0ypAtw1UCgbniNOLcVOLmAjHZolOYlxmTGXVZdAnRfXQm+7SoU4mXaOaiZsEpC9FkiQs6Z6bdCnNYruM6KNBw6YWewzl9z+sHImEWv+vz7XmT95f/+3/+7wP814v+efDOV3/SoX3lHAA+6ODeUFfMfjOWMADgdk+eEKz0pF7aQdMAcOKLLjrcVMVX3xdWN29/GhYP7SvnP0cWfS8caSkfHZsPE9Fgnt02JNutQ0QYHB2dDz9/pKX8QjjuO9xUxd/66HdxTeCHZ3rojQObGQBcuNjfplkD3b19Y/6MrimSaKgSMmpGU5WevmE/swa6Oy73tQHA0Rdr2Mmv/6A1n9w9suQ7097Z9lM4FlTgTDrzZTu4StXVfpiI48rVcUDM5cmEksrFnHxfpTtU/3BFQzCQF/2bYVoNbH7zmItbSoMj40JSzmMyX5qDvriA7QdrIIpA+3cdsMpu0nXI8cV0MtKXCPZev+gCEM1S2NHPvWfP/hL+7FSr3+0p5RBEyhEN5JCKYr8XnASMT0xBNyzQGQeI8fjsGD39RMPk7se2bd5ZtTyoFYXftF6y37gx7NeUtJJOTFlAHDZLDuILU3j3+H5oOrD3yWbIztugaAzgnBKJuBLpGfQrS8wO4FZgV+c1IxaLgWVU0tMLEETCos4xMzEIv9cJXQcyagIwigDGwJgOAtHAwAhisQUjy0ORGERiELgG4iakkzo4MYAxcM5hAMi1WWG1yYCJIcMUaBkVRLdGeSU2995TLWzcUAzONJ7J6FBVBYIggMzmFbvdBV44Corg8vjhzC+EJEl8U1kJtgYrhCzgc/vvTwXKSib1paRFVRVORDAJAsw5FuTaJEhWM2SHB3mOAlhkNxwuLzeJsGwqWzf5TFNdKgtY5qHp6ZFf67Y/sAVadCaVY5YACDDb3Oi4NIjLnWMw2QthCBIsVhsUTU9tvXsjeq9+X1d75/KEs4LNOfcdf/+HthMnvwxOD0wmHaXr7ZItn2wuH2SnBzbZAbPJwpPx+VQuzcm7dgRCB57a1uBzUDRL4bfnI0RE0eaXd9W89mpjqHZnUI5Hh2l2dkZZUhOqpi2qSmpOmZ64Tuu9qlz/SEXo6MEHa3wOip46F1n7633eekV8ds8Wxjn37Wl63VVa+ej5oeEZ/82ZBETJjpJ1Rbij2D3Z/1trXUvLsblCK0XfOx0SX2kMsn9dX+d+7Kf6h8o4AIykuffjT8L20LU+w4AZd5VvEPY+XpWqLV327HR7DzXuDnD8r+ovkBehJ8i+y8YAAAAASUVORK5CYII=);
+}
+.notifyjs-bootstrap-warn {
+	color: #C09853;
+	background-color: #FCF8E3;
+	border-color: #FBEED5;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAABJlBMVEXr6eb/2oD/wi7/xjr/0mP/ykf/tQD/vBj/3o7/uQ//vyL/twebhgD/4pzX1K3z8e349vK6tHCilCWbiQymn0jGworr6dXQza3HxcKkn1vWvV/5uRfk4dXZ1bD18+/52YebiAmyr5S9mhCzrWq5t6ufjRH54aLs0oS+qD751XqPhAybhwXsujG3sm+Zk0PTwG6Shg+PhhObhwOPgQL4zV2nlyrf27uLfgCPhRHu7OmLgAafkyiWkD3l49ibiAfTs0C+lgCniwD4sgDJxqOilzDWowWFfAH08uebig6qpFHBvH/aw26FfQTQzsvy8OyEfz20r3jAvaKbhgG9q0nc2LbZxXanoUu/u5WSggCtp1anpJKdmFz/zlX/1nGJiYmuq5Dx7+sAAADoPUZSAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfdBgUBGhh4aah5AAAAlklEQVQY02NgoBIIE8EUcwn1FkIXM1Tj5dDUQhPU502Mi7XXQxGz5uVIjGOJUUUW81HnYEyMi2HVcUOICQZzMMYmxrEyMylJwgUt5BljWRLjmJm4pI1hYp5SQLGYxDgmLnZOVxuooClIDKgXKMbN5ggV1ACLJcaBxNgcoiGCBiZwdWxOETBDrTyEFey0jYJ4eHjMGWgEAIpRFRCUt08qAAAAAElFTkSuQmCC);
+}
+</style><style id="theia-sticky-sidebar-stylesheet-TSS">.theiaStickySidebar:after {content: ""; display: table; clear: both;}</style><style type="text/css" id="core-notify">.notifyjs-corner {
+	position: fixed;
+	margin: 5px;
+	z-index: 1050;
+}
+
+.notifyjs-corner .notifyjs-wrapper,
+.notifyjs-corner .notifyjs-container {
+	position: relative;
+	display: block;
+	height: inherit;
+	width: inherit;
+	margin: 3px;
+}
+
+.notifyjs-wrapper {
+	z-index: 1;
+	position: absolute;
+	display: inline-block;
+	height: 0;
+	width: 0;
+}
+
+.notifyjs-container {
+	display: none;
+	z-index: 1;
+	position: absolute;
+}
+
+.notifyjs-hidable {
+	cursor: pointer;
+}
+
+[data-notify-text],[data-notify-html] {
+	position: relative;
+}
+
+.notifyjs-arrow {
+	position: absolute;
+	z-index: 2;
+	width: 0;
+	height: 0;
+}</style></head>
+
+<body class="modal-open" style="transform: none; overflow: visible;">
+
+    <input class="form-control" id="formatDT" name="formatDT" type="hidden" value="DD.MM.YYYY HH:mm">
+    <input class="form-control" id="formatD" name="formatD" type="hidden" value="DD.MM.YYYY">
+    <input class="form-control" id="lancalendar" name="lancalendar" type="hidden" value="de-ch">
+    <input class="form-control" id="vallang" name="vallang" type="hidden" value="DE">
+    <div class="layer"></div>
+    <!-- Mobile menu overlay mask -->
+    <div id="preloader" style="display: none;">
+        <div data-loader="circle-side" style="display: none;"></div>
+    </div>
+    <!-- End Preload -->
+    <!-- /header -->
+    <main style="transform: none;">
+        
+
+<main style="transform: none;">
+    <div id="breadcrumb">
+        <div class="container">
+        </div>
+    </div>
+    <!-- /breadcrumb -->
+    <div class="container margin_60" style="transform: none;">
+        <div class="row" style="transform: none;">
+
+            
+<aside class="col-xl-8 col-lg-8 booking-sidebar" id="sidebar" style="position: relative; overflow: visible; box-sizing: border-box; min-height: 1px;">
+    
+    <!-- /box_general -->
+    
+
+
+
+
+
+
+    
+    
+<div class="theiaStickySidebar" style="padding-top: 0px; padding-bottom: 1px; position: static; transform: none;"><div class="box_general_3 booking">
+        <div class="title pt-3 mb-0">
+            <h3 class="mb-3">Termin buchen</h3>
+            <h6 class="txt-fontstyle-text">Die Online Terminvereinbarung erlaubt Ihnen rasch und einfach rund um die Uhr über das Internet Termine zu vereinbaren.</h6>
+        </div>
+        <div class="mt-2 pt-3">
+            <div id="appointmentselection" class="switch-field pt-3">
+                    <input type="radio" id="all" name="type_patient" value="termin" checked="">
+                    <label for="all"><span class="act mr-3">Termin</span></label>
+                                                    <input type="radio" id="events" name="type_patient" value="event">
+                    <label for="events"><span class="act">Meine gebuchten Termine</span></label>
+                            </div>
+
+            <div class="box termin" style="display: block">
+
+
+
+<style>
+    .btnRadio {
+        visibility: hidden;
+    }
+
+    .liTerminart {
+        border-radius: 0.5rem !important;
+        color: black !important;
+        -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0 0px 30px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0 0px 30px;
+        background-color: transparent !important;
+        border: none !important;
+        font-family: var(--main-fontFamily) !important;
+    }
+
+        .liTerminart:hover {
+            -webkit-box-shadow: rgba( var(--main-box-shadow), 0.2) 0 0px 30px;
+            box-shadow: rgba( var(--main-box-shadow), 0.2) 0 0px 30px;
+            background: var(--main-hover-color-booking) !important;
+            color: var(--main-hover-fontcolor) !important;
+            border: var(--main-txtborderSize) solid var(--main-hover-txtbordercolor) !important;
+        }
+
+
+        .btnRadio:checked + .liTerminart span .lblExInfo, .liTerminart.active span .lblExInfo {
+            background: white !important;
+            color: black !important;
+            /*border: 1px solid rgb(175,175,175) !important;*/
+            border: var(--main-txtborderSize) solid var(--main-bg-txtbordercolor) !important;
+        }
+
+        .liTerminart:hover span .lblExInfo {
+            background: white !important;
+            color: black !important;
+            border: var(--main-txtborderSize) solid var(--main-hover-txtbordercolor) !important;
+        }
+
+        .liTerminart > label, .liTerminart {
+            cursor: pointer;
+        }
+
+            .btnRadio:checked + .liTerminart, .liTerminart.active {
+                background: var(--main-bg-color-booking) !important;
+                color: var(--main-box-fontcolor) !important;
+                border: var(--main-txtborderSize) solid var(--main-bg-txtbordercolor) !important;
+                -webkit-box-shadow: rgba( var(--main-box-shadow), 0.2) 0 0px 30px !important;
+                box-shadow: rgba( var(--main-box-shadow), 0.2) 0 0px 30px !important;
+                font-family: var(--main-fontFamily) !important;
+                cursor: auto !important;
+            }
+
+    #lbTitleBezeichnung {
+        font-size: var(--main-titelFontSize) !important;
+        font-weight: 600 !important;
+    }
+
+    #lbTxtBezeichnung {
+        font-size: var(--main-textFontSize) !important;
+        font-weight: 500 !important;
+    }
+
+    .lblExInfo {
+        text-align: center;
+        color: black !important;
+        /*font-size: 0.875rem !important;*/
+        font-size: var(--main-textFontSize) !important;
+        font-weight: 600 !important;
+        /*font-family: "Poppins", Helvetica, sans-serif;*/
+        font-family: var(--main-fontFamily) !important;
+        padding: .5rem 1.25rem !important;
+        border-radius: 5rem !important;
+        border: 1px solid rgb(175,175,175) !important;
+        cursor: pointer !important;
+    }
+
+    .mcw-btn-iframe {
+        background: var(--main-bg-btncolor) !important;
+        color: var(--main-bg-btnfontcolor) !important;
+        border: var(--main-btnborderSize) solid var(--main-bg-btnbordercolor) !important;
+        font-size: var(--main-titelFontSize) !important;
+        font-family: var(--main-fontFamily) !important;
+        border-radius: 2.5rem !important;
+        -webkit-box-shadow: rgba( var(--main-box-shadow), 0.2) 0 0px 30px !important;
+        box-shadow: rgba( var(--main-box-shadow), 0.2) 0 0px 30px !important;
+        cursor: pointer !important;
+        font-weight: 600 !important;
+    }
+
+        .mcw-btn-iframe.lang {
+            height: 5rem !important;
+        }
+
+
+
+        .mcw-btn-iframe.disabled, .mcw-btn-iframe:disabled {
+            opacity: .5;
+            background: var(--main-bg-btncolor) !important;
+            color: var(--main-bg-btnfontcolor) !important;
+            border: var(--main-btnborderSize) solid var(--main-bg-btnbordercolor) !important;
+            cursor: auto !important;
+        }
+
+            .mcw-btn-iframe.disabled:hover, .mcw-btn-iframe:disabled:hover {
+                opacity: .5;
+                background: var(--main-bg-btncolor) !important;
+                color: var(--main-bg-btnfontcolor) !important;
+                border: var(--main-btnborderSize) solid var(--main-bg-btnbordercolor) !important;
+                cursor: auto !important;
+            }
+
+        .mcw-btn-iframe.additional {
+            border-radius: 0.5rem !important;
+            background-color: transparent !important;
+            border: 2px solid rgb(234,234,234) !important;
+            color: black !important;
+            height: 5rem !important;
+        }
+
+            .mcw-btn-iframe:hover, .mcw-btn-iframe.additional:hover {
+                background: var(--main-hover-btncolor) !important;
+                color: var(--main-hover-btnfontcolor) !important;
+                border: var(--main-btnborderSize) solid var(--main-hover-btnbordercolor) !important;
+            }
+
+    .igtclass {
+        border-radius: 100% !important;
+        font-style: normal !important;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgb(255 255 255 / 10%) !important;
+        border: 1px solid rgb(255 255 255 / 10%) !important;
+        position: absolute;
+        right: 10px;
+    }
+
+    .gtclass {
+        transform: scale( 1, 1.25 );
+        font-weight: 300;
+        font-size: 250% !important;
+        color: var(--main-bg-btnfontcolor) !important;
+    }
+
+    .mcw-header-iframe {
+        /*color: black !important;
+        font-size: 1.4rem !important;
+        font-weight: 600 !important;*/
+        transform: scale( 1, 1.1 );
+        font-size: var(--main-titelFontSize) !important;
+        font-weight: 700 !important;
+        font-family: var(--main-fontFamily) !important;
+        color: var(--main-bg-fontcolor) !important;
+    }
+
+    mcw-header-iframe:before {
+        position: absolute;
+        top: 14px;
+        bottom: 0;
+        content: " ";
+        display: table-row;
+        width: 100%;
+        height: 1px;
+        background-color: rgb(215,215,215);
+    }
+
+    mcw-header-iframe span {
+        background: white;
+        z-index: 100;
+        position: relative;
+        padding: 0rem 2rem;
+        font-size: 100% !important;
+    }
+
+
+    .mcw-lbl-iframe {
+        /*font-size: 1rem !important;
+        font-weight: 600 !important;
+        color: black !important;*/
+        font-size: var(--main-textFontSize) !important;
+        font-weight: 600 !important;
+        font-family: var(--main-fontFamily) !important;
+        color: var(--main-bg-fontcolor) !important;
+        height: 30px;
+        align-content: center;
+    }
+
+    .mcw-txt-iframe {
+        /*color: black;
+        font-size: 1rem !important;
+        font-weight: 400 !important;*/
+        font-size: var(--main-textFontSize) !important;
+        font-weight: 500 !important;
+        font-family: var(--main-fontFamily) !important;
+        color: var(--main-bg-fontcolor) !important;
+    }
+
+    .mcw-titlebox-iframe {
+        font-size: var(--main-titelFontSize) !important;
+        font-weight: 600 !important;
+        font-family: var(--main-fontFamily) !important;
+        color: var(--main-bg-fontcolor) !important;
+    }
+
+    .mcw-txtbox-iframe {
+        font-size: var(--main-textFontSize) !important;
+        font-weight: 500 !important;
+        font-family: var(--main-fontFamily) !important;
+        color: var(--main-bg-fontcolor) !important;
+    }
+
+    .boxTerminInfo {
+        border-radius: 0.5rem !important;
+        background-color: transparent;
+        /*border: 2px solid rgb(234,234,234) !important;*/
+        border: var(--main-boxborderSize) solid var(--main-bg-boxbordercolor) !important;
+    }
+
+    .gradient {
+        background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(251, 251, 251) 0%, rgb(248, 248, 248) 50%);
+    }
+
+    .mcw-formgroup-iframe {
+        position: relative;
+        min-height: 4.25rem;
+    }
+
+    .mcw-formcontrol-iframe {
+        height: 4.5rem !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 0.5rem !important;
+        background-color: transparent !important;
+        /*border: 2px solid rgb(234,234,234) !important;*/
+        border: var(--main-boxborderSize) solid var(--main-bg-boxbordercolor) !important;
+        /*font-size: 1.125rem !important;*/
+        font-weight: 500 !important;
+        /*color: black !important;*/
+        font-size: var(--main-textFontSize) !important;
+        font-family: var(--main-fontFamily) !important;
+        color: var(--main-bg-fontcolor) !important;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        appearance: none;
+    }
+
+        .mcw-formcontrol-iframe::-webkit-input-placeholder,
+        .mcw-formcontrol-iframe::placeholder {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: rgb(183,183,183) !important;
+            font-family: var(--main-fontFamily) !important;
+        }
+
+        .mcw-formcontrol-iframe:focus {
+            /*box-shadow: none !important;
+            border: var(--main-txtborderSize) solid var(--main-bg-txtbordercolor) !important;*/
+            border: none !important;
+            box-shadow: var(--main-hover-txtbordercolor) 0 0px 5px !important;
+        }
+
+        .mcw-formcontrol-iframe:disabled {
+            /*color: #495057 !important;*/
+            opacity: 0.5 !important;
+        }
+
+    select.mcw-formcontrol-iframe {
+        background-image: url(/Images/SvgIcon/Arrow_Down_Black_Icon.svg) !important;
+        background-position: calc(100% - 20px) center !important;
+        background-size: 15px !important;
+        background-repeat: no-repeat !important;
+    }
+
+    .mcw-formcontrol-label-iframe {
+        position: absolute;
+        /*font-size: 1rem;*/
+        top: 1.5rem;
+        right: 3.5rem;
+        text-transform: uppercase;
+        z-index: -100;
+        /*font-weight: 600;*/
+        /*color: rgb(92,92,92) !important;*/
+        font-size: var(--main-textFontSize) !important;
+        font-weight: 600 !important;
+        font-family: var(--main-fontFamily) !important;
+        color: var(--main-bg-fontcolor) !important;
+    }
+
+        .mcw-formcontrol-label-iframe.star {
+            right: 2.75rem !important;
+        }
+
+    #btnDeleteItem {
+        background-color: transparent;
+        right: 50px;
+    }
+
+        #btnDeleteItem .fa.fa-trash {
+            color: red;
+            font-size: 150%;
+        }
+</style>
+<style>
+    .Icon_DownloadConfirmation {
+        background-image: url(/Images/BookingDoc/Download_Icon.svg);
+        background-size: 90%;
+    }
+
+    .Icon_SendMail {
+        background-image: url(/Images/BookingDoc/SendMail_Icon.svg);
+        background-size: 75%;
+    }
+
+    .Icon_ICalendar {
+        background-image: url(/Images/BookingDoc/Calendar_Icon.svg);
+        background-size: 80%;
+    }
+
+    .Icon_ExChange {
+        background-image: url(/Images/BookingDoc/ExChange_Icon.svg);
+        background-size: 80%;
+    }
+
+    .Icon_DownloadConfirmation, .Icon_SendMail, .Icon_ICalendar, .Icon_ExChange {
+        background-repeat: no-repeat;
+        border-radius: 0px !important;
+        border-color: transparent;
+        background-color: transparent !important;
+        background-position: center;
+        width: 2.75rem;
+        height: 2.75rem;
+    }
+
+    .Icon_CheckMarkGreen {
+        background-image: url(/Images/BookingDoc/CheckMarkGreen_Icon.svg);
+        background-size: 80%;
+        background-repeat: no-repeat;
+        border-radius: 100% !important;
+        background-position: center;
+        width: 1.75rem;
+        height: 1.75rem;
+        display: flex;
+        border: none;
+    }
+
+    .vline {
+        border-right: 2px solid rgb(234,234,234) !important;
+        height: 120% !important;
+        margin-right: 1.5rem !important;
+    }
+
+    .boxconferm {
+        border: 2px solid rgb(234,234,234) !important;
+        border-radius: 5rem !important;
+        align-items: center;
+        background: white !important;
+    }
+</style>
+<style>
+    input[type="radio"] + label::before, .btnRadio + liTerminart::before {
+        top: 0px;
+        width: 30px;
+        height: 30px;
+        border: 2px solid rgb(215,215,215) !important;
+        background: rgb(200, 200, 200) !important;
+        border-radius: 25% !important;
+        box-shadow: none !important;
+        cursor: pointer;
+    }
+
+    input[type="radio"] + label::after, .btnRadio + liTerminart::after {
+        top: 0px;
+        width: 30px;
+        height: 30px;
+        border: 2px solid rgb(215,215,215) !important;
+        background: rgb(244, 244, 244) !important;
+        border-radius: 25% !important;
+        box-shadow: none !important;
+        cursor: pointer;
+    }
+
+    input[type="radio"]:checked + label::before, .btnRadio:checked + liTerminart::before {
+        top: 0px;
+        width: 30px;
+        height: 30px;
+        border: 2px solid rgb(215,215,215) !important;
+        background: rgb(244, 244, 244) !important;
+        border-radius: 25% !important;
+        box-shadow: none !important;
+        cursor: pointer;
+    }
+
+    input[type="radio"]:checked + label::after, .btnRadio:checked + liTerminart::after {
+        position: absolute;
+        left: -18px;
+        top: 6px;
+        width: 18px;
+        height: 18px;
+        border-style: none !important;
+        background: var(--main-bg-btncolor) !important;
+        border-radius: 100% !important;
+        box-shadow: none !important;
+        cursor: pointer;
+    }
+
+    .btn-Fill-1 {
+        background: #f06840 !important;
+        background: var(--main-bg-color-booking) !important;
+        color: #fff !important;
+        font-weight: bold;
+        -webkit-border-radius: unset !important;
+    }
+
+
+    ::placeholder {
+        opacity: 0.5 !important;
+    }
+
+    .btn-Fill-1:hover {
+        background: #596791 !important;
+        background: var(--main-hover-color-booking) !important;
+    }
+
+    .txt-fontstyle-mainbgcolor {
+        color: var(--main-bg-color-booking) !important;
+    }
+
+    .lblStyleTitel {
+        background-color: transparent;
+        color: rgb(23, 23, 23);
+        border-style: none;
+        height: 2.5rem;
+        box-shadow: none;
+        margin-bottom: 0px !important;
+        padding-top: 12px;
+    }
+
+    .lblStyleDesc {
+        background-color: transparent;
+        color: rgb(23, 23, 23);
+        border-style: none;
+        height: 2.5rem;
+        box-shadow: none;
+        margin-bottom: 0px !important;
+        padding-top: 12px;
+    }
+
+    .lblStyle2 {
+        background-color: transparent;
+        color: rgb(23, 23, 23);
+        border-style: none;
+        height: 2.5rem;
+        box-shadow: none;
+        margin-bottom: 0px !important;
+        padding-top: 12px;
+    }
+
+    input[type="checkbox"] + label::before {
+        top: 0px;
+        width: 30px;
+        height: 30px;
+        border: 2px solid rgb(215,215,215) !important;
+        background: rgb(244, 244, 244) !important;
+        border-radius: 25% !important;
+        box-shadow: none !important;
+        cursor: pointer;
+    }
+
+    input[type="checkbox"] + label::after {
+        top: 0px;
+        width: 30px;
+        height: 30px;
+        border: 2px solid rgb(215,215,215) !important;
+        background: rgb(244, 244, 244) !important;
+        border-radius: 25% !important;
+        box-shadow: none !important;
+        cursor: pointer;
+    }
+
+    input[type="checkbox"]:checked + label::before {
+        top: 0px;
+        width: 30px;
+        height: 30px;
+        border: 2px solid rgb(215,215,215) !important;
+        background: rgb(244, 244, 244) !important;
+        border-radius: 25% !important;
+        box-shadow: none !important;
+        cursor: pointer;
+    }
+
+    input[type="checkbox"]:checked + label::after {
+        position: absolute;
+        left: -18px;
+        top: 6px;
+        width: 18px;
+        height: 18px;
+        border-style: none !important;
+        background: var(--main-bg-btncolor) !important;
+        border-radius: 100% !important;
+        box-shadow: none !important;
+        cursor: pointer;
+    }
+
+    .custom-control-input {
+        position: initial !important;
+    }
+
+    /*.custom-control-input:disabled {
+            opacity: 0.5 !important;
+        }*/
+
+    #InputUsername, #InputPassword {
+        border: 1px solid #ced4da !important;
+    }
+
+    .form-control {
+        border: none;
+        border-bottom-color: currentcolor;
+        border-bottom-style: none;
+        border-bottom-width: medium;
+        border-bottom: 1px solid #e1e8ed;
+    }
+
+    .btn_out {
+        /*border: 2px solid #a0a2a0;*/
+        border: 2px solid rgb(229, 229, 229);
+        color: #1b1b1c;
+        background-color: transparent;
+        background-image: none;
+        border-radius: unset !important;
+    }
+
+        .btn_out:hover {
+            background-color: var(--main-hover-color-booking) !important;
+            color: var(--main-hover-fontcolor) !important;
+        }
+
+        .btn_out:active {
+            background-color: var(--main-bg-color-booking) !important;
+            /*color: var(--main-bg-fontcolor) !important;*/
+        }
+
+    .mcw-msg-iframe {
+        /*font-weight: 500;
+        color: black;*/
+        font-size: var(--main-textFontSize) !important;
+        font-weight: 500 !important;
+        font-family: var(--main-fontFamily) !important;
+        color: var(--main-bg-fontcolor) !important;
+    }
+
+        .mcw-msg-iframe a {
+            color: var(--main-bg-btncolor);
+            text-decoration: underline;
+        }
+</style>
+    <div class="bodyApi overflow-auto " id="bodyApiBooking">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 infobody" style="padding-top:-2%">
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 infobodystep1">
+                    <div class="xyOverflow" id="DivPlanSearch">
+                        
+<link href="/Content/fonts/css/ApiBooking_icons.css" rel="stylesheet">
+<style>
+
+    .mrg-left {
+        margin-left: 50%;
+    }
+
+    .content-allsteps {
+        position: relative;
+        width: 100%;
+        /*margin-top: 3.5%;*/
+        display: table;
+        overflow: auto;
+    }
+
+    .content-row:before {
+        position: absolute;
+        top: 20px;
+        bottom: 0;
+        content: " ";
+        display: table-row;
+        width: 80%;
+        margin-left: 10%;
+        height: 2px;
+        background-color: rgb(215,215,215);
+    }
+
+    .content-row {
+        display: table-row;
+        width: auto;
+    }
+
+    .content-step {
+        width: 25%;
+        position: relative;
+        display: table-cell;
+        text-align: center;
+    }
+
+    .btn-circle-active {
+        width: 60px !important;
+        height: 60px;
+        border: 2px solid;
+        border-color: rgba(0, 99, 157, 1);
+        background-color: white !important;
+        color: rgba(0, 99, 157, 1) !important;
+        border-radius: 100%;
+        padding-top: 16px;
+        padding-right: 30px;
+        padding-bottom: 15px;
+        padding-left: 18px;
+        margin-top: -10px;
+        cursor: default;
+
+    }
+
+        .btn-circle-active:hover {
+            /*border: 3px solid;*/
+            border-color: rgba(0, 99, 157, 1);
+            color: rgba(34, 43, 91, 1) !important;
+            background-color: white !important;
+        }
+
+    .btn-circle-deact {
+        width: 60px !important;
+        height: 60px;
+        border: 2px solid;
+        border-color: grey;
+        background-color: white !important;
+        color: grey !important;
+        border-radius: 100%;
+        padding-top: 16px;
+        padding-right: 30px;
+        padding-bottom: 15px;
+        padding-left: 18px;
+        margin-top: -10px;
+        cursor: no-drop;
+    }
+
+    .textActive {
+        color: rgb(0, 99, 157);
+    }
+
+    .txtDeact {
+        color: grey;
+    }
+
+    .content-step .btn-circle-active {
+        border-color: #f26b43 !important;
+        background-color: #f26b43 !important;
+        color: white !important;
+    }
+
+        .content-step .btn-circle-active span, .content-step .btn-circle-deact span {
+            font-size: 1.25rem !important;
+            font-weight: 500 !important;
+        }
+
+    .content-step .color-modal {
+        border-color: #1e4183 !important;
+        background-color: #1e4183 !important;
+    }
+
+    .content-step .btn-circle-active {
+        border: var(--main-txtborderSize) solid var(--main-bg-txtbordercolor) !important;
+        background-color: var(--main-bg-color-booking) !important;
+        color: var(--main-box-fontcolor) !important;
+    }
+
+    .content-step .btn-circle-deact {
+        background-color: rgb(244,244,244) !important;
+        border: 2px solid rgb(215,215,215) !important;
+    }
+
+    .stepdate .noplan {
+        background-color: rgba(153, 153, 153, 1) !important;
+    }
+
+    #Icon_ApiStep1 {
+        background-image: url(/Images/SvgIcon/ApiStep1_Icon.svg);
+        background-size: 90%;
+        background-repeat: no-repeat;
+        border-radius: 0px !important;
+        border-color: transparent;
+        background-color: transparent !important;
+        width: 30px;
+        height: 30px;
+    }
+</style>
+
+<div class="pt-2 mt-4">
+    <div class="content-allsteps">
+        <div class="content-row justify-content-center">
+                <div class="content-step">
+                    <div class="btn btn-circle-active   waves-effect" onclick="ShModalStep(0)" data-toggle="tooltip" data-placement="top" title="" data-original-title="Art des Termins"><span class="Api-List"></span></div>
+                    
+                </div>
+                <div class="content-step">
+                    <div class="btn btn-circle-deact " data-toggle="tooltip" data-placement="top" title="" data-original-title="Tag und Zeit "><span class="Api-Calendar"></span></div>
+                </div>
+                <div class="content-step">
+                    <div class="btn btn-circle-deact " data-toggle="tooltip" data-placement="top" title="" data-original-title="Einloggen / Registrieren"><span class="Api-Avatar"></span></div>
+                </div>
+                <div class="content-step">
+                    <div class="btn btn-circle-deact " data-toggle="tooltip" data-placement="top" title="" data-original-title="Bestätigung"><span class="Api-Tick"></span></div>
+                </div>
+            
+        </div>
+    </div>
+</div>
+                        <div id="DivLoginBox" class="pt-3">
+                            <input id="hLoginBox" name="hLoginBox" type="hidden" value="Patient">
+                        </div>
+                        <div class="pt-2 mt-2">
+                                <h5 class="my-3 mcw-header-iframe align-center">Unsere Terminarten</h5>
+                        </div>
+                        <form action="/Patient/Doctor/SearchPlan" lstplansearch="System.Collections.Generic.List`1[MCW.Eos.ModelsEntity.Model.PlanSearch]" method="post" onsubmit="return ShModalResultPlan(this)" searchplan="MCW.Eos.ModelsEntity.Model.PlanSearch" novalidate="novalidate">                            <fieldset class="fieldset" id="frmSearchPlan" style="padding-top:0px !important;">
+
+                                <div class="form-group" style="display:none;" id="DivFamilyMember">
+                                    <div class="form-group textcustom" id="DivFamilyMemberDetail">
+    <div class="col-sm-6 col-md-6 col-lg-6 hidden-xs px-3">
+        <h5 class="mcw-header-iframe mb-4 px-1"> Vor- und Zuname: </h5>
+        <h5 class="mcw-header-iframe mb-4 px-1"> Terminart: </h5>
+    </div>
+
+
+    
+</div>
+
+                                </div>
+                                
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12" id="DivTermine">
+<input id="TypeUser" name="TypeUser" type="hidden" value="Patient"><input data-val="true" data-val-number="Das Feld &quot;ZeitType&quot; muss eine Zahl sein." data-val-required="Das Feld &quot;ZeitType&quot; ist erforderlich." id="ZeitType" name="ZeitType" type="hidden" value="1">
+
+<div class="" id="DivTerminarten">
+
+    <input id="hdBookingTerminartAuto" name="hdBookingTerminartAuto" type="hidden" value="false">
+    <input data-val="true" data-val-number="Das Feld &quot;Account_Id&quot; muss eine Zahl sein." data-val-required="Das Feld &quot;Account_Id&quot; ist erforderlich." id="hAccount_Id" name="Account_Id" type="hidden" value="22728">
+    <input id="hMitarbeiterCode" name="MitarbeiterCode" type="hidden" value="22728e12de895-c398-4d7b-9793-47a7668ff961">
+    <input data-val="true" data-val-number="Das Feld &quot;Dauer&quot; muss eine Zahl sein." data-val-range="Das Feld &quot;Dauer&quot; muss zwischen 0 und 1000 liegen." data-val-range-max="1000" data-val-range-min="0" data-val-required=" Pflichtfeld" id="hDauer" name="Dauer" type="hidden" value="15">
+    <input data-val="true" data-val-number="Das Feld &quot;LoginBoxTerminart&quot; muss eine Zahl sein." data-val-required="Das Feld &quot;LoginBoxTerminart&quot; ist erforderlich." id="hLoginBoxTerminart" name="LoginBoxTerminart" type="hidden" value="7">
+    <input data-val="true" data-val-number="Das Feld &quot;AccountDoctor_Id&quot; muss eine Zahl sein." data-val-required="Das Feld &quot;AccountDoctor_Id&quot; ist erforderlich." id="hAccountDoctor_Id" name="AccountDoctor_Id" type="hidden" value="20786">
+    <input data-val="true" data-val-number="Das Feld &quot;Terminarten&quot; muss eine Zahl sein." data-val-required=" Pflichtfeld" id="hTerminarten" name="Terminarten_Id" type="hidden" value="10">
+    <input id="hBezeichnung" name="Bezeichnung" type="hidden" value="Abdomen-Ultraschall">
+    <input data-val="true" data-val-number="Das Feld &quot;Mitarbeiter&quot; muss eine Zahl sein." data-val-required="Das Feld &quot;Mitarbeiter&quot; ist erforderlich." id="hMitarbeiter_Id" name="Mitarbeiter_Id" type="hidden" value="1">
+        <ul style=" list-style: none;">
+<input id="Text10" name="Text10" type="hidden" value="10#15#Abdomensonographie (Ultraschall der Bauchorgane) und Besprechung#1#7#Abdomen-Ultraschall">                <li>
+                    <input type="submit" value="10" class="col-12 px-0 btnRadio" name="radio" id="BtnRadioId10" onclick="getTerminartenInfo(this,'-1' ,'Abdomen-Ultraschall','');">
+                    <label class="col-12 liTerminart px-3 py-4 active" id="BoxTerminart10" for="BtnRadioId10">
+                        <span class="d-flex justify-content-between align-item-center mb-3">
+                            <label class="d-flex align-items-center justify-content-start pl-2 mb-0" id="lbTitleBezeichnung">
+                                Abdomen-Ultraschall
+                                    <label class=" d-flex align-items-start justify-content-start pb-1" for="BtnRadioId10">
+                                        <span id="ProcessId10" class="ProcessWaiting" style="display: none;"> <i class="fa fa-spinner fa-spin"></i></span>
+                                    </label>
+                            </label>
+                        </span>
+                        <label class="d-flex align-items-start justify-content-start pl-2" id="lbTxtBezeichnung" for="BtnRadioId10">
+                            Abdomensonographie (Ultraschall der Bauchorgane) und Besprechung
+                        </label>
+                    </label>
+                </li>
+<input id="Text2" name="Text2" type="hidden" value="2#15#Patientengespräch (Besprechung Innere Medizin, Gastroenterologie und Hepatologie, sowie Kardiologie).#1#7#Patientengespräch">                <li>
+                    <input type="submit" value="2" class="col-12 px-0 btnRadio" name="radio" id="BtnRadioId2" onclick="getTerminartenInfo(this,'-1' ,'Patientengespräch','');">
+                    <label class="col-12 liTerminart px-3 py-4" id="BoxTerminart2" for="BtnRadioId2">
+                        <span class="d-flex justify-content-between align-item-center mb-3">
+                            <label class="d-flex align-items-center justify-content-start pl-2 mb-0" id="lbTitleBezeichnung">
+                                Patientengespräch
+                                    <label class=" d-flex align-items-start justify-content-start pb-1" for="BtnRadioId2">
+                                        <span id="ProcessId2" class="ProcessWaiting" style="display: none;"> <i class="fa fa-spinner fa-spin"></i></span>
+                                    </label>
+                            </label>
+                        </span>
+                        <label class="d-flex align-items-start justify-content-start pl-2" id="lbTxtBezeichnung" for="BtnRadioId2">
+                            Patientengespräch (Besprechung Innere Medizin, Gastroenterologie und Hepatologie, sowie Kardiologie).
+                        </label>
+                    </label>
+                </li>
+<input id="Text1" name="Text1" type="hidden" value="1#15#Schildrüsenuntersuchung inkl. Ultraschall. Bitte Laborbefund mit den Werten TSH, fT3 und fT4 mitbringen oder spätestens 2 Tage vor dem Termin bei uns bestimmen lassen.#1#7#Schildrüse">                <li>
+                    <input type="submit" value="1" class="col-12 px-0 btnRadio" name="radio" id="BtnRadioId1" checked="" onclick="getTerminartenInfo(this,'-1' ,'Schildrüse','');">
+                    <label class="col-12 liTerminart px-3 py-4" id="BoxTerminart1" for="BtnRadioId1">
+                        <span class="d-flex justify-content-between align-item-center mb-3">
+                            <label class="d-flex align-items-center justify-content-start pl-2 mb-0" id="lbTitleBezeichnung">
+                                Schildrüse
+                                    <label class=" d-flex align-items-start justify-content-start pb-1" for="BtnRadioId1">
+                                        <span id="ProcessId1" class="ProcessWaiting" style="display: none;"> <i class="fa fa-spinner fa-spin"></i></span>
+                                    </label>
+                            </label>
+                        </span>
+                        <label class="d-flex align-items-start justify-content-start pl-2" id="lbTxtBezeichnung" for="BtnRadioId1">
+                            Schildrüsenuntersuchung inkl. Ultraschall. Bitte Laborbefund mit den Werten TSH, fT3 und fT4 mitbringen oder spätestens 2 Tage vor dem Termin bei uns bestimmen lassen.
+                        </label>
+                    </label>
+                </li>
+<input id="Text4" name="Text4" type="hidden" value="4#15#Echokardiographie (Herzultraschall)#1#7#Herzultraschall">                <li>
+                    <input type="submit" value="4" class="col-12 px-0 btnRadio" name="radio" id="BtnRadioId4" onclick="getTerminartenInfo(this,'-1' ,'Herzultraschall','');">
+                    <label class="col-12 liTerminart px-3 py-4" id="BoxTerminart4" for="BtnRadioId4">
+                        <span class="d-flex justify-content-between align-item-center mb-3">
+                            <label class="d-flex align-items-center justify-content-start pl-2 mb-0" id="lbTitleBezeichnung">
+                                Herzultraschall
+                                    <label class=" d-flex align-items-start justify-content-start pb-1" for="BtnRadioId4">
+                                        <span id="ProcessId4" class="ProcessWaiting" style="display: none;"> <i class="fa fa-spinner fa-spin"></i></span>
+                                    </label>
+                            </label>
+                        </span>
+                        <label class="d-flex align-items-start justify-content-start pl-2" id="lbTxtBezeichnung" for="BtnRadioId4">
+                            Echokardiographie (Herzultraschall)
+                        </label>
+                    </label>
+                </li>
+<input id="Text3" name="Text3" type="hidden" value="3#15#Carotisultraschall (Ultraschall der Halsgefäße)#1#7#Carotisultraschall">                <li>
+                    <input type="submit" value="3" class="col-12 px-0 btnRadio" name="radio" id="BtnRadioId3" onclick="getTerminartenInfo(this,'-1' ,'Carotisultraschall','');">
+                    <label class="col-12 liTerminart px-3 py-4" id="BoxTerminart3" for="BtnRadioId3">
+                        <span class="d-flex justify-content-between align-item-center mb-3">
+                            <label class="d-flex align-items-center justify-content-start pl-2 mb-0" id="lbTitleBezeichnung">
+                                Carotisultraschall
+                                    <label class=" d-flex align-items-start justify-content-start pb-1" for="BtnRadioId3">
+                                        <span id="ProcessId3" class="ProcessWaiting" style="display: none;"> <i class="fa fa-spinner fa-spin"></i></span>
+                                    </label>
+                            </label>
+                        </span>
+                        <label class="d-flex align-items-start justify-content-start pl-2" id="lbTxtBezeichnung" for="BtnRadioId3">
+                            Carotisultraschall (Ultraschall der Halsgefäße)
+                        </label>
+                    </label>
+                </li>
+        </ul>
+
+
+
+</div>
+
+                                </div>
+
+<input data-val="true" data-val-booleanrequired="Bitte bestätigen Sie das Kontrollkästchen" data-val-required="Bitte bestätigen Sie das Kontrollkästchen" id="hdConfirm" name="Confirm" type="hidden" value="True">                                <div class="hidden">
+                                        <div class="form-group">
+                                            <label for="Date">ab Datum</label>
+                                            <div id="McwDatePickerForDiv" class="input-group Datepicker">
+                    <input autocomplete="off" class="form-control" data-val="true" data-val-date="Das Feld &quot;ab Datum&quot; muss eine Datumsangabe sein." data-val-genericcompare="Der Wert sollte größer als heute sein" data-val-genericcompare-comparetopropertyname="#txtDate" data-val-genericcompare-operatorname="GreaterThanOrEqualToDay" data-val-genericcompare-operatortype="Date" data-val-required=" Pflichtfeld" id="txtPlanDate" name="Date" type="text" value="06.01.2026 15:19:45" version="Bootstrap4">
+                    <span class="input-group-append input-group-addon "><span class="input-group-text"><i class="fa fa-calendar" aria-hidden="true"></i></span></span></div>
+                                            <span class="field-validation-valid text-danger" data-valmsg-for="Date" data-valmsg-replace="true"></span>
+                                        </div>
+                                </div>
+
+                                <input id="txtPlanDate" name="Date" type="hidden" value="06.01.2026 15:19:45">
+                                <input id="txtFromT" name="FromTime" type="hidden" value="07:00">
+                                <input id="txtToT" name="ToTime" type="hidden" value="23:00">
+
+                                <input data-val="true" data-val-required="Das Feld &quot;Montag&quot; ist erforderlich." id="CHMonday" name="Monday" type="hidden" value="True">
+                                <input data-val="true" data-val-required="Das Feld &quot;Dienstag&quot; ist erforderlich." id="CHTuesday" name="Tuesday" type="hidden" value="True">
+                                <input data-val="true" data-val-required="Das Feld &quot;Mittwoch&quot; ist erforderlich." id="CHTuesday" name="Wednesday" type="hidden" value="True">
+                                <input data-val="true" data-val-required="Das Feld &quot;Donnerstag&quot; ist erforderlich." id="CHThursday" name="Thursday" type="hidden" value="True">
+                                <input data-val="true" data-val-required="Das Feld &quot;Freitag&quot; ist erforderlich." id="CHFriday" name="Friday" type="hidden" value="True">
+                                <input data-val="true" data-val-required="Das Feld &quot;Samstag&quot; ist erforderlich." id="CHSaturday" name="Saturday" type="hidden" value="True">
+                                <input data-val="true" data-val-required="Das Feld &quot;Sonntag&quot; ist erforderlich." id="CHSunday" name="Sunday" type="hidden" value="True">
+                                <input data-val="true" data-val-number="Das Feld &quot;BoxBooking&quot; muss eine Zahl sein." data-val-required="Das Feld &quot;BoxBooking&quot; ist erforderlich." id="hBoxBooking" name="BoxBooking" type="hidden" value="2">
+
+                                <input id="hBookingTerminartSubmit" name="BookingTerminartSubmit" type="hidden" value="true">
+
+                                <style>
+                                    .hideSubmit {
+                                        display: none !important;
+                                    }
+                                </style>
+                                <div class="d-flex align-items-center justify-content-center ">
+                                    <button type="submit" id="btnSearch" class="col-xl-9 col-lg-9 col-md-10 col-sm-10 col-xs-10 mcw-btn-iframe lang d-flex align-items-center justify-content-center py-3 hideSubmit">
+                                        <span id="submitProcessId" class="ProcessWaiting" style="display: none;"> <i class="fa fa-spinner fa-spin"></i> </span>
+                                        Zum nächsten Schritt
+                                        <i class="igtclass"><span class="gtclass">&gt;</span></i>
+                                    </button>
+                                </div>
+
+                            </fieldset>
+</form>                    </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 infobodystep2"></div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 infobodystep3"></div>
+        </div>
+    </div>
+            </div>
+
+            <div class="box tele" style="display: none" id="DivTelemedizine">
+                    <div class="box termin">
+                        Keine Telemdeizin verfügbar.
+                    </div>
+            </div>
+
+            <div class="box event" style="display: none" id="DivEvents">
+
+
+    <link href="/Content/css/masterlayout-style.css" rel="stylesheet">
+
+<style>
+    #PatientEvent .table-bordered {
+        border: 0px solid transparent !important;
+    }
+
+    #PatientEvent table.table-bordered.dataTable tbody th, table.table-bordered.dataTable tbody td {
+        border-bottom-width: 0;
+    }
+
+    #PatientEvent .table-bordered td, .table-bordered th {
+        border: 0px solid transparent;
+    }
+
+    #PatientEvent .txthidden > input {
+        visibility: hidden;
+    }
+
+    #PatientEvent thead {
+        display: none;
+    }
+
+    #PatientEvent tr {
+        height: auto;
+        border: 0px solid;
+    }
+
+    #PatientEvent .table-striped tbody tr:nth-of-type(odd) {
+        background-color: transparent !important;
+    }
+
+    .dt-buttons.btn-group {
+        margin-left: auto !important;
+    }
+
+        .dt-buttons.btn-group a span {
+            padding: 0rem 0rem !important;
+            display: flex;
+            align-items: center;
+        }
+
+        .dt-buttons.btn-group a {
+            padding: 0.25rem 0.65rem !important;
+            background-color: white !important;
+            display: flex;
+            align-items: center;
+            border: 2px solid #e1e1e1 !important;
+            border-radius: 0.75rem !important;
+            height: 2.5rem !important;
+            margin-left: 0.75rem !important;
+        }
+
+    #btnFunctional, #mytermin {
+        padding-left: 2.25rem !important;
+        padding-right: 2.25rem !important;
+    }
+
+    .Icon_Print3D, .Icon_Pdf {
+        width: 1.5rem !important;
+        height: 1.5rem !important;
+    }
+
+    .Icon_Magnifyingglass {
+        background-color: rgb(255, 255, 255) !important;
+        border: 2px solid #e1e1e1 !important;
+        border-right-color: rgb(225, 225, 225);
+        border-right-style: solid;
+        border-right-width: 2px;
+        border-top-right-radius: 0rem !important;
+        border-bottom-right-radius: 0rem !important;
+        border-top-left-radius: 0.75rem !important;
+        border-bottom-left-radius: 0.75rem !important;
+        height: 2.5rem !important;
+        background-size: 45%;
+        padding-left: 1.25rem !important;
+        padding-right: 1.25rem !important;
+        border-right: none !important;
+    }
+
+    .vlr {
+        border-right: 1px solid #ddd;
+        height: 2rem !important;
+        display: flex;
+        align-content: center;
+        margin-top: 0.25rem !important;
+        border-top: 2px solid #fff !important;
+        margin-left: -0.06rem !important;
+    }
+
+    div.dataTables_filter {
+        display: flex !important;
+    }
+
+    #tblMeinTermine_filter > label {
+        display: flex !important;
+        margin-bottom: 0rem !important;
+    }
+
+        #tblMeinTermine_filter > label > input {
+            background-color: rgb(255, 255, 255);
+            border: 2px solid #e1e1e1 !important;
+            border-top-right-radius: 0.75rem !important;
+            border-bottom-right-radius: 0.75rem !important;
+            border-top-left-radius: 0rem !important;
+            border-bottom-left-radius: 0rem !important;
+            height: 2.5rem !important;
+            font-size: 0.875rem !important;
+            font-weight: 500;
+            color: black !important;
+            padding-left: 1rem !important;
+            border-left: none !important;
+            margin-left: 0rem !important;
+            color: rgb(30,65,131) !important;
+        }
+
+            #tblMeinTermine_filter > label > input::placeholder {
+                color: #6c757d;
+                opacity: 1;
+                font-size: 0.875rem !important;
+                font-weight: 400 !important;
+            }
+
+            #tblMeinTermine_filter > label > input:focus {
+                box-shadow: none !important;
+            }
+
+    @media (max-width: 575.98px) {
+        #tblMeinTermine_filter > label > input::placeholder {
+            color: #fff !important;
+        }
+
+        .dt-buttons.btn-group a {
+            margin-left: 0.05rem !important;
+        }
+
+        .vlr {
+            margin-left: -0.07rem !important;
+        }
+
+        .Icon_Magnifyingglass {
+            background-size: 40%;
+            padding-left: 1rem !important;
+            padding-right: 1rem !important;
+        }
+
+        #tblMeinTermine_filter > label > input {
+            padding-left: .5rem !important;
+        }
+    }
+
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        #tblMeinTermine_filter > label > input::placeholder {
+            font-size: 0.75rem !important;
+        }
+
+        .dt-buttons.btn-group a {
+            margin-left: 0.25rem !important;
+        }
+    }
+</style>
+<style>
+    @media (max-width: 991.98px) {
+        .modal-body {
+            min-width: 155% !important;
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        h1, h2, h3, h4 {
+            font-size: 80% !important;
+        }
+    }
+</style>
+<div id="PatientEvent" class="wrapper pt-2">
+    <hr>
+    <fieldset class="fieldset ">
+        <div id="divCheckUser" class="row" style="display: block">
+<form action="/Patient/Doctor/CheckPatient" method="post" onsubmit="return ShBookingEventPatient(this);" novalidate="novalidate"><input data-val="true" data-val-number="Das Feld &quot;Account_Id&quot; muss eine Zahl sein." data-val-required="Das Feld &quot;Account_Id&quot; ist erforderlich." id="hdEventAccountId" name="Account_Id" type="hidden" value="22728"><input data-val="true" data-val-required=" Pflichtfeld" id="hdEventTypeUser" name="TypeUser" type="hidden" value="PatientMitSvnr"><input id="hdActivationCode" name="ActivationCode" type="hidden" value=""><input data-val="true" data-val-number="Das Feld &quot;Tpatienten_Id&quot; muss eine Zahl sein." id="hdTpatienten_Id" name="Tpatienten_Id" type="hidden" value=""><input data-val="true" data-val-number="Das Feld &quot;Step&quot; muss eine Zahl sein." data-val-required="Das Feld &quot;Step&quot; ist erforderlich." id="hdStep" name="Step" type="hidden" value="0">                <div class="col-12" id="divUser" style="display: block">
+                    <div class="form-group ">
+                        <label for="SVNr">SVNr</label><label for="">*</label>
+                        <input class="form-control" data-val="true" data-val-required=" Pflichtfeld" data-val-svnrcodevalid="Bitte geben Sie die Sozialversicherungsnummer im Format XXXXTTMMJJ ein." data-val-svnrcodevalid-operatortype="CheckSVNR" id="txtSvnr" name="Code" placeholder="XXXXTTMMJJ" type="text" value="">
+                        <span class="field-validation-valid text-danger" data-valmsg-for="Code" data-valmsg-replace="true"></span>
+                    </div>
+                        <div class="form-group " id="DivSvnrGetEmail">
+                            <label for="Email">E-Mail</label><label for="">*</label>
+                            <input autocomplete="off" class="form-control" data-val="true" data-val-regex="Die Eingabe sieht nicht wie eine gültige E-Mail-Adresse aus!" data-val-regex-pattern="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" data-val-required=" Pflichtfeld" id="txtEmail" name="Email" placeholder="E-Mail" type="text" value="">
+                            <span class="field-validation-valid text-danger" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+                        </div>
+<input data-val="true" data-val-regex="Im richtigen Format eintragen (z.B. 436...)" data-val-regex-pattern="^[\]?[1-9]{2,3}\s?[0-9]{8,12}$" id="txtMobil" name="Mobil" type="hidden" value="">                </div>
+                <div class="col-12" id="divActivation" style="display: none">
+                    <div class="form-group ">
+                        <label for="VerifyCode">Bestätigungscode</label><label for="">*</label>
+                        <input class="form-control" id="txtVerifyCode" name="VerifyCode" type="text" value="">
+                        <span class="field-validation-valid text-danger" data-valmsg-for="VerifyCode" data-valmsg-replace="true"></span>
+                    </div>
+                    <div class="form-group " style="color: red;font-size: large;">
+                        <span> Der Bestätigungscode wurde Ihnen per Email zugesendet!</span>
+                    </div>
+                </div>
+                <div class="col-12" style="margin-top:3%">
+                    <div class="form-group">
+                        <button type="submit" id="btnSearch" class="btn_1  full-width"> <span class="glyphicon glyphicon-search"></span> Weiter</button>
+                    </div>
+                </div>
+</form>        </div>
+        <style>
+            .StatusFilter {
+                display: none;
+            }
+        </style>
+        <div id="divListTermine" class="row" style="display: none">
+            <h3 class="col-12 mcw-title-4 mb-2" id="mytermin">Meine Termine</h3>
+            <div class="col-12 row mx-0 pt-4 justify-content-sm-between justify-content-center align-items-center flex-nowrap" id="btnFunctional" style="">
+
+            <div class="d-flex justify-content-start align-items-center custom-control custom-checkbox divCheckFilter" style="padding-top: 3px !important; padding-left: 35px !important;">
+                <input class="custom-control-input " checked="" id="ChFilter" type="checkbox" onclick="CheckedFilter(this)">
+                <label class="col-12 custom-control-label lblStyle1 pt-1" for="ChFilter">Termine Aktiv für Stornieren</label>
+                <input class="custom-control-input StatusFilter" checked="" id="ChStatusFilter" type="checkbox" onclick="CheckedFilter(this)">
+                <label class="col-12 custom-control-label lblStyle1 pt-1 StatusFilter" for="ChStatusFilter">Termine Aktiv </label>
+
+            </div><div class="dt-buttons btn-group"> <a class="btn btn-secondary buttons-print" tabindex="0" aria-controls="tblMeinTermine" href="#"><span><i class="Icon_Print3D mr-1"></i><i class="Icon_Download_Arrow ml-1"></i></span></a> <a class="btn btn-secondary buttons-pdf buttons-html5" tabindex="0" aria-controls="tblMeinTermine" href="#"><span><i class="Icon_Pdf mr-1"></i><i class="Icon_Download_Arrow ml-1"></i></span></a> </div></div>
+            
+            <div class="col-12">
+                <div id="tblMeinTermine_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><table id="tblMeinTermine" class="table table-striped table-bordered dt-responsive nowrap dataTable no-footer dtr-inline" style="width: 100%;" cellspacing="0" role="grid">
+                    <thead>
+                        <tr role="row"><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 0px;" aria-label=""></th></tr>
+                    </thead>
+                    
+                <tbody><tr class="odd"><td valign="top" colspan="1" class="dataTables_empty"></td></tr></tbody></table><div class="dataTables_paginate paging_full_numbers" id="tblMeinTermine_paginate"><ul class="pagination"><li class="paginate_button page-item first disabled" id="tblMeinTermine_first"><a href="#" aria-controls="tblMeinTermine" data-dt-idx="0" tabindex="0" class="page-link">First</a></li><li class="paginate_button page-item previous disabled" id="tblMeinTermine_previous"><a href="#" aria-controls="tblMeinTermine" data-dt-idx="1" tabindex="0" class="page-link">&lt;&lt;</a></li><li class="paginate_button page-item next disabled" id="tblMeinTermine_next"><a href="#" aria-controls="tblMeinTermine" data-dt-idx="2" tabindex="0" class="page-link">&gt;&gt;</a></li><li class="paginate_button page-item last disabled" id="tblMeinTermine_last"><a href="#" aria-controls="tblMeinTermine" data-dt-idx="3" tabindex="0" class="page-link">last</a></li></ul></div></div>
+            </div>
+        </div>
+    </fieldset>
+</div>
+<!-- Modal Msg für Löschen -->
+<div id="ModalLöschen" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="false" aria-labelledby="ModalLöschenLabel" style="transform: translatey(-35%);">
+    <div class="modal-dialog modal-dialog-centered modal-lg ui-draggable">
+        <div class="modal-content ui-draggable-handle" style="background-color:transparent !important;border:none !important">
+            <div class="modal-header">
+                <button type="button" class="close rounded-circle Width100" data-dismiss="modal">×</button>
+            </div>
+            <div class="modal-body masked " style="background-color: rgb(231,238,244) !important ;border-radius:0.75rem">
+                <div id="DivMsgLöschen-tab">
+                    <div class="d-flex justify-content-center" id="frmLöschen">
+                        <div class="align-content-center my-4">
+                            <div class="d-flex justify-content-center m-4">
+                                <h3 class="txt-fontstyle-1">Wollen Sie Ihren Termin wirklich stornieren ?  </h3>
+                            </div>
+<form action="/Patient/Doctor/DeleteEventPatient" method="post" onsubmit="return ConfirmDelete(this);" novalidate="novalidate">                            <div class="d-flex justify-content-center">
+                                <input data-val="true" data-val-number="Das Feld &quot;Termin_Id&quot; muss eine Zahl sein." id="Termin_Id" name="Termin_Id" type="hidden" value="id">
+                                <input data-val="true" data-val-number="Das Feld &quot;Account_Id&quot; muss eine Zahl sein." data-val-required="Das Feld &quot;Account_Id&quot; ist erforderlich." id="Account_Id" name="Account_Id" type="hidden" value="22728">
+                                <input data-val="true" data-val-required=" Pflichtfeld" data-val-svnrcodevalid="Bitte geben Sie die Sozialversicherungsnummer im Format XXXXTTMMJJ ein." data-val-svnrcodevalid-operatortype="CheckSVNR" id="Code" name="Code" type="hidden" value="Svnr">
+                                <input data-val="true" data-val-number="Das Feld &quot;Tpatienten_Id&quot; muss eine Zahl sein." id="Tpatienten_Id" name="Tpatienten_Id" type="hidden" value="TpId">
+                                <input id="typ" name="typ" type="hidden" value="typ">
+
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  text-center" id="DivComment" style="display:none;">
+                                <div class="form-group">
+                                    <label class="col-xs-12 col-sm-12 col-md-12 col-lg-12  text-center">Geben Sie bitte einen Grund, warum Sie den Eintrag löschen möchten!</label>
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  text-center">
+                                        <input class="form-control" id="comment" name="Comment" required="required" type="text" value="" aria-required="true">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="d-flex justify-content-center mb-4 mt-2 mx-5 px-5">
+                                <button type="submit" id="yes" class="btn-block btn-Fill-1 d-flex align-items-center justify-content-center">Ja</button>
+                            </div>
+</form>                            <div class="d-flex justify-content-center mb-4 mt-2 mx-5 px-5">
+                                <a id="btnClos" class="btn-block btn-Fill-2 d-flex align-items-center justify-content-center" data-dismiss="modal">Nein</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+            </div>
+            <div class="box rezept" style="display: none" id="DivEvents">
+            </div>
+        </div>
+    </div><div class="col-md-6" id="DialogBoxMessage"><div class="col-md-6" id="DialogBoxMessage">
+    <style>
+        .fade:not(.show) {
+            opacity: 100;
+        }
+    </style>
+    <div class="modal fade show" id="ModalDialogBoxMessage" tabindex="-1" role="dialog" style="display: block;">
+        <div class="modal-dialog">
+            <div>
+                
+                <div class="modal-body DialogBoxMessage">
+
+                        <div class="form-group" id="infoDialogBoxMessage">
+                                                            <div class="alert alert-danger fade in">
+                                    <strong> Lieber Patient/Liebe Patientin, unser letzter Online Termin ist bereits reserviert! </strong>
+                                    <a class="close " onclick="closeModal()" data-dismiss="modal" aria-hidden="true"><span class=" fa fa-times pull-right"></span></a>
+                                </div>
+                                                                                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        setTimeout(function () {
+            var len = $('#ModalDialogBoxMessage').length;
+            if (len>0) {
+                $('#ModalDialogBoxMessage').modal('hide');
+            }
+        }, 4000);
+    </script>
+
+</div>
+
+
+
+
+
+</div><input id="hAGB" type="checkbox" style="display:none"><input id="hDatenschutz" type="checkbox" style="display:none"><div class="resize-sensor" style="position: absolute; inset: 0px; overflow: hidden; z-index: -1; visibility: hidden;"><div class="resize-sensor-expand" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;"><div style="position: absolute; left: 0px; top: 0px; transition: all; width: 770px; height: 1220px;"></div></div><div class="resize-sensor-shrink" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;"><div style="position: absolute; left: 0; top: 0; transition: 0s; width: 200%; height: 200%"></div></div></div></div></aside>
+<!-- /AGB && Datenschutz -->
+<div class="modal fade mt-5" id="ModalAGB" tabindex="-1" role="dialog" aria-hidden="true" style="">
+    <div class="modal-dialog modal-lg ui-draggable" role="document">
+        <div class="modal-content ui-draggable-handle">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">
+                    Priv.Doz.Dr. Richard Brunner  Allg. Geschäftsbedingungen
+                </h4>
+            </div>
+            <div class="modal-body ">
+                <div id="DivAGB-tab" style="display:inline-block" class="masked">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn" data-dismiss="modal">Schließen</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade  mt-5" id="ModalDatenschutz" tabindex="-1" role="dialog" aria-hidden="true" style="">
+    <div class="modal-dialog modal-lg ui-draggable" role="document">
+        <div class="modal-content ui-draggable-handle">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">
+                    Priv.Doz.Dr. Richard Brunner Datenschutzerklärung
+                </h4>
+            </div>
+            <div class="modal-body ">
+                <div id="DivDatenschutz-tab" style="display:inline-block" class="masked">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn" data-dismiss="modal">Schließen</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/Scripts/js/JsBookingDoctor.js" style=""></script>
+<script style="">
+
+    $(document).ready(function () {
+        $('#infoTerminarten').val($('#hTextInfo').val());
+        //AccessUser('ModalSearch');
+
+
+        $('#appointmentselection input[type="radio"]').click(function () {
+            var inputValue = $(this).attr("value");
+            var targetBox = $("." + inputValue);
+            $(".box").not(targetBox).hide();
+            $(targetBox).show();
+        });
+
+
+        $('#chConfirm').click(function () {
+            if ($(this).is(':checked')) {
+                $("#divMsgConfirm").css("visibility", "hidden");
+            } else {
+                $("#divMsgConfirm").css("visibility", "visible")
+            }
+        });
+        $('#chConfirm').click(function () {
+            if ($(this).is(':checked')) {
+                $("#divMsgConfirm").css("visibility", "hidden");
+            } else {
+                $("#divMsgConfirm").css("visibility", "visible")
+            }
+        });
+
+        $('#chConfirmPrivacy').click(function () {
+
+            if ($(this).is(':checked')) {
+                $("#divMsgConfirmPrivacy").css("visibility", "hidden");
+            } else {
+                $("#divMsgConfirmPrivacy").css("visibility", "visible")
+            }
+        });
+        //CreateTabel(null);
+    });
+</script>
+            <!-- /asdide -->
+            <div class="col-xl-4 col-lg-4">
+                <nav id="secondary_nav" class="" style="">
+                    <div class="container">
+                        <ul class="clearfix">
+                            <li>
+                                <a href="#section_1" class="active">
+                                    Priv.Doz.Dr. Richard Brunner  
+                                </a>
+                            </li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </nav>
+                <div id="section_1">
+                    <div class="box_general_3">
+                        <div class="profile">
+                            <div class="row">
+                                <div class="col-12">
+                                    <figure>
+                                            <img class="media-object hidden-xs doc-icon" src="/Images/BookingDocIcons/Doctor.jpg" alt="doctor-man" style="margin-top: 1%;">
+                                    </figure>
+                                </div>
+                                <div class="col-12">
+                                    <h4>Innere Medizin</h4>
+                                    <ul class="contacts">
+                                        <li>
+                                            <h6>Adresse</h6>
+                                            Elterleinplatz 6/1, 1170 Wien
+                                            <a href="https://www.google.com/maps/search/?api=1&amp;query=Elterleinplatz%206+1170+Wien" target="_blank"> (Karte anzeigen)</a>
+                                        </li>
+                                            <li>
+                                                <h6>Telefon</h6>
+                                                <a href="tel://4314076934">4314076934</a>
+                                            </li>
+                                                                                                                            <li>
+                                                <h6>Homepage</h6>
+                                                <a href="//www.internistenamelterleinplatz.at" target="_blank">www.internistenamelterleinplatz.at</a>
+                                            </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /section_1 -->
+                </div>
+                <!-- /box_general -->
+            </div>
+            <!-- /col -->
+        </div>
+
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+</main>
+<!-- /main -->
+
+
+        <!-- /Hero -->
+    </main>
+    <!-- /main content -->
+
+    <!--/footer-->
+    <div id="toTop" style="display: none;"></div>
+    <!-- COMMON SCRIPTS -->
+    <script src="/Scripts/js/homelayout-common_scripts.min.js"></script>
+    <script src="/Scripts/js/homelayout-functions.js"></script>
+    
+    <script src="/bundles/bootstrap-4?v=pi-eiLrA7altUrt8UsvSer3p52Sa2PxzF6njkbcP7sU1"></script>
+
+    <script src="/bundles/DataTable4?v=GC_f4Cqf_EE4r6OjOP90dITJrbWnplzo_i5n4rHxXdM1"></script>
+
+    <script src="/bundles/AllButtonDataTable4?v=z4lpue3Xz1O64lYU0myKrqP22m-Lrn2jHpyM3VJLqag1"></script>
+
+    <script>
+        var cp_MyTermin_Start = "start:";
+        var cp_MyTermin_EndTitle = "Ende:";
+        var cp_MyTermin_PatTitile = "Patient:";
+    </script>
+
+    <script src="/bundles/typeahead?v=tFz2REAY9y2Czuzg1Zmui2G4mtZMkpMfdNW9mvH6PNA1"></script>
+
+    <script src="/bundles/datetimepicker?v=PuwT8YqWvfFlXBXNwRt_ztFaONRqdNYLtqNqfSHsrNA1"></script>
+
+    <script src="/bundles/select2?v=fLmcB5Gu4IxUsZR8wIX2UOPhSz6owO7l0nsYUpG3rRQ1"></script>
+
+    <script src="/Scripts/MenuPatienten.js"></script>
+
+
+
+<div class="modal-backdrop fade show"></div></body></html>

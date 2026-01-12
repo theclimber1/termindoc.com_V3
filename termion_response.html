@@ -1,0 +1,37 @@
+<div class="col-md-6" id="DialogBoxMessage">
+    <style>
+        .fade:not(.show) {
+            opacity: 100;
+        }
+    </style>
+    <div class="modal fade" id="ModalDialogBoxMessage" tabindex="-1" role="dialog"  aria-hidden="true">
+        <div class="modal-dialog">
+            <div >
+                
+                <div class="modal-body DialogBoxMessage">
+
+                        <div class="form-group" id="infoDialogBoxMessage">
+                                                            <div class="alert alert-danger fade in">
+                                    <strong> Lieber Patient/Liebe Patientin, unser letzter Online Termin ist bereits reserviert! </strong>
+                                    <a class="close " onclick="closeModal()" data-dismiss="modal" aria-hidden="true"><span class=" fa fa-times pull-right"></span></a>
+                                </div>
+                                                                                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        setTimeout(function () {
+            var len = $('#ModalDialogBoxMessage').length;
+            if (len>0) {
+                $('#ModalDialogBoxMessage').modal('hide');
+            }
+        }, 4000);
+    </script>
+
+</div>
+
+
+
+
+
