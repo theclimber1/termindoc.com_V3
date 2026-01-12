@@ -3,3 +3,7 @@ playwright
 streamlit
 pandas
 requests
+beautifulsoup4
+lxml
+pytz
+aiohttp

@@ -220,9 +220,9 @@ def normalize_single_speciality(raw):
     if "kinder" in s and "jugend" in s: return "Kinderheilkunde"
     if "frauenheilkunde" in s or "gynäkologie" in s: return "Gynäkologie & Geburtshilfe"
     if "innere medizin" in s: return "Innere Medizin"
+    if "zahn" in s or "kiefer" in s: return "Zahnmedizin / Kieferorthopädie"
     if "orthopädie" in s: return "Orthopädie"
     if "hno" in s or "hals" in s: return "HNO"
-    if "zahn" in s or "kiefer" in s: return "Zahnmedizin / Kieferorthopädie"
     if "kardiologie" in s: return "Innere Medizin (Kardiologie)"
     return raw
 

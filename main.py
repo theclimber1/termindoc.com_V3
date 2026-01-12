@@ -13,6 +13,7 @@ from scrapers.custom_perfect_smile import CustomPerfectSmileScraper
 from scrapers.doctena import DoctenaScraper
 from scrapers.timesloth import TimeslothScraper
 from scrapers.mobimed import MobimedScraper
+from scrapers.timify import TimifyScraper
 
 # Factory Map: Mapping von String-Typ zu Klasse
 SCRAPER_MAP = {
@@ -24,7 +25,8 @@ SCRAPER_MAP = {
     "kutschera": KutscheraScraper,
     "doctena": DoctenaScraper,
     "timesloth": TimeslothScraper,
-    "mobimed": MobimedScraper
+    "mobimed": MobimedScraper,
+    "timify": TimifyScraper
 }
 
 def run_scraper_for_single_doctor(doctor_config):

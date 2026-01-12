@@ -9,7 +9,8 @@
         ],
         "scraper_type": "timify",
         "booking_url": "https://book.timify.com/services?accountId=657c0cfb745a3a96db1ae2f4&hideCloseButton=true&enterpriseId=5e5e6a627f3c99122ee97b8d",
-        "timify_account_id": "657c0cfb745a3a96db1ae2f4"
+        "timify_account_id": "657c0cfb745a3a96db1ae2f4",
+        "service_filter": "Arztgespräch"
     },
     {
         "id": "minimaxi_akut",
@@ -86,7 +87,7 @@
     {
         "id": "ensat_mobimed",
         "name": "Dr. Florian Ensat",
-        "speciality": "Hautkrankheiten",
+        "speciality": "Plastische Chirurgie",
         "address": "Körblergasse 42, 8010 Graz",
         "insurance": [
             "Wahlarzt"
@@ -141,6 +142,7 @@
         ],
         "scraper_type": "timify",
         "booking_url": "https://book.timify.com/?accountId=66f2a4ff797066bed8f786b0&hideCloseButton=true&enterpriseId=5e5e6a627f3c99122ee97b8d",
-        "timify_account_id": "66f2a4ff797066bed8f786b0"
+        "timify_account_id": "66f2a4ff797066bed8f786b0",
+        "service_filter": "Allgemein"
     }
 ]
